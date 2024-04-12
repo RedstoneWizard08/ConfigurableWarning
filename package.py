@@ -13,6 +13,7 @@ out_dir = "./build"
 tmp_dir = "./.tmp"
 out_path = "./bin/Debug/netstandard2.1/ConfigurableWarning.dll"
 csproj_path = "./ConfigurableWarning.csproj"
+url = "https://github.com/RedstoneWizard08/ConfigurableWarning"
 
 deps = [
     "CommanderCat101-ContentSettings-1.0.1"
@@ -47,7 +48,7 @@ manifest = {
     "name": mod_name,
     "version_number": mod_ver,
     "description": mod_desc,
-    "website_url": "",
+    "website_url": url,
     "dependencies": deps,
 }
 

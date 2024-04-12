@@ -28,13 +28,11 @@ This is a quality-of-life mod to help you make the game as hard (or as easy) as 
     - Default: False
     - Whether or not the player's oxygen decreases in the dive bell.
 - Days Per Quota
-    - Type: Enum
-        - 3
-        - 5
-        - 7
-        - 10
-        - 14
-        - 18
-        - 20
+    - Type: Enum - [3, 5, 7, 10, 14, 18, 20]
     - Default: 3
     - How many days per quota period.
+
+## Information
+
+This project contains code based on [ContentSettings](https://github.com/Commander-Cat101/ContentSettings), which
+is licensed under GPL v3. Go check them out!

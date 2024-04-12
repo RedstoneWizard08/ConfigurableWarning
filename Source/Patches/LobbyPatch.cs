@@ -15,7 +15,7 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPatch(typeof(SteamLobbyHandler), "IsPlayingWithRandoms")]
         internal static void IsPlayingWithRandoms(SteamLobbyHandler __instance, ref bool __result) {
             if (__instance.MasterClient) {
-                __result = Plugin.Instance.config.privateHost.Value;
+                __result = Plugin.Instance.PluginConfig.privateHost.Value;
             }
         }
 
@@ -47,8 +47,7 @@ namespace ConfigurableWarning.Patches {
             if (__instance.MasterClient) {
                 if (__instance.IsPlayingWithRandoms()) {
                     SteamMatchmaking.SetLobbyType((CSteamID)AccessTools.Field(typeof(CSteamID), "m_CurrentLobby").GetValue(__instance), ELobbyType.k_ELobbyTypePublic);
-                }
-                else {
+                } else {
                     SteamMatchmaking.SetLobbyType((CSteamID)AccessTools.Field(typeof(CSteamID), "m_CurrentLobby").GetValue(__instance), ELobbyType.k_ELobbyTypeFriendsOnly);
                 }
 

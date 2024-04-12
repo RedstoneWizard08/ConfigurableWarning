@@ -1,2 +1,5 @@
 [*.{cs,vb}]
 csharp_new_line_before_open_brace = false
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = false

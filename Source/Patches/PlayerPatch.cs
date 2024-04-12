@@ -6,21 +6,21 @@ using UnityEngine.SceneManagement;
 namespace ConfigurableWarning.Patches {
     [HarmonyPatch]
     internal class PlayerPatch {
-        internal static float GetMaxOxygen() => Plugin.Instance.config.maxOxygen.Value;
-        internal static float GetMaxHealth() => Plugin.Instance.config.maxHealth.Value;
+        internal static float GetMaxOxygen() => Plugin.Instance.PluginConfig.maxOxygen.Value;
+        internal static float GetMaxHealth() => Plugin.Instance.PluginConfig.maxHealth.Value;
 
         internal static bool tmp_UsingOxygen;
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Player), "CheckOxygen")]
         internal static bool CheckOxygen(Player __instance) {
-            var flag = SceneManager.GetActiveScene().name == "SurfaceScene" && !Plugin.Instance.config.useOxygenOnSurface.Value;
+            var flag = SceneManager.GetActiveScene().name == "SurfaceScene" && !Plugin.Instance.PluginConfig.useOxygenOnSurface.Value;
 
             __instance.data.usingOxygen = !flag;
 
-            if (flag && Plugin.Instance.config.refillOxygenOnSurface.Value) {
+            if (flag && Plugin.Instance.PluginConfig.refillOxygenOnSurface.Value) {
                 // __instance.data.remainingOxygen = __instance.data.maxOxygen;
-                __instance.data.remainingOxygen += Time.deltaTime * Plugin.Instance.config.oxygenRefillRate.Value;
+                __instance.data.remainingOxygen += Time.deltaTime * Plugin.Instance.PluginConfig.oxygenRefillRate.Value;
             }
 
             if (__instance.ai) {
@@ -49,8 +49,8 @@ namespace ConfigurableWarning.Patches {
         internal static void UpdateValuesPost(Player.PlayerData __instance) {
             __instance.usingOxygen = tmp_UsingOxygen;
 
-            if (__instance.usingOxygen && !(__instance.isInDiveBell && !Plugin.Instance.config.useOxygenInDiveBell.Value)) {
-                var mul = (__instance.isSprinting ? Plugin.Instance.config.sprintMultiplier.Value : 1.0f) * Plugin.Instance.config.oxygenUsageMultiplier.Value;
+            if (__instance.usingOxygen && !(__instance.isInDiveBell && !Plugin.Instance.PluginConfig.useOxygenInDiveBell.Value)) {
+                var mul = (__instance.isSprinting ? Plugin.Instance.PluginConfig.sprintMultiplier.Value : 1.0f) * Plugin.Instance.PluginConfig.oxygenUsageMultiplier.Value;
 
                 __instance.remainingOxygen -= Time.deltaTime * mul;
 

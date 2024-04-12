@@ -20,23 +20,22 @@ namespace ConfigurableWarning.Patches {
 
                 var binarySerializer = new BinarySerializer(size, Allocator.Temp);
 
-                binarySerializer.WriteFloat(Plugin.Instance.config.maxOxygen.Value);
-                binarySerializer.WriteFloat(Plugin.Instance.config.oxygenUsageMultiplier.Value);
-                binarySerializer.WriteFloat(Plugin.Instance.config.sprintMultiplier.Value);
-                binarySerializer.WriteBool(Plugin.Instance.config.useOxygenInDiveBell.Value);
-                binarySerializer.WriteBool(Plugin.Instance.config.refillOxygenInDiveBell.Value);
-                binarySerializer.WriteBool(Plugin.Instance.config.useOxygenOnSurface.Value);
-                binarySerializer.WriteBool(Plugin.Instance.config.refillOxygenOnSurface.Value);
-                binarySerializer.WriteFloat(Plugin.Instance.config.oxygenRefillRate.Value);
-                binarySerializer.WriteFloat(Plugin.Instance.config.maxHealth.Value);
-                binarySerializer.WriteInt(Plugin.Instance.config.daysPerQuota.Value);
+                binarySerializer.WriteFloat(Plugin.Instance.PluginConfig.maxOxygen.Value);
+                binarySerializer.WriteFloat(Plugin.Instance.PluginConfig.oxygenUsageMultiplier.Value);
+                binarySerializer.WriteFloat(Plugin.Instance.PluginConfig.sprintMultiplier.Value);
+                binarySerializer.WriteBool(Plugin.Instance.PluginConfig.useOxygenInDiveBell.Value);
+                binarySerializer.WriteBool(Plugin.Instance.PluginConfig.refillOxygenInDiveBell.Value);
+                binarySerializer.WriteBool(Plugin.Instance.PluginConfig.useOxygenOnSurface.Value);
+                binarySerializer.WriteBool(Plugin.Instance.PluginConfig.refillOxygenOnSurface.Value);
+                binarySerializer.WriteFloat(Plugin.Instance.PluginConfig.oxygenRefillRate.Value);
+                binarySerializer.WriteFloat(Plugin.Instance.PluginConfig.maxHealth.Value);
+                binarySerializer.WriteInt(Plugin.Instance.PluginConfig.daysPerQuota.Value);
 
                 var array = binarySerializer.buffer.ToByteArray();
 
                 stream.SendNext(array);
                 binarySerializer.Dispose();
-            }
-            else {
+            } else {
                 if (GetPlayer(__instance) == null || GetPlayer(__instance).data == null) {
                     return true;
                 }
@@ -55,18 +54,17 @@ namespace ConfigurableWarning.Patches {
                     binaryDeserializer.ReadFloat();
                     binaryDeserializer.ReadFloat();
                     binaryDeserializer.ReadInt();
-                }
-                else {
-                    ConfigContainers.maxOxygen.SetValue(binaryDeserializer.ReadFloat(), GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.oxygenUsage.SetValue(binaryDeserializer.ReadFloat(), GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.sprintUsage.SetValue(binaryDeserializer.ReadFloat(), GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.useOxygenInDiveBell.SetValue(binaryDeserializer.ReadBool() == true ? 1 : 0, GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.refillOxygenInDiveBell.SetValue(binaryDeserializer.ReadBool() == true ? 1 : 0, GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.useOxygenOnSurface.SetValue(binaryDeserializer.ReadBool() == true ? 1 : 0, GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.refillOxygenOnSurface.SetValue(binaryDeserializer.ReadBool() == true ? 1 : 0, GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.oxygenRefillRate.SetValue(binaryDeserializer.ReadFloat(), GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.maxHealth.SetValue(binaryDeserializer.ReadFloat(), GameHandler.Instance.SettingsHandler);
-                    ConfigContainers.daysPerQuota.SetValueX(binaryDeserializer.ReadInt(), GameHandler.Instance.SettingsHandler);
+                } else {
+                    Plugin.Instance.PluginSettings.maxOxygen.Set(binaryDeserializer.ReadFloat());
+                    Plugin.Instance.PluginSettings.oxygenUsage.Set(binaryDeserializer.ReadFloat());
+                    Plugin.Instance.PluginSettings.sprintUsage.Set(binaryDeserializer.ReadFloat());
+                    Plugin.Instance.PluginSettings.useOxygenInDiveBell.Set(binaryDeserializer.ReadBool() == true ? 1 : 0);
+                    Plugin.Instance.PluginSettings.refillOxygenInDiveBell.Set(binaryDeserializer.ReadBool() == true ? 1 : 0);
+                    Plugin.Instance.PluginSettings.useOxygenOnSurface.Set(binaryDeserializer.ReadBool() == true ? 1 : 0);
+                    Plugin.Instance.PluginSettings.refillOxygenOnSurface.Set(binaryDeserializer.ReadBool() == true ? 1 : 0);
+                    Plugin.Instance.PluginSettings.oxygenRefillRate.Set(binaryDeserializer.ReadFloat());
+                    Plugin.Instance.PluginSettings.maxHealth.Set(binaryDeserializer.ReadFloat());
+                    Plugin.Instance.PluginSettings.daysPerQuota.SetX(binaryDeserializer.ReadInt());
                 }
 
                 binaryDeserializer.Dispose();

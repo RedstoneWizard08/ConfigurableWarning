@@ -1,85 +1,35 @@
 ﻿using BepInEx;
-using ContentSettings.API;
 using HarmonyLib;
 using ConfigurableWarning.Settings;
-using System.Reflection;
 using BepInEx.Logging;
 
 namespace ConfigurableWarning {
-    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin {
         public static Plugin Instance { get; private set; } = null!;
         public static bool IsBoot = true;
 
-        public PluginConfig config;
-        public ConfigContainers configs;
+        public PluginConfig PluginConfig;
+        public PluginSettings PluginSettings;
+        public Harmony Harmony = new(MyPluginInfo.PLUGIN_GUID);
 
         public void Awake() {
             Instance = this;
-            config = new PluginConfig();
-            configs = new ConfigContainers();
 
-            Logger.LogInfo($"Loading plugin {PluginInfo.PLUGIN_GUID}...");
+            PluginConfig = new PluginConfig();
+            PluginSettings = new PluginSettings();
 
-            ConfigContainers.privateHost = new PrivateHost();
-            ConfigContainers.maxOxygen = new Oxygen();
-            ConfigContainers.maxHealth = new Health();
-            ConfigContainers.oxygenUsage = new OxygenUsageMultiplier();
-            ConfigContainers.sprintUsage = new SprintMultiplier();
-            ConfigContainers.daysPerQuota = new DaysPerQuota();
-            ConfigContainers.useOxygenInDiveBell = new UseOxygenInDiveBell();
-            ConfigContainers.refillOxygenInDiveBell = new RefillOxygenInDiveBell();
-            ConfigContainers.useOxygenOnSurface = new UseOxygenOnSurface();
-            ConfigContainers.refillOxygenOnSurface = new RefillOxygenOnSurface();
-            ConfigContainers.oxygenRefillRate = new OxygenRefillRate();
-
-            SettingsLoader.RegisterSetting(ConfigContainers.privateHost);
-            SettingsLoader.RegisterSetting(ConfigContainers.maxOxygen);
-            SettingsLoader.RegisterSetting(ConfigContainers.maxHealth);
-            SettingsLoader.RegisterSetting(ConfigContainers.oxygenUsage);
-            SettingsLoader.RegisterSetting(ConfigContainers.sprintUsage);
-            SettingsLoader.RegisterSetting(ConfigContainers.daysPerQuota);
-            SettingsLoader.RegisterSetting(ConfigContainers.useOxygenInDiveBell);
-            SettingsLoader.RegisterSetting(ConfigContainers.refillOxygenInDiveBell);
-            SettingsLoader.RegisterSetting(ConfigContainers.useOxygenOnSurface);
-            SettingsLoader.RegisterSetting(ConfigContainers.refillOxygenOnSurface);
-            SettingsLoader.RegisterSetting(ConfigContainers.oxygenRefillRate);
-
-            ConfigContainers.privateHost.ApplyValue();
-            ConfigContainers.maxOxygen.ApplyValue();
-            ConfigContainers.maxHealth.ApplyValue();
-            ConfigContainers.oxygenUsage.ApplyValue();
-            ConfigContainers.sprintUsage.ApplyValue();
-            ConfigContainers.daysPerQuota.ApplyValue();
-            ConfigContainers.useOxygenInDiveBell.ApplyValue();
-            ConfigContainers.refillOxygenInDiveBell.ApplyValue();
-            ConfigContainers.useOxygenOnSurface.ApplyValue();
-            ConfigContainers.refillOxygenOnSurface.ApplyValue();
-            ConfigContainers.oxygenRefillRate.ApplyValue();
+            Logger.LogInfo($"Loading plugin {MyPluginInfo.PLUGIN_GUID}...");
 
             IsBoot = false;
 
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+            Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
-            Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
+            Harmony.PatchAll();
         }
 
         public ManualLogSource GetLogger() {
             return Logger;
         }
-    }
-
-    public class ConfigContainers {
-        public static PrivateHost privateHost;
-        public static Oxygen maxOxygen;
-        public static Health maxHealth;
-        public static DaysPerQuota daysPerQuota;
-        public static SprintMultiplier sprintUsage;
-        public static OxygenUsageMultiplier oxygenUsage;
-        public static UseOxygenInDiveBell useOxygenInDiveBell;
-        public static RefillOxygenInDiveBell refillOxygenInDiveBell;
-        public static UseOxygenOnSurface useOxygenOnSurface;
-        public static RefillOxygenOnSurface refillOxygenOnSurface;
-        public static OxygenRefillRate oxygenRefillRate;
     }
 }

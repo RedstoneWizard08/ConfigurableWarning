@@ -2,7 +2,6 @@ import os
 import json
 import shutil
 import zipfile
-import subprocess
 
 from os import path
 from xml.etree.cElementTree import ElementTree as ET
@@ -14,10 +13,7 @@ tmp_dir = "./.tmp"
 out_path = "./bin/Debug/netstandard2.1/ConfigurableWarning.dll"
 csproj_path = "./ConfigurableWarning.csproj"
 url = "https://github.com/RedstoneWizard08/ConfigurableWarning"
-
-deps = [
-    "CommanderCat101-ContentSettings-1.0.1"
-]
+deps = []
 
 files = [
     "README.md",

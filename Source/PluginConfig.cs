@@ -25,7 +25,7 @@ namespace ConfigurableWarning {
             useOxygenInDiveBell = Plugin.Instance.Config.Bind("Oxygen", "UseOxygenInDiveBell", false, "Whether or not to use oxygen while inside of the dive bell.");
             refillOxygenInDiveBell = Plugin.Instance.Config.Bind("Oxygen", "RefillOxygenInDiveBell", false, "Whether or not to refill oxygen while inside of the dive bell.");
             useOxygenOnSurface = Plugin.Instance.Config.Bind("Oxygen", "UseOxygenOnSurface", false, "Whether or not to use oxygen on the surface. Useful for debugging.");
-            refillOxygenOnSurface = Plugin.Instance.Config.Bind("Oxygen", "RefillOxygenOnSurface", false, "Whether or not to refill oxygen on the surface. Useful for debugging.");
+            refillOxygenOnSurface = Plugin.Instance.Config.Bind("Oxygen", "RefillOxygenOnSurface", true, "Whether or not to refill oxygen on the surface. Useful for debugging.");
             oxygenRefillRate = Plugin.Instance.Config.Bind("Oxygen", "OxygenRefillRate", 10f, "The rate at which oxygen refills.");
 
             // Non-synced settings

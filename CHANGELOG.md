@@ -5,11 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.1] - 2024-04-12 (Unreleased)
+
+### Changed
+
+- Fixed a default config value
+
 ## [1.8.0] - 2024-04-12
 
 ### Changed
 
-- Fixed health & days left HUD to actually reflect the correct value (in real time)
+- Fixed health & days left HUD to actually reflect the correct value (in real time)`
 
 ## [1.7.1] - 2024-04-12
 

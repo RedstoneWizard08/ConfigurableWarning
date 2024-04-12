@@ -46,12 +46,12 @@ namespace ConfigurableWarning.Patches {
         internal static bool OpenLobby(SteamLobbyHandler __instance) {
             if (__instance.MasterClient) {
                 if (__instance.IsPlayingWithRandoms()) {
-                    SteamMatchmaking.SetLobbyType((CSteamID)AccessTools.Field(typeof(CSteamID), "m_CurrentLobby").GetValue(__instance), ELobbyType.k_ELobbyTypePublic);
+                    SteamMatchmaking.SetLobbyType(__instance.m_CurrentLobby, ELobbyType.k_ELobbyTypePublic);
                 } else {
-                    SteamMatchmaking.SetLobbyType((CSteamID)AccessTools.Field(typeof(CSteamID), "m_CurrentLobby").GetValue(__instance), ELobbyType.k_ELobbyTypeFriendsOnly);
+                    SteamMatchmaking.SetLobbyType(__instance.m_CurrentLobby, ELobbyType.k_ELobbyTypeFriendsOnly);
                 }
 
-                SteamMatchmaking.SetLobbyJoinable((CSteamID)AccessTools.Field(typeof(CSteamID), "m_CurrentLobby").GetValue(__instance), true);
+                SteamMatchmaking.SetLobbyJoinable(__instance.m_CurrentLobby, true);
             }
 
             return false;

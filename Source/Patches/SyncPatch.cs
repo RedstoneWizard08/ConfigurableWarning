@@ -7,8 +7,6 @@ using Unity.Collections;
 namespace ConfigurableWarning.Patches {
     [HarmonyPatch]
     internal class SyncPatch {
-        internal static Player GetPlayer(PlayerSyncer __instance) => (Player)AccessTools.Field(typeof(PlayerSyncer), "player").GetValue(__instance);
-
         [HarmonyPrefix]
         [HarmonyPatch(typeof(PlayerSyncer), nameof(PlayerSyncer.OnPhotonSerializeView))]
         internal static bool OnPhotonSerializeView(PlayerSyncer __instance, PhotonStream stream, PhotonMessageInfo info) {
@@ -36,7 +34,7 @@ namespace ConfigurableWarning.Patches {
                 stream.SendNext(array);
                 binarySerializer.Dispose();
             } else {
-                if (GetPlayer(__instance) == null || GetPlayer(__instance).data == null) {
+                if (__instance.player == null || __instance.player.data == null) {
                     return true;
                 }
 

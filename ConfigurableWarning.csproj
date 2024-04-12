@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>ConfigurableWarning</AssemblyName>
+    <Description>Makes the game configurable!</Description>
+    <Version>1.5.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+    <PackageReference Include="UnityEngine.Modules" Version="2022.3.10" IncludeAssets="compile" />	
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+
+	<ItemGroup Condition="$(CI) != 'true'">
+		<Reference Include="Assembly-CSharp" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Assembly-CSharp.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True" />
+		<Reference Include="Unity.Localization" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Localization.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="Unity.TextMeshPro" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.TextMeshPro.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="UnityEngine.UI" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\UnityEngine.UI.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="Unity.Mathematics" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Unity.Mathematics.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="Zorro.Core.Runtime" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.Core.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="Zorro.Settings.Runtime" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.Settings.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True" />
+		<Reference Include="Zorro.UI.Runtime" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Zorro.UI.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="Photon.Pun" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\PhotonUnityNetworking.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="Photon.Realtime" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\PhotonRealtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+		<Reference Include="Photon3Unity3D" HintPath="F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Photon3Unity3D.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+
+		<Reference Include="ContentSettings" HintPath="F:\Thunderstore\DataFolder\ContentWarning\profiles\Default\BepInEx\plugins\CommanderCat101-ContentSettings\ContentSettings.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(CI) == 'true'">
+		<PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.7-a-ngd.0" Publicize="true" PrivateAssets="All" />
+	</ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="Build">
+    <Exec Command="python3 package.py" />
+  </Target>
+</Project>

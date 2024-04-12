@@ -12,7 +12,7 @@ namespace ConfigurableWarning.Patches {
         internal static bool tmp_UsingOxygen;
 
         [HarmonyPrefix]
-        [HarmonyPatch(typeof(Player), "CheckOxygen")]
+        [HarmonyPatch(typeof(Player), nameof(Player.CheckOxygen))]
         internal static bool CheckOxygen(Player __instance) {
             var flag = SceneManager.GetActiveScene().name == "SurfaceScene" && !Plugin.Instance.PluginConfig.useOxygenOnSurface.Value;
 
@@ -31,7 +31,7 @@ namespace ConfigurableWarning.Patches {
         }
 
         [HarmonyPrefix]
-        [HarmonyPatch(typeof(Player.PlayerData), "UpdateValues")]
+        [HarmonyPatch(typeof(Player.PlayerData), nameof(Player.PlayerData.UpdateValues))]
         internal static bool UpdateValuesPre(Player.PlayerData __instance) {
             CheckOxygen(__instance.player);
 
@@ -45,7 +45,7 @@ namespace ConfigurableWarning.Patches {
         }
 
         [HarmonyPostfix]
-        [HarmonyPatch(typeof(Player.PlayerData), "UpdateValues")]
+        [HarmonyPatch(typeof(Player.PlayerData), nameof(Player.PlayerData.UpdateValues))]
         internal static void UpdateValuesPost(Player.PlayerData __instance) {
             __instance.usingOxygen = tmp_UsingOxygen;
 

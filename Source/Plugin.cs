@@ -21,32 +21,41 @@ namespace ConfigurableWarning {
 
             Logger.LogInfo($"Loading plugin {PluginInfo.PLUGIN_GUID}...");
 
+            ConfigContainers.privateHost = new PrivateHost();
             ConfigContainers.maxOxygen = new Oxygen();
             ConfigContainers.maxHealth = new Health();
             ConfigContainers.oxygenUsage = new OxygenUsageMultiplier();
             ConfigContainers.sprintUsage = new SprintMultiplier();
             ConfigContainers.daysPerQuota = new DaysPerQuota();
             ConfigContainers.useOxygenInDiveBell = new UseOxygenInDiveBell();
+            ConfigContainers.refillOxygenInDiveBell = new RefillOxygenInDiveBell();
             ConfigContainers.useOxygenOnSurface = new UseOxygenOnSurface();
             ConfigContainers.refillOxygenOnSurface = new RefillOxygenOnSurface();
+            ConfigContainers.oxygenRefillRate = new OxygenRefillRate();
 
+            SettingsLoader.RegisterSetting(ConfigContainers.privateHost);
             SettingsLoader.RegisterSetting(ConfigContainers.maxOxygen);
             SettingsLoader.RegisterSetting(ConfigContainers.maxHealth);
             SettingsLoader.RegisterSetting(ConfigContainers.oxygenUsage);
             SettingsLoader.RegisterSetting(ConfigContainers.sprintUsage);
             SettingsLoader.RegisterSetting(ConfigContainers.daysPerQuota);
             SettingsLoader.RegisterSetting(ConfigContainers.useOxygenInDiveBell);
+            SettingsLoader.RegisterSetting(ConfigContainers.refillOxygenInDiveBell);
             SettingsLoader.RegisterSetting(ConfigContainers.useOxygenOnSurface);
             SettingsLoader.RegisterSetting(ConfigContainers.refillOxygenOnSurface);
+            SettingsLoader.RegisterSetting(ConfigContainers.oxygenRefillRate);
 
+            ConfigContainers.privateHost.ApplyValue();
             ConfigContainers.maxOxygen.ApplyValue();
             ConfigContainers.maxHealth.ApplyValue();
             ConfigContainers.oxygenUsage.ApplyValue();
             ConfigContainers.sprintUsage.ApplyValue();
             ConfigContainers.daysPerQuota.ApplyValue();
             ConfigContainers.useOxygenInDiveBell.ApplyValue();
+            ConfigContainers.refillOxygenInDiveBell.ApplyValue();
             ConfigContainers.useOxygenOnSurface.ApplyValue();
             ConfigContainers.refillOxygenOnSurface.ApplyValue();
+            ConfigContainers.oxygenRefillRate.ApplyValue();
 
             IsBoot = false;
 
@@ -61,13 +70,16 @@ namespace ConfigurableWarning {
     }
 
     public class ConfigContainers {
+        public static PrivateHost privateHost;
         public static Oxygen maxOxygen;
         public static Health maxHealth;
         public static DaysPerQuota daysPerQuota;
         public static SprintMultiplier sprintUsage;
         public static OxygenUsageMultiplier oxygenUsage;
         public static UseOxygenInDiveBell useOxygenInDiveBell;
+        public static RefillOxygenInDiveBell refillOxygenInDiveBell;
         public static UseOxygenOnSurface useOxygenOnSurface;
         public static RefillOxygenOnSurface refillOxygenOnSurface;
+        public static OxygenRefillRate oxygenRefillRate;
     }
 }

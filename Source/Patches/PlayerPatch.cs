@@ -19,7 +19,8 @@ namespace ConfigurableWarning.Patches {
             __instance.data.usingOxygen = !flag;
 
             if (flag && Plugin.Instance.config.refillOxygenOnSurface.Value) {
-                __instance.data.remainingOxygen = __instance.data.maxOxygen;
+                // __instance.data.remainingOxygen = __instance.data.maxOxygen;
+                __instance.data.remainingOxygen += Time.deltaTime * Plugin.Instance.config.oxygenRefillRate.Value;
             }
 
             if (__instance.ai) {
@@ -36,7 +37,7 @@ namespace ConfigurableWarning.Patches {
 
             tmp_UsingOxygen = __instance.usingOxygen;
             Player.PlayerData.maxHealth = GetMaxHealth();
-            
+
             __instance.maxOxygen = GetMaxOxygen();
             __instance.usingOxygen = false;
 

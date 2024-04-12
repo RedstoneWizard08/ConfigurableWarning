@@ -14,6 +14,14 @@ namespace ConfigurableWarning {
             }
         }
 
+        public class PrivateHost : EnumSetting, IExposedSetting {
+            public override void ApplyValue() => SettingHandler.OnChange(() => Plugin.Instance.config.privateHost.Value = Value != 0);
+            public string GetDisplayName() => "Host Privately (friends-only)";
+            public SettingCategory GetSettingCategory() => SettingCategory.Controls;
+            protected override int GetDefaultValue() => Plugin.Instance.config.privateHost.Value == true ? 1 : 0;
+            public override List<string> GetChoices() => ["Off", "On"];
+        }
+
         public class Oxygen : FloatSetting, IExposedSetting {
             public override void ApplyValue() => SettingHandler.OnChange(() => Plugin.Instance.config.maxOxygen.Value = Value);
             public string GetDisplayName() => "Maximum Oxygen (in seconds)";
@@ -35,7 +43,7 @@ namespace ConfigurableWarning {
             public string GetDisplayName() => "Sprinting Oxygen Usage Multiplier";
             public SettingCategory GetSettingCategory() => SettingCategory.Controls;
             protected override float GetDefaultValue() => Plugin.Instance.config.sprintMultiplier.Value;
-            protected override float2 GetMinMaxValue() => new(1f, 4f);
+            protected override float2 GetMinMaxValue() => new(1f, 10f);
         }
 
         public class UseOxygenInDiveBell : EnumSetting, IExposedSetting {
@@ -46,7 +54,15 @@ namespace ConfigurableWarning {
             public override List<string> GetChoices() => ["Off", "On"];
         }
 
-        public class UseOxygenOnSurface: EnumSetting, IExposedSetting {
+        public class RefillOxygenInDiveBell : EnumSetting, IExposedSetting {
+            public override void ApplyValue() => SettingHandler.OnChange(() => Plugin.Instance.config.refillOxygenInDiveBell.Value = Value != 0);
+            public string GetDisplayName() => "Refill Oxygen in Dive Bell";
+            public SettingCategory GetSettingCategory() => SettingCategory.Controls;
+            protected override int GetDefaultValue() => Plugin.Instance.config.refillOxygenInDiveBell.Value == true ? 1 : 0;
+            public override List<string> GetChoices() => ["Off", "On"];
+        }
+
+        public class UseOxygenOnSurface : EnumSetting, IExposedSetting {
             public override void ApplyValue() => SettingHandler.OnChange(() => Plugin.Instance.config.useOxygenOnSurface.Value = Value != 0);
             public string GetDisplayName() => "Use Oxygen on Surface (useful for debugging)";
             public SettingCategory GetSettingCategory() => SettingCategory.Controls;
@@ -54,13 +70,20 @@ namespace ConfigurableWarning {
             public override List<string> GetChoices() => ["Off", "On"];
         }
 
-        public class RefillOxygenOnSurface: EnumSetting, IExposedSetting {
+        public class RefillOxygenOnSurface : EnumSetting, IExposedSetting {
             public override void ApplyValue() => SettingHandler.OnChange(() => Plugin.Instance.config.refillOxygenOnSurface.Value = Value != 0);
             public string GetDisplayName() => "Refill Oxygen on Surface (useful for debugging)";
             public SettingCategory GetSettingCategory() => SettingCategory.Controls;
             protected override int GetDefaultValue() => Plugin.Instance.config.refillOxygenOnSurface.Value == true ? 1 : 0;
             public override List<string> GetChoices() => ["Off", "On"];
-            
+        }
+
+        public class OxygenRefillRate : FloatSetting, IExposedSetting {
+            public override void ApplyValue() => SettingHandler.OnChange(() => Plugin.Instance.config.oxygenRefillRate.Value = Value);
+            public string GetDisplayName() => "Oxygen Refill Rate";
+            public SettingCategory GetSettingCategory() => SettingCategory.Controls;
+            protected override float GetDefaultValue() => Plugin.Instance.config.oxygenRefillRate.Value;
+            protected override float2 GetMinMaxValue() => new(0f, 500f);
         }
 
         public class Health : FloatSetting, IExposedSetting {

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Fixed a default config value
+- Hopefully fix the lobby patch
 
 ## [1.8.0] - 2024-04-12
 

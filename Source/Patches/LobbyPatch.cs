@@ -11,18 +11,26 @@ namespace ConfigurableWarning.Patches {
             return SteamFriends.HasFriend(cSteamID, EFriendFlags.k_EFriendFlagNone);
         }
 
+        internal static bool IsPublic(SteamLobbyHandler __instance) {
+            if (__instance.MasterClient) {
+                return !Plugin.Instance.PluginConfig.privateHost.Value;
+            }
+
+            return __instance.IsPlayingWithRandoms();
+        }
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.IsPlayingWithRandoms))]
         internal static void IsPlayingWithRandoms(SteamLobbyHandler __instance, ref bool __result) {
             if (__instance.MasterClient) {
-                __result = Plugin.Instance.PluginConfig.privateHost.Value;
+                __result = !Plugin.Instance.PluginConfig.privateHost.Value;
             }
         }
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.AddSteamClient))]
         internal static bool AddSteamClient(SteamLobbyHandler __instance, CSteamID cSteamID) {
-            if (!IsFriendsWith(cSteamID) && !__instance.IsPlayingWithRandoms()) {
+            if (!IsFriendsWith(cSteamID) && !IsPublic(__instance)) {
                 return false;
             }
 
@@ -34,7 +42,7 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPrefix]
         [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.OnNetworkingSessionRequest))]
         internal static bool OnNetworkingSessionRequest(SteamLobbyHandler __instance, SteamNetworkingMessagesSessionRequest_t param) {
-            if (!IsFriendsWith(param.m_identityRemote.GetSteamID()) && !__instance.IsPlayingWithRandoms()) {
+            if (!IsFriendsWith(param.m_identityRemote.GetSteamID()) && !IsPublic(__instance)) {
                 return false;
             }
 
@@ -47,7 +55,7 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.OpenLobby))]
         internal static bool OpenLobby(SteamLobbyHandler __instance) {
             if (__instance.MasterClient) {
-                if (__instance.IsPlayingWithRandoms()) {
+                if (IsPublic(__instance)) {
                     SteamMatchmaking.SetLobbyType(__instance.m_CurrentLobby, ELobbyType.k_ELobbyTypePublic);
                 } else {
                     SteamMatchmaking.SetLobbyType(__instance.m_CurrentLobby, ELobbyType.k_ELobbyTypeFriendsOnly);

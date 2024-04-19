@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>ConfigurableWarning</AssemblyName>
     <Description>Makes the game configurable!</Description>
-    <Version>1.8.1</Version>
+    <Version>1.9.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <NoWarn>$(NoWarn);CS0436</NoWarn>
@@ -38,6 +38,11 @@
     <Reference Include="Photon.Realtime" HintPath="$(CW_REFERENCES)\PhotonRealtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
     <Reference Include="Photon3Unity3D" HintPath="$(CW_REFERENCES)\Photon3Unity3D.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
     <Reference Include="Steamworks" HintPath="$(CW_REFERENCES)\com.rlabrecque.steamworks.net.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MyceliumNetworking" HintPath="libs\MyceliumNetworkingForCW-Debug.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
+    <PackageReference Include="CommanderCat101.ContentSettings" Version="1.1.0" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
   </ItemGroup>
 
   <ItemGroup Condition="$(CI) == 'true'">

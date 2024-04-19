@@ -50,7 +50,7 @@ namespace ConfigurableWarning.Patches {
             __instance.usingOxygen = tmp_UsingOxygen;
 
             if (__instance.usingOxygen && !(__instance.isInDiveBell && !Plugin.Instance.PluginConfig.useOxygenInDiveBell.Value)) {
-                var mul = (__instance.isSprinting ? Plugin.Instance.PluginConfig.sprintMultiplier.Value : 1.0f) * Plugin.Instance.PluginConfig.oxygenUsageMultiplier.Value;
+                var mul = (__instance.isSprinting ? Plugin.Instance.PluginConfig.sprintUsage.Value : 1.0f) * Plugin.Instance.PluginConfig.oxygenUsage.Value;
 
                 __instance.remainingOxygen -= Time.deltaTime * mul;
 

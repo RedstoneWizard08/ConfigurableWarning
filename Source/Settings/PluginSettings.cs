@@ -15,20 +15,20 @@ namespace ConfigurableWarning.Settings {
         public OxygenRefillRate oxygenRefillRate;
 
         public PluginSettings() {
-            // General
+            // -------------------- General -------------------- //
 
             SettingHelper.Setup(new TextSetting("General"));
 
             privateHost = SettingHelper.Setup(new PrivateHost());
             daysPerQuota = SettingHelper.Setup(new DaysPerQuota());
 
-            // Player
+            // -------------------- Player -------------------- //
 
             SettingHelper.Setup(new TextSetting("Player"));
 
             maxHealth = SettingHelper.Setup(new Health());
 
-            // Oxygen
+            // -------------------- Oxygen -------------------- //
 
             SettingHelper.Setup(new TextSetting("Oxygen"));
 
@@ -39,7 +39,6 @@ namespace ConfigurableWarning.Settings {
 
             useOxygenInDiveBell = SettingHelper.Setup(new UseOxygenInDiveBell());
             refillOxygenInDiveBell = SettingHelper.Setup(new RefillOxygenInDiveBell());
-
             useOxygenOnSurface = SettingHelper.Setup(new UseOxygenOnSurface());
             refillOxygenOnSurface = SettingHelper.Setup(new RefillOxygenOnSurface());
         }

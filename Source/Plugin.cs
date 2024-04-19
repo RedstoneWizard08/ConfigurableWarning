@@ -10,7 +10,7 @@ namespace ConfigurableWarning {
     [BepInDependency(ContentSettings.MyPluginInfo.PLUGIN_GUID)]
     public class Plugin : BaseUnityPlugin {
         public static Plugin Instance { get; private set; } = null!;
-        public static SettingsSync Sync { get; private set; } = null!;
+        public static SyncRPC Sync { get; private set; } = null!;
         public static bool IsBoot = true;
         
         // CF + G (in hex = 0x47) + W (in hex = 0x57), for ConFiGurableWarning
@@ -24,12 +24,12 @@ namespace ConfigurableWarning {
             Logger.LogInfo($"Loading plugin {MyPluginInfo.PLUGIN_GUID}...");
 
             Instance = this;
-            Sync = new SettingsSync();
+            Sync = new();
 
             Sync.Register();
 
-            PluginConfig = new PluginConfig();
-            PluginSettings = new PluginSettings();
+            PluginConfig = new();
+            PluginSettings = new();
 
             IsBoot = false;
             Harmony.PatchAll();

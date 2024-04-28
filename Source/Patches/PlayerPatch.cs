@@ -6,21 +6,21 @@ using UnityEngine.SceneManagement;
 namespace ConfigurableWarning.Patches {
     [HarmonyPatch]
     internal class PlayerPatch {
-        internal static float GetMaxOxygen() => Plugin.Instance.PluginConfig.maxOxygen.Value;
-        internal static float GetMaxHealth() => Plugin.Instance.PluginConfig.maxHealth.Value;
+        internal static float GetMaxOxygen() => Plugin.Instance.PluginSettings.maxOxygen.Value;
+        internal static float GetMaxHealth() => Plugin.Instance.PluginSettings.maxHealth.Value;
 
         internal static bool tmp_UsingOxygen;
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Player), nameof(Player.CheckOxygen))]
         internal static bool CheckOxygen(Player __instance) {
-            var flag = SceneManager.GetActiveScene().name == "SurfaceScene" && !Plugin.Instance.PluginConfig.useOxygenOnSurface.Value;
+            var flag = SceneManager.GetActiveScene().name == "SurfaceScene" && !Plugin.Instance.PluginSettings.useOxygenOnSurface.Value;
 
             __instance.data.usingOxygen = !flag;
 
-            if (flag && Plugin.Instance.PluginConfig.refillOxygenOnSurface.Value) {
+            if (flag && Plugin.Instance.PluginSettings.refillOxygenOnSurface.Value) {
                 // __instance.data.remainingOxygen = __instance.data.maxOxygen;
-                __instance.data.remainingOxygen += Time.deltaTime * Plugin.Instance.PluginConfig.oxygenRefillRate.Value;
+                __instance.data.remainingOxygen += Time.deltaTime * Plugin.Instance.PluginSettings.oxygenRefillRate.Value;
             }
 
             if (__instance.ai) {
@@ -36,9 +36,9 @@ namespace ConfigurableWarning.Patches {
             CheckOxygen(__instance.player);
 
             tmp_UsingOxygen = __instance.usingOxygen;
-            Player.PlayerData.maxHealth = GetMaxHealth();
+            Player.PlayerData.maxHealth = Plugin.Instance.PluginSettings.maxHealth.Value;
 
-            __instance.maxOxygen = GetMaxOxygen();
+            __instance.maxOxygen = Plugin.Instance.PluginSettings.maxOxygen.Value;
             __instance.usingOxygen = false;
 
             return true;
@@ -49,8 +49,8 @@ namespace ConfigurableWarning.Patches {
         internal static void UpdateValuesPost(Player.PlayerData __instance) {
             __instance.usingOxygen = tmp_UsingOxygen;
 
-            if (__instance.usingOxygen && !(__instance.isInDiveBell && !Plugin.Instance.PluginConfig.useOxygenInDiveBell.Value)) {
-                var mul = (__instance.isSprinting ? Plugin.Instance.PluginConfig.sprintUsage.Value : 1.0f) * Plugin.Instance.PluginConfig.oxygenUsage.Value;
+            if (__instance.usingOxygen && !(__instance.isInDiveBell && !Plugin.Instance.PluginSettings.useOxygenInDiveBell.Value)) {
+                var mul = (__instance.isSprinting ? Plugin.Instance.PluginSettings.sprintUsage.Value : 1.0f) * Plugin.Instance.PluginSettings.oxygenUsage.Value;
 
                 __instance.remainingOxygen -= Time.deltaTime * mul;
 

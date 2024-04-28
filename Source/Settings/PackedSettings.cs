@@ -12,38 +12,38 @@ namespace ConfigurableWarning.Settings {
         [SerializeField] private bool refillOxygenOnSurface;
         [SerializeField] private float oxygenRefillRate;
 
-        public static PackedSettings collect() {
+        public static PackedSettings Collect() {
             var me = new PackedSettings {
-                maxOxygen = Plugin.Instance.PluginConfig.maxOxygen.Value,
-                maxHealth = Plugin.Instance.PluginConfig.maxHealth.Value,
-                daysPerQuota = Plugin.Instance.PluginConfig.daysPerQuota.Value,
-                sprintUsage = Plugin.Instance.PluginConfig.sprintUsage.Value,
-                useOxygenInDiveBell = Plugin.Instance.PluginConfig.useOxygenInDiveBell.Value,
-                refillOxygenInDiveBell = Plugin.Instance.PluginConfig.refillOxygenInDiveBell.Value,
-                useOxygenOnSurface = Plugin.Instance.PluginConfig.useOxygenOnSurface.Value,
-                refillOxygenOnSurface = Plugin.Instance.PluginConfig.refillOxygenOnSurface.Value,
-                oxygenRefillRate = Plugin.Instance.PluginConfig.oxygenRefillRate.Value
+                maxOxygen = Plugin.Instance.PluginSettings.maxOxygen.Value,
+                maxHealth = Plugin.Instance.PluginSettings.maxHealth.Value,
+                daysPerQuota = Plugin.Instance.PluginSettings.daysPerQuota.Value,
+                sprintUsage = Plugin.Instance.PluginSettings.sprintUsage.Value,
+                useOxygenInDiveBell = Plugin.Instance.PluginSettings.useOxygenInDiveBell.Value,
+                refillOxygenInDiveBell = Plugin.Instance.PluginSettings.refillOxygenInDiveBell.Value,
+                useOxygenOnSurface = Plugin.Instance.PluginSettings.useOxygenOnSurface.Value,
+                refillOxygenOnSurface = Plugin.Instance.PluginSettings.refillOxygenOnSurface.Value,
+                oxygenRefillRate = Plugin.Instance.PluginSettings.oxygenRefillRate.Value
             };
 
             return me;
         }
 
-        public string pack() {
+        public string Pack() {
             return JsonUtility.ToJson(this);
         }
 
-        public static PackedSettings unpack(string data) {
+        public static PackedSettings Unpack(string data) {
             var me = JsonUtility.FromJson<PackedSettings>(data);
 
-            Plugin.Instance.PluginSettings.maxOxygen.Set(me.maxOxygen);
-            Plugin.Instance.PluginSettings.maxHealth.Set(me.maxHealth);
-            Plugin.Instance.PluginSettings.daysPerQuota.Set(me.daysPerQuota);
-            Plugin.Instance.PluginSettings.sprintUsage.Set(me.sprintUsage);
-            Plugin.Instance.PluginSettings.useOxygenInDiveBell.Set(me.useOxygenInDiveBell);
-            Plugin.Instance.PluginSettings.refillOxygenInDiveBell.Set(me.refillOxygenInDiveBell);
-            Plugin.Instance.PluginSettings.useOxygenOnSurface.Set(me.useOxygenOnSurface);
-            Plugin.Instance.PluginSettings.refillOxygenOnSurface.Set(me.refillOxygenOnSurface);
-            Plugin.Instance.PluginSettings.oxygenRefillRate.Set(me.oxygenRefillRate);
+            Plugin.Instance.PluginSettings.maxOxygen.SetValue(me.maxOxygen, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.maxHealth.SetValue(me.maxHealth, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.daysPerQuota.SetValue(me.daysPerQuota, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.sprintUsage.SetValue(me.sprintUsage, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.useOxygenInDiveBell.SetValue(me.useOxygenInDiveBell, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.refillOxygenInDiveBell.SetValue(me.refillOxygenInDiveBell, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.useOxygenOnSurface.SetValue(me.useOxygenOnSurface, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.refillOxygenOnSurface.SetValue(me.refillOxygenOnSurface, GameHandler.Instance.SettingsHandler);
+            Plugin.Instance.PluginSettings.oxygenRefillRate.SetValue(me.oxygenRefillRate, GameHandler.Instance.SettingsHandler);
 
             return me;
         }

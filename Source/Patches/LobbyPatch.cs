@@ -13,7 +13,7 @@ namespace ConfigurableWarning.Patches {
 
         internal static bool IsPublic(SteamLobbyHandler __instance) {
             if (__instance.MasterClient) {
-                return !Plugin.Instance.PluginConfig.privateHost.Value;
+                return !Plugin.Instance.PluginSettings.privateHost.Value;
             }
 
             return __instance.IsPlayingWithRandoms();
@@ -23,7 +23,7 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.IsPlayingWithRandoms))]
         internal static void IsPlayingWithRandoms(SteamLobbyHandler __instance, ref bool __result) {
             if (__instance.MasterClient) {
-                __result = !Plugin.Instance.PluginConfig.privateHost.Value;
+                __result = !Plugin.Instance.PluginSettings.privateHost.Value;
             }
         }
 

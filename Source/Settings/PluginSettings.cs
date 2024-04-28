@@ -1,5 +1,3 @@
-using ConfigurableWarning.Settings.Objects;
-
 namespace ConfigurableWarning.Settings {
     public class PluginSettings {
         public PrivateHost privateHost;
@@ -17,30 +15,24 @@ namespace ConfigurableWarning.Settings {
         public PluginSettings() {
             // -------------------- General -------------------- //
 
-            SettingHelper.Setup(new TextSetting("General"));
-
-            privateHost = SettingHelper.Setup(new PrivateHost());
-            daysPerQuota = SettingHelper.Setup(new DaysPerQuota());
+            privateHost = new PrivateHost();
+            daysPerQuota = new DaysPerQuota();
 
             // -------------------- Player -------------------- //
 
-            SettingHelper.Setup(new TextSetting("Player"));
-
-            maxHealth = SettingHelper.Setup(new Health());
+            maxHealth = new Health();
 
             // -------------------- Oxygen -------------------- //
 
-            SettingHelper.Setup(new TextSetting("Oxygen"));
+            maxOxygen = new Oxygen();
+            oxygenUsage = new OxygenUsageMultiplier();
+            sprintUsage = new SprintMultiplier();
+            oxygenRefillRate = new OxygenRefillRate();
 
-            maxOxygen = SettingHelper.Setup(new Oxygen());
-            oxygenUsage = SettingHelper.Setup(new OxygenUsageMultiplier());
-            sprintUsage = SettingHelper.Setup(new SprintMultiplier());
-            oxygenRefillRate = SettingHelper.Setup(new OxygenRefillRate());
-
-            useOxygenInDiveBell = SettingHelper.Setup(new UseOxygenInDiveBell());
-            refillOxygenInDiveBell = SettingHelper.Setup(new RefillOxygenInDiveBell());
-            useOxygenOnSurface = SettingHelper.Setup(new UseOxygenOnSurface());
-            refillOxygenOnSurface = SettingHelper.Setup(new RefillOxygenOnSurface());
+            useOxygenInDiveBell = new UseOxygenInDiveBell();
+            refillOxygenInDiveBell = new RefillOxygenInDiveBell();
+            useOxygenOnSurface = new UseOxygenOnSurface();
+            refillOxygenOnSurface = new RefillOxygenOnSurface();
         }
     }
 }

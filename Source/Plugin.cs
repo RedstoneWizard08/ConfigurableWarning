@@ -2,6 +2,7 @@
 using HarmonyLib;
 using ConfigurableWarning.Settings;
 using BepInEx.Logging;
+using UnityEngine;
 
 namespace ConfigurableWarning {
     [ContentWarningPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_VERSION, false)]
@@ -16,7 +17,6 @@ namespace ConfigurableWarning {
         // CF + G (in hex = 0x47) + W (in hex = 0x57), for ConFiGurableWarning
         public const uint MOD_ID = 0xCF4757;
 
-        public PluginConfig PluginConfig;
         public PluginSettings PluginSettings;
         public Harmony Harmony = new(MyPluginInfo.PLUGIN_GUID);
 
@@ -26,9 +26,6 @@ namespace ConfigurableWarning {
             Instance = this;
             Sync = new();
 
-            Sync.Register();
-
-            PluginConfig = new();
             PluginSettings = new();
 
             IsBoot = false;

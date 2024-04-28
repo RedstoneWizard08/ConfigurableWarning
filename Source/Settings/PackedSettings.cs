@@ -14,15 +14,15 @@ namespace ConfigurableWarning.Settings {
 
         public static PackedSettings Collect() {
             var me = new PackedSettings {
-                maxOxygen = Plugin.Instance.PluginSettings.maxOxygen.Value,
-                maxHealth = Plugin.Instance.PluginSettings.maxHealth.Value,
-                daysPerQuota = Plugin.Instance.PluginSettings.daysPerQuota.Value,
-                sprintUsage = Plugin.Instance.PluginSettings.sprintUsage.Value,
-                useOxygenInDiveBell = Plugin.Instance.PluginSettings.useOxygenInDiveBell.Value,
-                refillOxygenInDiveBell = Plugin.Instance.PluginSettings.refillOxygenInDiveBell.Value,
-                useOxygenOnSurface = Plugin.Instance.PluginSettings.useOxygenOnSurface.Value,
-                refillOxygenOnSurface = Plugin.Instance.PluginSettings.refillOxygenOnSurface.Value,
-                oxygenRefillRate = Plugin.Instance.PluginSettings.oxygenRefillRate.Value
+                maxOxygen = Plugin.Instance.PluginSettings.maxOxygen.RealValue,
+                maxHealth = Plugin.Instance.PluginSettings.maxHealth.RealValue,
+                daysPerQuota = Plugin.Instance.PluginSettings.daysPerQuota.RealValue,
+                sprintUsage = Plugin.Instance.PluginSettings.sprintUsage.RealValue,
+                useOxygenInDiveBell = Plugin.Instance.PluginSettings.useOxygenInDiveBell.RealValue,
+                refillOxygenInDiveBell = Plugin.Instance.PluginSettings.refillOxygenInDiveBell.RealValue,
+                useOxygenOnSurface = Plugin.Instance.PluginSettings.useOxygenOnSurface.RealValue,
+                refillOxygenOnSurface = Plugin.Instance.PluginSettings.refillOxygenOnSurface.RealValue,
+                oxygenRefillRate = Plugin.Instance.PluginSettings.oxygenRefillRate.RealValue,
             };
 
             return me;

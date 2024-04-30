@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zorro.Settings;
 
 namespace ConfigurableWarning.Settings {
     public class PackedSettings {
@@ -14,15 +15,15 @@ namespace ConfigurableWarning.Settings {
 
         public static PackedSettings Collect() {
             var me = new PackedSettings {
-                maxOxygen = Plugin.Instance.PluginSettings.maxOxygen.RealValue,
-                maxHealth = Plugin.Instance.PluginSettings.maxHealth.RealValue,
-                daysPerQuota = Plugin.Instance.PluginSettings.daysPerQuota.RealValue,
-                sprintUsage = Plugin.Instance.PluginSettings.sprintUsage.RealValue,
-                useOxygenInDiveBell = Plugin.Instance.PluginSettings.useOxygenInDiveBell.RealValue,
-                refillOxygenInDiveBell = Plugin.Instance.PluginSettings.refillOxygenInDiveBell.RealValue,
-                useOxygenOnSurface = Plugin.Instance.PluginSettings.useOxygenOnSurface.RealValue,
-                refillOxygenOnSurface = Plugin.Instance.PluginSettings.refillOxygenOnSurface.RealValue,
-                oxygenRefillRate = Plugin.Instance.PluginSettings.oxygenRefillRate.RealValue,
+                maxOxygen = Plugin.State.maxOxygen,
+                maxHealth = Plugin.State.maxHealth,
+                daysPerQuota = Plugin.State.daysPerQuota,
+                sprintUsage = Plugin.State.sprintUsage,
+                useOxygenInDiveBell = Plugin.State.useOxygenInDiveBell,
+                refillOxygenInDiveBell = Plugin.State.refillOxygenInDiveBell,
+                useOxygenOnSurface = Plugin.State.useOxygenOnSurface,
+                refillOxygenOnSurface = Plugin.State.refillOxygenOnSurface,
+                oxygenRefillRate = Plugin.State.oxygenRefillRate,
             };
 
             return me;
@@ -35,15 +36,15 @@ namespace ConfigurableWarning.Settings {
         public static PackedSettings Unpack(string data) {
             var me = JsonUtility.FromJson<PackedSettings>(data);
 
-            Plugin.Instance.PluginSettings.maxOxygen.SetValue(me.maxOxygen, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.maxHealth.SetValue(me.maxHealth, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.daysPerQuota.SetValue(me.daysPerQuota, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.sprintUsage.SetValue(me.sprintUsage, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.useOxygenInDiveBell.SetValue(me.useOxygenInDiveBell, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.refillOxygenInDiveBell.SetValue(me.refillOxygenInDiveBell, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.useOxygenOnSurface.SetValue(me.useOxygenOnSurface, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.refillOxygenOnSurface.SetValue(me.refillOxygenOnSurface, GameHandler.Instance.SettingsHandler);
-            Plugin.Instance.PluginSettings.oxygenRefillRate.SetValue(me.oxygenRefillRate, GameHandler.Instance.SettingsHandler);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.maxOxygen, me.maxOxygen);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.maxHealth, me.maxHealth);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.daysPerQuota, me.daysPerQuota);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.sprintUsage, me.sprintUsage);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.useOxygenInDiveBell, me.useOxygenInDiveBell);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.refillOxygenInDiveBell, me.refillOxygenInDiveBell);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.useOxygenOnSurface, me.useOxygenOnSurface);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.refillOxygenOnSurface, me.refillOxygenOnSurface);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.oxygenRefillRate, me.oxygenRefillRate);
 
             return me;
         }

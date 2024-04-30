@@ -10,12 +10,15 @@ namespace ConfigurableWarning.Settings {
             MyceliumNetwork.RegisterNetworkObject(this, Plugin.MOD_ID);
         }
 
+        public void ResetCache() {
+            lastSent = "";
+            lastRecv = "";
+        }
+
         [CustomRPC]
         public void SyncSettingsRecv(string data) {
             if (data == lastRecv) return;
             lastRecv = data;
-
-            Debug.Log("R: " + data);
 
             PackedSettings.Unpack(data);
         }
@@ -25,8 +28,6 @@ namespace ConfigurableWarning.Settings {
 
             if (settings == lastSent) return;
             lastSent = settings;
-
-            Debug.Log("S: " + settings);
 
             MyceliumNetwork.RPC(Plugin.MOD_ID, nameof(SyncSettingsRecv), ReliableType.Reliable, settings);
         }

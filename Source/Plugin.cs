@@ -12,12 +12,12 @@ namespace ConfigurableWarning {
     public class Plugin : BaseUnityPlugin {
         public static Plugin Instance { get; private set; } = null!;
         public static SyncRPC Sync { get; private set; } = null!;
+        public static SettingsState State { get; private set; } = null!;
+        public static PluginSettings PluginSettings { get; private set; } = null!;
         public static bool IsBoot = true;
         
         // CF + G (in hex = 0x47) + W (in hex = 0x57), for ConFiGurableWarning
         public const uint MOD_ID = 0xCF4757;
-
-        public PluginSettings PluginSettings;
         public Harmony Harmony = new(MyPluginInfo.PLUGIN_GUID);
 
         public void Awake() {
@@ -26,6 +26,7 @@ namespace ConfigurableWarning {
             Instance = this;
             Sync = new();
 
+            State = new SettingsState();
             PluginSettings = new();
 
             IsBoot = false;

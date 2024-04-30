@@ -10,10 +10,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "GENERAL")]
     public class PrivateHost : BoolSetting, ICustomSetting {
-        public bool RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.privateHost = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -23,10 +21,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "GENERAL")]
     public class DaysPerQuota : IntSetting, ICustomSetting {
-        public int RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.daysPerQuota = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -39,10 +35,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "PLAYER")]
     public class Health : FloatSetting, ICustomSetting {
-        public float RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.maxHealth = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -55,10 +49,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class Oxygen : FloatSetting, ICustomSetting {
-        public float RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.maxOxygen = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -69,10 +61,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class OxygenUsageMultiplier : FloatSetting, ICustomSetting {
-        public float RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.oxygenUsage = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -83,10 +73,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class SprintMultiplier : FloatSetting, ICustomSetting {
-        public float RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.sprintUsage = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -97,10 +85,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class UseOxygenInDiveBell : BoolSetting, ICustomSetting {
-        public bool RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.useOxygenInDiveBell = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -110,10 +96,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class RefillOxygenInDiveBell : BoolSetting, ICustomSetting {
-        public bool RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.refillOxygenInDiveBell = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -123,10 +107,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class UseOxygenOnSurface : BoolSetting, ICustomSetting {
-        public bool RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.useOxygenOnSurface = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -136,10 +118,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class RefillOxygenOnSurface : BoolSetting, ICustomSetting {
-        public bool RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.refillOxygenOnSurface = Value;
             Plugin.Sync.SyncSettings();
         }
 
@@ -149,10 +129,8 @@ namespace ConfigurableWarning.Settings {
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]
     public class OxygenRefillRate : FloatSetting, ICustomSetting {
-        public float RealValue;
-        
         public override void ApplyValue() {
-            RealValue = Value;
+            Plugin.State.oxygenRefillRate = Value;
             Plugin.Sync.SyncSettings();
         }
 

@@ -10,7 +10,7 @@ from xml.etree.cElementTree import ElementTree as ET
 
 out_dir = "./build"
 tmp_dir = "./.tmp"
-out_path = "./bin/Debug/netstandard2.1/ConfigurableWarning.dll"
+out_path = "./bin/Release/netstandard2.1/ConfigurableWarning.dll"
 csproj_path = "./ConfigurableWarning.csproj"
 url = "https://github.com/RedstoneWizard08/ConfigurableWarning"
 deps = []

@@ -46,6 +46,16 @@ namespace ConfigurableWarning.Settings {
             SettingsUtil.SetValue(ref Plugin.PluginSettings.refillOxygenOnSurface, me.refillOxygenOnSurface);
             SettingsUtil.SetValue(ref Plugin.PluginSettings.oxygenRefillRate, me.oxygenRefillRate);
 
+            Plugin.State.maxOxygen = Plugin.PluginSettings.maxOxygen.Value;
+            Plugin.State.maxHealth = Plugin.PluginSettings.maxHealth.Value;
+            Plugin.State.daysPerQuota = Plugin.PluginSettings.daysPerQuota.Value;
+            Plugin.State.sprintUsage = Plugin.PluginSettings.sprintUsage.Value;
+            Plugin.State.useOxygenInDiveBell = Plugin.PluginSettings.useOxygenInDiveBell.Value;
+            Plugin.State.refillOxygenInDiveBell = Plugin.PluginSettings.refillOxygenInDiveBell.Value;
+            Plugin.State.useOxygenOnSurface = Plugin.PluginSettings.useOxygenOnSurface.Value;
+            Plugin.State.refillOxygenOnSurface = Plugin.PluginSettings.refillOxygenOnSurface.Value;
+            Plugin.State.oxygenRefillRate = Plugin.PluginSettings.oxygenRefillRate.Value;
+
             return me;
         }
     }

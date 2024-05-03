@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.11.0] - 2024-05-02
+
+### Changed
+
+- Fixed settings sync (again)
+- Made UI elements not borked
+- Redid settings packing
+- Added depdendencies
+- Fixed for CW's new May 2nd release
+
 ## [1.10.2] - 2024-05-01
 
 ### Changed

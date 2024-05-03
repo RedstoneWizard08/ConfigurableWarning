@@ -14,17 +14,25 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Player), nameof(Player.CheckOxygen))]
         internal static bool CheckOxygen(Player __instance) {
-            var flag = SceneManager.GetActiveScene().name == "SurfaceScene" && !Plugin.State.useOxygenOnSurface;
+            var isSurface = SceneManager.GetActiveScene().name == "SurfaceScene";
+            var flag = isSurface && !Plugin.State.useOxygenOnSurface;
 
             __instance.data.usingOxygen = !flag;
 
-            if (flag && Plugin.State.refillOxygenOnSurface) {
-                // __instance.data.remainingOxygen = __instance.data.maxOxygen;
+            if (isSurface && Plugin.State.refillOxygenOnSurface) {
                 __instance.data.remainingOxygen += Time.deltaTime * Plugin.State.oxygenRefillRate;
             }
 
             if (__instance.ai) {
                 __instance.data.usingOxygen = false;
+            }
+
+            if (__instance.data.remainingOxygen > Plugin.State.maxOxygen) {
+                __instance.data.remainingOxygen = Plugin.State.maxOxygen;
+            }
+
+            if (__instance.data.remainingOxygen < 0) {
+                __instance.data.remainingOxygen = 0;
             }
 
             return false;
@@ -51,10 +59,10 @@ namespace ConfigurableWarning.Patches {
 
             if (__instance.usingOxygen && !(__instance.isInDiveBell && !Plugin.State.useOxygenInDiveBell)) {
                 var mul = (__instance.isSprinting ? Plugin.State.sprintUsage : 1.0f) * Plugin.State.oxygenUsage;
-
+                
                 __instance.remainingOxygen -= Time.deltaTime * mul;
 
-                if (__instance.remainingOxygen < __instance.maxOxygen * 0.5f && PhotonNetwork.IsMasterClient && PhotonGameLobbyHandler.CurrentObjective is FilmSomethingScaryObjective) {
+                if (__instance.remainingOxygen < Plugin.State.maxOxygen * 0.5f && PhotonNetwork.IsMasterClient && PhotonGameLobbyHandler.CurrentObjective is FilmSomethingScaryObjective) {
                     PhotonGameLobbyHandler.Instance.SetCurrentObjective(new ReturnToTheDiveBellObjective());
                 }
             }

@@ -8,13 +8,5 @@ namespace ConfigurableWarning.Patches {
         internal static void UpdateHealth(UI_Health __instance) {
             __instance.fill.fillAmount = Player.localPlayer.data.health / Plugin.State.maxHealth;
         }
-
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(UI_DaysLeft), nameof(UI_DaysLeft.Update))]
-        internal static void UpdateDaysLeft(UI_DaysLeft __instance) {
-            int num = Plugin.State.daysPerQuota - SurfaceNetworkHandler.RoomStats.CurrentQuotaDay + 1;
-
-            __instance.text.text = (num == 1) ? __instance.m_LastDayText : __instance.m_DaysLeftText.Replace("{0}", num.ToString());
-        }
     }
 }

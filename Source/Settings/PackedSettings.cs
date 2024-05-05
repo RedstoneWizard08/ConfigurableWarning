@@ -12,6 +12,9 @@ namespace ConfigurableWarning.Settings {
         [SerializeField] private bool useOxygenOnSurface;
         [SerializeField] private bool refillOxygenOnSurface;
         [SerializeField] private float oxygenRefillRate;
+        [SerializeField] private bool requireAllPlayersInDiveBell;
+        [SerializeField] private bool requireDiveBellDoorClosed;
+        [SerializeField] private bool infiniteOxygen;
 
         public static PackedSettings Collect() {
             var me = new PackedSettings {
@@ -24,6 +27,9 @@ namespace ConfigurableWarning.Settings {
                 useOxygenOnSurface = Plugin.State.useOxygenOnSurface,
                 refillOxygenOnSurface = Plugin.State.refillOxygenOnSurface,
                 oxygenRefillRate = Plugin.State.oxygenRefillRate,
+                requireAllPlayersInDiveBell = Plugin.State.requireAllPlayersInDiveBell,
+                requireDiveBellDoorClosed = Plugin.State.requireDiveBellDoorClosed,
+                infiniteOxygen = Plugin.State.infiniteOxygen,
             };
 
             return me;
@@ -45,6 +51,9 @@ namespace ConfigurableWarning.Settings {
             SettingsUtil.SetValue(ref Plugin.PluginSettings.useOxygenOnSurface, me.useOxygenOnSurface);
             SettingsUtil.SetValue(ref Plugin.PluginSettings.refillOxygenOnSurface, me.refillOxygenOnSurface);
             SettingsUtil.SetValue(ref Plugin.PluginSettings.oxygenRefillRate, me.oxygenRefillRate);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.requireAllPlayersInDiveBell, me.requireAllPlayersInDiveBell);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.requireDiveBellDoorClosed, me.requireDiveBellDoorClosed);
+            SettingsUtil.SetValue(ref Plugin.PluginSettings.infiniteOxygen, me.infiniteOxygen);
 
             Plugin.State.maxOxygen = me.maxOxygen;
             Plugin.State.maxHealth = me.maxHealth;
@@ -55,6 +64,11 @@ namespace ConfigurableWarning.Settings {
             Plugin.State.useOxygenOnSurface = me.useOxygenOnSurface;
             Plugin.State.refillOxygenOnSurface = me.refillOxygenOnSurface;
             Plugin.State.oxygenRefillRate = me.oxygenRefillRate;
+            Plugin.State.requireAllPlayersInDiveBell = me.requireAllPlayersInDiveBell;
+            Plugin.State.requireDiveBellDoorClosed = me.requireDiveBellDoorClosed;
+            Plugin.State.infiniteOxygen = me.infiniteOxygen;
+
+            SettingsUtil.UpdateQuotaDays();
 
             return me;
         }

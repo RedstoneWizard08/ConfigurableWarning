@@ -1,4 +1,5 @@
-﻿using ContentSettings.API.Attributes;
+﻿using BepInEx;
+using ContentSettings.API.Attributes;
 using ContentSettings.API.Settings;
 using Unity.Mathematics;
 using Zorro.Settings;
@@ -24,11 +25,34 @@ namespace ConfigurableWarning.Settings {
         public override void ApplyValue() {
             Plugin.State.daysPerQuota = Value;
             Plugin.Sync.SyncSettings();
+            SettingsUtil.UpdateQuotaDays();
         }
 
         public string GetDisplayName() => "Days Per Quota";
         public override int GetDefaultValue() => 3;
         public override (int, int) GetMinMaxValue() => (0, 30);
+    }
+
+    [SettingRegister("GAMEPLAY", "GENERAL")]
+    public class RequireAllPlayersInDiveBell : BoolSetting, ICustomSetting {
+        public override void ApplyValue() {
+            Plugin.State.requireAllPlayersInDiveBell = Value;
+            Plugin.Sync.SyncSettings();
+        }
+
+        public string GetDisplayName() => "Require All Players in Dive Bell";
+        public override bool GetDefaultValue() => true;
+    }
+
+    [SettingRegister("GAMEPLAY", "GENERAL")]
+    public class RequireDiveBellDoorClosed : BoolSetting, ICustomSetting {
+        public override void ApplyValue() {
+            Plugin.State.requireDiveBellDoorClosed = Value;
+            Plugin.Sync.SyncSettings();
+        }
+
+        public string GetDisplayName() => "Require Dive Bell Door Closed";
+        public override bool GetDefaultValue() => true;
     }
 
     // -------------------- Player -------------------- //
@@ -57,6 +81,17 @@ namespace ConfigurableWarning.Settings {
         public string GetDisplayName() => "Maximum Oxygen (in seconds)";
         public override float GetDefaultValue() => 500.0f;
         public override float2 GetMinMaxValue() => new(0f, 2000f);
+    }
+
+    [SettingRegister("GAMEPLAY", "OXYGEN")]
+    public class InfiniteOxygen : BoolSetting, ICustomSetting {
+        public override void ApplyValue() {
+            Plugin.State.infiniteOxygen = Value;
+            Plugin.Sync.SyncSettings();
+        }
+
+        public string GetDisplayName() => "Enable Infinite Oxygen";
+        public override bool GetDefaultValue() => false;
     }
 
     [SettingRegister("GAMEPLAY", "OXYGEN")]

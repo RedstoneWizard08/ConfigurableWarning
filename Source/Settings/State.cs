@@ -11,6 +11,9 @@ namespace ConfigurableWarning.Settings {
         public bool useOxygenOnSurface;
         public bool refillOxygenOnSurface;
         public float oxygenRefillRate;
+        public bool requireAllPlayersInDiveBell;
+        public bool requireDiveBellDoorClosed;
+        public bool infiniteOxygen;
 
         public SettingsState() {
             privateHost = true;
@@ -19,11 +22,14 @@ namespace ConfigurableWarning.Settings {
             daysPerQuota = 3;
             sprintUsage = 1.0f;
             oxygenUsage = 1.0f;
-            useOxygenInDiveBell = true;
-            refillOxygenInDiveBell = true;
-            useOxygenOnSurface = true;
+            useOxygenInDiveBell = false;
+            refillOxygenInDiveBell = false;
+            useOxygenOnSurface = false;
             refillOxygenOnSurface = true;
             oxygenRefillRate = 1.0f;
+            requireAllPlayersInDiveBell = true;
+            requireDiveBellDoorClosed = true;
+            infiniteOxygen = false;
         }
     }
 }

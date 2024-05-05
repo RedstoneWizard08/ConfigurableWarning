@@ -11,12 +11,17 @@ namespace ConfigurableWarning.Settings {
         public UseOxygenOnSurface useOxygenOnSurface;
         public RefillOxygenOnSurface refillOxygenOnSurface;
         public OxygenRefillRate oxygenRefillRate;
+        public RequireAllPlayersInDiveBell requireAllPlayersInDiveBell;
+        public RequireDiveBellDoorClosed requireDiveBellDoorClosed;
+        public InfiniteOxygen infiniteOxygen;
 
         public PluginSettings() {
             // -------------------- General -------------------- //
 
             privateHost = new PrivateHost();
             daysPerQuota = new DaysPerQuota();
+            requireAllPlayersInDiveBell = new RequireAllPlayersInDiveBell();
+            requireDiveBellDoorClosed = new RequireDiveBellDoorClosed();
 
             // -------------------- Player -------------------- //
 
@@ -33,6 +38,7 @@ namespace ConfigurableWarning.Settings {
             refillOxygenInDiveBell = new RefillOxygenInDiveBell();
             useOxygenOnSurface = new UseOxygenOnSurface();
             refillOxygenOnSurface = new RefillOxygenOnSurface();
+            infiniteOxygen = new InfiniteOxygen();
         }
     }
 }

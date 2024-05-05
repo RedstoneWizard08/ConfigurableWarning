@@ -14,6 +14,11 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Player), nameof(Player.CheckOxygen))]
         internal static bool CheckOxygen(Player __instance) {
+            if (Plugin.State.infiniteOxygen) {
+                __instance.data.remainingOxygen = Plugin.State.maxOxygen;
+                return false;
+            }
+
             var isSurface = SceneManager.GetActiveScene().name == "SurfaceScene";
             var flag = isSurface && !Plugin.State.useOxygenOnSurface;
 
@@ -47,6 +52,9 @@ namespace ConfigurableWarning.Patches {
             Player.PlayerData.maxHealth = Plugin.State.maxHealth;
 
             __instance.maxOxygen = Plugin.State.maxOxygen;
+
+            // We want to override this functionality with our own code, but
+            // preserve the rest of the method.
             __instance.usingOxygen = false;
 
             return true;

@@ -5,19 +5,24 @@ using IntSetting = ContentSettings.API.Settings.IntSetting;
 
 namespace ConfigurableWarning.Settings {
     public class SettingsUtil {
-        public static void SetValue<T>(ref T setting, float value) where T: FloatSetting {
+        public static void SetValue<T>(ref T setting, float value) where T : FloatSetting {
             setting.Value = setting.Clamp(value);
             GameHandler.Instance.SettingsHandler.SaveSetting(setting);
         }
 
-        public static void SetValue<T>(ref T setting, int value) where T: IntSetting {
+        public static void SetValue<T>(ref T setting, int value) where T : IntSetting {
             setting.Value = setting.Clamp(value);
             GameHandler.Instance.SettingsHandler.SaveSetting(setting);
         }
 
-        public static void SetValue<T>(ref T setting, bool value) where T: BoolSetting {
+        public static void SetValue<T>(ref T setting, bool value) where T : BoolSetting {
             setting.Value = value;
             GameHandler.Instance.SettingsHandler.SaveSetting(setting);
+        }
+
+        public static void UpdateQuotaDays() {
+            if (SurfaceNetworkHandler.RoomStats != null)
+                SurfaceNetworkHandler.RoomStats.DaysPerQutoa = Plugin.State.daysPerQuota;
         }
     }
 }

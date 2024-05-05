@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>ConfigurableWarning</AssemblyName>
     <Description>Makes the game configurable!</Description>
-    <Version>1.11.0</Version>
+    <Version>1.12.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <NoWarn>$(NoWarn);CS0436</NoWarn>

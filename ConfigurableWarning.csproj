@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>ConfigurableWarning</AssemblyName>
     <Description>Makes the game configurable!</Description>
-    <Version>1.12.0</Version>
+    <Version>1.13.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <NoWarn>$(NoWarn);CS0436</NoWarn>
@@ -17,6 +17,9 @@
     <PackageReference Include="BepInEx.Core" Version="5.*" ExcludeAssets="RUNTIME" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" ExcludeAssets="RUNTIME" />
     <PackageReference Include="UnityEngine.Modules" Version="2022.3.10" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
+    <PackageReference Include="RugbugRedfern.MyceliumNetworking.CW" Version="1.0.12" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
+    <PackageReference Include="CommanderCat101.ContentSettings" Version="1.2.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" Publicize="True" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,13 +43,8 @@
     <Reference Include="Steamworks" HintPath="$(CW_REFERENCES)\com.rlabrecque.steamworks.net.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="MyceliumNetworking" HintPath="libs\MyceliumNetworkingForCW-Debug.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <PackageReference Include="CommanderCat101.ContentSettings" Version="1.2.2" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-  </ItemGroup>
-
   <ItemGroup Condition="$(CI) == 'true'">
-    <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.9-b-ngd.0" Publicize="true" PrivateAssets="All" />
+    <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="Build">

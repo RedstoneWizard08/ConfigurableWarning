@@ -1,28 +1,10 @@
-using ContentSettings.API.Settings;
-using Zorro.Settings;
-
-using IntSetting = ContentSettings.API.Settings.IntSetting;
+using ConfigurableWarning.Options;
 
 namespace ConfigurableWarning.Settings {
-    public class SettingsUtil {
-        public static void SetValue<T>(ref T setting, float value) where T : FloatSetting {
-            setting.Value = setting.Clamp(value);
-            GameHandler.Instance.SettingsHandler.SaveSetting(setting);
-        }
-
-        public static void SetValue<T>(ref T setting, int value) where T : IntSetting {
-            setting.Value = setting.Clamp(value);
-            GameHandler.Instance.SettingsHandler.SaveSetting(setting);
-        }
-
-        public static void SetValue<T>(ref T setting, bool value) where T : BoolSetting {
-            setting.Value = value;
-            GameHandler.Instance.SettingsHandler.SaveSetting(setting);
-        }
-
-        public static void UpdateQuotaDays() {
+    public static class SettingsUtil {
+        public static void UpdateQuotaDays(IntOption opt) {
             if (SurfaceNetworkHandler.RoomStats != null)
-                SurfaceNetworkHandler.RoomStats.DaysPerQutoa = Plugin.State.daysPerQuota;
+                SurfaceNetworkHandler.RoomStats.DaysPerQutoa = OptionsState.Instance.Get<int>(BuiltInSettings.Keys.DaysPerQuota);
         }
     }
 }

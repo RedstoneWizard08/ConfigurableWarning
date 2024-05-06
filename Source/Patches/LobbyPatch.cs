@@ -1,3 +1,5 @@
+using ConfigurableWarning.Options;
+using ConfigurableWarning.Settings;
 using HarmonyLib;
 using Steamworks;
 
@@ -7,13 +9,13 @@ namespace ConfigurableWarning.Patches {
     /// </summary>
     [HarmonyPatch]
     internal class LobbyPatch {
-        internal static bool IsFriendsWith(CSteamID cSteamID) {
+        private static bool IsFriendsWith(CSteamID cSteamID) {
             return SteamFriends.HasFriend(cSteamID, EFriendFlags.k_EFriendFlagNone);
         }
 
-        internal static bool IsPublic(SteamLobbyHandler __instance) {
+        private static bool IsPublic(SteamLobbyHandler __instance) {
             if (__instance.MasterClient) {
-                return !Plugin.State.privateHost;
+                return !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.PrivateHost);
             }
 
             return __instance.IsPlayingWithRandoms();
@@ -23,7 +25,7 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.IsPlayingWithRandoms))]
         internal static void IsPlayingWithRandoms(SteamLobbyHandler __instance, ref bool __result) {
             if (__instance.MasterClient) {
-                __result = !Plugin.State.privateHost;
+                __result = !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.PrivateHost);
             }
         }
 
@@ -42,11 +44,7 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPrefix]
         [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.OnNetworkingSessionRequest))]
         internal static bool OnNetworkingSessionRequest(SteamLobbyHandler __instance, SteamNetworkingMessagesSessionRequest_t param) {
-            if (!IsFriendsWith(param.m_identityRemote.GetSteamID()) && !IsPublic(__instance)) {
-                return false;
-            }
-
-            return true;
+            return IsFriendsWith(param.m_identityRemote.GetSteamID()) || IsPublic(__instance);
         }
 
 #pragma warning restore Harmony003

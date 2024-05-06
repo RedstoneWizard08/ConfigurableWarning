@@ -1,0 +1,8 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Copy DLL" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="F:\Source\ConfigurableWarning\Scripts\Copy.ps1" executablePath="C:/Program Files/PowerShell/7/pwsh.exe">
+    <envs />
+    <method v="2">
+      <option name="Build" default="false" projectName="ConfigurableWarning" projectPath="$PROJECT_DIR$/ConfigurableWarning.csproj" />
+    </method>
+  </configuration>
+</component>

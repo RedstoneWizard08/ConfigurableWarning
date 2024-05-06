@@ -1,4 +1,6 @@
-﻿using HarmonyLib;
+﻿using ConfigurableWarning.Options;
+using ConfigurableWarning.Settings;
+using HarmonyLib;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,34 +8,34 @@ using UnityEngine.SceneManagement;
 namespace ConfigurableWarning.Patches {
     [HarmonyPatch]
     internal class PlayerPatch {
-        internal static float GetMaxOxygen() => Plugin.State.maxOxygen;
-        internal static float GetMaxHealth() => Plugin.State.maxHealth;
+        internal static float GetMaxOxygen() => OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
+        internal static float GetMaxHealth() => OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Health);
 
-        internal static bool tmp_UsingOxygen;
+        private static bool _tmpUsingOxygen;
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Player), nameof(Player.CheckOxygen))]
         internal static bool CheckOxygen(Player __instance) {
-            if (Plugin.State.infiniteOxygen) {
-                __instance.data.remainingOxygen = Plugin.State.maxOxygen;
+            if (OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.InfiniteOxygen)) {
+                __instance.data.remainingOxygen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
                 return false;
             }
 
             var isSurface = SceneManager.GetActiveScene().name == "SurfaceScene";
-            var flag = isSurface && !Plugin.State.useOxygenOnSurface;
+            var flag = isSurface && !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.UseOxygenOnSurface);
 
             __instance.data.usingOxygen = !flag;
 
-            if (isSurface && Plugin.State.refillOxygenOnSurface) {
-                __instance.data.remainingOxygen += Time.deltaTime * Plugin.State.oxygenRefillRate;
+            if (isSurface && OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RefillOxygenOnSurface)) {
+                __instance.data.remainingOxygen += Time.deltaTime * OptionsState.Instance.Get<float>(BuiltInSettings.Keys.OxygenRefillRate);
             }
 
             if (__instance.ai) {
                 __instance.data.usingOxygen = false;
             }
 
-            if (__instance.data.remainingOxygen > Plugin.State.maxOxygen) {
-                __instance.data.remainingOxygen = Plugin.State.maxOxygen;
+            if (__instance.data.remainingOxygen > OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen)) {
+                __instance.data.remainingOxygen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
             }
 
             if (__instance.data.remainingOxygen < 0) {
@@ -48,10 +50,10 @@ namespace ConfigurableWarning.Patches {
         internal static bool UpdateValuesPre(Player.PlayerData __instance) {
             CheckOxygen(__instance.player);
 
-            tmp_UsingOxygen = __instance.usingOxygen;
-            Player.PlayerData.maxHealth = Plugin.State.maxHealth;
+            _tmpUsingOxygen = __instance.usingOxygen;
+            Player.PlayerData.maxHealth = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Health);
 
-            __instance.maxOxygen = Plugin.State.maxOxygen;
+            __instance.maxOxygen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
 
             // We want to override this functionality with our own code, but
             // preserve the rest of the method.
@@ -63,14 +65,14 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Player.PlayerData), nameof(Player.PlayerData.UpdateValues))]
         internal static void UpdateValuesPost(Player.PlayerData __instance) {
-            __instance.usingOxygen = tmp_UsingOxygen;
+            __instance.usingOxygen = _tmpUsingOxygen;
 
-            if (__instance.usingOxygen && !(__instance.isInDiveBell && !Plugin.State.useOxygenInDiveBell)) {
-                var mul = (__instance.isSprinting ? Plugin.State.sprintUsage : 1.0f) * Plugin.State.oxygenUsage;
-                
+            if (__instance.usingOxygen && !(__instance.isInDiveBell && !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.UseOxygenInDiveBell))) {
+                var mul = (__instance.isSprinting ? OptionsState.Instance.Get<float>(BuiltInSettings.Keys.SprintMultiplier) : 1.0f) * OptionsState.Instance.Get<float>(BuiltInSettings.Keys.OxygenUsageMultiplier);
+
                 __instance.remainingOxygen -= Time.deltaTime * mul;
 
-                if (__instance.remainingOxygen < Plugin.State.maxOxygen * 0.5f && PhotonNetwork.IsMasterClient && PhotonGameLobbyHandler.CurrentObjective is FilmSomethingScaryObjective) {
+                if (__instance.remainingOxygen < OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen) * 0.5f && PhotonNetwork.IsMasterClient && PhotonGameLobbyHandler.CurrentObjective is FilmSomethingScaryObjective) {
                     PhotonGameLobbyHandler.Instance.SetCurrentObjective(new ReturnToTheDiveBellObjective());
                 }
             }

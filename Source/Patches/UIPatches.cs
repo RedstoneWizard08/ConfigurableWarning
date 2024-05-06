@@ -1,3 +1,5 @@
+using ConfigurableWarning.Options;
+using ConfigurableWarning.Settings;
 using HarmonyLib;
 
 namespace ConfigurableWarning.Patches {
@@ -6,7 +8,7 @@ namespace ConfigurableWarning.Patches {
         [HarmonyPostfix]
         [HarmonyPatch(typeof(UI_Health), nameof(UI_Health.Update))]
         internal static void UpdateHealth(UI_Health __instance) {
-            __instance.fill.fillAmount = Player.localPlayer.data.health / Plugin.State.maxHealth;
+            __instance.fill.fillAmount = Player.localPlayer.data.health / OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Health);
         }
     }
 }

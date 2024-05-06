@@ -1,53 +1,53 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>ConfigurableWarning</AssemblyName>
-    <Description>Makes the game configurable!</Description>
-    <Version>1.13.0</Version>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>latest</LangVersion>
-    <NoWarn>$(NoWarn);CS0436;NU1701</NoWarn>
-  
-    <CW_REFERENCES>F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed</CW_REFERENCES>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AssemblyName>ConfigurableWarning</AssemblyName>
+        <Description>Makes the game configurable!</Description>
+        <Version>1.13.0</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+        <NoWarn>$(NoWarn);CS0436;NU1701</NoWarn>
 
-  <ItemGroup>
-    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" ExcludeAssets="RUNTIME" />
-    <PackageReference Include="BepInEx.Core" Version="5.*" ExcludeAssets="RUNTIME" />
-    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" ExcludeAssets="RUNTIME" />
-    <PackageReference Include="UnityEngine.Modules" Version="2022.3.10" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
-    <PackageReference Include="RugbugRedfern.MyceliumNetworking.CW" Version="1.0.12" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
-    <PackageReference Include="CommanderCat101.ContentSettings" Version="1.2.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" Publicize="True" />
-  </ItemGroup>
+        <CW_REFERENCES>F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed</CW_REFERENCES>
+    </PropertyGroup>
 
-  <ItemGroup>
-      <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.1" PrivateAssets="all" ExcludeAssets="RUNTIME">
-          <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="BepInEx.Core" Version="5.*" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="UnityEngine.Modules" Version="2022.3.10" IncludeAssets="compile" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" IncludeAssets="compile" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="RugbugRedfern.MyceliumNetworking.CW" Version="1.0.12" IncludeAssets="compile" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="CommanderCat101.ContentSettings" Version="1.2.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" Publicize="True"/>
+    </ItemGroup>
 
-  <ItemGroup Condition="$(CI) != 'true' And $(USER) != 'codespace'">
-    <Reference Include="Assembly-CSharp" HintPath="$(CW_REFERENCES)\Assembly-CSharp.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True" />
-    <Reference Include="Unity.Localization" HintPath="$(CW_REFERENCES)\Unity.Localization.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Unity.TextMeshPro" HintPath="$(CW_REFERENCES)\Unity.TextMeshPro.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="UnityEngine.UI" HintPath="$(CW_REFERENCES)\UnityEngine.UI.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Unity.Mathematics" HintPath="$(CW_REFERENCES)\Unity.Mathematics.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Zorro.Core.Runtime" HintPath="$(CW_REFERENCES)\Zorro.Core.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Zorro.Settings.Runtime" HintPath="$(CW_REFERENCES)\Zorro.Settings.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True" />
-    <Reference Include="Zorro.UI.Runtime" HintPath="$(CW_REFERENCES)\Zorro.UI.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Photon.Pun" HintPath="$(CW_REFERENCES)\PhotonUnityNetworking.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Photon.Realtime" HintPath="$(CW_REFERENCES)\PhotonRealtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Photon3Unity3D" HintPath="$(CW_REFERENCES)\Photon3Unity3D.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-    <Reference Include="Steamworks" HintPath="$(CW_REFERENCES)\com.rlabrecque.steamworks.net.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.1" PrivateAssets="all" ExcludeAssets="RUNTIME">
+            <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
 
-  <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
-    <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All" />
-  </ItemGroup>
+    <ItemGroup Condition="$(CI) != 'true' And $(USER) != 'codespace'">
+        <Reference Include="Assembly-CSharp" HintPath="$(CW_REFERENCES)\Assembly-CSharp.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True"/>
+        <Reference Include="Unity.Localization" HintPath="$(CW_REFERENCES)\Unity.Localization.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Unity.TextMeshPro" HintPath="$(CW_REFERENCES)\Unity.TextMeshPro.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="UnityEngine.UI" HintPath="$(CW_REFERENCES)\UnityEngine.UI.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Unity.Mathematics" HintPath="$(CW_REFERENCES)\Unity.Mathematics.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Zorro.Core.Runtime" HintPath="$(CW_REFERENCES)\Zorro.Core.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Zorro.Settings.Runtime" HintPath="$(CW_REFERENCES)\Zorro.Settings.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True"/>
+        <Reference Include="Zorro.UI.Runtime" HintPath="$(CW_REFERENCES)\Zorro.UI.Runtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Photon.Pun" HintPath="$(CW_REFERENCES)\PhotonUnityNetworking.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Photon.Realtime" HintPath="$(CW_REFERENCES)\PhotonRealtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Photon3Unity3D" HintPath="$(CW_REFERENCES)\Photon3Unity3D.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Steamworks" HintPath="$(CW_REFERENCES)\com.rlabrecque.steamworks.net.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+    </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="Build">
-    <Exec Command="python3 package.py" />
-  </Target>
+    <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
+        <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All"/>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="Build">
+        <Exec Command="python3 package.py"/>
+    </Target>
 </Project>

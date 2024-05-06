@@ -4,36 +4,32 @@ using System.Linq;
 using System.Reflection;
 using Zorro.Settings;
 
-namespace ConfigurableWarning.Options {
+namespace ConfigurableWarning.Options;
+
+/// <summary>
+///     Responsible for loading, holding, and registering options.
+/// </summary>
+public static class OptionLoader {
+    private static Dictionary<Type, IUntypedOption> RegisteredOptions { get; } = new();
+
     /// <summary>
-    /// Responsible for loading, holding, and registering options.
+    ///     Automatically collect and register all options annotated with
+    ///     <see cref="RegisterOption" />.
     /// </summary>
-    public static class OptionLoader {
-        private static Dictionary<Type, IUntypedOption> RegisteredOptions { get; } = new();
+    public static void RegisterOptions() {
+        foreach (var type in AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes())) {
+            if (type.IsAbstract || type.IsInterface || !type.IsSubclassOf(typeof(Setting))) continue;
 
-        /// <summary>
-        /// Automatically collect and register all options annotated with
-        /// <see cref="RegisterOption" />.
-        /// </summary>
-        public static void RegisterOptions() {
-            foreach (var type in AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes())) {
-                if (type.IsAbstract || type.IsInterface || !type.IsSubclassOf(typeof(Setting))) {
-                    continue;
-                }
+            if (RegisteredOptions.ContainsKey(type)) continue;
 
-                if (RegisteredOptions.ContainsKey(type)) {
-                    continue;
-                }
+            var register = type.GetCustomAttribute<RegisterOption>(false);
 
-                var register = type.GetCustomAttribute<RegisterOption>(false);
+            if (register == null) continue;
 
-                if (register != null) {
-                    var opt = (IOption<object>)Activator.CreateInstance(type);
-                    var uopt = opt.AsUntyped();
+            var opt = (IOption<object>) Activator.CreateInstance(type);
+            var untypedOption = opt.AsUntyped();
 
-                    RegisteredOptions[type] = uopt;
-                }
-            }
+            RegisteredOptions[type] = untypedOption;
         }
     }
 }

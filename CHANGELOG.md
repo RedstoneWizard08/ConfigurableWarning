@@ -115,7 +115,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Moved to weird(-er) patching methods instead of overwriting methods for maximum compatibility (pretend that had echo in it)
+- Moved to weird(-er) patching methods instead of overwriting methods for maximum compatibility (pretend that had echo
+  in it)
 - Removed redundant stuff
 - Made config sync hopefully better
 - Hopefully didn't break anything :pray:

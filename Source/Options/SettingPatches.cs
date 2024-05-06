@@ -1,3 +1,4 @@
+using ContentSettings.API;
 using HarmonyLib;
 using Zorro.Settings;
 
@@ -19,7 +20,7 @@ namespace ConfigurableWarning.Options {
         [HarmonyPatch(typeof(FloatSetting), nameof(FloatSetting.SetValue))]
         internal static void SetValueFloat(ref FloatSetting __instance, float value, ISettingHandler handler) {
             if (__instance is not FloatOption opt) return;
-            
+
             __instance.Value = opt.ShouldClamp ? __instance.Clamp(_originalFloatValue) : _originalFloatValue;
             __instance.ApplyValue();
             handler.SaveSetting(__instance);
@@ -39,6 +40,12 @@ namespace ConfigurableWarning.Options {
                 __instance.ApplyValue();
                 settingHandler.SaveSetting(__instance);
             }
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(SettingsLoader), nameof(SettingsLoader.RegisterSettings))]
+        internal static void RegisterOptions() {
+            OptionLoader.RegisterOptions();
         }
     }
 }

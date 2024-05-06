@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using ConfigurableWarning.Options.Untyped;
 using ContentSettings.API;
 using ContentSettings.API.Settings;
 using Unity.Mathematics;
 
 namespace ConfigurableWarning.Options {
-    public class IntOption : IntSetting, IOption<int> {
+    public class IntOption : IntSetting, IOption<int>, IUntypedOption {
         private readonly string _name;
         private readonly string _displayName;
         private readonly int _defaultValue;
@@ -52,7 +51,10 @@ namespace ConfigurableWarning.Options {
         public override int GetDefaultValue() => _defaultValue;
         public string GetDisplayName() => _displayName;
         public override (int, int) GetMinMaxValue() => (_minMax.x, _minMax.y);
-        public IUntypedOption AsUntyped() => new UntypedIntOption(this);
+        public IUntypedOption AsUntyped() => this;
         public IOption<int> AsOption() => this;
+
+        object IUntypedOption.GetValue() => GetValue();
+        public void SetValue(object value) => SetValue((int) value);
     }
 }

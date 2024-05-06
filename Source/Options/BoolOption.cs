@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
-using ConfigurableWarning.Options.Untyped;
 using ContentSettings.API;
 using ContentSettings.API.Settings;
 
 namespace ConfigurableWarning.Options {
-    public class BoolOption : BoolSetting, IOption<bool> {
+    public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
         private readonly string _name;
         private readonly string _displayName;
         private readonly bool _defaultValue;
@@ -46,7 +45,10 @@ namespace ConfigurableWarning.Options {
         public bool GetValue() => Value;
         public override bool GetDefaultValue() => _defaultValue;
         public string GetDisplayName() => _displayName;
-        public IUntypedOption AsUntyped() => new UntypedBoolOption(this);
+        public IUntypedOption AsUntyped() => this;
         public IOption<bool> AsOption() => this;
+
+        object IUntypedOption.GetValue() => GetValue();
+        public void SetValue(object value) => SetValue((bool) value);
     }
 }

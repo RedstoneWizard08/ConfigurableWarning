@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
-using ConfigurableWarning.Options.Untyped;
 using ContentSettings.API;
-using HarmonyLib;
 using Unity.Mathematics;
 using Zorro.Settings;
 
 namespace ConfigurableWarning.Options {
-    public class FloatOption : FloatSetting, IOption<float> {
+    public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
         private readonly string _name;
         private readonly string _displayName;
         private readonly float _defaultValue;
@@ -53,7 +51,10 @@ namespace ConfigurableWarning.Options {
         public override float GetDefaultValue() => _defaultValue;
         public string GetDisplayName() => _displayName;
         public override float2 GetMinMaxValue() => _minMax;
-        public IUntypedOption AsUntyped() => new UntypedFloatOption(this);
+        public IUntypedOption AsUntyped() => this;
         public IOption<float> AsOption() => this;
+
+        object IUntypedOption.GetValue() => GetValue();
+        public void SetValue(object value) => SetValue((float) value);
     }
 }

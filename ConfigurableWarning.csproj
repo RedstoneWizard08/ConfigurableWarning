@@ -7,8 +7,8 @@
     <Version>1.13.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
-    <NoWarn>$(NoWarn);CS0436</NoWarn>
-
+    <NoWarn>$(NoWarn);CS0436;NU1701</NoWarn>
+  
     <CW_REFERENCES>F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed</CW_REFERENCES>
   </PropertyGroup>
 
@@ -17,7 +17,7 @@
     <PackageReference Include="BepInEx.Core" Version="5.*" ExcludeAssets="RUNTIME" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" ExcludeAssets="RUNTIME" />
     <PackageReference Include="UnityEngine.Modules" Version="2022.3.10" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
     <PackageReference Include="RugbugRedfern.MyceliumNetworking.CW" Version="1.0.12" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
     <PackageReference Include="CommanderCat101.ContentSettings" Version="1.2.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" Publicize="True" />
   </ItemGroup>
@@ -28,7 +28,7 @@
       </PackageReference>
   </ItemGroup>
 
-  <ItemGroup Condition="$(CI) != 'true'">
+  <ItemGroup Condition="$(CI) != 'true' And $(USER) != 'codespace'">
     <Reference Include="Assembly-CSharp" HintPath="$(CW_REFERENCES)\Assembly-CSharp.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True" />
     <Reference Include="Unity.Localization" HintPath="$(CW_REFERENCES)\Unity.Localization.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
     <Reference Include="Unity.TextMeshPro" HintPath="$(CW_REFERENCES)\Unity.TextMeshPro.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
@@ -43,7 +43,7 @@
     <Reference Include="Steamworks" HintPath="$(CW_REFERENCES)\com.rlabrecque.steamworks.net.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true" />
   </ItemGroup>
 
-  <ItemGroup Condition="$(CI) == 'true'">
+  <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
     <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All" />
   </ItemGroup>
 

@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
-using ConfigurableWarning.Options.Untyped;
 using ContentSettings.API;
 using ContentSettings.API.Settings;
 
 namespace ConfigurableWarning.Options {
     // ReSharper disable once ClassNeverInstantiated.Global
-    public class TextOption : TextSetting, IOption<string> {
+    public class TextOption : TextSetting, IOption<string>, IUntypedOption {
         private readonly string _name;
         private readonly string _displayName;
         private readonly string _defaultValue;
@@ -47,7 +46,10 @@ namespace ConfigurableWarning.Options {
         public string GetValue() => Value;
         public override string GetDefaultValue() => _defaultValue;
         public string GetDisplayName() => _displayName;
-        public IUntypedOption AsUntyped() => new UntypedTextOption(this);
+        public IUntypedOption AsUntyped() => this;
         public IOption<string> AsOption() => this;
+
+        object IUntypedOption.GetValue() => GetValue();
+        public void SetValue(object value) => SetValue((string) value);
     }
 }

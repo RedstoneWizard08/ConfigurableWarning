@@ -1,0 +1,34 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "RedstoneWizard08"
+name = "ConfigurableWarning"
+versionNumber = "1.13.0"
+description = "Makes the game configurable!"
+websiteUrl = "https://github.com/RedstoneWizard08/ConfigurableWarning"
+containsNsfwContent = false
+
+[package.dependencies]
+RugbugRedfern-MyceliumNetworking = "1.0.12"
+CommanderCat101-ContentSettings = "1.2.2"
+
+[build]
+icon = "./icon.svg"
+readme = "./README.md"
+outdir = "./output"
+
+[[build.copy]]
+source = "./ConfigurableWarning/bin/Release/netstandard2.1"
+target = ""
+
+[[build.copy]]
+source = "./CHANGELOG.md"
+target = "CHANGELOG.md"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["content-warning"]
+
+[publish.categories]
+content-warning = ["mods", "tools", "misc", "bepinex"]

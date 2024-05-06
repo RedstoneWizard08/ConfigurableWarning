@@ -6,6 +6,8 @@
         <Description>Makes the game configurable!</Description>
         <Version>1.13.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <LangVersion>latest</LangVersion>
         <NoWarn>$(NoWarn);CS0436;NU1701</NoWarn>
 
@@ -46,8 +48,4 @@
     <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
         <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All"/>
     </ItemGroup>
-
-    <Target Name="PostBuild" AfterTargets="Build">
-        <Exec Command="python3 package.py"/>
-    </Target>
 </Project>

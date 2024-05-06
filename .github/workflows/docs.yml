@@ -24,6 +24,7 @@ jobs:
       
       - name: Build Docs
         run: |
+          dotnet tool update -g docfx
           dotnet tool restore
           chmod +x build.sh
           ./build.sh -t Docs

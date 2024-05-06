@@ -10,10 +10,7 @@
         }
       ],
       "dest": "api",
-      "filter": "docs/filterConfig.yml",
-      "references": [
-        "~/.nuget/packages/commandercat101.contentsettings/1.2.2/lib/netstandard2.1/CommanderCat101.ContentSettings.dll"
-      ]
+      "filter": "docs/filterConfig.yml"
     }
   ],
   "build": {
@@ -37,7 +34,9 @@
     "output": "_site",
     "template": [
       "default",
-      "modern"
+      "modern",
+      "templates/material",
+      "plugins/last-modified"
     ],
     "globalMetadata": {
       "_appName": "ConfigurableWarning Docs",

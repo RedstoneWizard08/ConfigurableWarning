@@ -42,7 +42,7 @@ namespace ConfigurableWarning.Options {
         /// </summary>
         public override void ApplyValue() {
             OptionsState.Instance.Update(this);
-            Plugin.Sync.SyncSettings();
+            ConfigurableWarningAPI.Sync.SyncSettings();
 
             foreach (var action in _applyActions) {
                 action(this);

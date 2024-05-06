@@ -7,7 +7,6 @@
         <Version>1.13.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <Nullable>enable</Nullable>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <LangVersion>latest</LangVersion>
         <NoWarn>$(NoWarn);CS0436;NU1701</NoWarn>
 

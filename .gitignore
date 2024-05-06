@@ -4,3 +4,7 @@ build
 obj
 .vs
 TODO.md
+_site
+.mono
+api
+_doc

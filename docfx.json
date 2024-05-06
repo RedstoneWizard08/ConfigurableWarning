@@ -1,0 +1,49 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../.",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "filter": "docs/filterConfig.yml",
+      "references": [
+        "~/.nuget/packages/commandercat101.contentsettings/1.2.2/lib/netstandard2.1/CommanderCat101.ContentSettings.dll"
+      ]
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "ConfigurableWarning Docs",
+      "_appTitle": "ConfigurableWarning Docs",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}

@@ -5,9 +5,16 @@ using System.Reflection;
 using Zorro.Settings;
 
 namespace ConfigurableWarning.Options {
+    /// <summary>
+    /// Responsible for loading, holding, and registering options.
+    /// </summary>
     public static class OptionLoader {
         private static Dictionary<Type, IUntypedOption> RegisteredOptions { get; } = new();
 
+        /// <summary>
+        /// Automatically collect and register all options annotated with
+        /// <see cref="RegisterOption" />.
+        /// </summary>
         public static void RegisterOptions() {
             foreach (var type in AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes())) {
                 if (type.IsAbstract || type.IsInterface || !type.IsSubclassOf(typeof(Setting))) {

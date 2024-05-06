@@ -21,7 +21,7 @@ namespace ConfigurableWarning.Options {
         internal static void SetValueFloat(ref FloatSetting __instance, float value, ISettingHandler handler) {
             if (__instance is not FloatOption opt) return;
 
-            __instance.Value = opt.ShouldClamp ? __instance.Clamp(_originalFloatValue) : _originalFloatValue;
+            __instance.Value = opt._shouldClamp ? __instance.Clamp(_originalFloatValue) : _originalFloatValue;
             __instance.ApplyValue();
             handler.SaveSetting(__instance);
         }
@@ -36,7 +36,7 @@ namespace ConfigurableWarning.Options {
         [HarmonyPatch(typeof(IntSetting), nameof(IntSetting.SetValue))]
         internal static void SetValueInt(ref IntSetting __instance, int newValue, ISettingHandler settingHandler) {
             if (__instance is IntOption opt) {
-                __instance.Value = opt.ShouldClamp ? __instance.Clamp(_originalIntValue) : _originalIntValue;
+                __instance.Value = opt._shouldClamp ? __instance.Clamp(_originalIntValue) : _originalIntValue;
                 __instance.ApplyValue();
                 settingHandler.SaveSetting(__instance);
             }

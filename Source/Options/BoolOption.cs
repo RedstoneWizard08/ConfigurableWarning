@@ -4,20 +4,24 @@ using ContentSettings.API;
 using ContentSettings.API.Settings;
 
 namespace ConfigurableWarning.Options {
+    /// <summary>
+    /// A boolean option. This *must* be inherited from to use.
+    /// Its state is stored in the <see cref="OptionsState" /> class.
+    /// </summary>
     public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
         private readonly string _name;
         private readonly string _displayName;
         private readonly bool _defaultValue;
-        public string Tab;
-        public string Category;
+        private readonly string _tab;
+        private readonly string _category;
         private readonly List<Action<BoolOption>> _applyActions;
 
         protected BoolOption(string name, bool defaultValue, string displayName, string tab, string category, Action<BoolOption>[] actions) {
             _name = name;
             _displayName = displayName;
             _defaultValue = defaultValue;
-            Tab = tab;
-            Category = category;
+            _tab = tab;
+            _category = category;
             _applyActions = [.. actions];
 
             AsOption().Register(tab, category);
@@ -27,6 +31,10 @@ namespace ConfigurableWarning.Options {
             SettingsLoader.RegisterSetting(tab, category, this);
         }
 
+        /// <summary>
+        /// Applies the value. This is run when the user changes the value.
+        /// This will sync it, update the state, and run any apply actions.
+        /// </summary>
         public override void ApplyValue() {
             OptionsState.Instance.Update(this);
             Plugin.Sync.SyncSettings();

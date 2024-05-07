@@ -76,33 +76,71 @@
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
 and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h2 id="1120---2024-05-05">[1.12.0] - 2024-05-05</h2>
+<h2 id="unreleased">[Unreleased]</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>New Developer API (<code>ConfigurableWarning.API</code>)</li>
+<li>Added documentation built with <a href="https://dotnet.github.io/docfx/">DocFX</a></li>
+<li>Added CI for docs</li>
+<li>Added new days-per-quota patch</li>
+<li>Added new state cache</li>
+<li>Added new option loader</li>
+<li>Added <code>[RegisterOption]</code> annotation</li>
+<li>Added clamp toggles (via a patch to <code>Zorro.Settings</code> and <code>ContentSettings</code>)</li>
+<li>Added <code>BoolOption</code>, <code>FloatOption</code>, <code>IntOption</code>, and <code>TextOption</code></li>
+<li>Added documentation comments to all API classes</li>
+</ul>
 <h3 id="changed">Changed</h3>
 <ul>
+<li>Updated README</li>
+<li>Migrated existing settings to the new API</li>
+<li>Migrated patches to the new API</li>
+<li>Reorganized project</li>
+<li>Switched to <a href="https://cakebuild.net/">Cake</a> (Frosting) for builds</li>
+<li>Switched to <a href="https://github.com/thunderstore-io/thunderstore-cli">Thunderstore CLI</a>/<a href="https://cakebuild.net/">Cake</a> for packaging</li>
+<li>Switched mostly to Rider (for development)</li>
+<li>Moved the syncer from the <code>Plugin</code> class to an instance of <code>OptionSyncer</code></li>
+<li>Improved code structure</li>
+<li>Moved namespaces to the top instead of a block</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Removed old (legacy) package script</li>
+<li>Removed old days-per-quota patch</li>
+</ul>
+<h2 id="1120---2024-05-05">[1.12.0] - 2024-05-05</h2>
+<h3 id="added-1">Added</h3>
+<ul>
 <li>Added diving bell settings</li>
+</ul>
+<h3 id="changed-1">Changed</h3>
+<ul>
 <li>Updated sync</li>
 </ul>
 <h2 id="1110---2024-05-02">[1.11.0] - 2024-05-02</h2>
-<h3 id="changed-1">Changed</h3>
+<h3 id="added-2">Added</h3>
+<ul>
+<li>Added depdendencies</li>
+</ul>
+<h3 id="changed-2">Changed</h3>
 <ul>
 <li>Fixed settings sync (again)</li>
 <li>Made UI elements not borked</li>
 <li>Redid settings packing</li>
-<li>Added depdendencies</li>
 <li>Fixed for CW's new May 2nd release</li>
 </ul>
 <h2 id="1102---2024-05-01">[1.10.2] - 2024-05-01</h2>
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 <ul>
 <li>Hopefully fix settings sync</li>
 </ul>
 <h2 id="1101---2024-05-01">[1.10.1] - 2024-05-01</h2>
-<h3 id="changed-3">Changed</h3>
+<h3 id="changed-4">Changed</h3>
 <ul>
 <li>Actually fixed the build</li>
 </ul>
 <h2 id="1100---2024-04-29">[1.10.0] - 2024-04-29</h2>
-<h3 id="changed-4">Changed</h3>
+<h3 id="changed-5">Changed</h3>
 <ul>
 <li>Updated settings UI to be cleaner</li>
 <li>Switched fully to Mycelium Networking</li>
@@ -111,47 +149,47 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Removed BepInEx config because it kinda broke stuff</li>
 </ul>
 <h2 id="192---2024-04-19">[1.9.2] - 2024-04-19</h2>
-<h3 id="changed-5">Changed</h3>
+<h3 id="changed-6">Changed</h3>
 <ul>
 <li>Fixed settings sync</li>
 </ul>
 <h2 id="191---2024-04-18">[1.9.1] - 2024-04-18</h2>
-<h3 id="changed-6">Changed</h3>
+<h3 id="changed-7">Changed</h3>
 <ul>
 <li>Nothing, just updated the README. :)</li>
 </ul>
 <h2 id="190---2024-04-18">[1.9.0] - 2024-04-18</h2>
-<h3 id="changed-7">Changed</h3>
+<h3 id="changed-8">Changed</h3>
 <ul>
 <li>Refactored UI</li>
 <li>Moved to using ContentSettings and MyceliumNetworking</li>
 </ul>
 <h2 id="181---2024-04-12">[1.8.1] - 2024-04-12</h2>
-<h3 id="changed-8">Changed</h3>
+<h3 id="changed-9">Changed</h3>
 <ul>
 <li>Fixed a default config value</li>
 <li>Hopefully fix the lobby patch</li>
 </ul>
 <h2 id="180---2024-04-12">[1.8.0] - 2024-04-12</h2>
-<h3 id="changed-9">Changed</h3>
+<h3 id="changed-10">Changed</h3>
 <ul>
 <li>Fixed health &amp; days left HUD to actually reflect the correct value (in real time)</li>
 </ul>
 <h2 id="171---2024-04-12">[1.7.1] - 2024-04-12</h2>
-<h3 id="changed-10">Changed</h3>
+<h3 id="changed-11">Changed</h3>
 <ul>
 <li>Fixed lobby stuff (I actually applied the patch this time!)</li>
 <li>Fixed patches not using <code>nameof</code></li>
 </ul>
 <h2 id="170---2024-04-12">[1.7.0] - 2024-04-12</h2>
-<h3 id="changed-11">Changed</h3>
+<h3 id="changed-12">Changed</h3>
 <ul>
 <li>Reorganized settings to make it easier to work with</li>
 <li>Fixed a few issues</li>
 <li>Made the patches better</li>
 <li>We no longer rely on ContentSettings!</li>
 </ul>
-<h3 id="added">Added</h3>
+<h3 id="added-3">Added</h3>
 <ul>
 <li>Modified ContentSettings API is now built-in</li>
 <li>Settings patch</li>
@@ -160,17 +198,17 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Basic register &amp; setup function for settings (DX stuff)</li>
 </ul>
 <h2 id="160---2024-04-11">[1.6.0] - 2024-04-11</h2>
-<h3 id="added-1">Added</h3>
+<h3 id="added-4">Added</h3>
 <ul>
 <li>Added oxygen refill-related settings</li>
 <li>Added private lobbies patch &amp; config</li>
 </ul>
-<h3 id="changed-12">Changed</h3>
+<h3 id="changed-13">Changed</h3>
 <ul>
 <li>Changed the sprint multiplier max from 4 to 10</li>
 </ul>
 <h2 id="150---2024-04-11">[1.5.0] - 2024-04-11</h2>
-<h3 id="changed-13">Changed</h3>
+<h3 id="changed-14">Changed</h3>
 <ul>
 <li>Moved to weird(-er) patching methods instead of overwriting methods for maximum compatibility (pretend that had echo
 in it)</li>

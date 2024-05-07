@@ -1,4 +1,4 @@
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API;
 
 /// <summary>
 ///     ConfigurableWarning's main API entrypoint.

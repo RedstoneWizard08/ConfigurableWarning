@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using ConfigurableWarning.API.Options;
 using Zorro.Settings;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API;
 
 /// <summary>
 ///     Manages options' loading, saving, registration, and accessing.

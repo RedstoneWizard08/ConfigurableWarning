@@ -1,8 +1,10 @@
 ﻿using BepInEx;
-using ConfigurableWarning.Options;
+using ConfigurableWarning.API;
 using HarmonyLib;
 
 namespace ConfigurableWarning;
+
+#pragma warning disable 1591
 
 [ContentWarningPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_VERSION, false)]
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
@@ -30,3 +32,5 @@ public class Plugin : BaseUnityPlugin {
         Harmony.UnpatchAll();
     }
 }
+
+#pragma warning restore 1591

@@ -7,14 +7,5 @@ apiRules:
       uidRegex: ^ConfigurableWarning\.MyPluginInfo$
       type: Class
   - exclude:
-      uidRegex: ^ConfigurableWarning\..*\.BuiltInSettings$
-      type: Class
-  - exclude:
-      uidRegex: ^ConfigurableWarning\..*\.BuiltInSettings\.Keys$
-      type: Class
-  - exclude:
-      uidRegex: ^ConfigurableWarning\..*\.SettingsUtil$
-      type: Class
-  - exclude:
       uidRegex: ^ConfigurableWarning\..*\.SettingPatches$
       type: Class

@@ -1,7 +1,7 @@
 using System;
 using JetBrains.Annotations;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API;
 
 /// <summary>
 ///     Automatically registers the option. This will initialize it in the state,

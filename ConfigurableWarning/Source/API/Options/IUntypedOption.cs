@@ -1,4 +1,4 @@
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API.Options;
 
 /// <summary>
 ///     A simplified version of <see cref="IOption{T}" /> that has no type

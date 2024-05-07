@@ -1,6 +1,6 @@
 using MyceliumNetworking;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API;
 
 /// <summary>
 ///     Handles syncing all the options in <see cref="OptionsState" />

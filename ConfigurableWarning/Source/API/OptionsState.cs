@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using ConfigurableWarning.API.Options;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API;
 
 /// <summary>
 ///     The class responsible for storing options' values.
@@ -34,9 +35,8 @@ public class OptionsState {
     /// <typeparam name="T">The option's value type.</typeparam>
     /// <param name="opt">The option to set for.</param>
     /// <param name="value">The new value.</param>
-    [UsedImplicitly]
     public void Set<T>(IOption<T> opt, T value) {
-        _states[opt.GetName()] = value;
+        _states[opt.GetName()] = value!;
     }
 
     /// <summary>
@@ -46,7 +46,7 @@ public class OptionsState {
     /// <param name="name">The option's name.</param>
     /// <param name="value">The new value.</param>
     public void Set<T>(string name, T value) {
-        _states[name] = value;
+        _states[name] = value!;
     }
 
     /// <summary>
@@ -57,7 +57,7 @@ public class OptionsState {
     /// <typeparam name="T">The option's value type.</typeparam>
     /// <param name="opt">The option to reference.</param>
     /// <returns>The option's value.</returns>
-    public T Get<T>(IOption<T> opt) {
+    public T? Get<T>(IOption<T> opt) {
         return Get<T>(opt.GetName());
     }
 
@@ -67,7 +67,7 @@ public class OptionsState {
     /// <typeparam name="T">The value type.</typeparam>
     /// <param name="name">The option's name.</param>
     /// <returns>The option's value.</returns>
-    public T Get<T>(string name) {
+    public T? Get<T>(string name) {
         var v = _states[name];
 
         // Json.NET is dumb and doesn't deserialize numbers as the correct type.
@@ -75,11 +75,11 @@ public class OptionsState {
         return v switch {
             double d when typeof(T) == typeof(float) =>
                 // This is dumb. Kill it with fire.
-                (T) (object) (float) d,
+                (T)(object)(float)d,
             long l when typeof(T) == typeof(int) =>
                 // This is dumb. Kill it with fire. (again)
-                (T) (object) (int) l,
-            _ => (T) v
+                (T)(object)(int)l,
+            _ => (T)v
         };
     }
 
@@ -89,7 +89,6 @@ public class OptionsState {
     /// <typeparam name="T">The option's value type.</typeparam>
     /// <param name="opt">The option to reference.</param>
     /// <returns>True if the option has a value in the state.</returns>
-    [UsedImplicitly]
     public bool Has<T>(IOption<T> opt) {
         return _states.ContainsKey(opt.GetName());
     }
@@ -162,6 +161,6 @@ public class OptionsState {
     /// </summary>
     /// <param name="json">The JSON-encoded map.</param>
     public void Apply(string json) {
-        _states = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+        _states = JsonConvert.DeserializeObject<Dictionary<string, object>>(json)!;
     }
 }

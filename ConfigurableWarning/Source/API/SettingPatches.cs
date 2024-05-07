@@ -1,9 +1,10 @@
+using ConfigurableWarning.API.Options;
 using ContentSettings.API;
 using HarmonyLib;
 using Zorro.Settings;
 using IntSetting = ContentSettings.API.Settings.IntSetting;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API;
 
 [HarmonyPatch]
 internal class SettingPatches {

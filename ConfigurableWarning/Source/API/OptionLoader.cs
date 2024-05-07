@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using ConfigurableWarning.API.Options;
 using Zorro.Settings;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API;
 
 /// <summary>
 ///     Responsible for loading, holding, and registering options.
@@ -26,7 +27,7 @@ public static class OptionLoader {
 
             if (register == null) continue;
 
-            var opt = (IOption<object>) Activator.CreateInstance(type);
+            var opt = (IOption<object>)Activator.CreateInstance(type);
             var untypedOption = opt.AsUntyped();
 
             RegisteredOptions[type] = untypedOption;

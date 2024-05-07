@@ -1,6 +1,6 @@
 using ContentSettings.API.Settings;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API.Options;
 
 /// <summary>
 ///     Represents an option. This interface is implemented
@@ -14,6 +14,22 @@ public interface IOption<T> : ICustomSetting {
     /// </summary>
     /// <returns>The option's name.</returns>
     string GetName();
+
+    /// <summary>
+    /// Get the display name of this option.
+    /// </summary>
+    /// <returns>The option's display name.</returns>
+    new string GetDisplayName();
+
+    string IExposedSetting.GetDisplayName() {
+        return GetDisplayName();
+    }
+
+    /// <summary>
+    /// Get this option's default value.
+    /// </summary>
+    /// <returns>The option's default value.</returns>
+    T GetDefaultValue();
 
     /// <summary>
     ///     Gets the current value of the option.
@@ -41,6 +57,13 @@ public interface IOption<T> : ICustomSetting {
     /// </summary>
     /// <returns>The <see cref="IUntypedOption" /> form of this.</returns>
     IUntypedOption AsUntyped();
+
+    /// <summary>
+    /// Get this as an <see cref="IOption{T}" />.
+    /// This is used for accessing default methods.
+    /// </summary>
+    /// <returns>This as an <see cref="IOption{T}" />.</returns>
+    IOption<T> AsOption();
 
     /// <summary>
     ///     Registers this option to Content Settings, sets up its state,

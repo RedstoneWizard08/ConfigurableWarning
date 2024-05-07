@@ -1,4 +1,4 @@
-using ConfigurableWarning.Options;
+using ConfigurableWarning.API;
 using ConfigurableWarning.Settings;
 using HarmonyLib;
 using UnityEngine;

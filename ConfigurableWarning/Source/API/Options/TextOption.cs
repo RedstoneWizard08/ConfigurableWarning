@@ -4,7 +4,7 @@ using ContentSettings.API;
 using ContentSettings.API.Settings;
 using JetBrains.Annotations;
 
-namespace ConfigurableWarning.Options;
+namespace ConfigurableWarning.API.Options;
 
 /// <summary>
 ///     A string option. This *must* be inherited from to use.
@@ -17,8 +17,27 @@ public class TextOption : TextSetting, IOption<string>, IUntypedOption {
     private readonly string _displayName;
     private readonly string _name;
 
+    /// <summary>
+    ///     Initialize a <see cref="IOption{T}" /> with the <see cref="string" /> type.
+    /// </summary>
+    /// <param name="name">The option's name.</param>
+    /// <param name="defaultValue">The default value.</param>
+    /// <param name="displayName">The option's displayed name.</param>
+    /// <param name="tab">The tab to register to.</param>
+    /// <param name="category">The category to register to.</param>
+    protected TextOption(string name, string defaultValue, string displayName, string tab, string category) : this(name, defaultValue, displayName, tab, category, []) { }
+
+    /// <summary>
+    ///     Initialize a <see cref="IOption{T}" /> with the <see cref="string" /> type.
+    /// </summary>
+    /// <param name="name">The option's name.</param>
+    /// <param name="defaultValue">The default value.</param>
+    /// <param name="displayName">The option's displayed name.</param>
+    /// <param name="tab">The tab to register to.</param>
+    /// <param name="category">The category to register to.</param>
+    /// <param name="actions">Functions to run when the value is applied.</param>
     public TextOption(string name, string defaultValue, string displayName, string tab, string category,
-        Action<TextOption>[] actions) {
+        Action<TextOption>[]? actions) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
@@ -27,27 +46,33 @@ public class TextOption : TextSetting, IOption<string>, IUntypedOption {
         AsOption().Register(tab, category);
     }
 
+    /// <inheritdoc />
     public void RegisterSetting(string tab, string category) {
         SettingsLoader.RegisterSetting(tab, category, this);
     }
 
+    /// <inheritdoc />
     public void SetValue(string value) {
         Value = value;
         GameHandler.Instance.SettingsHandler.SaveSetting(this);
     }
 
+    /// <inheritdoc />
     public string GetName() {
         return _name;
     }
 
+    /// <inheritdoc />
     public string GetValue() {
         return Value;
     }
 
+    /// <inheritdoc />
     public string GetDisplayName() {
         return _displayName;
     }
 
+    /// <inheritdoc />
     public IUntypedOption AsUntyped() {
         return this;
     }
@@ -56,8 +81,9 @@ public class TextOption : TextSetting, IOption<string>, IUntypedOption {
         return GetValue();
     }
 
+    /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((string) value);
+        SetValue((string)value);
     }
 
     /// <summary>
@@ -71,11 +97,12 @@ public class TextOption : TextSetting, IOption<string>, IUntypedOption {
         foreach (var action in _applyActions) action(this);
     }
 
+    /// <inheritdoc />
     public override string GetDefaultValue() {
         return _defaultValue;
     }
 
-    [UsedImplicitly]
+    /// <inheritdoc />
     public IOption<string> AsOption() {
         return this;
     }

@@ -14,4 +14,4 @@ ConfigurableWarning also has a handy developer API which is documented right her
 API Docs:
 <xref:ConfigurableWarning.API>
 
-[Get Started](guides/quickstart/getting-started.md)
+[Get Started](getting-started.md)

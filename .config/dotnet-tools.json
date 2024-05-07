@@ -19,6 +19,12 @@
       "commands": [
         "dotnet-cake"
       ]
+    },
+    "doclinkchecker": {
+      "version": "1.18.0",
+      "commands": [
+        "DocLinkChecker"
+      ]
     }
   }
 }

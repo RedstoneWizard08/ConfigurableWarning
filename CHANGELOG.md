@@ -124,13 +124,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.7.0] - 2024-04-12
 
-### Changed
-
-- Reorganized settings to make it easier to work with
-- Fixed a few issues
-- Made the patches better
-- We no longer rely on ContentSettings!
-
 ### Added
 
 - Modified ContentSettings API is now built-in
@@ -138,6 +131,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `TextSetting` and `TextSettingsUI` for blank "settings" (basically a label/divider)
 - `Common*Setting` classes for ease
 - Basic register & setup function for settings (DX stuff)
+
+### Changed
+
+- Reorganized settings to make it easier to work with
+- Fixed a few issues
+- Made the patches better
+- We no longer rely on ContentSettings!
 
 ## [1.6.0] - 2024-04-11
 

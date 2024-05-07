@@ -5,21 +5,60 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.12.0] - 2024-05-05
+## [Unreleased]
+
+### Added
+
+- New Developer API (`ConfigurableWarning.API`)
+- Added documentation built with [DocFX](https://dotnet.github.io/docfx/)
+- Added CI for docs
+- Added new days-per-quota patch
+- Added new state cache
+- Added new option loader
+- Added `[RegisterOption]` annotation
+- Added clamp toggles (via a patch to `Zorro.Settings` and `ContentSettings`)
+- Added `BoolOption`, `FloatOption`, `IntOption`, and `TextOption`
+- Added documentation comments to all API classes
 
 ### Changed
 
+- Updated README
+- Migrated existing settings to the new API
+- Migrated patches to the new API
+- Reorganized project
+- Switched to [Cake](https://cakebuild.net/) (Frosting) for builds
+- Switched to [Thunderstore CLI](https://github.com/thunderstore-io/thunderstore-cli)/[Cake](https://cakebuild.net/) for packaging
+- Switched mostly to Rider (for development)
+- Moved the syncer from the `Plugin` class to an instance of `OptionSyncer`
+- Improved code structure
+- Moved namespaces to the top instead of a block
+
+### Removed
+
+- Removed old (legacy) package script
+- Removed old days-per-quota patch
+
+## [1.12.0] - 2024-05-05
+
+### Added
+
 - Added diving bell settings
+
+### Changed
+
 - Updated sync
 
 ## [1.11.0] - 2024-05-02
+
+### Added
+
+- Added depdendencies
 
 ### Changed
 
 - Fixed settings sync (again)
 - Made UI elements not borked
 - Redid settings packing
-- Added depdendencies
 - Fixed for CW's new May 2nd release
 
 ## [1.10.2] - 2024-05-01

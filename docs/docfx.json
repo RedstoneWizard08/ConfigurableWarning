@@ -3,10 +3,10 @@
     {
       "src": [
         {
-          "src": "../.",
           "files": [
             "**/ConfigurableWarning.csproj"
-          ]
+          ],
+          "src": "../ConfigurableWarning"
         }
       ],
       "dest": "api",
@@ -28,8 +28,7 @@
       {
         "files": [
           "toc.yml",
-          "index.md",
-          ".nojekyll"
+          "index.md"
         ]
       },
       {
@@ -48,7 +47,8 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "images/**",
+          ".nojekyll"
         ]
       },
       {
@@ -73,7 +73,7 @@
       "_appTitle": "ConfigurableWarning Docs",
       "_appLogoPath": "banner.svg",
       "_enableSearch": true,
-      "pdf": false
+      "_gitUrlPattern": "github"
     },
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"

@@ -1,15 +1,15 @@
 export default {
-    defaultTheme: 'dark',
+    defaultTheme: "dark",
     iconLinks: [
         {
-            icon: 'github',
-            href: 'https://github.com/RedstoneWizard08/ConfigurableWarning',
-            title: 'GitHub'
+            icon: "github",
+            href: "https://github.com/RedstoneWizard08/ConfigurableWarning",
+            title: "GitHub",
         },
         {
             icon: "download",
             href: "https://thunderstore.io/c/content-warning/p/RedstoneWizard08/ConfigurableWarning/",
-            title: "Thunderstore"
+            title: "Thunderstore",
         },
     ],
 };

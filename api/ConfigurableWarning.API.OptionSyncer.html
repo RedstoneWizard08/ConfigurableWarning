@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class OptionLoader | ConfigurableWarning Docs </title>
+      <title>Class OptionSyncer | ConfigurableWarning Docs </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class OptionLoader | ConfigurableWarning Docs ">
+      <meta name="title" content="Class OptionSyncer | ConfigurableWarning Docs ">
       
-      <meta name="description" content="Responsible for loading, holding, and registering options.">
+      <meta name="description" content="Handles syncing all the options in  using the  API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/new/main/apiSpec/new?filename=ConfigurableWarning_Options_OptionLoader.md&amp;value=---%0Auid%3A%20ConfigurableWarning.Options.OptionLoader%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/new/main/apiSpec/new?filename=ConfigurableWarning_API_OptionSyncer.md&amp;value=---%0Auid%3A%20ConfigurableWarning.API.OptionSyncer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,26 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ConfigurableWarning.Options.OptionLoader">
+        <article data-uid="ConfigurableWarning.API.OptionSyncer">
 
 
 
-  <h1 id="ConfigurableWarning_Options_OptionLoader" data-uid="ConfigurableWarning.Options.OptionLoader" class="text-break">
-Class OptionLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Options/OptionLoader.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ConfigurableWarning_API_OptionSyncer" data-uid="ConfigurableWarning.API.OptionSyncer" class="text-break">
+Class OptionSyncer  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionSyncer.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ConfigurableWarning.html">ConfigurableWarning</a>.<a class="xref" href="ConfigurableWarning.Options.html">Options</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ConfigurableWarning.html">ConfigurableWarning</a>.<a class="xref" href="ConfigurableWarning.API.html">API</a></dd></dl>
   <dl><dt>Assembly</dt><dd>RedstoneWizard08.ConfigurableWarning.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Responsible for loading, holding, and registering options.</p>
+  <div class="markdown summary"><p>Handles syncing all the options in <a class="xref" href="ConfigurableWarning.API.OptionsState.html">OptionsState</a>
+using the <span class="xref">MyceliumNetworking.MyceliumNetwork</span> API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class OptionLoader</code></pre>
+    <pre><code class="lang-csharp hljs">public class OptionSyncer</code></pre>
   </div>
 
 
@@ -112,7 +113,7 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">OptionLoader</span></div>
+      <div><span class="xref">OptionSyncer</span></div>
     </dd>
   </dl>
 
@@ -153,22 +154,84 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
 </h2>
 
 
-  <a id="ConfigurableWarning_Options_OptionLoader_RegisterOptions_" data-uid="ConfigurableWarning.Options.OptionLoader.RegisterOptions*"></a>
+  <a id="ConfigurableWarning_API_OptionSyncer_ResetCache_" data-uid="ConfigurableWarning.API.OptionSyncer.ResetCache*"></a>
 
-  <h3 id="ConfigurableWarning_Options_OptionLoader_RegisterOptions" data-uid="ConfigurableWarning.Options.OptionLoader.RegisterOptions">
-  RegisterOptions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Options/OptionLoader.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ConfigurableWarning_API_OptionSyncer_ResetCache" data-uid="ConfigurableWarning.API.OptionSyncer.ResetCache">
+  ResetCache()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionSyncer.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Automatically collect and register all options annotated with
-<a class="xref" href="ConfigurableWarning.Options.RegisterOption.html">RegisterOption</a>.</p>
+  <div class="markdown level1 summary"><p>Resets cached values to force a re-sync.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterOptions()</code></pre>
+    <pre><code class="lang-csharp hljs">public void ResetCache()</code></pre>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_OptionSyncer_SyncSettings_" data-uid="ConfigurableWarning.API.OptionSyncer.SyncSettings*"></a>
+
+  <h3 id="ConfigurableWarning_API_OptionSyncer_SyncSettings" data-uid="ConfigurableWarning.API.OptionSyncer.SyncSettings">
+  SyncSettings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionSyncer.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Send the data to all connected clients
+and sync current values in the <a class="xref" href="ConfigurableWarning.API.OptionsState.html">OptionsState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SyncSettings()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_OptionSyncer_SyncSettingsRecv_" data-uid="ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv*"></a>
+
+  <h3 id="ConfigurableWarning_API_OptionSyncer_SyncSettingsRecv_System_String_" data-uid="ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv(System.String)">
+  SyncSettingsRecv(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionSyncer.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The receiving end of the sync RPC.
+Applies new values when called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CustomRPC]
+public void SyncSettingsRecv(string data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The JSON-encoded data string.</p>
+</dd>
+  </dl>
 
 
 
@@ -185,7 +248,7 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Options/OptionLoader.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionSyncer.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace ConfigurableWarning.Options | ConfigurableWarning Docs </title>
+      <title>Namespace ConfigurableWarning.API | ConfigurableWarning Docs </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace ConfigurableWarning.Options | ConfigurableWarning Docs ">
+      <meta name="title" content="Namespace ConfigurableWarning.API | ConfigurableWarning Docs ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,86 +84,54 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ConfigurableWarning.Options">
+        <article data-uid="ConfigurableWarning.API">
 
-  <h1 id="ConfigurableWarning_Options" data-uid="ConfigurableWarning.Options" class="text-break">Namespace ConfigurableWarning.Options</h1>
+  <h1 id="ConfigurableWarning_API" data-uid="ConfigurableWarning.API" class="text-break">Namespace ConfigurableWarning.API</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
 
+    <h3 id="namespaces">
+Namespaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ConfigurableWarning.API.Options.html">ConfigurableWarning.API.Options</a></dt>
+      <dd></dd>
+    </dl>
     <h3 id="classes">
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.BoolOption.html">BoolOption</a></dt>
-      <dd><p>A boolean option. This <em>must</em> be inherited from to use.
-Its state is stored in the <a class="xref" href="ConfigurableWarning.Options.OptionsState.html">OptionsState</a> class.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.ConfigurableWarningAPI.html">ConfigurableWarningAPI</a></dt>
+      <dt><a class="xref" href="ConfigurableWarning.API.ConfigurableWarningAPI.html">ConfigurableWarningAPI</a></dt>
       <dd><p>ConfigurableWarning's main API entrypoint.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.FloatOption.html">FloatOption</a></dt>
-      <dd><p>A float option. This <em>must</em> be inherited from to use.
-Its state is stored in the <a class="xref" href="ConfigurableWarning.Options.OptionsState.html">OptionsState</a> class.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.IntOption.html">IntOption</a></dt>
-      <dd><p>An int option. This <em>must</em> be inherited from to use.
-Its state is stored in the <a class="xref" href="ConfigurableWarning.Options.OptionsState.html">OptionsState</a> class.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.OptionLoader.html">OptionLoader</a></dt>
+      <dt><a class="xref" href="ConfigurableWarning.API.OptionLoader.html">OptionLoader</a></dt>
       <dd><p>Responsible for loading, holding, and registering options.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.OptionManager.html">OptionManager</a></dt>
+      <dt><a class="xref" href="ConfigurableWarning.API.OptionManager.html">OptionManager</a></dt>
       <dd><p>Manages options' loading, saving, registration, and accessing.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.OptionSyncer.html">OptionSyncer</a></dt>
-      <dd><p>Handles syncing all the options in <a class="xref" href="ConfigurableWarning.Options.OptionsState.html">OptionsState</a>
+      <dt><a class="xref" href="ConfigurableWarning.API.OptionSyncer.html">OptionSyncer</a></dt>
+      <dd><p>Handles syncing all the options in <a class="xref" href="ConfigurableWarning.API.OptionsState.html">OptionsState</a>
 using the <span class="xref">MyceliumNetworking.MyceliumNetwork</span> API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.OptionsState.html">OptionsState</a></dt>
+      <dt><a class="xref" href="ConfigurableWarning.API.OptionsState.html">OptionsState</a></dt>
       <dd><p>The class responsible for storing options' values.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.RegisterOption.html">RegisterOption</a></dt>
+      <dt><a class="xref" href="ConfigurableWarning.API.RegisterOption.html">RegisterOption</a></dt>
       <dd><p>Automatically registers the option. This will initialize it in the state,
 register it with Content Settings, and load its default value if the value
 is not present.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.TextOption.html">TextOption</a></dt>
-      <dd><p>A string option. This <em>must</em> be inherited from to use.
-Its state is stored in the <a class="xref" href="ConfigurableWarning.Options.OptionsState.html">OptionsState</a> class.</p>
-</dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.IOption-1.html">IOption&lt;T&gt;</a></dt>
-      <dd><p>Represents an option. This interface is implemented
-by all options.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ConfigurableWarning.Options.IUntypedOption.html">IUntypedOption</a></dt>
-      <dd><p>A simplified version of <a class="xref" href="ConfigurableWarning.Options.IOption-1.html">IOption&lt;T&gt;</a> that has no type
-argument, and uses objects instead (with casts).</p>
 </dd>
     </dl>
 

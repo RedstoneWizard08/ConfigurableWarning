@@ -1,1182 +1,1417 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: ConfigurableWarning.Options
-  name: ConfigurableWarning.Options
-  href: api/ConfigurableWarning.Options.html
-  commentId: N:ConfigurableWarning.Options
-  fullName: ConfigurableWarning.Options
-  nameWithType: ConfigurableWarning.Options
-- uid: ConfigurableWarning.Options.BoolOption
-  name: BoolOption
-  href: api/ConfigurableWarning.Options.BoolOption.html
-  commentId: T:ConfigurableWarning.Options.BoolOption
-  fullName: ConfigurableWarning.Options.BoolOption
-  nameWithType: BoolOption
-- uid: ConfigurableWarning.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.Action{ConfigurableWarning.Options.BoolOption}[])
-  name: BoolOption(string, bool, string, string, string, Action<BoolOption>[])
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption__ctor_System_String_System_Boolean_System_String_System_String_System_String_System_Action_ConfigurableWarning_Options_BoolOption____
-  commentId: M:ConfigurableWarning.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.Action{ConfigurableWarning.Options.BoolOption}[])
-  name.vb: New(String, Boolean, String, String, String, Action(Of BoolOption)())
-  fullName: ConfigurableWarning.Options.BoolOption.BoolOption(string, bool, string, string, string, System.Action<ConfigurableWarning.Options.BoolOption>[])
-  fullName.vb: ConfigurableWarning.Options.BoolOption.New(String, Boolean, String, String, String, System.Action(Of ConfigurableWarning.Options.BoolOption)())
-  nameWithType: BoolOption.BoolOption(string, bool, string, string, string, Action<BoolOption>[])
-  nameWithType.vb: BoolOption.New(String, Boolean, String, String, String, Action(Of BoolOption)())
-- uid: ConfigurableWarning.Options.BoolOption.#ctor*
-  name: BoolOption
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption__ctor_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ConfigurableWarning.Options.BoolOption.BoolOption
-  fullName.vb: ConfigurableWarning.Options.BoolOption.New
-  nameWithType: BoolOption.BoolOption
-  nameWithType.vb: BoolOption.New
-- uid: ConfigurableWarning.Options.BoolOption.ApplyValue
-  name: ApplyValue()
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_ApplyValue
-  commentId: M:ConfigurableWarning.Options.BoolOption.ApplyValue
-  fullName: ConfigurableWarning.Options.BoolOption.ApplyValue()
-  nameWithType: BoolOption.ApplyValue()
-- uid: ConfigurableWarning.Options.BoolOption.ApplyValue*
-  name: ApplyValue
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_ApplyValue_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.ApplyValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.ApplyValue
-  nameWithType: BoolOption.ApplyValue
-- uid: ConfigurableWarning.Options.BoolOption.AsOption
-  name: AsOption()
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_AsOption
-  commentId: M:ConfigurableWarning.Options.BoolOption.AsOption
-  fullName: ConfigurableWarning.Options.BoolOption.AsOption()
-  nameWithType: BoolOption.AsOption()
-- uid: ConfigurableWarning.Options.BoolOption.AsOption*
-  name: AsOption
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_AsOption_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.AsOption
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.AsOption
-  nameWithType: BoolOption.AsOption
-- uid: ConfigurableWarning.Options.BoolOption.AsUntyped
-  name: AsUntyped()
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_AsUntyped
-  commentId: M:ConfigurableWarning.Options.BoolOption.AsUntyped
-  fullName: ConfigurableWarning.Options.BoolOption.AsUntyped()
-  nameWithType: BoolOption.AsUntyped()
-- uid: ConfigurableWarning.Options.BoolOption.AsUntyped*
-  name: AsUntyped
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_AsUntyped_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.AsUntyped
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.AsUntyped
-  nameWithType: BoolOption.AsUntyped
-- uid: ConfigurableWarning.Options.BoolOption.GetDefaultValue
-  name: GetDefaultValue()
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetDefaultValue
-  commentId: M:ConfigurableWarning.Options.BoolOption.GetDefaultValue
-  fullName: ConfigurableWarning.Options.BoolOption.GetDefaultValue()
-  nameWithType: BoolOption.GetDefaultValue()
-- uid: ConfigurableWarning.Options.BoolOption.GetDefaultValue*
-  name: GetDefaultValue
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetDefaultValue_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.GetDefaultValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.GetDefaultValue
-  nameWithType: BoolOption.GetDefaultValue
-- uid: ConfigurableWarning.Options.BoolOption.GetDisplayName
-  name: GetDisplayName()
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetDisplayName
-  commentId: M:ConfigurableWarning.Options.BoolOption.GetDisplayName
-  fullName: ConfigurableWarning.Options.BoolOption.GetDisplayName()
-  nameWithType: BoolOption.GetDisplayName()
-- uid: ConfigurableWarning.Options.BoolOption.GetDisplayName*
-  name: GetDisplayName
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetDisplayName_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.GetDisplayName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.GetDisplayName
-  nameWithType: BoolOption.GetDisplayName
-- uid: ConfigurableWarning.Options.BoolOption.GetName
-  name: GetName()
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetName
-  commentId: M:ConfigurableWarning.Options.BoolOption.GetName
-  fullName: ConfigurableWarning.Options.BoolOption.GetName()
-  nameWithType: BoolOption.GetName()
-- uid: ConfigurableWarning.Options.BoolOption.GetName*
-  name: GetName
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetName_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.GetName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.GetName
-  nameWithType: BoolOption.GetName
-- uid: ConfigurableWarning.Options.BoolOption.GetValue
-  name: GetValue()
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetValue
-  commentId: M:ConfigurableWarning.Options.BoolOption.GetValue
-  fullName: ConfigurableWarning.Options.BoolOption.GetValue()
-  nameWithType: BoolOption.GetValue()
-- uid: ConfigurableWarning.Options.BoolOption.GetValue*
-  name: GetValue
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_GetValue_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.GetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.GetValue
-  nameWithType: BoolOption.GetValue
-- uid: ConfigurableWarning.Options.BoolOption.RegisterSetting(System.String,System.String)
-  name: RegisterSetting(string, string)
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_RegisterSetting_System_String_System_String_
-  commentId: M:ConfigurableWarning.Options.BoolOption.RegisterSetting(System.String,System.String)
-  name.vb: RegisterSetting(String, String)
-  fullName: ConfigurableWarning.Options.BoolOption.RegisterSetting(string, string)
-  fullName.vb: ConfigurableWarning.Options.BoolOption.RegisterSetting(String, String)
-  nameWithType: BoolOption.RegisterSetting(string, string)
-  nameWithType.vb: BoolOption.RegisterSetting(String, String)
-- uid: ConfigurableWarning.Options.BoolOption.RegisterSetting*
-  name: RegisterSetting
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_RegisterSetting_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.RegisterSetting
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.RegisterSetting
-  nameWithType: BoolOption.RegisterSetting
-- uid: ConfigurableWarning.Options.BoolOption.SetValue(System.Boolean)
-  name: SetValue(bool)
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_SetValue_System_Boolean_
-  commentId: M:ConfigurableWarning.Options.BoolOption.SetValue(System.Boolean)
-  name.vb: SetValue(Boolean)
-  fullName: ConfigurableWarning.Options.BoolOption.SetValue(bool)
-  fullName.vb: ConfigurableWarning.Options.BoolOption.SetValue(Boolean)
-  nameWithType: BoolOption.SetValue(bool)
-  nameWithType.vb: BoolOption.SetValue(Boolean)
-- uid: ConfigurableWarning.Options.BoolOption.SetValue(System.Object)
-  name: SetValue(object)
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_SetValue_System_Object_
-  commentId: M:ConfigurableWarning.Options.BoolOption.SetValue(System.Object)
-  name.vb: SetValue(Object)
-  fullName: ConfigurableWarning.Options.BoolOption.SetValue(object)
-  fullName.vb: ConfigurableWarning.Options.BoolOption.SetValue(Object)
-  nameWithType: BoolOption.SetValue(object)
-  nameWithType.vb: BoolOption.SetValue(Object)
-- uid: ConfigurableWarning.Options.BoolOption.SetValue*
-  name: SetValue
-  href: api/ConfigurableWarning.Options.BoolOption.html#ConfigurableWarning_Options_BoolOption_SetValue_
-  commentId: Overload:ConfigurableWarning.Options.BoolOption.SetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.BoolOption.SetValue
-  nameWithType: BoolOption.SetValue
-- uid: ConfigurableWarning.Options.ConfigurableWarningAPI
+- uid: ConfigurableWarning
+  name: ConfigurableWarning
+  href: api/ConfigurableWarning.html
+- uid: ConfigurableWarning.API
+  name: ConfigurableWarning.API
+  href: api/ConfigurableWarning.API.html
+  commentId: N:ConfigurableWarning.API
+  fullName: ConfigurableWarning.API
+  nameWithType: ConfigurableWarning.API
+- uid: ConfigurableWarning.API.ConfigurableWarningAPI
   name: ConfigurableWarningAPI
-  href: api/ConfigurableWarning.Options.ConfigurableWarningAPI.html
-  commentId: T:ConfigurableWarning.Options.ConfigurableWarningAPI
-  fullName: ConfigurableWarning.Options.ConfigurableWarningAPI
+  href: api/ConfigurableWarning.API.ConfigurableWarningAPI.html
+  commentId: T:ConfigurableWarning.API.ConfigurableWarningAPI
+  fullName: ConfigurableWarning.API.ConfigurableWarningAPI
   nameWithType: ConfigurableWarningAPI
-- uid: ConfigurableWarning.Options.ConfigurableWarningAPI.Sync
+- uid: ConfigurableWarning.API.ConfigurableWarningAPI.Sync
   name: Sync
-  href: api/ConfigurableWarning.Options.ConfigurableWarningAPI.html#ConfigurableWarning_Options_ConfigurableWarningAPI_Sync
-  commentId: P:ConfigurableWarning.Options.ConfigurableWarningAPI.Sync
-  fullName: ConfigurableWarning.Options.ConfigurableWarningAPI.Sync
+  href: api/ConfigurableWarning.API.ConfigurableWarningAPI.html#ConfigurableWarning_API_ConfigurableWarningAPI_Sync
+  commentId: P:ConfigurableWarning.API.ConfigurableWarningAPI.Sync
+  fullName: ConfigurableWarning.API.ConfigurableWarningAPI.Sync
   nameWithType: ConfigurableWarningAPI.Sync
-- uid: ConfigurableWarning.Options.ConfigurableWarningAPI.Sync*
+- uid: ConfigurableWarning.API.ConfigurableWarningAPI.Sync*
   name: Sync
-  href: api/ConfigurableWarning.Options.ConfigurableWarningAPI.html#ConfigurableWarning_Options_ConfigurableWarningAPI_Sync_
-  commentId: Overload:ConfigurableWarning.Options.ConfigurableWarningAPI.Sync
+  href: api/ConfigurableWarning.API.ConfigurableWarningAPI.html#ConfigurableWarning_API_ConfigurableWarningAPI_Sync_
+  commentId: Overload:ConfigurableWarning.API.ConfigurableWarningAPI.Sync
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.ConfigurableWarningAPI.Sync
+  fullName: ConfigurableWarning.API.ConfigurableWarningAPI.Sync
   nameWithType: ConfigurableWarningAPI.Sync
-- uid: ConfigurableWarning.Options.FloatOption
-  name: FloatOption
-  href: api/ConfigurableWarning.Options.FloatOption.html
-  commentId: T:ConfigurableWarning.Options.FloatOption
-  fullName: ConfigurableWarning.Options.FloatOption
-  nameWithType: FloatOption
-- uid: ConfigurableWarning.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Action{ConfigurableWarning.Options.FloatOption}[],System.Boolean)
-  name: FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[], bool)
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption__ctor_System_String_System_Single_System_String_System_Single_System_Single_System_String_System_String_System_Action_ConfigurableWarning_Options_FloatOption____System_Boolean_
-  commentId: M:ConfigurableWarning.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Action{ConfigurableWarning.Options.FloatOption}[],System.Boolean)
-  name.vb: New(String, Single, String, Single, Single, String, String, Action(Of FloatOption)(), Boolean)
-  fullName: ConfigurableWarning.Options.FloatOption.FloatOption(string, float, string, float, float, string, string, System.Action<ConfigurableWarning.Options.FloatOption>[], bool)
-  fullName.vb: ConfigurableWarning.Options.FloatOption.New(String, Single, String, Single, Single, String, String, System.Action(Of ConfigurableWarning.Options.FloatOption)(), Boolean)
-  nameWithType: FloatOption.FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[], bool)
-  nameWithType.vb: FloatOption.New(String, Single, String, Single, Single, String, String, Action(Of FloatOption)(), Boolean)
-- uid: ConfigurableWarning.Options.FloatOption.#ctor*
-  name: FloatOption
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption__ctor_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ConfigurableWarning.Options.FloatOption.FloatOption
-  fullName.vb: ConfigurableWarning.Options.FloatOption.New
-  nameWithType: FloatOption.FloatOption
-  nameWithType.vb: FloatOption.New
-- uid: ConfigurableWarning.Options.FloatOption.ApplyValue
-  name: ApplyValue()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_ApplyValue
-  commentId: M:ConfigurableWarning.Options.FloatOption.ApplyValue
-  fullName: ConfigurableWarning.Options.FloatOption.ApplyValue()
-  nameWithType: FloatOption.ApplyValue()
-- uid: ConfigurableWarning.Options.FloatOption.ApplyValue*
-  name: ApplyValue
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_ApplyValue_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.ApplyValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.ApplyValue
-  nameWithType: FloatOption.ApplyValue
-- uid: ConfigurableWarning.Options.FloatOption.AsOption
-  name: AsOption()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_AsOption
-  commentId: M:ConfigurableWarning.Options.FloatOption.AsOption
-  fullName: ConfigurableWarning.Options.FloatOption.AsOption()
-  nameWithType: FloatOption.AsOption()
-- uid: ConfigurableWarning.Options.FloatOption.AsOption*
-  name: AsOption
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_AsOption_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.AsOption
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.AsOption
-  nameWithType: FloatOption.AsOption
-- uid: ConfigurableWarning.Options.FloatOption.AsUntyped
-  name: AsUntyped()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_AsUntyped
-  commentId: M:ConfigurableWarning.Options.FloatOption.AsUntyped
-  fullName: ConfigurableWarning.Options.FloatOption.AsUntyped()
-  nameWithType: FloatOption.AsUntyped()
-- uid: ConfigurableWarning.Options.FloatOption.AsUntyped*
-  name: AsUntyped
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_AsUntyped_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.AsUntyped
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.AsUntyped
-  nameWithType: FloatOption.AsUntyped
-- uid: ConfigurableWarning.Options.FloatOption.GetDefaultValue
-  name: GetDefaultValue()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetDefaultValue
-  commentId: M:ConfigurableWarning.Options.FloatOption.GetDefaultValue
-  fullName: ConfigurableWarning.Options.FloatOption.GetDefaultValue()
-  nameWithType: FloatOption.GetDefaultValue()
-- uid: ConfigurableWarning.Options.FloatOption.GetDefaultValue*
-  name: GetDefaultValue
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetDefaultValue_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.GetDefaultValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.GetDefaultValue
-  nameWithType: FloatOption.GetDefaultValue
-- uid: ConfigurableWarning.Options.FloatOption.GetDisplayName
-  name: GetDisplayName()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetDisplayName
-  commentId: M:ConfigurableWarning.Options.FloatOption.GetDisplayName
-  fullName: ConfigurableWarning.Options.FloatOption.GetDisplayName()
-  nameWithType: FloatOption.GetDisplayName()
-- uid: ConfigurableWarning.Options.FloatOption.GetDisplayName*
-  name: GetDisplayName
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetDisplayName_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.GetDisplayName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.GetDisplayName
-  nameWithType: FloatOption.GetDisplayName
-- uid: ConfigurableWarning.Options.FloatOption.GetMinMaxValue
-  name: GetMinMaxValue()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetMinMaxValue
-  commentId: M:ConfigurableWarning.Options.FloatOption.GetMinMaxValue
-  fullName: ConfigurableWarning.Options.FloatOption.GetMinMaxValue()
-  nameWithType: FloatOption.GetMinMaxValue()
-- uid: ConfigurableWarning.Options.FloatOption.GetMinMaxValue*
-  name: GetMinMaxValue
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetMinMaxValue_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.GetMinMaxValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.GetMinMaxValue
-  nameWithType: FloatOption.GetMinMaxValue
-- uid: ConfigurableWarning.Options.FloatOption.GetName
-  name: GetName()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetName
-  commentId: M:ConfigurableWarning.Options.FloatOption.GetName
-  fullName: ConfigurableWarning.Options.FloatOption.GetName()
-  nameWithType: FloatOption.GetName()
-- uid: ConfigurableWarning.Options.FloatOption.GetName*
-  name: GetName
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetName_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.GetName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.GetName
-  nameWithType: FloatOption.GetName
-- uid: ConfigurableWarning.Options.FloatOption.GetValue
-  name: GetValue()
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetValue
-  commentId: M:ConfigurableWarning.Options.FloatOption.GetValue
-  fullName: ConfigurableWarning.Options.FloatOption.GetValue()
-  nameWithType: FloatOption.GetValue()
-- uid: ConfigurableWarning.Options.FloatOption.GetValue*
-  name: GetValue
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_GetValue_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.GetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.GetValue
-  nameWithType: FloatOption.GetValue
-- uid: ConfigurableWarning.Options.FloatOption.RegisterSetting(System.String,System.String)
-  name: RegisterSetting(string, string)
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_RegisterSetting_System_String_System_String_
-  commentId: M:ConfigurableWarning.Options.FloatOption.RegisterSetting(System.String,System.String)
-  name.vb: RegisterSetting(String, String)
-  fullName: ConfigurableWarning.Options.FloatOption.RegisterSetting(string, string)
-  fullName.vb: ConfigurableWarning.Options.FloatOption.RegisterSetting(String, String)
-  nameWithType: FloatOption.RegisterSetting(string, string)
-  nameWithType.vb: FloatOption.RegisterSetting(String, String)
-- uid: ConfigurableWarning.Options.FloatOption.RegisterSetting*
-  name: RegisterSetting
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_RegisterSetting_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.RegisterSetting
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.RegisterSetting
-  nameWithType: FloatOption.RegisterSetting
-- uid: ConfigurableWarning.Options.FloatOption.SetValue(System.Object)
-  name: SetValue(object)
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_SetValue_System_Object_
-  commentId: M:ConfigurableWarning.Options.FloatOption.SetValue(System.Object)
-  name.vb: SetValue(Object)
-  fullName: ConfigurableWarning.Options.FloatOption.SetValue(object)
-  fullName.vb: ConfigurableWarning.Options.FloatOption.SetValue(Object)
-  nameWithType: FloatOption.SetValue(object)
-  nameWithType.vb: FloatOption.SetValue(Object)
-- uid: ConfigurableWarning.Options.FloatOption.SetValue(System.Single)
-  name: SetValue(float)
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_SetValue_System_Single_
-  commentId: M:ConfigurableWarning.Options.FloatOption.SetValue(System.Single)
-  name.vb: SetValue(Single)
-  fullName: ConfigurableWarning.Options.FloatOption.SetValue(float)
-  fullName.vb: ConfigurableWarning.Options.FloatOption.SetValue(Single)
-  nameWithType: FloatOption.SetValue(float)
-  nameWithType.vb: FloatOption.SetValue(Single)
-- uid: ConfigurableWarning.Options.FloatOption.SetValue*
-  name: SetValue
-  href: api/ConfigurableWarning.Options.FloatOption.html#ConfigurableWarning_Options_FloatOption_SetValue_
-  commentId: Overload:ConfigurableWarning.Options.FloatOption.SetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.FloatOption.SetValue
-  nameWithType: FloatOption.SetValue
-- uid: ConfigurableWarning.Options.IOption`1
-  name: IOption<T>
-  href: api/ConfigurableWarning.Options.IOption-1.html
-  commentId: T:ConfigurableWarning.Options.IOption`1
-  name.vb: IOption(Of T)
-  fullName: ConfigurableWarning.Options.IOption<T>
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T)
-  nameWithType: IOption<T>
-  nameWithType.vb: IOption(Of T)
-- uid: ConfigurableWarning.Options.IOption`1.AsUntyped
-  name: AsUntyped()
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_AsUntyped
-  commentId: M:ConfigurableWarning.Options.IOption`1.AsUntyped
-  fullName: ConfigurableWarning.Options.IOption<T>.AsUntyped()
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).AsUntyped()
-  nameWithType: IOption<T>.AsUntyped()
-  nameWithType.vb: IOption(Of T).AsUntyped()
-- uid: ConfigurableWarning.Options.IOption`1.AsUntyped*
-  name: AsUntyped
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_AsUntyped_
-  commentId: Overload:ConfigurableWarning.Options.IOption`1.AsUntyped
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IOption<T>.AsUntyped
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).AsUntyped
-  nameWithType: IOption<T>.AsUntyped
-  nameWithType.vb: IOption(Of T).AsUntyped
-- uid: ConfigurableWarning.Options.IOption`1.GetName
-  name: GetName()
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_GetName
-  commentId: M:ConfigurableWarning.Options.IOption`1.GetName
-  fullName: ConfigurableWarning.Options.IOption<T>.GetName()
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).GetName()
-  nameWithType: IOption<T>.GetName()
-  nameWithType.vb: IOption(Of T).GetName()
-- uid: ConfigurableWarning.Options.IOption`1.GetName*
-  name: GetName
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_GetName_
-  commentId: Overload:ConfigurableWarning.Options.IOption`1.GetName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IOption<T>.GetName
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).GetName
-  nameWithType: IOption<T>.GetName
-  nameWithType.vb: IOption(Of T).GetName
-- uid: ConfigurableWarning.Options.IOption`1.GetValue
-  name: GetValue()
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_GetValue
-  commentId: M:ConfigurableWarning.Options.IOption`1.GetValue
-  fullName: ConfigurableWarning.Options.IOption<T>.GetValue()
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).GetValue()
-  nameWithType: IOption<T>.GetValue()
-  nameWithType.vb: IOption(Of T).GetValue()
-- uid: ConfigurableWarning.Options.IOption`1.GetValue*
-  name: GetValue
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_GetValue_
-  commentId: Overload:ConfigurableWarning.Options.IOption`1.GetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IOption<T>.GetValue
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).GetValue
-  nameWithType: IOption<T>.GetValue
-  nameWithType.vb: IOption(Of T).GetValue
-- uid: ConfigurableWarning.Options.IOption`1.Register(System.String,System.String)
-  name: Register(string, string)
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_Register_System_String_System_String_
-  commentId: M:ConfigurableWarning.Options.IOption`1.Register(System.String,System.String)
-  name.vb: Register(String, String)
-  fullName: ConfigurableWarning.Options.IOption<T>.Register(string, string)
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).Register(String, String)
-  nameWithType: IOption<T>.Register(string, string)
-  nameWithType.vb: IOption(Of T).Register(String, String)
-- uid: ConfigurableWarning.Options.IOption`1.Register*
-  name: Register
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_Register_
-  commentId: Overload:ConfigurableWarning.Options.IOption`1.Register
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IOption<T>.Register
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).Register
-  nameWithType: IOption<T>.Register
-  nameWithType.vb: IOption(Of T).Register
-- uid: ConfigurableWarning.Options.IOption`1.RegisterSetting(System.String,System.String)
-  name: RegisterSetting(string, string)
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_RegisterSetting_System_String_System_String_
-  commentId: M:ConfigurableWarning.Options.IOption`1.RegisterSetting(System.String,System.String)
-  name.vb: RegisterSetting(String, String)
-  fullName: ConfigurableWarning.Options.IOption<T>.RegisterSetting(string, string)
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).RegisterSetting(String, String)
-  nameWithType: IOption<T>.RegisterSetting(string, string)
-  nameWithType.vb: IOption(Of T).RegisterSetting(String, String)
-- uid: ConfigurableWarning.Options.IOption`1.RegisterSetting*
-  name: RegisterSetting
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_RegisterSetting_
-  commentId: Overload:ConfigurableWarning.Options.IOption`1.RegisterSetting
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IOption<T>.RegisterSetting
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).RegisterSetting
-  nameWithType: IOption<T>.RegisterSetting
-  nameWithType.vb: IOption(Of T).RegisterSetting
-- uid: ConfigurableWarning.Options.IOption`1.SetValue(`0)
-  name: SetValue(T)
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_SetValue__0_
-  commentId: M:ConfigurableWarning.Options.IOption`1.SetValue(`0)
-  fullName: ConfigurableWarning.Options.IOption<T>.SetValue(T)
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).SetValue(T)
-  nameWithType: IOption<T>.SetValue(T)
-  nameWithType.vb: IOption(Of T).SetValue(T)
-- uid: ConfigurableWarning.Options.IOption`1.SetValue*
-  name: SetValue
-  href: api/ConfigurableWarning.Options.IOption-1.html#ConfigurableWarning_Options_IOption_1_SetValue_
-  commentId: Overload:ConfigurableWarning.Options.IOption`1.SetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IOption<T>.SetValue
-  fullName.vb: ConfigurableWarning.Options.IOption(Of T).SetValue
-  nameWithType: IOption<T>.SetValue
-  nameWithType.vb: IOption(Of T).SetValue
-- uid: ConfigurableWarning.Options.IUntypedOption
-  name: IUntypedOption
-  href: api/ConfigurableWarning.Options.IUntypedOption.html
-  commentId: T:ConfigurableWarning.Options.IUntypedOption
-  fullName: ConfigurableWarning.Options.IUntypedOption
-  nameWithType: IUntypedOption
-- uid: ConfigurableWarning.Options.IUntypedOption.GetName
-  name: GetName()
-  href: api/ConfigurableWarning.Options.IUntypedOption.html#ConfigurableWarning_Options_IUntypedOption_GetName
-  commentId: M:ConfigurableWarning.Options.IUntypedOption.GetName
-  fullName: ConfigurableWarning.Options.IUntypedOption.GetName()
-  nameWithType: IUntypedOption.GetName()
-- uid: ConfigurableWarning.Options.IUntypedOption.GetName*
-  name: GetName
-  href: api/ConfigurableWarning.Options.IUntypedOption.html#ConfigurableWarning_Options_IUntypedOption_GetName_
-  commentId: Overload:ConfigurableWarning.Options.IUntypedOption.GetName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IUntypedOption.GetName
-  nameWithType: IUntypedOption.GetName
-- uid: ConfigurableWarning.Options.IUntypedOption.GetValue
-  name: GetValue()
-  href: api/ConfigurableWarning.Options.IUntypedOption.html#ConfigurableWarning_Options_IUntypedOption_GetValue
-  commentId: M:ConfigurableWarning.Options.IUntypedOption.GetValue
-  fullName: ConfigurableWarning.Options.IUntypedOption.GetValue()
-  nameWithType: IUntypedOption.GetValue()
-- uid: ConfigurableWarning.Options.IUntypedOption.GetValue*
-  name: GetValue
-  href: api/ConfigurableWarning.Options.IUntypedOption.html#ConfigurableWarning_Options_IUntypedOption_GetValue_
-  commentId: Overload:ConfigurableWarning.Options.IUntypedOption.GetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IUntypedOption.GetValue
-  nameWithType: IUntypedOption.GetValue
-- uid: ConfigurableWarning.Options.IUntypedOption.SetValue(System.Object)
-  name: SetValue(object)
-  href: api/ConfigurableWarning.Options.IUntypedOption.html#ConfigurableWarning_Options_IUntypedOption_SetValue_System_Object_
-  commentId: M:ConfigurableWarning.Options.IUntypedOption.SetValue(System.Object)
-  name.vb: SetValue(Object)
-  fullName: ConfigurableWarning.Options.IUntypedOption.SetValue(object)
-  fullName.vb: ConfigurableWarning.Options.IUntypedOption.SetValue(Object)
-  nameWithType: IUntypedOption.SetValue(object)
-  nameWithType.vb: IUntypedOption.SetValue(Object)
-- uid: ConfigurableWarning.Options.IUntypedOption.SetValue*
-  name: SetValue
-  href: api/ConfigurableWarning.Options.IUntypedOption.html#ConfigurableWarning_Options_IUntypedOption_SetValue_
-  commentId: Overload:ConfigurableWarning.Options.IUntypedOption.SetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IUntypedOption.SetValue
-  nameWithType: IUntypedOption.SetValue
-- uid: ConfigurableWarning.Options.IntOption
-  name: IntOption
-  href: api/ConfigurableWarning.Options.IntOption.html
-  commentId: T:ConfigurableWarning.Options.IntOption
-  fullName: ConfigurableWarning.Options.IntOption
-  nameWithType: IntOption
-- uid: ConfigurableWarning.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Action{ConfigurableWarning.Options.IntOption}[],System.Boolean)
-  name: IntOption(string, int, string, int, int, string, string, Action<IntOption>[], bool)
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption__ctor_System_String_System_Int32_System_String_System_Int32_System_Int32_System_String_System_String_System_Action_ConfigurableWarning_Options_IntOption____System_Boolean_
-  commentId: M:ConfigurableWarning.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Action{ConfigurableWarning.Options.IntOption}[],System.Boolean)
-  name.vb: New(String, Integer, String, Integer, Integer, String, String, Action(Of IntOption)(), Boolean)
-  fullName: ConfigurableWarning.Options.IntOption.IntOption(string, int, string, int, int, string, string, System.Action<ConfigurableWarning.Options.IntOption>[], bool)
-  fullName.vb: ConfigurableWarning.Options.IntOption.New(String, Integer, String, Integer, Integer, String, String, System.Action(Of ConfigurableWarning.Options.IntOption)(), Boolean)
-  nameWithType: IntOption.IntOption(string, int, string, int, int, string, string, Action<IntOption>[], bool)
-  nameWithType.vb: IntOption.New(String, Integer, String, Integer, Integer, String, String, Action(Of IntOption)(), Boolean)
-- uid: ConfigurableWarning.Options.IntOption.#ctor*
-  name: IntOption
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption__ctor_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ConfigurableWarning.Options.IntOption.IntOption
-  fullName.vb: ConfigurableWarning.Options.IntOption.New
-  nameWithType: IntOption.IntOption
-  nameWithType.vb: IntOption.New
-- uid: ConfigurableWarning.Options.IntOption.ApplyValue
-  name: ApplyValue()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_ApplyValue
-  commentId: M:ConfigurableWarning.Options.IntOption.ApplyValue
-  fullName: ConfigurableWarning.Options.IntOption.ApplyValue()
-  nameWithType: IntOption.ApplyValue()
-- uid: ConfigurableWarning.Options.IntOption.ApplyValue*
-  name: ApplyValue
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_ApplyValue_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.ApplyValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.ApplyValue
-  nameWithType: IntOption.ApplyValue
-- uid: ConfigurableWarning.Options.IntOption.AsOption
-  name: AsOption()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_AsOption
-  commentId: M:ConfigurableWarning.Options.IntOption.AsOption
-  fullName: ConfigurableWarning.Options.IntOption.AsOption()
-  nameWithType: IntOption.AsOption()
-- uid: ConfigurableWarning.Options.IntOption.AsOption*
-  name: AsOption
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_AsOption_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.AsOption
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.AsOption
-  nameWithType: IntOption.AsOption
-- uid: ConfigurableWarning.Options.IntOption.AsUntyped
-  name: AsUntyped()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_AsUntyped
-  commentId: M:ConfigurableWarning.Options.IntOption.AsUntyped
-  fullName: ConfigurableWarning.Options.IntOption.AsUntyped()
-  nameWithType: IntOption.AsUntyped()
-- uid: ConfigurableWarning.Options.IntOption.AsUntyped*
-  name: AsUntyped
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_AsUntyped_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.AsUntyped
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.AsUntyped
-  nameWithType: IntOption.AsUntyped
-- uid: ConfigurableWarning.Options.IntOption.GetDefaultValue
-  name: GetDefaultValue()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetDefaultValue
-  commentId: M:ConfigurableWarning.Options.IntOption.GetDefaultValue
-  fullName: ConfigurableWarning.Options.IntOption.GetDefaultValue()
-  nameWithType: IntOption.GetDefaultValue()
-- uid: ConfigurableWarning.Options.IntOption.GetDefaultValue*
-  name: GetDefaultValue
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetDefaultValue_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.GetDefaultValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.GetDefaultValue
-  nameWithType: IntOption.GetDefaultValue
-- uid: ConfigurableWarning.Options.IntOption.GetDisplayName
-  name: GetDisplayName()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetDisplayName
-  commentId: M:ConfigurableWarning.Options.IntOption.GetDisplayName
-  fullName: ConfigurableWarning.Options.IntOption.GetDisplayName()
-  nameWithType: IntOption.GetDisplayName()
-- uid: ConfigurableWarning.Options.IntOption.GetDisplayName*
-  name: GetDisplayName
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetDisplayName_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.GetDisplayName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.GetDisplayName
-  nameWithType: IntOption.GetDisplayName
-- uid: ConfigurableWarning.Options.IntOption.GetMinMaxValue
-  name: GetMinMaxValue()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetMinMaxValue
-  commentId: M:ConfigurableWarning.Options.IntOption.GetMinMaxValue
-  fullName: ConfigurableWarning.Options.IntOption.GetMinMaxValue()
-  nameWithType: IntOption.GetMinMaxValue()
-- uid: ConfigurableWarning.Options.IntOption.GetMinMaxValue*
-  name: GetMinMaxValue
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetMinMaxValue_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.GetMinMaxValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.GetMinMaxValue
-  nameWithType: IntOption.GetMinMaxValue
-- uid: ConfigurableWarning.Options.IntOption.GetName
-  name: GetName()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetName
-  commentId: M:ConfigurableWarning.Options.IntOption.GetName
-  fullName: ConfigurableWarning.Options.IntOption.GetName()
-  nameWithType: IntOption.GetName()
-- uid: ConfigurableWarning.Options.IntOption.GetName*
-  name: GetName
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetName_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.GetName
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.GetName
-  nameWithType: IntOption.GetName
-- uid: ConfigurableWarning.Options.IntOption.GetValue
-  name: GetValue()
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetValue
-  commentId: M:ConfigurableWarning.Options.IntOption.GetValue
-  fullName: ConfigurableWarning.Options.IntOption.GetValue()
-  nameWithType: IntOption.GetValue()
-- uid: ConfigurableWarning.Options.IntOption.GetValue*
-  name: GetValue
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_GetValue_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.GetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.GetValue
-  nameWithType: IntOption.GetValue
-- uid: ConfigurableWarning.Options.IntOption.RegisterSetting(System.String,System.String)
-  name: RegisterSetting(string, string)
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_RegisterSetting_System_String_System_String_
-  commentId: M:ConfigurableWarning.Options.IntOption.RegisterSetting(System.String,System.String)
-  name.vb: RegisterSetting(String, String)
-  fullName: ConfigurableWarning.Options.IntOption.RegisterSetting(string, string)
-  fullName.vb: ConfigurableWarning.Options.IntOption.RegisterSetting(String, String)
-  nameWithType: IntOption.RegisterSetting(string, string)
-  nameWithType.vb: IntOption.RegisterSetting(String, String)
-- uid: ConfigurableWarning.Options.IntOption.RegisterSetting*
-  name: RegisterSetting
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_RegisterSetting_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.RegisterSetting
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.RegisterSetting
-  nameWithType: IntOption.RegisterSetting
-- uid: ConfigurableWarning.Options.IntOption.SetValue(System.Int32)
-  name: SetValue(int)
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_SetValue_System_Int32_
-  commentId: M:ConfigurableWarning.Options.IntOption.SetValue(System.Int32)
-  name.vb: SetValue(Integer)
-  fullName: ConfigurableWarning.Options.IntOption.SetValue(int)
-  fullName.vb: ConfigurableWarning.Options.IntOption.SetValue(Integer)
-  nameWithType: IntOption.SetValue(int)
-  nameWithType.vb: IntOption.SetValue(Integer)
-- uid: ConfigurableWarning.Options.IntOption.SetValue(System.Object)
-  name: SetValue(object)
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_SetValue_System_Object_
-  commentId: M:ConfigurableWarning.Options.IntOption.SetValue(System.Object)
-  name.vb: SetValue(Object)
-  fullName: ConfigurableWarning.Options.IntOption.SetValue(object)
-  fullName.vb: ConfigurableWarning.Options.IntOption.SetValue(Object)
-  nameWithType: IntOption.SetValue(object)
-  nameWithType.vb: IntOption.SetValue(Object)
-- uid: ConfigurableWarning.Options.IntOption.SetValue*
-  name: SetValue
-  href: api/ConfigurableWarning.Options.IntOption.html#ConfigurableWarning_Options_IntOption_SetValue_
-  commentId: Overload:ConfigurableWarning.Options.IntOption.SetValue
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.IntOption.SetValue
-  nameWithType: IntOption.SetValue
-- uid: ConfigurableWarning.Options.OptionLoader
+- uid: ConfigurableWarning.API.OptionLoader
   name: OptionLoader
-  href: api/ConfigurableWarning.Options.OptionLoader.html
-  commentId: T:ConfigurableWarning.Options.OptionLoader
-  fullName: ConfigurableWarning.Options.OptionLoader
+  href: api/ConfigurableWarning.API.OptionLoader.html
+  commentId: T:ConfigurableWarning.API.OptionLoader
+  fullName: ConfigurableWarning.API.OptionLoader
   nameWithType: OptionLoader
-- uid: ConfigurableWarning.Options.OptionLoader.RegisterOptions
+- uid: ConfigurableWarning.API.OptionLoader.RegisterOptions
   name: RegisterOptions()
-  href: api/ConfigurableWarning.Options.OptionLoader.html#ConfigurableWarning_Options_OptionLoader_RegisterOptions
-  commentId: M:ConfigurableWarning.Options.OptionLoader.RegisterOptions
-  fullName: ConfigurableWarning.Options.OptionLoader.RegisterOptions()
+  href: api/ConfigurableWarning.API.OptionLoader.html#ConfigurableWarning_API_OptionLoader_RegisterOptions
+  commentId: M:ConfigurableWarning.API.OptionLoader.RegisterOptions
+  fullName: ConfigurableWarning.API.OptionLoader.RegisterOptions()
   nameWithType: OptionLoader.RegisterOptions()
-- uid: ConfigurableWarning.Options.OptionLoader.RegisterOptions*
+- uid: ConfigurableWarning.API.OptionLoader.RegisterOptions*
   name: RegisterOptions
-  href: api/ConfigurableWarning.Options.OptionLoader.html#ConfigurableWarning_Options_OptionLoader_RegisterOptions_
-  commentId: Overload:ConfigurableWarning.Options.OptionLoader.RegisterOptions
+  href: api/ConfigurableWarning.API.OptionLoader.html#ConfigurableWarning_API_OptionLoader_RegisterOptions_
+  commentId: Overload:ConfigurableWarning.API.OptionLoader.RegisterOptions
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionLoader.RegisterOptions
+  fullName: ConfigurableWarning.API.OptionLoader.RegisterOptions
   nameWithType: OptionLoader.RegisterOptions
-- uid: ConfigurableWarning.Options.OptionManager
+- uid: ConfigurableWarning.API.OptionManager
   name: OptionManager
-  href: api/ConfigurableWarning.Options.OptionManager.html
-  commentId: T:ConfigurableWarning.Options.OptionManager
-  fullName: ConfigurableWarning.Options.OptionManager
+  href: api/ConfigurableWarning.API.OptionManager.html
+  commentId: T:ConfigurableWarning.API.OptionManager
+  fullName: ConfigurableWarning.API.OptionManager
   nameWithType: OptionManager
-- uid: ConfigurableWarning.Options.OptionManager.Get(System.String)
+- uid: ConfigurableWarning.API.OptionManager.Get(System.String)
   name: Get(string)
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_Get_System_String_
-  commentId: M:ConfigurableWarning.Options.OptionManager.Get(System.String)
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Get_System_String_
+  commentId: M:ConfigurableWarning.API.OptionManager.Get(System.String)
   name.vb: Get(String)
-  fullName: ConfigurableWarning.Options.OptionManager.Get(string)
-  fullName.vb: ConfigurableWarning.Options.OptionManager.Get(String)
+  fullName: ConfigurableWarning.API.OptionManager.Get(string)
+  fullName.vb: ConfigurableWarning.API.OptionManager.Get(String)
   nameWithType: OptionManager.Get(string)
   nameWithType.vb: OptionManager.Get(String)
-- uid: ConfigurableWarning.Options.OptionManager.Get*
+- uid: ConfigurableWarning.API.OptionManager.Get*
   name: Get
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_Get_
-  commentId: Overload:ConfigurableWarning.Options.OptionManager.Get
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Get_
+  commentId: Overload:ConfigurableWarning.API.OptionManager.Get
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionManager.Get
+  fullName: ConfigurableWarning.API.OptionManager.Get
   nameWithType: OptionManager.Get
-- uid: ConfigurableWarning.Options.OptionManager.Instance
+- uid: ConfigurableWarning.API.OptionManager.Instance
   name: Instance
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_Instance
-  commentId: P:ConfigurableWarning.Options.OptionManager.Instance
-  fullName: ConfigurableWarning.Options.OptionManager.Instance
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Instance
+  commentId: P:ConfigurableWarning.API.OptionManager.Instance
+  fullName: ConfigurableWarning.API.OptionManager.Instance
   nameWithType: OptionManager.Instance
-- uid: ConfigurableWarning.Options.OptionManager.Instance*
+- uid: ConfigurableWarning.API.OptionManager.Instance*
   name: Instance
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_Instance_
-  commentId: Overload:ConfigurableWarning.Options.OptionManager.Instance
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Instance_
+  commentId: Overload:ConfigurableWarning.API.OptionManager.Instance
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionManager.Instance
+  fullName: ConfigurableWarning.API.OptionManager.Instance
   nameWithType: OptionManager.Instance
-- uid: ConfigurableWarning.Options.OptionManager.Register(ConfigurableWarning.Options.IUntypedOption)
+- uid: ConfigurableWarning.API.OptionManager.Register(ConfigurableWarning.API.Options.IUntypedOption)
   name: Register(IUntypedOption)
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_Register_ConfigurableWarning_Options_IUntypedOption_
-  commentId: M:ConfigurableWarning.Options.OptionManager.Register(ConfigurableWarning.Options.IUntypedOption)
-  fullName: ConfigurableWarning.Options.OptionManager.Register(ConfigurableWarning.Options.IUntypedOption)
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Register_ConfigurableWarning_API_Options_IUntypedOption_
+  commentId: M:ConfigurableWarning.API.OptionManager.Register(ConfigurableWarning.API.Options.IUntypedOption)
+  fullName: ConfigurableWarning.API.OptionManager.Register(ConfigurableWarning.API.Options.IUntypedOption)
   nameWithType: OptionManager.Register(IUntypedOption)
-- uid: ConfigurableWarning.Options.OptionManager.Register*
+- uid: ConfigurableWarning.API.OptionManager.Register*
   name: Register
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_Register_
-  commentId: Overload:ConfigurableWarning.Options.OptionManager.Register
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Register_
+  commentId: Overload:ConfigurableWarning.API.OptionManager.Register
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionManager.Register
+  fullName: ConfigurableWarning.API.OptionManager.Register
   nameWithType: OptionManager.Register
-- uid: ConfigurableWarning.Options.OptionManager.Register``1(ConfigurableWarning.Options.IOption{``0})
+- uid: ConfigurableWarning.API.OptionManager.Register``1(ConfigurableWarning.API.Options.IOption{``0})
   name: Register<T>(IOption<T>)
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_Register__1_ConfigurableWarning_Options_IOption___0__
-  commentId: M:ConfigurableWarning.Options.OptionManager.Register``1(ConfigurableWarning.Options.IOption{``0})
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Register__1_ConfigurableWarning_API_Options_IOption___0__
+  commentId: M:ConfigurableWarning.API.OptionManager.Register``1(ConfigurableWarning.API.Options.IOption{``0})
   name.vb: Register(Of T)(IOption(Of T))
-  fullName: ConfigurableWarning.Options.OptionManager.Register<T>(ConfigurableWarning.Options.IOption<T>)
-  fullName.vb: ConfigurableWarning.Options.OptionManager.Register(Of T)(ConfigurableWarning.Options.IOption(Of T))
+  fullName: ConfigurableWarning.API.OptionManager.Register<T>(ConfigurableWarning.API.Options.IOption<T>)
+  fullName.vb: ConfigurableWarning.API.OptionManager.Register(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
   nameWithType: OptionManager.Register<T>(IOption<T>)
   nameWithType.vb: OptionManager.Register(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.Options.OptionManager.SaveLoader
+- uid: ConfigurableWarning.API.OptionManager.SaveLoader
   name: SaveLoader
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_SaveLoader
-  commentId: P:ConfigurableWarning.Options.OptionManager.SaveLoader
-  fullName: ConfigurableWarning.Options.OptionManager.SaveLoader
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_SaveLoader
+  commentId: P:ConfigurableWarning.API.OptionManager.SaveLoader
+  fullName: ConfigurableWarning.API.OptionManager.SaveLoader
   nameWithType: OptionManager.SaveLoader
-- uid: ConfigurableWarning.Options.OptionManager.SaveLoader*
+- uid: ConfigurableWarning.API.OptionManager.SaveLoader*
   name: SaveLoader
-  href: api/ConfigurableWarning.Options.OptionManager.html#ConfigurableWarning_Options_OptionManager_SaveLoader_
-  commentId: Overload:ConfigurableWarning.Options.OptionManager.SaveLoader
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_SaveLoader_
+  commentId: Overload:ConfigurableWarning.API.OptionManager.SaveLoader
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionManager.SaveLoader
+  fullName: ConfigurableWarning.API.OptionManager.SaveLoader
   nameWithType: OptionManager.SaveLoader
-- uid: ConfigurableWarning.Options.OptionSyncer
+- uid: ConfigurableWarning.API.OptionSyncer
   name: OptionSyncer
-  href: api/ConfigurableWarning.Options.OptionSyncer.html
-  commentId: T:ConfigurableWarning.Options.OptionSyncer
-  fullName: ConfigurableWarning.Options.OptionSyncer
+  href: api/ConfigurableWarning.API.OptionSyncer.html
+  commentId: T:ConfigurableWarning.API.OptionSyncer
+  fullName: ConfigurableWarning.API.OptionSyncer
   nameWithType: OptionSyncer
-- uid: ConfigurableWarning.Options.OptionSyncer.ResetCache
+- uid: ConfigurableWarning.API.OptionSyncer.ResetCache
   name: ResetCache()
-  href: api/ConfigurableWarning.Options.OptionSyncer.html#ConfigurableWarning_Options_OptionSyncer_ResetCache
-  commentId: M:ConfigurableWarning.Options.OptionSyncer.ResetCache
-  fullName: ConfigurableWarning.Options.OptionSyncer.ResetCache()
+  href: api/ConfigurableWarning.API.OptionSyncer.html#ConfigurableWarning_API_OptionSyncer_ResetCache
+  commentId: M:ConfigurableWarning.API.OptionSyncer.ResetCache
+  fullName: ConfigurableWarning.API.OptionSyncer.ResetCache()
   nameWithType: OptionSyncer.ResetCache()
-- uid: ConfigurableWarning.Options.OptionSyncer.ResetCache*
+- uid: ConfigurableWarning.API.OptionSyncer.ResetCache*
   name: ResetCache
-  href: api/ConfigurableWarning.Options.OptionSyncer.html#ConfigurableWarning_Options_OptionSyncer_ResetCache_
-  commentId: Overload:ConfigurableWarning.Options.OptionSyncer.ResetCache
+  href: api/ConfigurableWarning.API.OptionSyncer.html#ConfigurableWarning_API_OptionSyncer_ResetCache_
+  commentId: Overload:ConfigurableWarning.API.OptionSyncer.ResetCache
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionSyncer.ResetCache
+  fullName: ConfigurableWarning.API.OptionSyncer.ResetCache
   nameWithType: OptionSyncer.ResetCache
-- uid: ConfigurableWarning.Options.OptionSyncer.SyncSettings
+- uid: ConfigurableWarning.API.OptionSyncer.SyncSettings
   name: SyncSettings()
-  href: api/ConfigurableWarning.Options.OptionSyncer.html#ConfigurableWarning_Options_OptionSyncer_SyncSettings
-  commentId: M:ConfigurableWarning.Options.OptionSyncer.SyncSettings
-  fullName: ConfigurableWarning.Options.OptionSyncer.SyncSettings()
+  href: api/ConfigurableWarning.API.OptionSyncer.html#ConfigurableWarning_API_OptionSyncer_SyncSettings
+  commentId: M:ConfigurableWarning.API.OptionSyncer.SyncSettings
+  fullName: ConfigurableWarning.API.OptionSyncer.SyncSettings()
   nameWithType: OptionSyncer.SyncSettings()
-- uid: ConfigurableWarning.Options.OptionSyncer.SyncSettings*
+- uid: ConfigurableWarning.API.OptionSyncer.SyncSettings*
   name: SyncSettings
-  href: api/ConfigurableWarning.Options.OptionSyncer.html#ConfigurableWarning_Options_OptionSyncer_SyncSettings_
-  commentId: Overload:ConfigurableWarning.Options.OptionSyncer.SyncSettings
+  href: api/ConfigurableWarning.API.OptionSyncer.html#ConfigurableWarning_API_OptionSyncer_SyncSettings_
+  commentId: Overload:ConfigurableWarning.API.OptionSyncer.SyncSettings
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionSyncer.SyncSettings
+  fullName: ConfigurableWarning.API.OptionSyncer.SyncSettings
   nameWithType: OptionSyncer.SyncSettings
-- uid: ConfigurableWarning.Options.OptionSyncer.SyncSettingsRecv(System.String)
+- uid: ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv(System.String)
   name: SyncSettingsRecv(string)
-  href: api/ConfigurableWarning.Options.OptionSyncer.html#ConfigurableWarning_Options_OptionSyncer_SyncSettingsRecv_System_String_
-  commentId: M:ConfigurableWarning.Options.OptionSyncer.SyncSettingsRecv(System.String)
+  href: api/ConfigurableWarning.API.OptionSyncer.html#ConfigurableWarning_API_OptionSyncer_SyncSettingsRecv_System_String_
+  commentId: M:ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv(System.String)
   name.vb: SyncSettingsRecv(String)
-  fullName: ConfigurableWarning.Options.OptionSyncer.SyncSettingsRecv(string)
-  fullName.vb: ConfigurableWarning.Options.OptionSyncer.SyncSettingsRecv(String)
+  fullName: ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv(string)
+  fullName.vb: ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv(String)
   nameWithType: OptionSyncer.SyncSettingsRecv(string)
   nameWithType.vb: OptionSyncer.SyncSettingsRecv(String)
-- uid: ConfigurableWarning.Options.OptionSyncer.SyncSettingsRecv*
+- uid: ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv*
   name: SyncSettingsRecv
-  href: api/ConfigurableWarning.Options.OptionSyncer.html#ConfigurableWarning_Options_OptionSyncer_SyncSettingsRecv_
-  commentId: Overload:ConfigurableWarning.Options.OptionSyncer.SyncSettingsRecv
+  href: api/ConfigurableWarning.API.OptionSyncer.html#ConfigurableWarning_API_OptionSyncer_SyncSettingsRecv_
+  commentId: Overload:ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionSyncer.SyncSettingsRecv
+  fullName: ConfigurableWarning.API.OptionSyncer.SyncSettingsRecv
   nameWithType: OptionSyncer.SyncSettingsRecv
-- uid: ConfigurableWarning.Options.OptionsState
-  name: OptionsState
-  href: api/ConfigurableWarning.Options.OptionsState.html
-  commentId: T:ConfigurableWarning.Options.OptionsState
-  fullName: ConfigurableWarning.Options.OptionsState
-  nameWithType: OptionsState
-- uid: ConfigurableWarning.Options.OptionsState.Apply(System.String)
-  name: Apply(string)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Apply_System_String_
-  commentId: M:ConfigurableWarning.Options.OptionsState.Apply(System.String)
-  name.vb: Apply(String)
-  fullName: ConfigurableWarning.Options.OptionsState.Apply(string)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Apply(String)
-  nameWithType: OptionsState.Apply(string)
-  nameWithType.vb: OptionsState.Apply(String)
-- uid: ConfigurableWarning.Options.OptionsState.Apply*
-  name: Apply
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Apply_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Apply
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Apply
-  nameWithType: OptionsState.Apply
-- uid: ConfigurableWarning.Options.OptionsState.Clear
-  name: Clear()
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Clear
-  commentId: M:ConfigurableWarning.Options.OptionsState.Clear
-  fullName: ConfigurableWarning.Options.OptionsState.Clear()
-  nameWithType: OptionsState.Clear()
-- uid: ConfigurableWarning.Options.OptionsState.Clear*
-  name: Clear
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Clear_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Clear
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Clear
-  nameWithType: OptionsState.Clear
-- uid: ConfigurableWarning.Options.OptionsState.Collect
-  name: Collect()
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Collect
-  commentId: M:ConfigurableWarning.Options.OptionsState.Collect
-  fullName: ConfigurableWarning.Options.OptionsState.Collect()
-  nameWithType: OptionsState.Collect()
-- uid: ConfigurableWarning.Options.OptionsState.Collect*
-  name: Collect
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Collect_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Collect
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Collect
-  nameWithType: OptionsState.Collect
-- uid: ConfigurableWarning.Options.OptionsState.Get*
-  name: Get
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Get_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Get
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Get
-  nameWithType: OptionsState.Get
-- uid: ConfigurableWarning.Options.OptionsState.Get``1(ConfigurableWarning.Options.IOption{``0})
-  name: Get<T>(IOption<T>)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Get__1_ConfigurableWarning_Options_IOption___0__
-  commentId: M:ConfigurableWarning.Options.OptionsState.Get``1(ConfigurableWarning.Options.IOption{``0})
-  name.vb: Get(Of T)(IOption(Of T))
-  fullName: ConfigurableWarning.Options.OptionsState.Get<T>(ConfigurableWarning.Options.IOption<T>)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Get(Of T)(ConfigurableWarning.Options.IOption(Of T))
-  nameWithType: OptionsState.Get<T>(IOption<T>)
-  nameWithType.vb: OptionsState.Get(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.Options.OptionsState.Get``1(System.String)
-  name: Get<T>(string)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Get__1_System_String_
-  commentId: M:ConfigurableWarning.Options.OptionsState.Get``1(System.String)
-  name.vb: Get(Of T)(String)
-  fullName: ConfigurableWarning.Options.OptionsState.Get<T>(string)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Get(Of T)(String)
-  nameWithType: OptionsState.Get<T>(string)
-  nameWithType.vb: OptionsState.Get(Of T)(String)
-- uid: ConfigurableWarning.Options.OptionsState.Has*
-  name: Has
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Has_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Has
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Has
-  nameWithType: OptionsState.Has
-- uid: ConfigurableWarning.Options.OptionsState.Has``1(ConfigurableWarning.Options.IOption{``0})
-  name: Has<T>(IOption<T>)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Has__1_ConfigurableWarning_Options_IOption___0__
-  commentId: M:ConfigurableWarning.Options.OptionsState.Has``1(ConfigurableWarning.Options.IOption{``0})
-  name.vb: Has(Of T)(IOption(Of T))
-  fullName: ConfigurableWarning.Options.OptionsState.Has<T>(ConfigurableWarning.Options.IOption<T>)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Has(Of T)(ConfigurableWarning.Options.IOption(Of T))
-  nameWithType: OptionsState.Has<T>(IOption<T>)
-  nameWithType.vb: OptionsState.Has(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.Options.OptionsState.Has``1(System.String)
-  name: Has<T>(string)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Has__1_System_String_
-  commentId: M:ConfigurableWarning.Options.OptionsState.Has``1(System.String)
-  name.vb: Has(Of T)(String)
-  fullName: ConfigurableWarning.Options.OptionsState.Has<T>(string)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Has(Of T)(String)
-  nameWithType: OptionsState.Has<T>(string)
-  nameWithType.vb: OptionsState.Has(Of T)(String)
-- uid: ConfigurableWarning.Options.OptionsState.Instance
-  name: Instance
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Instance
-  commentId: P:ConfigurableWarning.Options.OptionsState.Instance
-  fullName: ConfigurableWarning.Options.OptionsState.Instance
-  nameWithType: OptionsState.Instance
-- uid: ConfigurableWarning.Options.OptionsState.Instance*
-  name: Instance
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Instance_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Instance
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Instance
-  nameWithType: OptionsState.Instance
-- uid: ConfigurableWarning.Options.OptionsState.Register*
-  name: Register
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Register_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Register
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Register
-  nameWithType: OptionsState.Register
-- uid: ConfigurableWarning.Options.OptionsState.Register``1(ConfigurableWarning.Options.IOption{``0})
-  name: Register<T>(IOption<T>)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Register__1_ConfigurableWarning_Options_IOption___0__
-  commentId: M:ConfigurableWarning.Options.OptionsState.Register``1(ConfigurableWarning.Options.IOption{``0})
-  name.vb: Register(Of T)(IOption(Of T))
-  fullName: ConfigurableWarning.Options.OptionsState.Register<T>(ConfigurableWarning.Options.IOption<T>)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Register(Of T)(ConfigurableWarning.Options.IOption(Of T))
-  nameWithType: OptionsState.Register<T>(IOption<T>)
-  nameWithType.vb: OptionsState.Register(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.Options.OptionsState.Remove*
-  name: Remove
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Remove_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Remove
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Remove
-  nameWithType: OptionsState.Remove
-- uid: ConfigurableWarning.Options.OptionsState.Remove``1(ConfigurableWarning.Options.IOption{``0})
-  name: Remove<T>(IOption<T>)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Remove__1_ConfigurableWarning_Options_IOption___0__
-  commentId: M:ConfigurableWarning.Options.OptionsState.Remove``1(ConfigurableWarning.Options.IOption{``0})
-  name.vb: Remove(Of T)(IOption(Of T))
-  fullName: ConfigurableWarning.Options.OptionsState.Remove<T>(ConfigurableWarning.Options.IOption<T>)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Remove(Of T)(ConfigurableWarning.Options.IOption(Of T))
-  nameWithType: OptionsState.Remove<T>(IOption<T>)
-  nameWithType.vb: OptionsState.Remove(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.Options.OptionsState.Remove``1(System.String)
-  name: Remove<T>(string)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Remove__1_System_String_
-  commentId: M:ConfigurableWarning.Options.OptionsState.Remove``1(System.String)
-  name.vb: Remove(Of T)(String)
-  fullName: ConfigurableWarning.Options.OptionsState.Remove<T>(string)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Remove(Of T)(String)
-  nameWithType: OptionsState.Remove<T>(string)
-  nameWithType.vb: OptionsState.Remove(Of T)(String)
-- uid: ConfigurableWarning.Options.OptionsState.Set*
-  name: Set
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Set_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Set
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Set
-  nameWithType: OptionsState.Set
-- uid: ConfigurableWarning.Options.OptionsState.Set``1(ConfigurableWarning.Options.IOption{``0},``0)
-  name: Set<T>(IOption<T>, T)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Set__1_ConfigurableWarning_Options_IOption___0____0_
-  commentId: M:ConfigurableWarning.Options.OptionsState.Set``1(ConfigurableWarning.Options.IOption{``0},``0)
-  name.vb: Set(Of T)(IOption(Of T), T)
-  fullName: ConfigurableWarning.Options.OptionsState.Set<T>(ConfigurableWarning.Options.IOption<T>, T)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Set(Of T)(ConfigurableWarning.Options.IOption(Of T), T)
-  nameWithType: OptionsState.Set<T>(IOption<T>, T)
-  nameWithType.vb: OptionsState.Set(Of T)(IOption(Of T), T)
-- uid: ConfigurableWarning.Options.OptionsState.Set``1(System.String,``0)
-  name: Set<T>(string, T)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Set__1_System_String___0_
-  commentId: M:ConfigurableWarning.Options.OptionsState.Set``1(System.String,``0)
-  name.vb: Set(Of T)(String, T)
-  fullName: ConfigurableWarning.Options.OptionsState.Set<T>(string, T)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Set(Of T)(String, T)
-  nameWithType: OptionsState.Set<T>(string, T)
-  nameWithType.vb: OptionsState.Set(Of T)(String, T)
-- uid: ConfigurableWarning.Options.OptionsState.Update*
-  name: Update
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Update_
-  commentId: Overload:ConfigurableWarning.Options.OptionsState.Update
-  isSpec: "True"
-  fullName: ConfigurableWarning.Options.OptionsState.Update
-  nameWithType: OptionsState.Update
-- uid: ConfigurableWarning.Options.OptionsState.Update``1(ConfigurableWarning.Options.IOption{``0})
-  name: Update<T>(IOption<T>)
-  href: api/ConfigurableWarning.Options.OptionsState.html#ConfigurableWarning_Options_OptionsState_Update__1_ConfigurableWarning_Options_IOption___0__
-  commentId: M:ConfigurableWarning.Options.OptionsState.Update``1(ConfigurableWarning.Options.IOption{``0})
-  name.vb: Update(Of T)(IOption(Of T))
-  fullName: ConfigurableWarning.Options.OptionsState.Update<T>(ConfigurableWarning.Options.IOption<T>)
-  fullName.vb: ConfigurableWarning.Options.OptionsState.Update(Of T)(ConfigurableWarning.Options.IOption(Of T))
-  nameWithType: OptionsState.Update<T>(IOption<T>)
-  nameWithType.vb: OptionsState.Update(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.Options.RegisterOption
-  name: RegisterOption
-  href: api/ConfigurableWarning.Options.RegisterOption.html
-  commentId: T:ConfigurableWarning.Options.RegisterOption
-  fullName: ConfigurableWarning.Options.RegisterOption
-  nameWithType: RegisterOption
-- uid: ConfigurableWarning.Options.TextOption
-  name: TextOption
-  href: api/ConfigurableWarning.Options.TextOption.html
-  commentId: T:ConfigurableWarning.Options.TextOption
-  fullName: ConfigurableWarning.Options.TextOption
-  nameWithType: TextOption
-- uid: ConfigurableWarning.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String,System.Action{ConfigurableWarning.Options.TextOption}[])
-  name: TextOption(string, string, string, string, string, Action<TextOption>[])
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption__ctor_System_String_System_String_System_String_System_String_System_String_System_Action_ConfigurableWarning_Options_TextOption____
-  commentId: M:ConfigurableWarning.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String,System.Action{ConfigurableWarning.Options.TextOption}[])
-  name.vb: New(String, String, String, String, String, Action(Of TextOption)())
-  fullName: ConfigurableWarning.Options.TextOption.TextOption(string, string, string, string, string, System.Action<ConfigurableWarning.Options.TextOption>[])
-  fullName.vb: ConfigurableWarning.Options.TextOption.New(String, String, String, String, String, System.Action(Of ConfigurableWarning.Options.TextOption)())
-  nameWithType: TextOption.TextOption(string, string, string, string, string, Action<TextOption>[])
-  nameWithType.vb: TextOption.New(String, String, String, String, String, Action(Of TextOption)())
-- uid: ConfigurableWarning.Options.TextOption.#ctor*
-  name: TextOption
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption__ctor_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.#ctor
+- uid: ConfigurableWarning.API.Options
+  name: ConfigurableWarning.API.Options
+  href: api/ConfigurableWarning.API.Options.html
+  commentId: N:ConfigurableWarning.API.Options
+  fullName: ConfigurableWarning.API.Options
+  nameWithType: ConfigurableWarning.API.Options
+- uid: ConfigurableWarning.API.Options.BoolOption
+  name: BoolOption
+  href: api/ConfigurableWarning.API.Options.BoolOption.html
+  commentId: T:ConfigurableWarning.API.Options.BoolOption
+  fullName: ConfigurableWarning.API.Options.BoolOption
+  nameWithType: BoolOption
+- uid: ConfigurableWarning.API.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String)
+  name: BoolOption(string, bool, string, string, string)
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption__ctor_System_String_System_Boolean_System_String_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String)
+  name.vb: New(String, Boolean, String, String, String)
+  fullName: ConfigurableWarning.API.Options.BoolOption.BoolOption(string, bool, string, string, string)
+  fullName.vb: ConfigurableWarning.API.Options.BoolOption.New(String, Boolean, String, String, String)
+  nameWithType: BoolOption.BoolOption(string, bool, string, string, string)
+  nameWithType.vb: BoolOption.New(String, Boolean, String, String, String)
+- uid: ConfigurableWarning.API.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.BoolOption}[])
+  name: BoolOption(string, bool, string, string, string, Action<BoolOption>[]?)
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption__ctor_System_String_System_Boolean_System_String_System_String_System_String_System_Action_ConfigurableWarning_API_Options_BoolOption____
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.BoolOption}[])
+  name.vb: New(String, Boolean, String, String, String, Action(Of BoolOption)())
+  fullName: ConfigurableWarning.API.Options.BoolOption.BoolOption(string, bool, string, string, string, System.Action<ConfigurableWarning.API.Options.BoolOption>[]?)
+  fullName.vb: ConfigurableWarning.API.Options.BoolOption.New(String, Boolean, String, String, String, System.Action(Of ConfigurableWarning.API.Options.BoolOption)())
+  nameWithType: BoolOption.BoolOption(string, bool, string, string, string, Action<BoolOption>[]?)
+  nameWithType.vb: BoolOption.New(String, Boolean, String, String, String, Action(Of BoolOption)())
+- uid: ConfigurableWarning.API.Options.BoolOption.#ctor*
+  name: BoolOption
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption__ctor_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: ConfigurableWarning.Options.TextOption.TextOption
-  fullName.vb: ConfigurableWarning.Options.TextOption.New
+  fullName: ConfigurableWarning.API.Options.BoolOption.BoolOption
+  fullName.vb: ConfigurableWarning.API.Options.BoolOption.New
+  nameWithType: BoolOption.BoolOption
+  nameWithType.vb: BoolOption.New
+- uid: ConfigurableWarning.API.Options.BoolOption.ApplyValue
+  name: ApplyValue()
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_ApplyValue
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.ApplyValue
+  fullName: ConfigurableWarning.API.Options.BoolOption.ApplyValue()
+  nameWithType: BoolOption.ApplyValue()
+- uid: ConfigurableWarning.API.Options.BoolOption.ApplyValue*
+  name: ApplyValue
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_ApplyValue_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.ApplyValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.ApplyValue
+  nameWithType: BoolOption.ApplyValue
+- uid: ConfigurableWarning.API.Options.BoolOption.AsOption
+  name: AsOption()
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_AsOption
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.AsOption
+  fullName: ConfigurableWarning.API.Options.BoolOption.AsOption()
+  nameWithType: BoolOption.AsOption()
+- uid: ConfigurableWarning.API.Options.BoolOption.AsOption*
+  name: AsOption
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_AsOption_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.AsOption
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.AsOption
+  nameWithType: BoolOption.AsOption
+- uid: ConfigurableWarning.API.Options.BoolOption.AsUntyped
+  name: AsUntyped()
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_AsUntyped
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.AsUntyped
+  fullName: ConfigurableWarning.API.Options.BoolOption.AsUntyped()
+  nameWithType: BoolOption.AsUntyped()
+- uid: ConfigurableWarning.API.Options.BoolOption.AsUntyped*
+  name: AsUntyped
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_AsUntyped_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.AsUntyped
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.AsUntyped
+  nameWithType: BoolOption.AsUntyped
+- uid: ConfigurableWarning.API.Options.BoolOption.GetDefaultValue
+  name: GetDefaultValue()
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetDefaultValue
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.GetDefaultValue
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetDefaultValue()
+  nameWithType: BoolOption.GetDefaultValue()
+- uid: ConfigurableWarning.API.Options.BoolOption.GetDefaultValue*
+  name: GetDefaultValue
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetDefaultValue_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.GetDefaultValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetDefaultValue
+  nameWithType: BoolOption.GetDefaultValue
+- uid: ConfigurableWarning.API.Options.BoolOption.GetDisplayName
+  name: GetDisplayName()
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetDisplayName
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.GetDisplayName
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetDisplayName()
+  nameWithType: BoolOption.GetDisplayName()
+- uid: ConfigurableWarning.API.Options.BoolOption.GetDisplayName*
+  name: GetDisplayName
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetDisplayName_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.GetDisplayName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetDisplayName
+  nameWithType: BoolOption.GetDisplayName
+- uid: ConfigurableWarning.API.Options.BoolOption.GetName
+  name: GetName()
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetName
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.GetName
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetName()
+  nameWithType: BoolOption.GetName()
+- uid: ConfigurableWarning.API.Options.BoolOption.GetName*
+  name: GetName
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetName_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.GetName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetName
+  nameWithType: BoolOption.GetName
+- uid: ConfigurableWarning.API.Options.BoolOption.GetValue
+  name: GetValue()
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetValue
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.GetValue
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetValue()
+  nameWithType: BoolOption.GetValue()
+- uid: ConfigurableWarning.API.Options.BoolOption.GetValue*
+  name: GetValue
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_GetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.GetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.GetValue
+  nameWithType: BoolOption.GetValue
+- uid: ConfigurableWarning.API.Options.BoolOption.RegisterSetting(System.String,System.String)
+  name: RegisterSetting(string, string)
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_RegisterSetting_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.RegisterSetting(System.String,System.String)
+  name.vb: RegisterSetting(String, String)
+  fullName: ConfigurableWarning.API.Options.BoolOption.RegisterSetting(string, string)
+  fullName.vb: ConfigurableWarning.API.Options.BoolOption.RegisterSetting(String, String)
+  nameWithType: BoolOption.RegisterSetting(string, string)
+  nameWithType.vb: BoolOption.RegisterSetting(String, String)
+- uid: ConfigurableWarning.API.Options.BoolOption.RegisterSetting*
+  name: RegisterSetting
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_RegisterSetting_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.RegisterSetting
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.RegisterSetting
+  nameWithType: BoolOption.RegisterSetting
+- uid: ConfigurableWarning.API.Options.BoolOption.SetValue(System.Boolean)
+  name: SetValue(bool)
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_SetValue_System_Boolean_
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.SetValue(System.Boolean)
+  name.vb: SetValue(Boolean)
+  fullName: ConfigurableWarning.API.Options.BoolOption.SetValue(bool)
+  fullName.vb: ConfigurableWarning.API.Options.BoolOption.SetValue(Boolean)
+  nameWithType: BoolOption.SetValue(bool)
+  nameWithType.vb: BoolOption.SetValue(Boolean)
+- uid: ConfigurableWarning.API.Options.BoolOption.SetValue(System.Object)
+  name: SetValue(object)
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_SetValue_System_Object_
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.SetValue(System.Object)
+  name.vb: SetValue(Object)
+  fullName: ConfigurableWarning.API.Options.BoolOption.SetValue(object)
+  fullName.vb: ConfigurableWarning.API.Options.BoolOption.SetValue(Object)
+  nameWithType: BoolOption.SetValue(object)
+  nameWithType.vb: BoolOption.SetValue(Object)
+- uid: ConfigurableWarning.API.Options.BoolOption.SetValue*
+  name: SetValue
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_SetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.SetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.SetValue
+  nameWithType: BoolOption.SetValue
+- uid: ConfigurableWarning.API.Options.FloatOption
+  name: FloatOption
+  href: api/ConfigurableWarning.API.Options.FloatOption.html
+  commentId: T:ConfigurableWarning.API.Options.FloatOption
+  fullName: ConfigurableWarning.API.Options.FloatOption
+  nameWithType: FloatOption
+- uid: ConfigurableWarning.API.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Action{ConfigurableWarning.API.Options.FloatOption}[],System.Boolean)
+  name: FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[]?, bool)
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption__ctor_System_String_System_Single_System_String_System_Single_System_Single_System_String_System_String_System_Action_ConfigurableWarning_API_Options_FloatOption____System_Boolean_
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Action{ConfigurableWarning.API.Options.FloatOption}[],System.Boolean)
+  name.vb: New(String, Single, String, Single, Single, String, String, Action(Of FloatOption)(), Boolean)
+  fullName: ConfigurableWarning.API.Options.FloatOption.FloatOption(string, float, string, float, float, string, string, System.Action<ConfigurableWarning.API.Options.FloatOption>[]?, bool)
+  fullName.vb: ConfigurableWarning.API.Options.FloatOption.New(String, Single, String, Single, Single, String, String, System.Action(Of ConfigurableWarning.API.Options.FloatOption)(), Boolean)
+  nameWithType: FloatOption.FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[]?, bool)
+  nameWithType.vb: FloatOption.New(String, Single, String, Single, Single, String, String, Action(Of FloatOption)(), Boolean)
+- uid: ConfigurableWarning.API.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Boolean)
+  name: FloatOption(string, float, string, float, float, string, string, bool)
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption__ctor_System_String_System_Single_System_String_System_Single_System_Single_System_String_System_String_System_Boolean_
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Boolean)
+  name.vb: New(String, Single, String, Single, Single, String, String, Boolean)
+  fullName: ConfigurableWarning.API.Options.FloatOption.FloatOption(string, float, string, float, float, string, string, bool)
+  fullName.vb: ConfigurableWarning.API.Options.FloatOption.New(String, Single, String, Single, Single, String, String, Boolean)
+  nameWithType: FloatOption.FloatOption(string, float, string, float, float, string, string, bool)
+  nameWithType.vb: FloatOption.New(String, Single, String, Single, Single, String, String, Boolean)
+- uid: ConfigurableWarning.API.Options.FloatOption.#ctor*
+  name: FloatOption
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption__ctor_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConfigurableWarning.API.Options.FloatOption.FloatOption
+  fullName.vb: ConfigurableWarning.API.Options.FloatOption.New
+  nameWithType: FloatOption.FloatOption
+  nameWithType.vb: FloatOption.New
+- uid: ConfigurableWarning.API.Options.FloatOption.ApplyValue
+  name: ApplyValue()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_ApplyValue
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.ApplyValue
+  fullName: ConfigurableWarning.API.Options.FloatOption.ApplyValue()
+  nameWithType: FloatOption.ApplyValue()
+- uid: ConfigurableWarning.API.Options.FloatOption.ApplyValue*
+  name: ApplyValue
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_ApplyValue_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.ApplyValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.ApplyValue
+  nameWithType: FloatOption.ApplyValue
+- uid: ConfigurableWarning.API.Options.FloatOption.AsOption
+  name: AsOption()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_AsOption
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.AsOption
+  fullName: ConfigurableWarning.API.Options.FloatOption.AsOption()
+  nameWithType: FloatOption.AsOption()
+- uid: ConfigurableWarning.API.Options.FloatOption.AsOption*
+  name: AsOption
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_AsOption_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.AsOption
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.AsOption
+  nameWithType: FloatOption.AsOption
+- uid: ConfigurableWarning.API.Options.FloatOption.AsUntyped
+  name: AsUntyped()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_AsUntyped
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.AsUntyped
+  fullName: ConfigurableWarning.API.Options.FloatOption.AsUntyped()
+  nameWithType: FloatOption.AsUntyped()
+- uid: ConfigurableWarning.API.Options.FloatOption.AsUntyped*
+  name: AsUntyped
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_AsUntyped_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.AsUntyped
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.AsUntyped
+  nameWithType: FloatOption.AsUntyped
+- uid: ConfigurableWarning.API.Options.FloatOption.GetDefaultValue
+  name: GetDefaultValue()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetDefaultValue
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.GetDefaultValue
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetDefaultValue()
+  nameWithType: FloatOption.GetDefaultValue()
+- uid: ConfigurableWarning.API.Options.FloatOption.GetDefaultValue*
+  name: GetDefaultValue
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetDefaultValue_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.GetDefaultValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetDefaultValue
+  nameWithType: FloatOption.GetDefaultValue
+- uid: ConfigurableWarning.API.Options.FloatOption.GetDisplayName
+  name: GetDisplayName()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetDisplayName
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.GetDisplayName
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetDisplayName()
+  nameWithType: FloatOption.GetDisplayName()
+- uid: ConfigurableWarning.API.Options.FloatOption.GetDisplayName*
+  name: GetDisplayName
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetDisplayName_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.GetDisplayName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetDisplayName
+  nameWithType: FloatOption.GetDisplayName
+- uid: ConfigurableWarning.API.Options.FloatOption.GetMinMaxValue
+  name: GetMinMaxValue()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetMinMaxValue
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.GetMinMaxValue
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetMinMaxValue()
+  nameWithType: FloatOption.GetMinMaxValue()
+- uid: ConfigurableWarning.API.Options.FloatOption.GetMinMaxValue*
+  name: GetMinMaxValue
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetMinMaxValue_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.GetMinMaxValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetMinMaxValue
+  nameWithType: FloatOption.GetMinMaxValue
+- uid: ConfigurableWarning.API.Options.FloatOption.GetName
+  name: GetName()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetName
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.GetName
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetName()
+  nameWithType: FloatOption.GetName()
+- uid: ConfigurableWarning.API.Options.FloatOption.GetName*
+  name: GetName
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetName_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.GetName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetName
+  nameWithType: FloatOption.GetName
+- uid: ConfigurableWarning.API.Options.FloatOption.GetValue
+  name: GetValue()
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetValue
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.GetValue
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetValue()
+  nameWithType: FloatOption.GetValue()
+- uid: ConfigurableWarning.API.Options.FloatOption.GetValue*
+  name: GetValue
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_GetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.GetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.GetValue
+  nameWithType: FloatOption.GetValue
+- uid: ConfigurableWarning.API.Options.FloatOption.RegisterSetting(System.String,System.String)
+  name: RegisterSetting(string, string)
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_RegisterSetting_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.RegisterSetting(System.String,System.String)
+  name.vb: RegisterSetting(String, String)
+  fullName: ConfigurableWarning.API.Options.FloatOption.RegisterSetting(string, string)
+  fullName.vb: ConfigurableWarning.API.Options.FloatOption.RegisterSetting(String, String)
+  nameWithType: FloatOption.RegisterSetting(string, string)
+  nameWithType.vb: FloatOption.RegisterSetting(String, String)
+- uid: ConfigurableWarning.API.Options.FloatOption.RegisterSetting*
+  name: RegisterSetting
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_RegisterSetting_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.RegisterSetting
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.RegisterSetting
+  nameWithType: FloatOption.RegisterSetting
+- uid: ConfigurableWarning.API.Options.FloatOption.SetValue(System.Object)
+  name: SetValue(object)
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_SetValue_System_Object_
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.SetValue(System.Object)
+  name.vb: SetValue(Object)
+  fullName: ConfigurableWarning.API.Options.FloatOption.SetValue(object)
+  fullName.vb: ConfigurableWarning.API.Options.FloatOption.SetValue(Object)
+  nameWithType: FloatOption.SetValue(object)
+  nameWithType.vb: FloatOption.SetValue(Object)
+- uid: ConfigurableWarning.API.Options.FloatOption.SetValue(System.Single)
+  name: SetValue(float)
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_SetValue_System_Single_
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.SetValue(System.Single)
+  name.vb: SetValue(Single)
+  fullName: ConfigurableWarning.API.Options.FloatOption.SetValue(float)
+  fullName.vb: ConfigurableWarning.API.Options.FloatOption.SetValue(Single)
+  nameWithType: FloatOption.SetValue(float)
+  nameWithType.vb: FloatOption.SetValue(Single)
+- uid: ConfigurableWarning.API.Options.FloatOption.SetValue*
+  name: SetValue
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_SetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.SetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.SetValue
+  nameWithType: FloatOption.SetValue
+- uid: ConfigurableWarning.API.Options.IOption`1
+  name: IOption<T>
+  href: api/ConfigurableWarning.API.Options.IOption-1.html
+  commentId: T:ConfigurableWarning.API.Options.IOption`1
+  name.vb: IOption(Of T)
+  fullName: ConfigurableWarning.API.Options.IOption<T>
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T)
+  nameWithType: IOption<T>
+  nameWithType.vb: IOption(Of T)
+- uid: ConfigurableWarning.API.Options.IOption`1.AsOption
+  name: AsOption()
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_AsOption
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.AsOption
+  fullName: ConfigurableWarning.API.Options.IOption<T>.AsOption()
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).AsOption()
+  nameWithType: IOption<T>.AsOption()
+  nameWithType.vb: IOption(Of T).AsOption()
+- uid: ConfigurableWarning.API.Options.IOption`1.AsOption*
+  name: AsOption
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_AsOption_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.AsOption
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.AsOption
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).AsOption
+  nameWithType: IOption<T>.AsOption
+  nameWithType.vb: IOption(Of T).AsOption
+- uid: ConfigurableWarning.API.Options.IOption`1.AsUntyped
+  name: AsUntyped()
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_AsUntyped
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.AsUntyped
+  fullName: ConfigurableWarning.API.Options.IOption<T>.AsUntyped()
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).AsUntyped()
+  nameWithType: IOption<T>.AsUntyped()
+  nameWithType.vb: IOption(Of T).AsUntyped()
+- uid: ConfigurableWarning.API.Options.IOption`1.AsUntyped*
+  name: AsUntyped
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_AsUntyped_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.AsUntyped
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.AsUntyped
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).AsUntyped
+  nameWithType: IOption<T>.AsUntyped
+  nameWithType.vb: IOption(Of T).AsUntyped
+- uid: ConfigurableWarning.API.Options.IOption`1.GetDefaultValue
+  name: GetDefaultValue()
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetDefaultValue
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.GetDefaultValue
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetDefaultValue()
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetDefaultValue()
+  nameWithType: IOption<T>.GetDefaultValue()
+  nameWithType.vb: IOption(Of T).GetDefaultValue()
+- uid: ConfigurableWarning.API.Options.IOption`1.GetDefaultValue*
+  name: GetDefaultValue
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetDefaultValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.GetDefaultValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetDefaultValue
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetDefaultValue
+  nameWithType: IOption<T>.GetDefaultValue
+  nameWithType.vb: IOption(Of T).GetDefaultValue
+- uid: ConfigurableWarning.API.Options.IOption`1.GetDisplayName
+  name: GetDisplayName()
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetDisplayName
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.GetDisplayName
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetDisplayName()
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetDisplayName()
+  nameWithType: IOption<T>.GetDisplayName()
+  nameWithType.vb: IOption(Of T).GetDisplayName()
+- uid: ConfigurableWarning.API.Options.IOption`1.GetDisplayName*
+  name: GetDisplayName
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetDisplayName_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.GetDisplayName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetDisplayName
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetDisplayName
+  nameWithType: IOption<T>.GetDisplayName
+  nameWithType.vb: IOption(Of T).GetDisplayName
+- uid: ConfigurableWarning.API.Options.IOption`1.GetName
+  name: GetName()
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetName
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.GetName
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetName()
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetName()
+  nameWithType: IOption<T>.GetName()
+  nameWithType.vb: IOption(Of T).GetName()
+- uid: ConfigurableWarning.API.Options.IOption`1.GetName*
+  name: GetName
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetName_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.GetName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetName
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetName
+  nameWithType: IOption<T>.GetName
+  nameWithType.vb: IOption(Of T).GetName
+- uid: ConfigurableWarning.API.Options.IOption`1.GetValue
+  name: GetValue()
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetValue
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.GetValue
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetValue()
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetValue()
+  nameWithType: IOption<T>.GetValue()
+  nameWithType.vb: IOption(Of T).GetValue()
+- uid: ConfigurableWarning.API.Options.IOption`1.GetValue*
+  name: GetValue
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_GetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.GetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.GetValue
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetValue
+  nameWithType: IOption<T>.GetValue
+  nameWithType.vb: IOption(Of T).GetValue
+- uid: ConfigurableWarning.API.Options.IOption`1.Register(System.String,System.String)
+  name: Register(string, string)
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_Register_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.Register(System.String,System.String)
+  name.vb: Register(String, String)
+  fullName: ConfigurableWarning.API.Options.IOption<T>.Register(string, string)
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).Register(String, String)
+  nameWithType: IOption<T>.Register(string, string)
+  nameWithType.vb: IOption(Of T).Register(String, String)
+- uid: ConfigurableWarning.API.Options.IOption`1.Register*
+  name: Register
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_Register_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.Register
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.Register
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).Register
+  nameWithType: IOption<T>.Register
+  nameWithType.vb: IOption(Of T).Register
+- uid: ConfigurableWarning.API.Options.IOption`1.RegisterSetting(System.String,System.String)
+  name: RegisterSetting(string, string)
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_RegisterSetting_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.RegisterSetting(System.String,System.String)
+  name.vb: RegisterSetting(String, String)
+  fullName: ConfigurableWarning.API.Options.IOption<T>.RegisterSetting(string, string)
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).RegisterSetting(String, String)
+  nameWithType: IOption<T>.RegisterSetting(string, string)
+  nameWithType.vb: IOption(Of T).RegisterSetting(String, String)
+- uid: ConfigurableWarning.API.Options.IOption`1.RegisterSetting*
+  name: RegisterSetting
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_RegisterSetting_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.RegisterSetting
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.RegisterSetting
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).RegisterSetting
+  nameWithType: IOption<T>.RegisterSetting
+  nameWithType.vb: IOption(Of T).RegisterSetting
+- uid: ConfigurableWarning.API.Options.IOption`1.SetValue(`0)
+  name: SetValue(T)
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_SetValue__0_
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.SetValue(`0)
+  fullName: ConfigurableWarning.API.Options.IOption<T>.SetValue(T)
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).SetValue(T)
+  nameWithType: IOption<T>.SetValue(T)
+  nameWithType.vb: IOption(Of T).SetValue(T)
+- uid: ConfigurableWarning.API.Options.IOption`1.SetValue*
+  name: SetValue
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_SetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.SetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.SetValue
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).SetValue
+  nameWithType: IOption<T>.SetValue
+  nameWithType.vb: IOption(Of T).SetValue
+- uid: ConfigurableWarning.API.Options.IUntypedOption
+  name: IUntypedOption
+  href: api/ConfigurableWarning.API.Options.IUntypedOption.html
+  commentId: T:ConfigurableWarning.API.Options.IUntypedOption
+  fullName: ConfigurableWarning.API.Options.IUntypedOption
+  nameWithType: IUntypedOption
+- uid: ConfigurableWarning.API.Options.IUntypedOption.GetName
+  name: GetName()
+  href: api/ConfigurableWarning.API.Options.IUntypedOption.html#ConfigurableWarning_API_Options_IUntypedOption_GetName
+  commentId: M:ConfigurableWarning.API.Options.IUntypedOption.GetName
+  fullName: ConfigurableWarning.API.Options.IUntypedOption.GetName()
+  nameWithType: IUntypedOption.GetName()
+- uid: ConfigurableWarning.API.Options.IUntypedOption.GetName*
+  name: GetName
+  href: api/ConfigurableWarning.API.Options.IUntypedOption.html#ConfigurableWarning_API_Options_IUntypedOption_GetName_
+  commentId: Overload:ConfigurableWarning.API.Options.IUntypedOption.GetName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IUntypedOption.GetName
+  nameWithType: IUntypedOption.GetName
+- uid: ConfigurableWarning.API.Options.IUntypedOption.GetValue
+  name: GetValue()
+  href: api/ConfigurableWarning.API.Options.IUntypedOption.html#ConfigurableWarning_API_Options_IUntypedOption_GetValue
+  commentId: M:ConfigurableWarning.API.Options.IUntypedOption.GetValue
+  fullName: ConfigurableWarning.API.Options.IUntypedOption.GetValue()
+  nameWithType: IUntypedOption.GetValue()
+- uid: ConfigurableWarning.API.Options.IUntypedOption.GetValue*
+  name: GetValue
+  href: api/ConfigurableWarning.API.Options.IUntypedOption.html#ConfigurableWarning_API_Options_IUntypedOption_GetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IUntypedOption.GetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IUntypedOption.GetValue
+  nameWithType: IUntypedOption.GetValue
+- uid: ConfigurableWarning.API.Options.IUntypedOption.SetValue(System.Object)
+  name: SetValue(object)
+  href: api/ConfigurableWarning.API.Options.IUntypedOption.html#ConfigurableWarning_API_Options_IUntypedOption_SetValue_System_Object_
+  commentId: M:ConfigurableWarning.API.Options.IUntypedOption.SetValue(System.Object)
+  name.vb: SetValue(Object)
+  fullName: ConfigurableWarning.API.Options.IUntypedOption.SetValue(object)
+  fullName.vb: ConfigurableWarning.API.Options.IUntypedOption.SetValue(Object)
+  nameWithType: IUntypedOption.SetValue(object)
+  nameWithType.vb: IUntypedOption.SetValue(Object)
+- uid: ConfigurableWarning.API.Options.IUntypedOption.SetValue*
+  name: SetValue
+  href: api/ConfigurableWarning.API.Options.IUntypedOption.html#ConfigurableWarning_API_Options_IUntypedOption_SetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IUntypedOption.SetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IUntypedOption.SetValue
+  nameWithType: IUntypedOption.SetValue
+- uid: ConfigurableWarning.API.Options.IntOption
+  name: IntOption
+  href: api/ConfigurableWarning.API.Options.IntOption.html
+  commentId: T:ConfigurableWarning.API.Options.IntOption
+  fullName: ConfigurableWarning.API.Options.IntOption
+  nameWithType: IntOption
+- uid: ConfigurableWarning.API.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Action{ConfigurableWarning.API.Options.IntOption}[],System.Boolean)
+  name: IntOption(string, int, string, int, int, string, string, Action<IntOption>[]?, bool)
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption__ctor_System_String_System_Int32_System_String_System_Int32_System_Int32_System_String_System_String_System_Action_ConfigurableWarning_API_Options_IntOption____System_Boolean_
+  commentId: M:ConfigurableWarning.API.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Action{ConfigurableWarning.API.Options.IntOption}[],System.Boolean)
+  name.vb: New(String, Integer, String, Integer, Integer, String, String, Action(Of IntOption)(), Boolean)
+  fullName: ConfigurableWarning.API.Options.IntOption.IntOption(string, int, string, int, int, string, string, System.Action<ConfigurableWarning.API.Options.IntOption>[]?, bool)
+  fullName.vb: ConfigurableWarning.API.Options.IntOption.New(String, Integer, String, Integer, Integer, String, String, System.Action(Of ConfigurableWarning.API.Options.IntOption)(), Boolean)
+  nameWithType: IntOption.IntOption(string, int, string, int, int, string, string, Action<IntOption>[]?, bool)
+  nameWithType.vb: IntOption.New(String, Integer, String, Integer, Integer, String, String, Action(Of IntOption)(), Boolean)
+- uid: ConfigurableWarning.API.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Boolean)
+  name: IntOption(string, int, string, int, int, string, string, bool)
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption__ctor_System_String_System_Int32_System_String_System_Int32_System_Int32_System_String_System_String_System_Boolean_
+  commentId: M:ConfigurableWarning.API.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Boolean)
+  name.vb: New(String, Integer, String, Integer, Integer, String, String, Boolean)
+  fullName: ConfigurableWarning.API.Options.IntOption.IntOption(string, int, string, int, int, string, string, bool)
+  fullName.vb: ConfigurableWarning.API.Options.IntOption.New(String, Integer, String, Integer, Integer, String, String, Boolean)
+  nameWithType: IntOption.IntOption(string, int, string, int, int, string, string, bool)
+  nameWithType.vb: IntOption.New(String, Integer, String, Integer, Integer, String, String, Boolean)
+- uid: ConfigurableWarning.API.Options.IntOption.#ctor*
+  name: IntOption
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption__ctor_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConfigurableWarning.API.Options.IntOption.IntOption
+  fullName.vb: ConfigurableWarning.API.Options.IntOption.New
+  nameWithType: IntOption.IntOption
+  nameWithType.vb: IntOption.New
+- uid: ConfigurableWarning.API.Options.IntOption.ApplyValue
+  name: ApplyValue()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_ApplyValue
+  commentId: M:ConfigurableWarning.API.Options.IntOption.ApplyValue
+  fullName: ConfigurableWarning.API.Options.IntOption.ApplyValue()
+  nameWithType: IntOption.ApplyValue()
+- uid: ConfigurableWarning.API.Options.IntOption.ApplyValue*
+  name: ApplyValue
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_ApplyValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.ApplyValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.ApplyValue
+  nameWithType: IntOption.ApplyValue
+- uid: ConfigurableWarning.API.Options.IntOption.AsOption
+  name: AsOption()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_AsOption
+  commentId: M:ConfigurableWarning.API.Options.IntOption.AsOption
+  fullName: ConfigurableWarning.API.Options.IntOption.AsOption()
+  nameWithType: IntOption.AsOption()
+- uid: ConfigurableWarning.API.Options.IntOption.AsOption*
+  name: AsOption
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_AsOption_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.AsOption
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.AsOption
+  nameWithType: IntOption.AsOption
+- uid: ConfigurableWarning.API.Options.IntOption.AsUntyped
+  name: AsUntyped()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_AsUntyped
+  commentId: M:ConfigurableWarning.API.Options.IntOption.AsUntyped
+  fullName: ConfigurableWarning.API.Options.IntOption.AsUntyped()
+  nameWithType: IntOption.AsUntyped()
+- uid: ConfigurableWarning.API.Options.IntOption.AsUntyped*
+  name: AsUntyped
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_AsUntyped_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.AsUntyped
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.AsUntyped
+  nameWithType: IntOption.AsUntyped
+- uid: ConfigurableWarning.API.Options.IntOption.GetDefaultValue
+  name: GetDefaultValue()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetDefaultValue
+  commentId: M:ConfigurableWarning.API.Options.IntOption.GetDefaultValue
+  fullName: ConfigurableWarning.API.Options.IntOption.GetDefaultValue()
+  nameWithType: IntOption.GetDefaultValue()
+- uid: ConfigurableWarning.API.Options.IntOption.GetDefaultValue*
+  name: GetDefaultValue
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetDefaultValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.GetDefaultValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.GetDefaultValue
+  nameWithType: IntOption.GetDefaultValue
+- uid: ConfigurableWarning.API.Options.IntOption.GetDisplayName
+  name: GetDisplayName()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetDisplayName
+  commentId: M:ConfigurableWarning.API.Options.IntOption.GetDisplayName
+  fullName: ConfigurableWarning.API.Options.IntOption.GetDisplayName()
+  nameWithType: IntOption.GetDisplayName()
+- uid: ConfigurableWarning.API.Options.IntOption.GetDisplayName*
+  name: GetDisplayName
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetDisplayName_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.GetDisplayName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.GetDisplayName
+  nameWithType: IntOption.GetDisplayName
+- uid: ConfigurableWarning.API.Options.IntOption.GetMinMaxValue
+  name: GetMinMaxValue()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetMinMaxValue
+  commentId: M:ConfigurableWarning.API.Options.IntOption.GetMinMaxValue
+  fullName: ConfigurableWarning.API.Options.IntOption.GetMinMaxValue()
+  nameWithType: IntOption.GetMinMaxValue()
+- uid: ConfigurableWarning.API.Options.IntOption.GetMinMaxValue*
+  name: GetMinMaxValue
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetMinMaxValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.GetMinMaxValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.GetMinMaxValue
+  nameWithType: IntOption.GetMinMaxValue
+- uid: ConfigurableWarning.API.Options.IntOption.GetName
+  name: GetName()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetName
+  commentId: M:ConfigurableWarning.API.Options.IntOption.GetName
+  fullName: ConfigurableWarning.API.Options.IntOption.GetName()
+  nameWithType: IntOption.GetName()
+- uid: ConfigurableWarning.API.Options.IntOption.GetName*
+  name: GetName
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetName_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.GetName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.GetName
+  nameWithType: IntOption.GetName
+- uid: ConfigurableWarning.API.Options.IntOption.GetValue
+  name: GetValue()
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetValue
+  commentId: M:ConfigurableWarning.API.Options.IntOption.GetValue
+  fullName: ConfigurableWarning.API.Options.IntOption.GetValue()
+  nameWithType: IntOption.GetValue()
+- uid: ConfigurableWarning.API.Options.IntOption.GetValue*
+  name: GetValue
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_GetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.GetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.GetValue
+  nameWithType: IntOption.GetValue
+- uid: ConfigurableWarning.API.Options.IntOption.RegisterSetting(System.String,System.String)
+  name: RegisterSetting(string, string)
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_RegisterSetting_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.IntOption.RegisterSetting(System.String,System.String)
+  name.vb: RegisterSetting(String, String)
+  fullName: ConfigurableWarning.API.Options.IntOption.RegisterSetting(string, string)
+  fullName.vb: ConfigurableWarning.API.Options.IntOption.RegisterSetting(String, String)
+  nameWithType: IntOption.RegisterSetting(string, string)
+  nameWithType.vb: IntOption.RegisterSetting(String, String)
+- uid: ConfigurableWarning.API.Options.IntOption.RegisterSetting*
+  name: RegisterSetting
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_RegisterSetting_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.RegisterSetting
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.RegisterSetting
+  nameWithType: IntOption.RegisterSetting
+- uid: ConfigurableWarning.API.Options.IntOption.SetValue(System.Int32)
+  name: SetValue(int)
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_SetValue_System_Int32_
+  commentId: M:ConfigurableWarning.API.Options.IntOption.SetValue(System.Int32)
+  name.vb: SetValue(Integer)
+  fullName: ConfigurableWarning.API.Options.IntOption.SetValue(int)
+  fullName.vb: ConfigurableWarning.API.Options.IntOption.SetValue(Integer)
+  nameWithType: IntOption.SetValue(int)
+  nameWithType.vb: IntOption.SetValue(Integer)
+- uid: ConfigurableWarning.API.Options.IntOption.SetValue(System.Object)
+  name: SetValue(object)
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_SetValue_System_Object_
+  commentId: M:ConfigurableWarning.API.Options.IntOption.SetValue(System.Object)
+  name.vb: SetValue(Object)
+  fullName: ConfigurableWarning.API.Options.IntOption.SetValue(object)
+  fullName.vb: ConfigurableWarning.API.Options.IntOption.SetValue(Object)
+  nameWithType: IntOption.SetValue(object)
+  nameWithType.vb: IntOption.SetValue(Object)
+- uid: ConfigurableWarning.API.Options.IntOption.SetValue*
+  name: SetValue
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_SetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.SetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.SetValue
+  nameWithType: IntOption.SetValue
+- uid: ConfigurableWarning.API.Options.TextOption
+  name: TextOption
+  href: api/ConfigurableWarning.API.Options.TextOption.html
+  commentId: T:ConfigurableWarning.API.Options.TextOption
+  fullName: ConfigurableWarning.API.Options.TextOption
+  nameWithType: TextOption
+- uid: ConfigurableWarning.API.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String)
+  name: TextOption(string, string, string, string, string)
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption__ctor_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String)
+  name.vb: New(String, String, String, String, String)
+  fullName: ConfigurableWarning.API.Options.TextOption.TextOption(string, string, string, string, string)
+  fullName.vb: ConfigurableWarning.API.Options.TextOption.New(String, String, String, String, String)
+  nameWithType: TextOption.TextOption(string, string, string, string, string)
+  nameWithType.vb: TextOption.New(String, String, String, String, String)
+- uid: ConfigurableWarning.API.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.TextOption}[])
+  name: TextOption(string, string, string, string, string, Action<TextOption>[]?)
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption__ctor_System_String_System_String_System_String_System_String_System_String_System_Action_ConfigurableWarning_API_Options_TextOption____
+  commentId: M:ConfigurableWarning.API.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.TextOption}[])
+  name.vb: New(String, String, String, String, String, Action(Of TextOption)())
+  fullName: ConfigurableWarning.API.Options.TextOption.TextOption(string, string, string, string, string, System.Action<ConfigurableWarning.API.Options.TextOption>[]?)
+  fullName.vb: ConfigurableWarning.API.Options.TextOption.New(String, String, String, String, String, System.Action(Of ConfigurableWarning.API.Options.TextOption)())
+  nameWithType: TextOption.TextOption(string, string, string, string, string, Action<TextOption>[]?)
+  nameWithType.vb: TextOption.New(String, String, String, String, String, Action(Of TextOption)())
+- uid: ConfigurableWarning.API.Options.TextOption.#ctor*
+  name: TextOption
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption__ctor_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConfigurableWarning.API.Options.TextOption.TextOption
+  fullName.vb: ConfigurableWarning.API.Options.TextOption.New
   nameWithType: TextOption.TextOption
   nameWithType.vb: TextOption.New
-- uid: ConfigurableWarning.Options.TextOption.ApplyValue
+- uid: ConfigurableWarning.API.Options.TextOption.ApplyValue
   name: ApplyValue()
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_ApplyValue
-  commentId: M:ConfigurableWarning.Options.TextOption.ApplyValue
-  fullName: ConfigurableWarning.Options.TextOption.ApplyValue()
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_ApplyValue
+  commentId: M:ConfigurableWarning.API.Options.TextOption.ApplyValue
+  fullName: ConfigurableWarning.API.Options.TextOption.ApplyValue()
   nameWithType: TextOption.ApplyValue()
-- uid: ConfigurableWarning.Options.TextOption.ApplyValue*
+- uid: ConfigurableWarning.API.Options.TextOption.ApplyValue*
   name: ApplyValue
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_ApplyValue_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.ApplyValue
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_ApplyValue_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.ApplyValue
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.ApplyValue
+  fullName: ConfigurableWarning.API.Options.TextOption.ApplyValue
   nameWithType: TextOption.ApplyValue
-- uid: ConfigurableWarning.Options.TextOption.AsOption
+- uid: ConfigurableWarning.API.Options.TextOption.AsOption
   name: AsOption()
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_AsOption
-  commentId: M:ConfigurableWarning.Options.TextOption.AsOption
-  fullName: ConfigurableWarning.Options.TextOption.AsOption()
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_AsOption
+  commentId: M:ConfigurableWarning.API.Options.TextOption.AsOption
+  fullName: ConfigurableWarning.API.Options.TextOption.AsOption()
   nameWithType: TextOption.AsOption()
-- uid: ConfigurableWarning.Options.TextOption.AsOption*
+- uid: ConfigurableWarning.API.Options.TextOption.AsOption*
   name: AsOption
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_AsOption_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.AsOption
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_AsOption_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.AsOption
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.AsOption
+  fullName: ConfigurableWarning.API.Options.TextOption.AsOption
   nameWithType: TextOption.AsOption
-- uid: ConfigurableWarning.Options.TextOption.AsUntyped
+- uid: ConfigurableWarning.API.Options.TextOption.AsUntyped
   name: AsUntyped()
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_AsUntyped
-  commentId: M:ConfigurableWarning.Options.TextOption.AsUntyped
-  fullName: ConfigurableWarning.Options.TextOption.AsUntyped()
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_AsUntyped
+  commentId: M:ConfigurableWarning.API.Options.TextOption.AsUntyped
+  fullName: ConfigurableWarning.API.Options.TextOption.AsUntyped()
   nameWithType: TextOption.AsUntyped()
-- uid: ConfigurableWarning.Options.TextOption.AsUntyped*
+- uid: ConfigurableWarning.API.Options.TextOption.AsUntyped*
   name: AsUntyped
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_AsUntyped_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.AsUntyped
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_AsUntyped_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.AsUntyped
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.AsUntyped
+  fullName: ConfigurableWarning.API.Options.TextOption.AsUntyped
   nameWithType: TextOption.AsUntyped
-- uid: ConfigurableWarning.Options.TextOption.GetDefaultValue
+- uid: ConfigurableWarning.API.Options.TextOption.GetDefaultValue
   name: GetDefaultValue()
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetDefaultValue
-  commentId: M:ConfigurableWarning.Options.TextOption.GetDefaultValue
-  fullName: ConfigurableWarning.Options.TextOption.GetDefaultValue()
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetDefaultValue
+  commentId: M:ConfigurableWarning.API.Options.TextOption.GetDefaultValue
+  fullName: ConfigurableWarning.API.Options.TextOption.GetDefaultValue()
   nameWithType: TextOption.GetDefaultValue()
-- uid: ConfigurableWarning.Options.TextOption.GetDefaultValue*
+- uid: ConfigurableWarning.API.Options.TextOption.GetDefaultValue*
   name: GetDefaultValue
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetDefaultValue_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.GetDefaultValue
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetDefaultValue_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.GetDefaultValue
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.GetDefaultValue
+  fullName: ConfigurableWarning.API.Options.TextOption.GetDefaultValue
   nameWithType: TextOption.GetDefaultValue
-- uid: ConfigurableWarning.Options.TextOption.GetDisplayName
+- uid: ConfigurableWarning.API.Options.TextOption.GetDisplayName
   name: GetDisplayName()
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetDisplayName
-  commentId: M:ConfigurableWarning.Options.TextOption.GetDisplayName
-  fullName: ConfigurableWarning.Options.TextOption.GetDisplayName()
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetDisplayName
+  commentId: M:ConfigurableWarning.API.Options.TextOption.GetDisplayName
+  fullName: ConfigurableWarning.API.Options.TextOption.GetDisplayName()
   nameWithType: TextOption.GetDisplayName()
-- uid: ConfigurableWarning.Options.TextOption.GetDisplayName*
+- uid: ConfigurableWarning.API.Options.TextOption.GetDisplayName*
   name: GetDisplayName
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetDisplayName_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.GetDisplayName
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetDisplayName_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.GetDisplayName
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.GetDisplayName
+  fullName: ConfigurableWarning.API.Options.TextOption.GetDisplayName
   nameWithType: TextOption.GetDisplayName
-- uid: ConfigurableWarning.Options.TextOption.GetName
+- uid: ConfigurableWarning.API.Options.TextOption.GetName
   name: GetName()
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetName
-  commentId: M:ConfigurableWarning.Options.TextOption.GetName
-  fullName: ConfigurableWarning.Options.TextOption.GetName()
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetName
+  commentId: M:ConfigurableWarning.API.Options.TextOption.GetName
+  fullName: ConfigurableWarning.API.Options.TextOption.GetName()
   nameWithType: TextOption.GetName()
-- uid: ConfigurableWarning.Options.TextOption.GetName*
+- uid: ConfigurableWarning.API.Options.TextOption.GetName*
   name: GetName
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetName_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.GetName
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetName_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.GetName
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.GetName
+  fullName: ConfigurableWarning.API.Options.TextOption.GetName
   nameWithType: TextOption.GetName
-- uid: ConfigurableWarning.Options.TextOption.GetValue
+- uid: ConfigurableWarning.API.Options.TextOption.GetValue
   name: GetValue()
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetValue
-  commentId: M:ConfigurableWarning.Options.TextOption.GetValue
-  fullName: ConfigurableWarning.Options.TextOption.GetValue()
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetValue
+  commentId: M:ConfigurableWarning.API.Options.TextOption.GetValue
+  fullName: ConfigurableWarning.API.Options.TextOption.GetValue()
   nameWithType: TextOption.GetValue()
-- uid: ConfigurableWarning.Options.TextOption.GetValue*
+- uid: ConfigurableWarning.API.Options.TextOption.GetValue*
   name: GetValue
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_GetValue_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.GetValue
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_GetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.GetValue
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.GetValue
+  fullName: ConfigurableWarning.API.Options.TextOption.GetValue
   nameWithType: TextOption.GetValue
-- uid: ConfigurableWarning.Options.TextOption.RegisterSetting(System.String,System.String)
+- uid: ConfigurableWarning.API.Options.TextOption.RegisterSetting(System.String,System.String)
   name: RegisterSetting(string, string)
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_RegisterSetting_System_String_System_String_
-  commentId: M:ConfigurableWarning.Options.TextOption.RegisterSetting(System.String,System.String)
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_RegisterSetting_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.TextOption.RegisterSetting(System.String,System.String)
   name.vb: RegisterSetting(String, String)
-  fullName: ConfigurableWarning.Options.TextOption.RegisterSetting(string, string)
-  fullName.vb: ConfigurableWarning.Options.TextOption.RegisterSetting(String, String)
+  fullName: ConfigurableWarning.API.Options.TextOption.RegisterSetting(string, string)
+  fullName.vb: ConfigurableWarning.API.Options.TextOption.RegisterSetting(String, String)
   nameWithType: TextOption.RegisterSetting(string, string)
   nameWithType.vb: TextOption.RegisterSetting(String, String)
-- uid: ConfigurableWarning.Options.TextOption.RegisterSetting*
+- uid: ConfigurableWarning.API.Options.TextOption.RegisterSetting*
   name: RegisterSetting
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_RegisterSetting_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.RegisterSetting
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_RegisterSetting_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.RegisterSetting
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.RegisterSetting
+  fullName: ConfigurableWarning.API.Options.TextOption.RegisterSetting
   nameWithType: TextOption.RegisterSetting
-- uid: ConfigurableWarning.Options.TextOption.SetValue(System.Object)
+- uid: ConfigurableWarning.API.Options.TextOption.SetValue(System.Object)
   name: SetValue(object)
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_SetValue_System_Object_
-  commentId: M:ConfigurableWarning.Options.TextOption.SetValue(System.Object)
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_SetValue_System_Object_
+  commentId: M:ConfigurableWarning.API.Options.TextOption.SetValue(System.Object)
   name.vb: SetValue(Object)
-  fullName: ConfigurableWarning.Options.TextOption.SetValue(object)
-  fullName.vb: ConfigurableWarning.Options.TextOption.SetValue(Object)
+  fullName: ConfigurableWarning.API.Options.TextOption.SetValue(object)
+  fullName.vb: ConfigurableWarning.API.Options.TextOption.SetValue(Object)
   nameWithType: TextOption.SetValue(object)
   nameWithType.vb: TextOption.SetValue(Object)
-- uid: ConfigurableWarning.Options.TextOption.SetValue(System.String)
+- uid: ConfigurableWarning.API.Options.TextOption.SetValue(System.String)
   name: SetValue(string)
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_SetValue_System_String_
-  commentId: M:ConfigurableWarning.Options.TextOption.SetValue(System.String)
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_SetValue_System_String_
+  commentId: M:ConfigurableWarning.API.Options.TextOption.SetValue(System.String)
   name.vb: SetValue(String)
-  fullName: ConfigurableWarning.Options.TextOption.SetValue(string)
-  fullName.vb: ConfigurableWarning.Options.TextOption.SetValue(String)
+  fullName: ConfigurableWarning.API.Options.TextOption.SetValue(string)
+  fullName.vb: ConfigurableWarning.API.Options.TextOption.SetValue(String)
   nameWithType: TextOption.SetValue(string)
   nameWithType.vb: TextOption.SetValue(String)
-- uid: ConfigurableWarning.Options.TextOption.SetValue*
+- uid: ConfigurableWarning.API.Options.TextOption.SetValue*
   name: SetValue
-  href: api/ConfigurableWarning.Options.TextOption.html#ConfigurableWarning_Options_TextOption_SetValue_
-  commentId: Overload:ConfigurableWarning.Options.TextOption.SetValue
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_SetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.SetValue
   isSpec: "True"
-  fullName: ConfigurableWarning.Options.TextOption.SetValue
+  fullName: ConfigurableWarning.API.Options.TextOption.SetValue
   nameWithType: TextOption.SetValue
+- uid: ConfigurableWarning.API.OptionsState
+  name: OptionsState
+  href: api/ConfigurableWarning.API.OptionsState.html
+  commentId: T:ConfigurableWarning.API.OptionsState
+  fullName: ConfigurableWarning.API.OptionsState
+  nameWithType: OptionsState
+- uid: ConfigurableWarning.API.OptionsState.Apply(System.String)
+  name: Apply(string)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Apply_System_String_
+  commentId: M:ConfigurableWarning.API.OptionsState.Apply(System.String)
+  name.vb: Apply(String)
+  fullName: ConfigurableWarning.API.OptionsState.Apply(string)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Apply(String)
+  nameWithType: OptionsState.Apply(string)
+  nameWithType.vb: OptionsState.Apply(String)
+- uid: ConfigurableWarning.API.OptionsState.Apply*
+  name: Apply
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Apply_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Apply
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Apply
+  nameWithType: OptionsState.Apply
+- uid: ConfigurableWarning.API.OptionsState.Clear
+  name: Clear()
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Clear
+  commentId: M:ConfigurableWarning.API.OptionsState.Clear
+  fullName: ConfigurableWarning.API.OptionsState.Clear()
+  nameWithType: OptionsState.Clear()
+- uid: ConfigurableWarning.API.OptionsState.Clear*
+  name: Clear
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Clear_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Clear
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Clear
+  nameWithType: OptionsState.Clear
+- uid: ConfigurableWarning.API.OptionsState.Collect
+  name: Collect()
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Collect
+  commentId: M:ConfigurableWarning.API.OptionsState.Collect
+  fullName: ConfigurableWarning.API.OptionsState.Collect()
+  nameWithType: OptionsState.Collect()
+- uid: ConfigurableWarning.API.OptionsState.Collect*
+  name: Collect
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Collect_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Collect
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Collect
+  nameWithType: OptionsState.Collect
+- uid: ConfigurableWarning.API.OptionsState.Get*
+  name: Get
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Get_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Get
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Get
+  nameWithType: OptionsState.Get
+- uid: ConfigurableWarning.API.OptionsState.Get``1(ConfigurableWarning.API.Options.IOption{``0})
+  name: Get<T>(IOption<T>)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Get__1_ConfigurableWarning_API_Options_IOption___0__
+  commentId: M:ConfigurableWarning.API.OptionsState.Get``1(ConfigurableWarning.API.Options.IOption{``0})
+  name.vb: Get(Of T)(IOption(Of T))
+  fullName: ConfigurableWarning.API.OptionsState.Get<T>(ConfigurableWarning.API.Options.IOption<T>)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Get(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
+  nameWithType: OptionsState.Get<T>(IOption<T>)
+  nameWithType.vb: OptionsState.Get(Of T)(IOption(Of T))
+- uid: ConfigurableWarning.API.OptionsState.Get``1(System.String)
+  name: Get<T>(string)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Get__1_System_String_
+  commentId: M:ConfigurableWarning.API.OptionsState.Get``1(System.String)
+  name.vb: Get(Of T)(String)
+  fullName: ConfigurableWarning.API.OptionsState.Get<T>(string)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Get(Of T)(String)
+  nameWithType: OptionsState.Get<T>(string)
+  nameWithType.vb: OptionsState.Get(Of T)(String)
+- uid: ConfigurableWarning.API.OptionsState.Has*
+  name: Has
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Has_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Has
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Has
+  nameWithType: OptionsState.Has
+- uid: ConfigurableWarning.API.OptionsState.Has``1(ConfigurableWarning.API.Options.IOption{``0})
+  name: Has<T>(IOption<T>)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Has__1_ConfigurableWarning_API_Options_IOption___0__
+  commentId: M:ConfigurableWarning.API.OptionsState.Has``1(ConfigurableWarning.API.Options.IOption{``0})
+  name.vb: Has(Of T)(IOption(Of T))
+  fullName: ConfigurableWarning.API.OptionsState.Has<T>(ConfigurableWarning.API.Options.IOption<T>)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Has(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
+  nameWithType: OptionsState.Has<T>(IOption<T>)
+  nameWithType.vb: OptionsState.Has(Of T)(IOption(Of T))
+- uid: ConfigurableWarning.API.OptionsState.Has``1(System.String)
+  name: Has<T>(string)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Has__1_System_String_
+  commentId: M:ConfigurableWarning.API.OptionsState.Has``1(System.String)
+  name.vb: Has(Of T)(String)
+  fullName: ConfigurableWarning.API.OptionsState.Has<T>(string)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Has(Of T)(String)
+  nameWithType: OptionsState.Has<T>(string)
+  nameWithType.vb: OptionsState.Has(Of T)(String)
+- uid: ConfigurableWarning.API.OptionsState.Instance
+  name: Instance
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Instance
+  commentId: P:ConfigurableWarning.API.OptionsState.Instance
+  fullName: ConfigurableWarning.API.OptionsState.Instance
+  nameWithType: OptionsState.Instance
+- uid: ConfigurableWarning.API.OptionsState.Instance*
+  name: Instance
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Instance_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Instance
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Instance
+  nameWithType: OptionsState.Instance
+- uid: ConfigurableWarning.API.OptionsState.Register*
+  name: Register
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Register_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Register
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Register
+  nameWithType: OptionsState.Register
+- uid: ConfigurableWarning.API.OptionsState.Register``1(ConfigurableWarning.API.Options.IOption{``0})
+  name: Register<T>(IOption<T>)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Register__1_ConfigurableWarning_API_Options_IOption___0__
+  commentId: M:ConfigurableWarning.API.OptionsState.Register``1(ConfigurableWarning.API.Options.IOption{``0})
+  name.vb: Register(Of T)(IOption(Of T))
+  fullName: ConfigurableWarning.API.OptionsState.Register<T>(ConfigurableWarning.API.Options.IOption<T>)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Register(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
+  nameWithType: OptionsState.Register<T>(IOption<T>)
+  nameWithType.vb: OptionsState.Register(Of T)(IOption(Of T))
+- uid: ConfigurableWarning.API.OptionsState.Remove*
+  name: Remove
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Remove_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Remove
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Remove
+  nameWithType: OptionsState.Remove
+- uid: ConfigurableWarning.API.OptionsState.Remove``1(ConfigurableWarning.API.Options.IOption{``0})
+  name: Remove<T>(IOption<T>)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Remove__1_ConfigurableWarning_API_Options_IOption___0__
+  commentId: M:ConfigurableWarning.API.OptionsState.Remove``1(ConfigurableWarning.API.Options.IOption{``0})
+  name.vb: Remove(Of T)(IOption(Of T))
+  fullName: ConfigurableWarning.API.OptionsState.Remove<T>(ConfigurableWarning.API.Options.IOption<T>)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Remove(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
+  nameWithType: OptionsState.Remove<T>(IOption<T>)
+  nameWithType.vb: OptionsState.Remove(Of T)(IOption(Of T))
+- uid: ConfigurableWarning.API.OptionsState.Remove``1(System.String)
+  name: Remove<T>(string)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Remove__1_System_String_
+  commentId: M:ConfigurableWarning.API.OptionsState.Remove``1(System.String)
+  name.vb: Remove(Of T)(String)
+  fullName: ConfigurableWarning.API.OptionsState.Remove<T>(string)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Remove(Of T)(String)
+  nameWithType: OptionsState.Remove<T>(string)
+  nameWithType.vb: OptionsState.Remove(Of T)(String)
+- uid: ConfigurableWarning.API.OptionsState.Set*
+  name: Set
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Set_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Set
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Set
+  nameWithType: OptionsState.Set
+- uid: ConfigurableWarning.API.OptionsState.Set``1(ConfigurableWarning.API.Options.IOption{``0},``0)
+  name: Set<T>(IOption<T>, T)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Set__1_ConfigurableWarning_API_Options_IOption___0____0_
+  commentId: M:ConfigurableWarning.API.OptionsState.Set``1(ConfigurableWarning.API.Options.IOption{``0},``0)
+  name.vb: Set(Of T)(IOption(Of T), T)
+  fullName: ConfigurableWarning.API.OptionsState.Set<T>(ConfigurableWarning.API.Options.IOption<T>, T)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Set(Of T)(ConfigurableWarning.API.Options.IOption(Of T), T)
+  nameWithType: OptionsState.Set<T>(IOption<T>, T)
+  nameWithType.vb: OptionsState.Set(Of T)(IOption(Of T), T)
+- uid: ConfigurableWarning.API.OptionsState.Set``1(System.String,``0)
+  name: Set<T>(string, T)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Set__1_System_String___0_
+  commentId: M:ConfigurableWarning.API.OptionsState.Set``1(System.String,``0)
+  name.vb: Set(Of T)(String, T)
+  fullName: ConfigurableWarning.API.OptionsState.Set<T>(string, T)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Set(Of T)(String, T)
+  nameWithType: OptionsState.Set<T>(string, T)
+  nameWithType.vb: OptionsState.Set(Of T)(String, T)
+- uid: ConfigurableWarning.API.OptionsState.Update*
+  name: Update
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Update_
+  commentId: Overload:ConfigurableWarning.API.OptionsState.Update
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionsState.Update
+  nameWithType: OptionsState.Update
+- uid: ConfigurableWarning.API.OptionsState.Update``1(ConfigurableWarning.API.Options.IOption{``0})
+  name: Update<T>(IOption<T>)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Update__1_ConfigurableWarning_API_Options_IOption___0__
+  commentId: M:ConfigurableWarning.API.OptionsState.Update``1(ConfigurableWarning.API.Options.IOption{``0})
+  name.vb: Update(Of T)(IOption(Of T))
+  fullName: ConfigurableWarning.API.OptionsState.Update<T>(ConfigurableWarning.API.Options.IOption<T>)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Update(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
+  nameWithType: OptionsState.Update<T>(IOption<T>)
+  nameWithType.vb: OptionsState.Update(Of T)(IOption(Of T))
+- uid: ConfigurableWarning.API.RegisterOption
+  name: RegisterOption
+  href: api/ConfigurableWarning.API.RegisterOption.html
+  commentId: T:ConfigurableWarning.API.RegisterOption
+  fullName: ConfigurableWarning.API.RegisterOption
+  nameWithType: RegisterOption
+- uid: ConfigurableWarning.Settings
+  name: ConfigurableWarning.Settings
+  href: api/ConfigurableWarning.Settings.html
+  commentId: N:ConfigurableWarning.Settings
+  fullName: ConfigurableWarning.Settings
+  nameWithType: ConfigurableWarning.Settings
+- uid: ConfigurableWarning.Settings.BuiltInSettings
+  name: BuiltInSettings
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.html
+  commentId: T:ConfigurableWarning.Settings.BuiltInSettings
+  fullName: ConfigurableWarning.Settings.BuiltInSettings
+  nameWithType: BuiltInSettings
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys
+  name: BuiltInSettings.Keys
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html
+  commentId: T:ConfigurableWarning.Settings.BuiltInSettings.Keys
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys
+  nameWithType: BuiltInSettings.Keys
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.DaysPerQuota
+  name: DaysPerQuota
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_DaysPerQuota
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.DaysPerQuota
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.DaysPerQuota
+  nameWithType: BuiltInSettings.Keys.DaysPerQuota
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.Health
+  name: Health
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_Health
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.Health
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.Health
+  nameWithType: BuiltInSettings.Keys.Health
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.InfiniteOxygen
+  name: InfiniteOxygen
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_InfiniteOxygen
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.InfiniteOxygen
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.InfiniteOxygen
+  nameWithType: BuiltInSettings.Keys.InfiniteOxygen
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.MaxStamina
+  name: MaxStamina
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_MaxStamina
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.MaxStamina
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.MaxStamina
+  nameWithType: BuiltInSettings.Keys.MaxStamina
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.Oxygen
+  name: Oxygen
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_Oxygen
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.Oxygen
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.Oxygen
+  nameWithType: BuiltInSettings.Keys.Oxygen
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenRefillRate
+  name: OxygenRefillRate
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_OxygenRefillRate
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenRefillRate
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenRefillRate
+  nameWithType: BuiltInSettings.Keys.OxygenRefillRate
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenUsageMultiplier
+  name: OxygenUsageMultiplier
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_OxygenUsageMultiplier
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenUsageMultiplier
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenUsageMultiplier
+  nameWithType: BuiltInSettings.Keys.OxygenUsageMultiplier
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.PrivateHost
+  name: PrivateHost
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_PrivateHost
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.PrivateHost
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.PrivateHost
+  nameWithType: BuiltInSettings.Keys.PrivateHost
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenInDiveBell
+  name: RefillOxygenInDiveBell
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RefillOxygenInDiveBell
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenInDiveBell
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenInDiveBell
+  nameWithType: BuiltInSettings.Keys.RefillOxygenInDiveBell
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenOnSurface
+  name: RefillOxygenOnSurface
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RefillOxygenOnSurface
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenOnSurface
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenOnSurface
+  nameWithType: BuiltInSettings.Keys.RefillOxygenOnSurface
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireAllPlayersInDiveBell
+  name: RequireAllPlayersInDiveBell
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RequireAllPlayersInDiveBell
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireAllPlayersInDiveBell
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireAllPlayersInDiveBell
+  nameWithType: BuiltInSettings.Keys.RequireAllPlayersInDiveBell
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireDiveBellDoorClosed
+  name: RequireDiveBellDoorClosed
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RequireDiveBellDoorClosed
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireDiveBellDoorClosed
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireDiveBellDoorClosed
+  nameWithType: BuiltInSettings.Keys.RequireDiveBellDoorClosed
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintMultiplier
+  name: SprintMultiplier
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_SprintMultiplier
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintMultiplier
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintMultiplier
+  nameWithType: BuiltInSettings.Keys.SprintMultiplier
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintSpeed
+  name: SprintSpeed
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_SprintSpeed
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintSpeed
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintSpeed
+  nameWithType: BuiltInSettings.Keys.SprintSpeed
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.StaminaRegenRate
+  name: StaminaRegenRate
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_StaminaRegenRate
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.StaminaRegenRate
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.StaminaRegenRate
+  nameWithType: BuiltInSettings.Keys.StaminaRegenRate
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenInDiveBell
+  name: UseOxygenInDiveBell
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_UseOxygenInDiveBell
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenInDiveBell
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenInDiveBell
+  nameWithType: BuiltInSettings.Keys.UseOxygenInDiveBell
+- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenOnSurface
+  name: UseOxygenOnSurface
+  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_UseOxygenOnSurface
+  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenOnSurface
+  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenOnSurface
+  nameWithType: BuiltInSettings.Keys.UseOxygenOnSurface
+- uid: ConfigurableWarning.Settings.SettingsUtil
+  name: SettingsUtil
+  href: api/ConfigurableWarning.Settings.SettingsUtil.html
+  commentId: T:ConfigurableWarning.Settings.SettingsUtil
+  fullName: ConfigurableWarning.Settings.SettingsUtil
+  nameWithType: SettingsUtil
+- uid: ConfigurableWarning.Settings.SettingsUtil.UpdateQuotaDays(ConfigurableWarning.API.Options.IntOption)
+  name: UpdateQuotaDays(IntOption)
+  href: api/ConfigurableWarning.Settings.SettingsUtil.html#ConfigurableWarning_Settings_SettingsUtil_UpdateQuotaDays_ConfigurableWarning_API_Options_IntOption_
+  commentId: M:ConfigurableWarning.Settings.SettingsUtil.UpdateQuotaDays(ConfigurableWarning.API.Options.IntOption)
+  fullName: ConfigurableWarning.Settings.SettingsUtil.UpdateQuotaDays(ConfigurableWarning.API.Options.IntOption)
+  nameWithType: SettingsUtil.UpdateQuotaDays(IntOption)
+- uid: ConfigurableWarning.Settings.SettingsUtil.UpdateQuotaDays*
+  name: UpdateQuotaDays
+  href: api/ConfigurableWarning.Settings.SettingsUtil.html#ConfigurableWarning_Settings_SettingsUtil_UpdateQuotaDays_
+  commentId: Overload:ConfigurableWarning.Settings.SettingsUtil.UpdateQuotaDays
+  isSpec: "True"
+  fullName: ConfigurableWarning.Settings.SettingsUtil.UpdateQuotaDays
+  nameWithType: SettingsUtil.UpdateQuotaDays
 - uid: Guides.Introduction
   name: Introduction to LethalLib
   href: guides/quickstart/introduction.html

@@ -62,130 +62,190 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.BoolOption.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.ConfigurableWarningAPI.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.BoolOption.html"
+          "relative_path": "api/ConfigurableWarning.API.ConfigurableWarningAPI.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.ConfigurableWarningAPI.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.OptionLoader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.ConfigurableWarningAPI.html"
+          "relative_path": "api/ConfigurableWarning.API.OptionLoader.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.FloatOption.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.OptionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.FloatOption.html"
+          "relative_path": "api/ConfigurableWarning.API.OptionManager.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.IOption-1.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.OptionSyncer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.IOption-1.html"
+          "relative_path": "api/ConfigurableWarning.API.OptionSyncer.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.IUntypedOption.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.BoolOption.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.IUntypedOption.html"
+          "relative_path": "api/ConfigurableWarning.API.Options.BoolOption.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.IntOption.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.FloatOption.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.IntOption.html"
+          "relative_path": "api/ConfigurableWarning.API.Options.FloatOption.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.OptionLoader.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.IOption-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.OptionLoader.html"
+          "relative_path": "api/ConfigurableWarning.API.Options.IOption-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.OptionManager.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.IUntypedOption.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.OptionManager.html"
+          "relative_path": "api/ConfigurableWarning.API.Options.IUntypedOption.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.OptionSyncer.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.IntOption.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.OptionSyncer.html"
+          "relative_path": "api/ConfigurableWarning.API.Options.IntOption.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.OptionsState.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.TextOption.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.OptionsState.html"
+          "relative_path": "api/ConfigurableWarning.API.Options.TextOption.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.RegisterOption.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.RegisterOption.html"
+          "relative_path": "api/ConfigurableWarning.API.Options.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.TextOption.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.OptionsState.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.TextOption.html"
+          "relative_path": "api/ConfigurableWarning.API.OptionsState.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Options.yml",
+      "source_relative_path": "api/ConfigurableWarning.API.RegisterOption.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Options.html"
+          "relative_path": "api/ConfigurableWarning.API.RegisterOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.Keys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.SettingsUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.SettingsUtil.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.html"
         }
       },
       "version": ""

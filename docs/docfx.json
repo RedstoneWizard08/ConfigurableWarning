@@ -1,82 +1,54 @@
 {
-  "metadata": [
-    {
-      "src": [
+    "metadata": [
         {
-          "files": [
-            "**/ConfigurableWarning.csproj"
-          ],
-          "src": "../ConfigurableWarning"
+            "src": [
+                {
+                    "files": ["**/ConfigurableWarning.csproj"],
+                    "src": "../ConfigurableWarning"
+                }
+            ],
+            "dest": "api",
+            "filter": "filterConfig.yml",
+            "properties": {
+                "TargetFramework": "netstandard2.1"
+            },
+            "namespaceLayout": "nested"
         }
-      ],
-      "dest": "api",
-      "filter": "filterConfig.yml",
-      "properties": {
-        "TargetFramework": "netstandard2.1"
-      },
-      "namespaceLayout": "nested"
+    ],
+    "build": {
+        "content": [
+            {
+                "files": ["api/**/*.yml", "api/index.md"]
+            },
+            {
+                "files": ["toc.yml", "index.md"]
+            },
+            {
+                "files": ["guides/**/*.md", "guides/**/toc.yml"]
+            },
+            {
+                "src": "../",
+                "files": ["CHANGELOG.md"]
+            }
+        ],
+        "resource": [
+            {
+                "files": ["images/**", ".nojekyll"]
+            },
+            {
+                "src": "../",
+                "files": ["icon.svg", "banner.svg", "banner-small.png"]
+            }
+        ],
+        "dest": "_site",
+        "template": ["default", "modern", "templates/material"],
+        "postProcessors": ["ExtractSearchIndex"],
+        "globalMetadata": {
+            "_appTitle": "ConfigurableWarning Docs",
+            "_appLogoPath": "banner.svg",
+            "_enableSearch": true,
+            "_gitUrlPattern": "github"
+        },
+        "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"]
     }
-  ],
-  "build": {
-    "content": [
-      {
-        "files": [
-          "api/**/*.yml",
-          "api/index.md"
-        ]
-      },
-      {
-        "files": [
-          "toc.yml",
-          "index.md"
-        ]
-      },
-      {
-        "files": [
-          "guides/**/*.md",
-          "guides/**/toc.yml"
-        ]
-      },
-      {
-        "src": "../",
-        "files": [
-          "CHANGELOG.md"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "images/**",
-          ".nojekyll"
-        ]
-      },
-      {
-        "src": "../",
-        "files": [
-          "icon.svg",
-          "banner.svg",
-          "banner-small.png"
-        ]
-      }
-    ],
-    "dest": "_site",
-    "template": [
-      "default",
-      "modern",
-      "templates/material"
-    ],
-    "postProcessors": [
-      "ExtractSearchIndex"
-    ],
-    "globalMetadata": {
-      "_appTitle": "ConfigurableWarning Docs",
-      "_appLogoPath": "banner.svg",
-      "_enableSearch": true,
-      "_gitUrlPattern": "github"
-    },
-    "xrefService": [
-      "https://xref.docs.microsoft.com/query?uid={uid}"
-    ]
-  }
 }

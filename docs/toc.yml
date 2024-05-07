@@ -1,7 +1,7 @@
 items:
-- name: Guides
-  href: guides/
-- name: API Reference
-  href: api/
-- name: Changelog
-  href: ../CHANGELOG.md
+    - name: Guides
+      href: guides/
+    - name: API Reference
+      href: api/
+    - name: Changelog
+      href: ../CHANGELOG.md

@@ -48,7 +48,7 @@ The `[RegisterOption]` comes from <xref:ConfigurableWarning.API.RegisterOption>,
 tells ConfigurableWarning to automatically register your option to the game, meaning that
 you don't have to do that!
 
-The inherited class, <xref:ConfigurableWarning.API.Options.IntOption>, defines this as an 
+The inherited class, <xref:ConfigurableWarning.API.Options.IntOption>, defines this as an
 <xref:ConfigurableWarning.API.Options.IOption`1> with the <xref:System.Boolean> type for its
 value. This constructor takes a few arguments, namely:
 
@@ -68,7 +68,7 @@ value. This constructor takes a few arguments, namely:
 
 ## Notes
 
-- Unfortunately, due to the nature of how Zorro's Settings API works, each option has to be its
-  own class.
-- This API is built on top of ContentSettings, they did some amazing work!
-- This API is a work-in-progress! Things may change at any time!
+-   Unfortunately, due to the nature of how Zorro's Settings API works, each option has to be its
+    own class.
+-   This API is built on top of ContentSettings, they did some amazing work!
+-   This API is a work-in-progress! Things may change at any time!

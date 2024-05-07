@@ -1,0 +1,15 @@
+{
+    "watch": [
+        "index.md",
+        "**/*.*"
+    ],
+    "ignore": [
+        "**/bin/**/*.*",
+        "**/obj/**/*.*",
+        "**/node_modules/**/*.*",
+        "**/_site/**/*.*",
+        "**/api/**/*.*"
+    ],
+    "ext": "md,yml,csproj,cs,txt",
+    "exec": "docfx"
+}

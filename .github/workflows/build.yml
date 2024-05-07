@@ -22,11 +22,11 @@ jobs:
             chmod +x build.sh
             ./build.sh
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         name: Upload Artifacts
         with:
           if-no-files-found: error
           name: ${{ env.GITHUB_REPOSITORY_NAME_PART_SLUG }}.zip
           path: |
-            "${{ github.workspace }}/**/bin/**/*.dll"
-            "${{ github.workspace }}/output/**/*.zip"
+            **/bin/**/*.dll
+            output/**/*.zip

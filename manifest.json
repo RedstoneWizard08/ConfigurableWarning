@@ -51,6 +51,159 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": ".nojekyll",
+      "output": {
+        "resource": {
+          "relative_path": ".nojekyll"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.BoolOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.BoolOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.ConfigurableWarningAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.ConfigurableWarningAPI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.FloatOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.FloatOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.IOption-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.IOption-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.IUntypedOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.IUntypedOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.IntOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.IntOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.OptionLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.OptionLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.OptionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.OptionManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.OptionSyncer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.OptionSyncer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.OptionsState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.OptionsState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.RegisterOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.RegisterOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.TextOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.TextOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Options.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "guides/quickstart/introduction.md",
       "output": {

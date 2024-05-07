@@ -1412,6 +1412,9 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.Settings.SettingsUtil.UpdateQuotaDays
   nameWithType: SettingsUtil.UpdateQuotaDays
+- uid: Guides.GettingStarted
+  name: Getting Started
+  href: guides/quickstart/getting-started.html
 - uid: Guides.Introduction
-  name: Introduction to LethalLib
+  name: Introduction to ConfigurableWarning
   href: guides/quickstart/introduction.html

@@ -265,6 +265,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "guides/quickstart/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/quickstart/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "guides/quickstart/introduction.md",
       "output": {
         ".html": {

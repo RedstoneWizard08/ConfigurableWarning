@@ -99,14 +99,19 @@
     "title": "Namespace ConfigurableWarning | ConfigurableWarning Docs",
     "keywords": "Namespace ConfigurableWarning Namespaces ConfigurableWarning.API ConfigurableWarning.Settings"
   },
+  "guides/quickstart/getting-started.html": {
+    "href": "guides/quickstart/getting-started.html",
+    "title": "Getting Started | ConfigurableWarning Docs",
+    "keywords": "Getting Started With ConfigurableWarning, getting started is easy! Installing After setting up a new BepInEx mod, you can add the package to your project using the following: CLI CSProj dotnet add package RedstoneWizard08.ConfigurableWarning <PackageReference Include=\"RedstoneWizard08.ConfigurableWarning\" Version=\"1.13.0\" IncludeAssets=\"compile\" ExcludeAssets=\"RUNTIME\" /> Note ConfigurableWarning is not yet actually published on NuGet. This is what it will be like in the future! Your First Option To create an option, you'll need a few things. You'll start with the class: [RegisterOption] private class MyOption() : IntOption(\"MyOption\", 50, \"My Option!\", 0, 100, \"MY STUFF\", \"GENERAL\"); You'll notice a few things here. Let's break it down. The [RegisterOption] comes from RegisterOption, and tells ConfigurableWarning to automatically register your option to the game, meaning that you don't have to do that! The inherited class, IntOption, defines this as an IOption<T> with the bool type for its value. This constructor takes a few arguments, namely: The option's name - Here it's MyOption. This is used in the registry, and the end-user will likely never see it. The default value - Here it's 50. The option's display name - Here it's \"My Option!\". This is what the user will see in the settings menu. The minimum value - Here it's 0. This is the minumum value that the slider will go to. The maximum value - Here it's 100. This is the maximum value that the slider will go to. The tab - Here it's \"MY STUFF\". This will be the tab that the setting shows up in. The category - Here it's \"GENERAL\". This will be the category that the setting appears under. Tip To see all of the option types and constructors, look at the API reference! See ConfigurableWarning.API.Options. Notes Unfortunately, due to the nature of how Zorro's Settings API works, each option has to be its own class. This API is built on top of ContentSettings, they did some amazing work! This API is a work-in-progress! Things may change at any time!"
+  },
   "guides/quickstart/introduction.html": {
     "href": "guides/quickstart/introduction.html",
-    "title": "Introduction to LethalLib | ConfigurableWarning Docs",
-    "keywords": "Introduction"
+    "title": "Introduction to ConfigurableWarning | ConfigurableWarning Docs",
+    "keywords": "Introduction Welcome to our docs! ConfigurableWarning is a mod for Content Warning that allows you to change several aspects of the game that you can't normally change. ConfigurableWarning also has a handy developer API which is documented right here! API Docs: ConfigurableWarning.API Get Started"
   },
   "index.html": {
     "href": "index.html",
     "title": "ConfigurableWarning | ConfigurableWarning Docs",
-    "keywords": "ConfigurableWarning Makes the game configurable! This is a quality-of-life mod to help you make the game as hard (or as easy) as you want! Notes Configs should be host-only! Changes by anyone but the host should not apply!"
+    "keywords": "ConfigurableWarning Makes the game configurable! This is a quality-of-life mod to help you make the game as hard (or as easy) as you want! Get Started"
   }
 }

@@ -28,7 +28,8 @@
       {
         "files": [
           "toc.yml",
-          "index.md"
+          "index.md",
+          ".nojekyll"
         ]
       },
       {

@@ -4,6 +4,9 @@ references:
 - uid: ConfigurableWarning
   name: ConfigurableWarning
   href: api/ConfigurableWarning.html
+  commentId: N:ConfigurableWarning
+  fullName: ConfigurableWarning
+  nameWithType: ConfigurableWarning
 - uid: ConfigurableWarning.API
   name: ConfigurableWarning.API
   href: api/ConfigurableWarning.API.html
@@ -1273,6 +1276,81 @@ references:
   commentId: T:ConfigurableWarning.API.RegisterOption
   fullName: ConfigurableWarning.API.RegisterOption
   nameWithType: RegisterOption
+- uid: ConfigurableWarning.MyPluginInfo
+  name: MyPluginInfo
+  href: api/ConfigurableWarning.MyPluginInfo.html
+  commentId: T:ConfigurableWarning.MyPluginInfo
+  fullName: ConfigurableWarning.MyPluginInfo
+  nameWithType: MyPluginInfo
+- uid: ConfigurableWarning.MyPluginInfo.PLUGIN_GUID
+  name: PLUGIN_GUID
+  href: api/ConfigurableWarning.MyPluginInfo.html#ConfigurableWarning_MyPluginInfo_PLUGIN_GUID
+  commentId: F:ConfigurableWarning.MyPluginInfo.PLUGIN_GUID
+  fullName: ConfigurableWarning.MyPluginInfo.PLUGIN_GUID
+  nameWithType: MyPluginInfo.PLUGIN_GUID
+- uid: ConfigurableWarning.MyPluginInfo.PLUGIN_NAME
+  name: PLUGIN_NAME
+  href: api/ConfigurableWarning.MyPluginInfo.html#ConfigurableWarning_MyPluginInfo_PLUGIN_NAME
+  commentId: F:ConfigurableWarning.MyPluginInfo.PLUGIN_NAME
+  fullName: ConfigurableWarning.MyPluginInfo.PLUGIN_NAME
+  nameWithType: MyPluginInfo.PLUGIN_NAME
+- uid: ConfigurableWarning.MyPluginInfo.PLUGIN_VERSION
+  name: PLUGIN_VERSION
+  href: api/ConfigurableWarning.MyPluginInfo.html#ConfigurableWarning_MyPluginInfo_PLUGIN_VERSION
+  commentId: F:ConfigurableWarning.MyPluginInfo.PLUGIN_VERSION
+  fullName: ConfigurableWarning.MyPluginInfo.PLUGIN_VERSION
+  nameWithType: MyPluginInfo.PLUGIN_VERSION
+- uid: ConfigurableWarning.Plugin
+  name: Plugin
+  href: api/ConfigurableWarning.Plugin.html
+  commentId: T:ConfigurableWarning.Plugin
+  fullName: ConfigurableWarning.Plugin
+  nameWithType: Plugin
+- uid: ConfigurableWarning.Plugin.Awake
+  name: Awake()
+  href: api/ConfigurableWarning.Plugin.html#ConfigurableWarning_Plugin_Awake
+  commentId: M:ConfigurableWarning.Plugin.Awake
+  fullName: ConfigurableWarning.Plugin.Awake()
+  nameWithType: Plugin.Awake()
+- uid: ConfigurableWarning.Plugin.Awake*
+  name: Awake
+  href: api/ConfigurableWarning.Plugin.html#ConfigurableWarning_Plugin_Awake_
+  commentId: Overload:ConfigurableWarning.Plugin.Awake
+  isSpec: "True"
+  fullName: ConfigurableWarning.Plugin.Awake
+  nameWithType: Plugin.Awake
+- uid: ConfigurableWarning.Plugin.ModID
+  name: ModID
+  href: api/ConfigurableWarning.Plugin.html#ConfigurableWarning_Plugin_ModID
+  commentId: F:ConfigurableWarning.Plugin.ModID
+  fullName: ConfigurableWarning.Plugin.ModID
+  nameWithType: Plugin.ModID
+- uid: ConfigurableWarning.Plugin.Patch
+  name: Patch()
+  href: api/ConfigurableWarning.Plugin.html#ConfigurableWarning_Plugin_Patch
+  commentId: M:ConfigurableWarning.Plugin.Patch
+  fullName: ConfigurableWarning.Plugin.Patch()
+  nameWithType: Plugin.Patch()
+- uid: ConfigurableWarning.Plugin.Patch*
+  name: Patch
+  href: api/ConfigurableWarning.Plugin.html#ConfigurableWarning_Plugin_Patch_
+  commentId: Overload:ConfigurableWarning.Plugin.Patch
+  isSpec: "True"
+  fullName: ConfigurableWarning.Plugin.Patch
+  nameWithType: Plugin.Patch
+- uid: ConfigurableWarning.Plugin.Unpatch
+  name: Unpatch()
+  href: api/ConfigurableWarning.Plugin.html#ConfigurableWarning_Plugin_Unpatch
+  commentId: M:ConfigurableWarning.Plugin.Unpatch
+  fullName: ConfigurableWarning.Plugin.Unpatch()
+  nameWithType: Plugin.Unpatch()
+- uid: ConfigurableWarning.Plugin.Unpatch*
+  name: Unpatch
+  href: api/ConfigurableWarning.Plugin.html#ConfigurableWarning_Plugin_Unpatch_
+  commentId: Overload:ConfigurableWarning.Plugin.Unpatch
+  isSpec: "True"
+  fullName: ConfigurableWarning.Plugin.Unpatch
+  nameWithType: Plugin.Unpatch
 - uid: ConfigurableWarning.Settings
   name: ConfigurableWarning.Settings
   href: api/ConfigurableWarning.Settings.html

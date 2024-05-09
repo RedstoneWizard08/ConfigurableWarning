@@ -8,7 +8,6 @@
                 }
             ],
             "dest": "api",
-            "filter": "filterConfig.yml",
             "properties": {
                 "TargetFramework": "netstandard2.1"
             },

@@ -191,13 +191,13 @@ references:
   nameWithType: BoolOption.BoolOption(string, bool, string, string, string)
   nameWithType.vb: BoolOption.New(String, Boolean, String, String, String)
 - uid: ConfigurableWarning.API.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.BoolOption}[])
-  name: BoolOption(string, bool, string, string, string, Action<BoolOption>[]?)
+  name: BoolOption(string, bool, string, string, string, Action<BoolOption>[])
   href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption__ctor_System_String_System_Boolean_System_String_System_String_System_String_System_Action_ConfigurableWarning_API_Options_BoolOption____
   commentId: M:ConfigurableWarning.API.Options.BoolOption.#ctor(System.String,System.Boolean,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.BoolOption}[])
   name.vb: New(String, Boolean, String, String, String, Action(Of BoolOption)())
-  fullName: ConfigurableWarning.API.Options.BoolOption.BoolOption(string, bool, string, string, string, System.Action<ConfigurableWarning.API.Options.BoolOption>[]?)
+  fullName: ConfigurableWarning.API.Options.BoolOption.BoolOption(string, bool, string, string, string, System.Action<ConfigurableWarning.API.Options.BoolOption>[])
   fullName.vb: ConfigurableWarning.API.Options.BoolOption.New(String, Boolean, String, String, String, System.Action(Of ConfigurableWarning.API.Options.BoolOption)())
-  nameWithType: BoolOption.BoolOption(string, bool, string, string, string, Action<BoolOption>[]?)
+  nameWithType: BoolOption.BoolOption(string, bool, string, string, string, Action<BoolOption>[])
   nameWithType.vb: BoolOption.New(String, Boolean, String, String, String, Action(Of BoolOption)())
 - uid: ConfigurableWarning.API.Options.BoolOption.#ctor*
   name: BoolOption
@@ -348,13 +348,13 @@ references:
   fullName: ConfigurableWarning.API.Options.FloatOption
   nameWithType: FloatOption
 - uid: ConfigurableWarning.API.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Action{ConfigurableWarning.API.Options.FloatOption}[],System.Boolean)
-  name: FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[]?, bool)
+  name: FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[], bool)
   href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption__ctor_System_String_System_Single_System_String_System_Single_System_Single_System_String_System_String_System_Action_ConfigurableWarning_API_Options_FloatOption____System_Boolean_
   commentId: M:ConfigurableWarning.API.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Action{ConfigurableWarning.API.Options.FloatOption}[],System.Boolean)
   name.vb: New(String, Single, String, Single, Single, String, String, Action(Of FloatOption)(), Boolean)
-  fullName: ConfigurableWarning.API.Options.FloatOption.FloatOption(string, float, string, float, float, string, string, System.Action<ConfigurableWarning.API.Options.FloatOption>[]?, bool)
+  fullName: ConfigurableWarning.API.Options.FloatOption.FloatOption(string, float, string, float, float, string, string, System.Action<ConfigurableWarning.API.Options.FloatOption>[], bool)
   fullName.vb: ConfigurableWarning.API.Options.FloatOption.New(String, Single, String, Single, Single, String, String, System.Action(Of ConfigurableWarning.API.Options.FloatOption)(), Boolean)
-  nameWithType: FloatOption.FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[]?, bool)
+  nameWithType: FloatOption.FloatOption(string, float, string, float, float, string, string, Action<FloatOption>[], bool)
   nameWithType.vb: FloatOption.New(String, Single, String, Single, Single, String, String, Action(Of FloatOption)(), Boolean)
 - uid: ConfigurableWarning.API.Options.FloatOption.#ctor(System.String,System.Single,System.String,System.Single,System.Single,System.String,System.String,System.Boolean)
   name: FloatOption(string, float, string, float, float, string, string, bool)
@@ -739,13 +739,13 @@ references:
   fullName: ConfigurableWarning.API.Options.IntOption
   nameWithType: IntOption
 - uid: ConfigurableWarning.API.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Action{ConfigurableWarning.API.Options.IntOption}[],System.Boolean)
-  name: IntOption(string, int, string, int, int, string, string, Action<IntOption>[]?, bool)
+  name: IntOption(string, int, string, int, int, string, string, Action<IntOption>[], bool)
   href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption__ctor_System_String_System_Int32_System_String_System_Int32_System_Int32_System_String_System_String_System_Action_ConfigurableWarning_API_Options_IntOption____System_Boolean_
   commentId: M:ConfigurableWarning.API.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Action{ConfigurableWarning.API.Options.IntOption}[],System.Boolean)
   name.vb: New(String, Integer, String, Integer, Integer, String, String, Action(Of IntOption)(), Boolean)
-  fullName: ConfigurableWarning.API.Options.IntOption.IntOption(string, int, string, int, int, string, string, System.Action<ConfigurableWarning.API.Options.IntOption>[]?, bool)
+  fullName: ConfigurableWarning.API.Options.IntOption.IntOption(string, int, string, int, int, string, string, System.Action<ConfigurableWarning.API.Options.IntOption>[], bool)
   fullName.vb: ConfigurableWarning.API.Options.IntOption.New(String, Integer, String, Integer, Integer, String, String, System.Action(Of ConfigurableWarning.API.Options.IntOption)(), Boolean)
-  nameWithType: IntOption.IntOption(string, int, string, int, int, string, string, Action<IntOption>[]?, bool)
+  nameWithType: IntOption.IntOption(string, int, string, int, int, string, string, Action<IntOption>[], bool)
   nameWithType.vb: IntOption.New(String, Integer, String, Integer, Integer, String, String, Action(Of IntOption)(), Boolean)
 - uid: ConfigurableWarning.API.Options.IntOption.#ctor(System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.String,System.Boolean)
   name: IntOption(string, int, string, int, int, string, string, bool)
@@ -927,13 +927,13 @@ references:
   nameWithType: TextOption.TextOption(string, string, string, string, string)
   nameWithType.vb: TextOption.New(String, String, String, String, String)
 - uid: ConfigurableWarning.API.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.TextOption}[])
-  name: TextOption(string, string, string, string, string, Action<TextOption>[]?)
+  name: TextOption(string, string, string, string, string, Action<TextOption>[])
   href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption__ctor_System_String_System_String_System_String_System_String_System_String_System_Action_ConfigurableWarning_API_Options_TextOption____
   commentId: M:ConfigurableWarning.API.Options.TextOption.#ctor(System.String,System.String,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.TextOption}[])
   name.vb: New(String, String, String, String, String, Action(Of TextOption)())
-  fullName: ConfigurableWarning.API.Options.TextOption.TextOption(string, string, string, string, string, System.Action<ConfigurableWarning.API.Options.TextOption>[]?)
+  fullName: ConfigurableWarning.API.Options.TextOption.TextOption(string, string, string, string, string, System.Action<ConfigurableWarning.API.Options.TextOption>[])
   fullName.vb: ConfigurableWarning.API.Options.TextOption.New(String, String, String, String, String, System.Action(Of ConfigurableWarning.API.Options.TextOption)())
-  nameWithType: TextOption.TextOption(string, string, string, string, string, Action<TextOption>[]?)
+  nameWithType: TextOption.TextOption(string, string, string, string, string, Action<TextOption>[])
   nameWithType.vb: TextOption.New(String, String, String, String, String, Action(Of TextOption)())
 - uid: ConfigurableWarning.API.Options.TextOption.#ctor*
   name: TextOption

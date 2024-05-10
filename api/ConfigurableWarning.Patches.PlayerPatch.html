@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class PlayerPatch | ConfigurableWarning Docs ">
       
-      
+      <meta name="description" content="Player &amp;amp; PlayerData patch">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ConfigurableWarning_Patches_PlayerPatch" data-uid="ConfigurableWarning.Patches.PlayerPatch" class="text-break">
-Class PlayerPatch  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class PlayerPatch  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class PlayerPatch  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>RedstoneWizard08.ConfigurableWarning.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Player &amp; PlayerData patch</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -157,10 +158,11 @@ public class PlayerPatch</code></pre>
 
   <h3 id="ConfigurableWarning_Patches_PlayerPatch_CheckOxygen_Player_" data-uid="ConfigurableWarning.Patches.PlayerPatch.CheckOxygen(Player)">
   CheckOxygen(Player)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Patches the CheckOxygen value to add our custom stuff.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -172,13 +174,15 @@ public static bool CheckOxygen(Player __instance)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>__instance</code> <span class="xref">Player</span></dt>
-    <dd></dd>
+    <dd><p>The current instance of a <span class="xref">Player</span>.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><span class="xref">HarmonyLib.HarmonyPrefix</span> continue-or-not flag (this is a prefix)</p>
+</dd>
   </dl>
 
 
@@ -195,10 +199,11 @@ public static bool CheckOxygen(Player __instance)</code></pre>
 
   <h3 id="ConfigurableWarning_Patches_PlayerPatch_GetMaxHealth" data-uid="ConfigurableWarning.Patches.PlayerPatch.GetMaxHealth">
   GetMaxHealth()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Internal max health value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -209,7 +214,8 @@ public static bool CheckOxygen(Player __instance)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The custom max health value.</p>
+</dd>
   </dl>
 
 
@@ -226,10 +232,11 @@ public static bool CheckOxygen(Player __instance)</code></pre>
 
   <h3 id="ConfigurableWarning_Patches_PlayerPatch_GetMaxOxygen" data-uid="ConfigurableWarning.Patches.PlayerPatch.GetMaxOxygen">
   GetMaxOxygen()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Internal max oxygen value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -240,7 +247,8 @@ public static bool CheckOxygen(Player __instance)</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The custom max oxygen value.</p>
+</dd>
   </dl>
 
 
@@ -257,10 +265,11 @@ public static bool CheckOxygen(Player __instance)</code></pre>
 
   <h3 id="ConfigurableWarning_Patches_PlayerPatch_UpdateValuesPost_Player_PlayerData_" data-uid="ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPost(Player.PlayerData)">
   UpdateValuesPost(PlayerData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Patches the UpdateValues method to include our custom oxygen code</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -272,7 +281,8 @@ public static void UpdateValuesPost(Player.PlayerData __instance)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>__instance</code> <span class="xref">Player</span>.<span class="xref">PlayerData</span></dt>
-    <dd></dd>
+    <dd><p>The current instance of a <span class="xref">Player.PlayerData</span>.</p>
+</dd>
   </dl>
 
 
@@ -290,10 +300,11 @@ public static void UpdateValuesPost(Player.PlayerData __instance)</code></pre>
 
   <h3 id="ConfigurableWarning_Patches_PlayerPatch_UpdateValuesPre_Player_PlayerData_" data-uid="ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPre(Player.PlayerData)">
   UpdateValuesPre(PlayerData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores the current usingOxygen flag and modifies a few more things.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -305,13 +316,15 @@ public static bool UpdateValuesPre(Player.PlayerData __instance)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>__instance</code> <span class="xref">Player</span>.<span class="xref">PlayerData</span></dt>
-    <dd></dd>
+    <dd><p>The current instance of a <span class="xref">Player.PlayerData</span>.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><span class="xref">HarmonyLib.HarmonyPrefix</span> continue-or-not flag (this is a prefix)</p>
+</dd>
   </dl>
 
 
@@ -328,7 +341,7 @@ public static bool UpdateValuesPre(Player.PlayerData __instance)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Patches/PlayerPatch.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

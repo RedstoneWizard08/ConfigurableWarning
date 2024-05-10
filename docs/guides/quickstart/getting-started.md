@@ -21,7 +21,7 @@ dotnet add package RedstoneWizard08.ConfigurableWarning
 # [CSProj](#tab/csproj)
 
 ```xml
-<PackageReference Include="RedstoneWizard08.ConfigurableWarning" Version="1.13.0" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
+<PackageReference Include="RedstoneWizard08.ConfigurableWarning" Version="1.13.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
 ```
 
 ---

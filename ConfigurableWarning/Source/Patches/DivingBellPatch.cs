@@ -19,7 +19,7 @@ public class DivingBellPatch {
     [HarmonyPostfix]
     [HarmonyPatch(typeof(DivingBellDoor), nameof(DivingBellDoor.IsFullyClosed))]
     public static void IsFullyClosed(DivingBellDoor __instance, ref bool __result) {
-        __result = __result || !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RequireDiveBellDoorClosed);
+        __result = __result || !States.Bools[SettingKeys.RequireDiveBellDoorClosed];
     }
 
     /// <summary>
@@ -31,7 +31,7 @@ public class DivingBellPatch {
     [HarmonyPostfix]
     [HarmonyPatch(typeof(DiveBellPlayerDetector), nameof(DiveBellPlayerDetector.CheckForPlayers))]
     public static void CheckForPlayers(DiveBellPlayerDetector __instance, ref ICollection<Player> __result) {
-        if (!OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RequireAllPlayersInDiveBell))
+        if (!States.Bools[SettingKeys.RequireAllPlayersInDiveBell])
             __result = PlayerHandler.instance.players;
     }
 
@@ -52,10 +52,8 @@ public class DivingBellPatch {
         var playersFoundInBell = __instance.playerDetector.CheckForPlayers();
         var players = PlayerHandler.instance.players;
         var allInside = players.All(player => playersFoundInBell.Contains(player));
-        var notClosed = !__instance.door.IsFullyClosed() &&
-                        OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RequireDiveBellDoorClosed);
-        var notAllInside =
-            !allInside && OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RequireAllPlayersInDiveBell);
+        var notClosed = !__instance.door.IsFullyClosed() && States.Bools[SettingKeys.RequireDiveBellDoorClosed];
+        var notAllInside = !allInside && States.Bools[SettingKeys.RequireAllPlayersInDiveBell];
 
         if (!notClosed) __instance.opened = false;
 

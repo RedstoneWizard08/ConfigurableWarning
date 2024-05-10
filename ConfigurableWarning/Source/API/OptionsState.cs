@@ -93,10 +93,9 @@ public class OptionsState {
     /// <summary>
     ///     Returns true if the option is registered in the state.
     /// </summary>
-    /// <typeparam name="T">The option's value type.</typeparam>
     /// <param name="name">The option's name.</param>
     /// <returns>True if the option has a value in the state.</returns>
-    public bool Has<T>(string name) {
+    public bool Has(string name) {
         return _states.ContainsKey(name);
     }
 
@@ -116,9 +115,8 @@ public class OptionsState {
     ///     This does NOT unregister it from the <see cref="OptionManager" />
     ///     *or* ContentSettings' <see cref="ContentSettings.API.SettingsLoader" />.
     /// </summary>
-    /// <typeparam name="T">The option's value type.</typeparam>
     /// <param name="name">The option's name.</param>
-    public void Remove<T>(string name) {
+    public void Remove(string name) {
         _states.Remove(name);
     }
 

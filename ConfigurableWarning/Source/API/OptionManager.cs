@@ -43,7 +43,17 @@ public class OptionManager {
     /// </summary>
     /// <param name="name">The option's name.</param>
     /// <returns>The untyped form of the option.</returns>
-    public IUntypedOption Get(string name) {
+    public IUntypedOption? Get(string name) {
         return _options[name];
+    }
+
+    /// <summary>
+    ///     Gets a typed option by its name.
+    /// </summary>
+    /// <typeparam name="T">The option's type.</typeparam>
+    /// <param name="name">The option's name.</param>
+    /// <returns>The option.</returns>
+    public IOption<T>? Get<T>(string name) {
+        return (IOption<T>?) Get(name);
     }
 }

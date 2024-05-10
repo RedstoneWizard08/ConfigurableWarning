@@ -19,7 +19,7 @@ public class PlayerPatch {
     /// </summary>
     /// <returns>The custom max oxygen value.</returns>
     public static float GetMaxOxygen() {
-        return OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
+        return States.Floats[SettingKeys.Oxygen];
     }
 
     /// <summary>
@@ -27,7 +27,7 @@ public class PlayerPatch {
     /// </summary>
     /// <returns>The custom max health value.</returns>
     public static float GetMaxHealth() {
-        return OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Health);
+        return States.Floats[SettingKeys.Health];
     }
 
     /// <summary>
@@ -38,24 +38,24 @@ public class PlayerPatch {
     [HarmonyPrefix]
     [HarmonyPatch(typeof(Player), nameof(Player.CheckOxygen))]
     public static bool CheckOxygen(Player __instance) {
-        if (OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.InfiniteOxygen)) {
-            __instance.data.remainingOxygen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
+        if (States.Bools[SettingKeys.InfiniteOxygen]) {
+            __instance.data.remainingOxygen = States.Floats[SettingKeys.Oxygen];
             return false;
         }
 
         var isSurface = SceneManager.GetActiveScene().name == "SurfaceScene";
-        var flag = isSurface && !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.UseOxygenOnSurface);
+        var flag = isSurface && !States.Bools[SettingKeys.UseOxygenOnSurface];
 
         __instance.data.usingOxygen = !flag;
 
-        if (isSurface && OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RefillOxygenOnSurface))
+        if (isSurface && States.Bools[SettingKeys.RefillOxygenOnSurface])
             __instance.data.remainingOxygen +=
-                Time.deltaTime * OptionsState.Instance.Get<float>(BuiltInSettings.Keys.OxygenRefillRate);
+                Time.deltaTime * States.Floats[SettingKeys.OxygenRefillRate];
 
         if (__instance.ai) __instance.data.usingOxygen = false;
 
-        if (__instance.data.remainingOxygen > OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen))
-            __instance.data.remainingOxygen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
+        if (__instance.data.remainingOxygen > States.Floats[SettingKeys.Oxygen])
+            __instance.data.remainingOxygen = States.Floats[SettingKeys.Oxygen];
 
         if (__instance.data.remainingOxygen < 0) __instance.data.remainingOxygen = 0;
 
@@ -73,8 +73,8 @@ public class PlayerPatch {
         CheckOxygen(__instance.player);
 
         _tmpUsingOxygen = __instance.usingOxygen;
-        Player.PlayerData.maxHealth = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Health);
-        __instance.maxOxygen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
+        Player.PlayerData.maxHealth = States.Floats[SettingKeys.Health];
+        __instance.maxOxygen = States.Floats[SettingKeys.Oxygen];
 
         // We want to override this functionality with our own code, but
         // preserve the rest of the method.
@@ -92,17 +92,16 @@ public class PlayerPatch {
     public static void UpdateValuesPost(Player.PlayerData __instance) {
         __instance.usingOxygen = _tmpUsingOxygen;
 
-        if (!__instance.usingOxygen || (__instance.isInDiveBell &&
-                                        !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.UseOxygenInDiveBell)))
+        if (!__instance.usingOxygen || (__instance.isInDiveBell && !States.Bools[SettingKeys.UseOxygenInDiveBell]))
             return;
 
         var mul = (__instance.isSprinting
-            ? OptionsState.Instance.Get<float>(BuiltInSettings.Keys.SprintMultiplier)
-            : 1.0f) * OptionsState.Instance.Get<float>(BuiltInSettings.Keys.OxygenUsageMultiplier);
+            ? States.Floats[SettingKeys.SprintMultiplier]
+            : 1.0f) * States.Floats[SettingKeys.OxygenUsageMultiplier];
 
         __instance.remainingOxygen -= Time.deltaTime * mul;
 
-        if (__instance.remainingOxygen < OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen) * 0.5f &&
+        if (__instance.remainingOxygen < States.Floats[SettingKeys.Oxygen] * 0.5f &&
             PhotonNetwork.IsMasterClient &&
             PhotonGameLobbyHandler.CurrentObjective is FilmSomethingScaryObjective)
             PhotonGameLobbyHandler.Instance.SetCurrentObjective(new ReturnToTheDiveBellObjective());

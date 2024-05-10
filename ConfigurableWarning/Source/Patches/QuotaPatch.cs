@@ -23,7 +23,7 @@ public class QuotaPatch {
         [typeof(SurfaceNetworkHandler), typeof(int), typeof(int), typeof(int)])]
     public static void Constructor(RoomStatsHolder __instance, SurfaceNetworkHandler handler, int startMoney,
         int startQuotaToReachToReach, int daysPerQuota) {
-        __instance.DaysPerQutoa = OptionsState.Instance.Get<int>(BuiltInSettings.Keys.DaysPerQuota);
+        __instance.DaysPerQutoa = States.Ints[SettingKeys.DaysPerQuota];
     }
 
     /// <summary>
@@ -34,6 +34,6 @@ public class QuotaPatch {
     [HarmonyPostfix]
     [HarmonyPatch(typeof(RoomStatsHolder), nameof(RoomStatsHolder.DaysPerQutoa), MethodType.Getter)]
     public static void GetDaysPerQuota(RoomStatsHolder __instance, ref int __result) {
-        __result = OptionsState.Instance.Get<int>(BuiltInSettings.Keys.DaysPerQuota);
+        __result = States.Ints[SettingKeys.DaysPerQuota];
     }
 }

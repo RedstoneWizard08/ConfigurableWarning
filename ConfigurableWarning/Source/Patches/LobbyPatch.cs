@@ -25,7 +25,7 @@ public class LobbyPatch {
     /// <param name="__instance">The current instance of the <see cref="SteamLobbyHandler" />.</param>
     /// <returns>If the game is public</returns>
     private static bool IsPublic(SteamLobbyHandler __instance) {
-        if (__instance.MasterClient) return !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.PrivateHost);
+        if (__instance.MasterClient) return !States.Bools[SettingKeys.PrivateHost];
 
         return __instance.IsPlayingWithRandoms();
     }
@@ -38,7 +38,7 @@ public class LobbyPatch {
     [HarmonyPostfix]
     [HarmonyPatch(typeof(SteamLobbyHandler), nameof(SteamLobbyHandler.IsPlayingWithRandoms))]
     public static void IsPlayingWithRandoms(SteamLobbyHandler __instance, ref bool __result) {
-        if (__instance.MasterClient) __result = !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.PrivateHost);
+        if (__instance.MasterClient) __result = !States.Bools[SettingKeys.PrivateHost];
     }
 
     /// <summary>

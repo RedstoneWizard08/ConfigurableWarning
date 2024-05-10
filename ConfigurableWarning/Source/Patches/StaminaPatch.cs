@@ -18,7 +18,7 @@ public class StaminaPatch {
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Start))]
     public static void Start(ref PlayerController __instance) {
         Update(ref __instance);
-        Player.localPlayer.data.currentStamina = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.MaxStamina);
+        Player.localPlayer.data.currentStamina = States.Floats[SettingKeys.MaxStamina];
     }
 
     /// <summary>
@@ -28,9 +28,9 @@ public class StaminaPatch {
     [HarmonyPrefix]
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Update))]
     public static void Update(ref PlayerController __instance) {
-        __instance.maxStamina = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.MaxStamina);
-        __instance.sprintMultiplier = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.SprintSpeed);
-        __instance.staminaRegRate = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.StaminaRegenRate);
+        __instance.maxStamina = States.Floats[SettingKeys.MaxStamina];
+        __instance.sprintMultiplier = States.Floats[SettingKeys.SprintSpeed];
+        __instance.staminaRegRate = States.Floats[SettingKeys.StaminaRegenRate];
     }
 
     /// <summary>
@@ -41,8 +41,8 @@ public class StaminaPatch {
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Update))]
     public static void UpdatePost(ref PlayerController __instance) {
         var data = Player.localPlayer.data;
-        var max = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.MaxStamina);
-        var regen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.StaminaRegenRate);
+        var max = States.Floats[SettingKeys.MaxStamina];
+        var regen = States.Floats[SettingKeys.StaminaRegenRate];
 
         if (!(data.sinceSprint > 1f)) return;
 

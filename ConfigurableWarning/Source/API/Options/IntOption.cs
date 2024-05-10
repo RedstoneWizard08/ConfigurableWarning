@@ -18,6 +18,16 @@ public class IntOption : IntSetting, IOption<int>, IUntypedOption {
     private readonly string _name;
     internal readonly bool _shouldClamp;
 
+    /// <inheritdoc />
+    public int State { get => AsOption().State; set => AsOption().State = value; }
+
+    /// <summary>
+    ///     Get an instance of an option.
+    /// </summary>
+    /// <param name="name">The option's name.</param>
+    /// <returns>The option.</returns>
+    public static IntOption? Instance(string name) => (IntOption?)IOption<int>.Instance(name);
+
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="int" /> type.
     /// </summary>

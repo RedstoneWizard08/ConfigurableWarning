@@ -17,7 +17,6 @@ public class UIPatches {
     [HarmonyPostfix]
     [HarmonyPatch(typeof(UI_Health), nameof(UI_Health.Update))]
     public static void UpdateHealth(UI_Health __instance) {
-        __instance.fill.fillAmount = Player.localPlayer.data.health /
-                                     OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Health);
+        __instance.fill.fillAmount = Player.localPlayer.data.health / States.Floats[SettingKeys.Health];
     }
 }

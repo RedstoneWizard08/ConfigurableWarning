@@ -27,7 +27,7 @@ public class SpawnPatch {
         var max = bigNumbers.day3ExtraMoBudget;
         var min = bigNumbers.day1ExtraMoBudget;
         var diff = max - min;
-        var days = OptionsState.Instance.Get<int>(BuiltInSettings.Keys.DaysPerQuota);
+        var days = States.Ints[SettingKeys.DaysPerQuota];
         var per = diff / days;
 
         __result = per * day + min;
@@ -43,7 +43,7 @@ public class SpawnPatch {
     [HarmonyPatch(typeof(BigNumbers), nameof(BigNumbers.GetMonsterBudgetForDayFirstWave))]
     public static void GetMonsterBudgetForDayFirstWave(int day, ref int __result) {
         var bigNumbers = SingletonAsset<BigNumbers>.Instance;
-        var days = OptionsState.Instance.Get<int>(BuiltInSettings.Keys.DaysPerQuota);
+        var days = States.Ints[SettingKeys.DaysPerQuota];
         var realDay = (day - 1) % days + 1;
         var res = 0;
 
@@ -70,7 +70,7 @@ public class SpawnPatch {
     [HarmonyPatch(typeof(BigNumbers), nameof(BigNumbers.GetMonsterBudgetForSecondWave))]
     public static void GetMonsterBudgetForSecondWave(int day, ref int __result) {
         var bigNumbers = SingletonAsset<BigNumbers>.Instance;
-        var days = OptionsState.Instance.Get<int>(BuiltInSettings.Keys.DaysPerQuota);
+        var days = States.Ints[SettingKeys.DaysPerQuota];
         var realDay = (day - 1) % days + 1;
         var res = 0;
 

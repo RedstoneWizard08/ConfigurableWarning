@@ -7,7 +7,7 @@ namespace ConfigurableWarning.API.Options;
 ///     by all options.
 /// </summary>
 /// <typeparam name="T">The option's value type.</typeparam>
-public interface IOption<T> : ICustomSetting {
+public interface IOption<T> : ICustomSetting, IUntypedOption {
     string IExposedSetting.GetDisplayName() {
         return GetDisplayName();
     }
@@ -17,7 +17,7 @@ public interface IOption<T> : ICustomSetting {
     ///     and in the state holder.
     /// </summary>
     /// <returns>The option's name.</returns>
-    string GetName();
+    new string GetName();
 
     /// <summary>
     ///     Get the display name of this option.
@@ -36,7 +36,7 @@ public interface IOption<T> : ICustomSetting {
     ///     WARNING! THIS MAY NOT ALWAYS BE CORRECT! USE THE STATE HOLDER INSTEAD!
     /// </summary>
     /// <returns>The (potential) value of this option.</returns>
-    T GetValue();
+    new T GetValue();
 
     /// <summary>
     ///     Sets the option's value. This will NOT update it in the state!
@@ -76,4 +76,19 @@ public interface IOption<T> : ICustomSetting {
         OptionManager.Instance.Register(this);
         OptionsState.Instance.Register(this);
     }
+
+    /// <summary>
+    ///     Get or set this option's state.
+    /// </summary>
+    public T? State {
+        get => OptionsState.Instance.Get<T>(GetName());
+        set => OptionsState.Instance.Set<T>(this, value!);
+    }
+
+    /// <summary>
+    ///     Get an instance of an option.
+    /// </summary>
+    /// <param name="name">The option's name.</param>
+    /// <returns>The option.</returns>
+    public static IOption<T>? Instance(string name) => OptionManager.Instance.Get<T>(name);
 }

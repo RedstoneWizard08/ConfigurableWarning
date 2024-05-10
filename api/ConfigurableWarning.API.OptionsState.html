@@ -193,7 +193,7 @@ Class OptionsState  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="ConfigurableWarning_API_OptionsState_Apply_System_String_" data-uid="ConfigurableWarning.API.OptionsState.Apply(System.String)">
   Apply(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Replaces all states with the JSON-encoded map provided,
@@ -228,7 +228,7 @@ replacing all that are already present.</p>
 
   <h3 id="ConfigurableWarning_API_OptionsState_Clear" data-uid="ConfigurableWarning.API.OptionsState.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clears all states from the internal dictionary,
@@ -258,7 +258,7 @@ This does NOT unregister ANYTHING from the <a class="xref" href="ConfigurableWar
 
   <h3 id="ConfigurableWarning_API_OptionsState_Collect" data-uid="ConfigurableWarning.API.OptionsState.Collect">
   Collect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Collect and serialize (with <span class="xref">Newtonsoft.Json.JsonConvert</span>) all
@@ -382,6 +382,45 @@ based on <a class="xref" href="ConfigurableWarning.API.Options.IOption-1.html#Co
 
   <a id="ConfigurableWarning_API_OptionsState_Has_" data-uid="ConfigurableWarning.API.OptionsState.Has*"></a>
 
+  <h3 id="ConfigurableWarning_API_OptionsState_Has_System_String_" data-uid="ConfigurableWarning.API.OptionsState.Has(System.String)">
+  Has(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if the option is registered in the state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Has(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The option's name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the option has a value in the state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_OptionsState_Has_" data-uid="ConfigurableWarning.API.OptionsState.Has*"></a>
+
   <h3 id="ConfigurableWarning_API_OptionsState_Has__1_ConfigurableWarning_API_Options_IOption___0__" data-uid="ConfigurableWarning.API.OptionsState.Has``1(ConfigurableWarning.API.Options.IOption{``0})">
   Has&lt;T&gt;(IOption&lt;T&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L89"><i class="bi bi-code-slash"></i></a>
@@ -399,51 +438,6 @@ based on <a class="xref" href="ConfigurableWarning.API.Options.IOption-1.html#Co
   <dl class="parameters">
     <dt><code>opt</code> <a class="xref" href="ConfigurableWarning.API.Options.IOption-1.html">IOption</a>&lt;T&gt;</dt>
     <dd><p>The option to reference.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>True if the option has a value in the state.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The option's value type.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <a id="ConfigurableWarning_API_OptionsState_Has_" data-uid="ConfigurableWarning.API.OptionsState.Has*"></a>
-
-  <h3 id="ConfigurableWarning_API_OptionsState_Has__1_System_String_" data-uid="ConfigurableWarning.API.OptionsState.Has``1(System.String)">
-  Has&lt;T&gt;(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L99"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Returns true if the option is registered in the state.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Has&lt;T&gt;(string name)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The option's name.</p>
 </dd>
   </dl>
 
@@ -511,9 +505,44 @@ based on <a class="xref" href="ConfigurableWarning.API.Options.IOption-1.html#Co
 
   <a id="ConfigurableWarning_API_OptionsState_Remove_" data-uid="ConfigurableWarning.API.OptionsState.Remove*"></a>
 
+  <h3 id="ConfigurableWarning_API_OptionsState_Remove_System_String_" data-uid="ConfigurableWarning.API.OptionsState.Remove(System.String)">
+  Remove(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the option's value from the state, unregistering it.
+This does NOT unregister it from the <a class="xref" href="ConfigurableWarning.API.OptionManager.html">OptionManager</a>
+<em>or</em> ContentSettings' <span class="xref">ContentSettings.API.SettingsLoader</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The option's name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_OptionsState_Remove_" data-uid="ConfigurableWarning.API.OptionsState.Remove*"></a>
+
   <h3 id="ConfigurableWarning_API_OptionsState_Remove__1_ConfigurableWarning_API_Options_IOption___0__" data-uid="ConfigurableWarning.API.OptionsState.Remove``1(ConfigurableWarning.API.Options.IOption{``0})">
   Remove&lt;T&gt;(IOption&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes the option's value from the state, unregistering it.
@@ -530,47 +559,6 @@ This does NOT unregister it from the <a class="xref" href="ConfigurableWarning.A
   <dl class="parameters">
     <dt><code>opt</code> <a class="xref" href="ConfigurableWarning.API.Options.IOption-1.html">IOption</a>&lt;T&gt;</dt>
     <dd><p>The option to remove.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The option's value type.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <a id="ConfigurableWarning_API_OptionsState_Remove_" data-uid="ConfigurableWarning.API.OptionsState.Remove*"></a>
-
-  <h3 id="ConfigurableWarning_API_OptionsState_Remove__1_System_String_" data-uid="ConfigurableWarning.API.OptionsState.Remove``1(System.String)">
-  Remove&lt;T&gt;(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L121"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Removes the option's value from the state, unregistering it.
-This does NOT unregister it from the <a class="xref" href="ConfigurableWarning.API.OptionManager.html">OptionManager</a>
-<em>or</em> ContentSettings' <span class="xref">ContentSettings.API.SettingsLoader</span>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Remove&lt;T&gt;(string name)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The option's name.</p>
 </dd>
   </dl>
 
@@ -679,7 +667,7 @@ This does NOT unregister it from the <a class="xref" href="ConfigurableWarning.A
 
   <h3 id="ConfigurableWarning_API_OptionsState_Update__1_ConfigurableWarning_API_Options_IOption___0__" data-uid="ConfigurableWarning.API.OptionsState.Update``1(ConfigurableWarning.API.Options.IOption{``0})">
   Update&lt;T&gt;(IOption&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionsState.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates an option's value in the state.

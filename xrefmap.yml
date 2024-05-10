@@ -32,6 +32,140 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.ConfigurableWarningAPI.Sync
   nameWithType: ConfigurableWarningAPI.Sync
+- uid: ConfigurableWarning.API.OptionExt
+  name: OptionExt
+  href: api/ConfigurableWarning.API.OptionExt.html
+  commentId: T:ConfigurableWarning.API.OptionExt
+  fullName: ConfigurableWarning.API.OptionExt
+  nameWithType: OptionExt
+- uid: ConfigurableWarning.API.OptionExt.BoolOpt(System.String)
+  name: BoolOpt(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_BoolOpt_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.BoolOpt(System.String)
+  name.vb: BoolOpt(String)
+  fullName: ConfigurableWarning.API.OptionExt.BoolOpt(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.BoolOpt(String)
+  nameWithType: OptionExt.BoolOpt(string)
+  nameWithType.vb: OptionExt.BoolOpt(String)
+- uid: ConfigurableWarning.API.OptionExt.BoolOpt*
+  name: BoolOpt
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_BoolOpt_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.BoolOpt
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.BoolOpt
+  nameWithType: OptionExt.BoolOpt
+- uid: ConfigurableWarning.API.OptionExt.BoolState(System.String)
+  name: BoolState(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_BoolState_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.BoolState(System.String)
+  name.vb: BoolState(String)
+  fullName: ConfigurableWarning.API.OptionExt.BoolState(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.BoolState(String)
+  nameWithType: OptionExt.BoolState(string)
+  nameWithType.vb: OptionExt.BoolState(String)
+- uid: ConfigurableWarning.API.OptionExt.BoolState*
+  name: BoolState
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_BoolState_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.BoolState
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.BoolState
+  nameWithType: OptionExt.BoolState
+- uid: ConfigurableWarning.API.OptionExt.FloatOpt(System.String)
+  name: FloatOpt(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_FloatOpt_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.FloatOpt(System.String)
+  name.vb: FloatOpt(String)
+  fullName: ConfigurableWarning.API.OptionExt.FloatOpt(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.FloatOpt(String)
+  nameWithType: OptionExt.FloatOpt(string)
+  nameWithType.vb: OptionExt.FloatOpt(String)
+- uid: ConfigurableWarning.API.OptionExt.FloatOpt*
+  name: FloatOpt
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_FloatOpt_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.FloatOpt
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.FloatOpt
+  nameWithType: OptionExt.FloatOpt
+- uid: ConfigurableWarning.API.OptionExt.FloatState(System.String)
+  name: FloatState(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_FloatState_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.FloatState(System.String)
+  name.vb: FloatState(String)
+  fullName: ConfigurableWarning.API.OptionExt.FloatState(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.FloatState(String)
+  nameWithType: OptionExt.FloatState(string)
+  nameWithType.vb: OptionExt.FloatState(String)
+- uid: ConfigurableWarning.API.OptionExt.FloatState*
+  name: FloatState
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_FloatState_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.FloatState
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.FloatState
+  nameWithType: OptionExt.FloatState
+- uid: ConfigurableWarning.API.OptionExt.IntOpt(System.String)
+  name: IntOpt(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_IntOpt_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.IntOpt(System.String)
+  name.vb: IntOpt(String)
+  fullName: ConfigurableWarning.API.OptionExt.IntOpt(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.IntOpt(String)
+  nameWithType: OptionExt.IntOpt(string)
+  nameWithType.vb: OptionExt.IntOpt(String)
+- uid: ConfigurableWarning.API.OptionExt.IntOpt*
+  name: IntOpt
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_IntOpt_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.IntOpt
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.IntOpt
+  nameWithType: OptionExt.IntOpt
+- uid: ConfigurableWarning.API.OptionExt.IntState(System.String)
+  name: IntState(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_IntState_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.IntState(System.String)
+  name.vb: IntState(String)
+  fullName: ConfigurableWarning.API.OptionExt.IntState(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.IntState(String)
+  nameWithType: OptionExt.IntState(string)
+  nameWithType.vb: OptionExt.IntState(String)
+- uid: ConfigurableWarning.API.OptionExt.IntState*
+  name: IntState
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_IntState_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.IntState
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.IntState
+  nameWithType: OptionExt.IntState
+- uid: ConfigurableWarning.API.OptionExt.TextOpt(System.String)
+  name: TextOpt(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_TextOpt_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.TextOpt(System.String)
+  name.vb: TextOpt(String)
+  fullName: ConfigurableWarning.API.OptionExt.TextOpt(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.TextOpt(String)
+  nameWithType: OptionExt.TextOpt(string)
+  nameWithType.vb: OptionExt.TextOpt(String)
+- uid: ConfigurableWarning.API.OptionExt.TextOpt*
+  name: TextOpt
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_TextOpt_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.TextOpt
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.TextOpt
+  nameWithType: OptionExt.TextOpt
+- uid: ConfigurableWarning.API.OptionExt.TextState(System.String)
+  name: TextState(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_TextState_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.TextState(System.String)
+  name.vb: TextState(String)
+  fullName: ConfigurableWarning.API.OptionExt.TextState(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.TextState(String)
+  nameWithType: OptionExt.TextState(string)
+  nameWithType.vb: OptionExt.TextState(String)
+- uid: ConfigurableWarning.API.OptionExt.TextState*
+  name: TextState
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_TextState_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.TextState
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.TextState
+  nameWithType: OptionExt.TextState
 - uid: ConfigurableWarning.API.OptionLoader
   name: OptionLoader
   href: api/ConfigurableWarning.API.OptionLoader.html
@@ -73,6 +207,15 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.OptionManager.Get
   nameWithType: OptionManager.Get
+- uid: ConfigurableWarning.API.OptionManager.Get``1(System.String)
+  name: Get<T>(string)
+  href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Get__1_System_String_
+  commentId: M:ConfigurableWarning.API.OptionManager.Get``1(System.String)
+  name.vb: Get(Of T)(String)
+  fullName: ConfigurableWarning.API.OptionManager.Get<T>(string)
+  fullName.vb: ConfigurableWarning.API.OptionManager.Get(Of T)(String)
+  nameWithType: OptionManager.Get<T>(string)
+  nameWithType.vb: OptionManager.Get(Of T)(String)
 - uid: ConfigurableWarning.API.OptionManager.Instance
   name: Instance
   href: api/ConfigurableWarning.API.OptionManager.html#ConfigurableWarning_API_OptionManager_Instance
@@ -300,6 +443,22 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.BoolOption.GetValue
   nameWithType: BoolOption.GetValue
+- uid: ConfigurableWarning.API.Options.BoolOption.Instance(System.String)
+  name: Instance(string)
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_Instance_System_String_
+  commentId: M:ConfigurableWarning.API.Options.BoolOption.Instance(System.String)
+  name.vb: Instance(String)
+  fullName: ConfigurableWarning.API.Options.BoolOption.Instance(string)
+  fullName.vb: ConfigurableWarning.API.Options.BoolOption.Instance(String)
+  nameWithType: BoolOption.Instance(string)
+  nameWithType.vb: BoolOption.Instance(String)
+- uid: ConfigurableWarning.API.Options.BoolOption.Instance*
+  name: Instance
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_Instance_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.Instance
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.Instance
+  nameWithType: BoolOption.Instance
 - uid: ConfigurableWarning.API.Options.BoolOption.RegisterSetting(System.String,System.String)
   name: RegisterSetting(string, string)
   href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_RegisterSetting_System_String_System_String_
@@ -341,6 +500,19 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.BoolOption.SetValue
   nameWithType: BoolOption.SetValue
+- uid: ConfigurableWarning.API.Options.BoolOption.State
+  name: State
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_State
+  commentId: P:ConfigurableWarning.API.Options.BoolOption.State
+  fullName: ConfigurableWarning.API.Options.BoolOption.State
+  nameWithType: BoolOption.State
+- uid: ConfigurableWarning.API.Options.BoolOption.State*
+  name: State
+  href: api/ConfigurableWarning.API.Options.BoolOption.html#ConfigurableWarning_API_Options_BoolOption_State_
+  commentId: Overload:ConfigurableWarning.API.Options.BoolOption.State
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.BoolOption.State
+  nameWithType: BoolOption.State
 - uid: ConfigurableWarning.API.Options.FloatOption
   name: FloatOption
   href: api/ConfigurableWarning.API.Options.FloatOption.html
@@ -479,6 +651,22 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.FloatOption.GetValue
   nameWithType: FloatOption.GetValue
+- uid: ConfigurableWarning.API.Options.FloatOption.Instance(System.String)
+  name: Instance(string)
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_Instance_System_String_
+  commentId: M:ConfigurableWarning.API.Options.FloatOption.Instance(System.String)
+  name.vb: Instance(String)
+  fullName: ConfigurableWarning.API.Options.FloatOption.Instance(string)
+  fullName.vb: ConfigurableWarning.API.Options.FloatOption.Instance(String)
+  nameWithType: FloatOption.Instance(string)
+  nameWithType.vb: FloatOption.Instance(String)
+- uid: ConfigurableWarning.API.Options.FloatOption.Instance*
+  name: Instance
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_Instance_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.Instance
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.Instance
+  nameWithType: FloatOption.Instance
 - uid: ConfigurableWarning.API.Options.FloatOption.RegisterSetting(System.String,System.String)
   name: RegisterSetting(string, string)
   href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_RegisterSetting_System_String_System_String_
@@ -520,6 +708,19 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.FloatOption.SetValue
   nameWithType: FloatOption.SetValue
+- uid: ConfigurableWarning.API.Options.FloatOption.State
+  name: State
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_State
+  commentId: P:ConfigurableWarning.API.Options.FloatOption.State
+  fullName: ConfigurableWarning.API.Options.FloatOption.State
+  nameWithType: FloatOption.State
+- uid: ConfigurableWarning.API.Options.FloatOption.State*
+  name: State
+  href: api/ConfigurableWarning.API.Options.FloatOption.html#ConfigurableWarning_API_Options_FloatOption_State_
+  commentId: Overload:ConfigurableWarning.API.Options.FloatOption.State
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.FloatOption.State
+  nameWithType: FloatOption.State
 - uid: ConfigurableWarning.API.Options.IOption`1
   name: IOption<T>
   href: api/ConfigurableWarning.API.Options.IOption-1.html
@@ -631,6 +832,24 @@ references:
   fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).GetValue
   nameWithType: IOption<T>.GetValue
   nameWithType.vb: IOption(Of T).GetValue
+- uid: ConfigurableWarning.API.Options.IOption`1.Instance(System.String)
+  name: Instance(string)
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_Instance_System_String_
+  commentId: M:ConfigurableWarning.API.Options.IOption`1.Instance(System.String)
+  name.vb: Instance(String)
+  fullName: ConfigurableWarning.API.Options.IOption<T>.Instance(string)
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).Instance(String)
+  nameWithType: IOption<T>.Instance(string)
+  nameWithType.vb: IOption(Of T).Instance(String)
+- uid: ConfigurableWarning.API.Options.IOption`1.Instance*
+  name: Instance
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_Instance_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.Instance
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.Instance
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).Instance
+  nameWithType: IOption<T>.Instance
+  nameWithType.vb: IOption(Of T).Instance
 - uid: ConfigurableWarning.API.Options.IOption`1.Register(System.String,System.String)
   name: Register(string, string)
   href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_Register_System_String_System_String_
@@ -684,6 +903,23 @@ references:
   fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).SetValue
   nameWithType: IOption<T>.SetValue
   nameWithType.vb: IOption(Of T).SetValue
+- uid: ConfigurableWarning.API.Options.IOption`1.State
+  name: State
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_State
+  commentId: P:ConfigurableWarning.API.Options.IOption`1.State
+  fullName: ConfigurableWarning.API.Options.IOption<T>.State
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).State
+  nameWithType: IOption<T>.State
+  nameWithType.vb: IOption(Of T).State
+- uid: ConfigurableWarning.API.Options.IOption`1.State*
+  name: State
+  href: api/ConfigurableWarning.API.Options.IOption-1.html#ConfigurableWarning_API_Options_IOption_1_State_
+  commentId: Overload:ConfigurableWarning.API.Options.IOption`1.State
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IOption<T>.State
+  fullName.vb: ConfigurableWarning.API.Options.IOption(Of T).State
+  nameWithType: IOption<T>.State
+  nameWithType.vb: IOption(Of T).State
 - uid: ConfigurableWarning.API.Options.IUntypedOption
   name: IUntypedOption
   href: api/ConfigurableWarning.API.Options.IUntypedOption.html
@@ -870,6 +1106,22 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.IntOption.GetValue
   nameWithType: IntOption.GetValue
+- uid: ConfigurableWarning.API.Options.IntOption.Instance(System.String)
+  name: Instance(string)
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_Instance_System_String_
+  commentId: M:ConfigurableWarning.API.Options.IntOption.Instance(System.String)
+  name.vb: Instance(String)
+  fullName: ConfigurableWarning.API.Options.IntOption.Instance(string)
+  fullName.vb: ConfigurableWarning.API.Options.IntOption.Instance(String)
+  nameWithType: IntOption.Instance(string)
+  nameWithType.vb: IntOption.Instance(String)
+- uid: ConfigurableWarning.API.Options.IntOption.Instance*
+  name: Instance
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_Instance_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.Instance
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.Instance
+  nameWithType: IntOption.Instance
 - uid: ConfigurableWarning.API.Options.IntOption.RegisterSetting(System.String,System.String)
   name: RegisterSetting(string, string)
   href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_RegisterSetting_System_String_System_String_
@@ -911,6 +1163,19 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.IntOption.SetValue
   nameWithType: IntOption.SetValue
+- uid: ConfigurableWarning.API.Options.IntOption.State
+  name: State
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_State
+  commentId: P:ConfigurableWarning.API.Options.IntOption.State
+  fullName: ConfigurableWarning.API.Options.IntOption.State
+  nameWithType: IntOption.State
+- uid: ConfigurableWarning.API.Options.IntOption.State*
+  name: State
+  href: api/ConfigurableWarning.API.Options.IntOption.html#ConfigurableWarning_API_Options_IntOption_State_
+  commentId: Overload:ConfigurableWarning.API.Options.IntOption.State
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.IntOption.State
+  nameWithType: IntOption.State
 - uid: ConfigurableWarning.API.Options.TextOption
   name: TextOption
   href: api/ConfigurableWarning.API.Options.TextOption.html
@@ -1036,6 +1301,22 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.TextOption.GetValue
   nameWithType: TextOption.GetValue
+- uid: ConfigurableWarning.API.Options.TextOption.Instance(System.String)
+  name: Instance(string)
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_Instance_System_String_
+  commentId: M:ConfigurableWarning.API.Options.TextOption.Instance(System.String)
+  name.vb: Instance(String)
+  fullName: ConfigurableWarning.API.Options.TextOption.Instance(string)
+  fullName.vb: ConfigurableWarning.API.Options.TextOption.Instance(String)
+  nameWithType: TextOption.Instance(string)
+  nameWithType.vb: TextOption.Instance(String)
+- uid: ConfigurableWarning.API.Options.TextOption.Instance*
+  name: Instance
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_Instance_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.Instance
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.TextOption.Instance
+  nameWithType: TextOption.Instance
 - uid: ConfigurableWarning.API.Options.TextOption.RegisterSetting(System.String,System.String)
   name: RegisterSetting(string, string)
   href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_RegisterSetting_System_String_System_String_
@@ -1077,6 +1358,19 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.TextOption.SetValue
   nameWithType: TextOption.SetValue
+- uid: ConfigurableWarning.API.Options.TextOption.State
+  name: State
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_State
+  commentId: P:ConfigurableWarning.API.Options.TextOption.State
+  fullName: ConfigurableWarning.API.Options.TextOption.State
+  nameWithType: TextOption.State
+- uid: ConfigurableWarning.API.Options.TextOption.State*
+  name: State
+  href: api/ConfigurableWarning.API.Options.TextOption.html#ConfigurableWarning_API_Options_TextOption_State_
+  commentId: Overload:ConfigurableWarning.API.Options.TextOption.State
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.TextOption.State
+  nameWithType: TextOption.State
 - uid: ConfigurableWarning.API.OptionsState
   name: OptionsState
   href: api/ConfigurableWarning.API.OptionsState.html
@@ -1150,6 +1444,15 @@ references:
   fullName.vb: ConfigurableWarning.API.OptionsState.Get(Of T)(String)
   nameWithType: OptionsState.Get<T>(string)
   nameWithType.vb: OptionsState.Get(Of T)(String)
+- uid: ConfigurableWarning.API.OptionsState.Has(System.String)
+  name: Has(string)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Has_System_String_
+  commentId: M:ConfigurableWarning.API.OptionsState.Has(System.String)
+  name.vb: Has(String)
+  fullName: ConfigurableWarning.API.OptionsState.Has(string)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Has(String)
+  nameWithType: OptionsState.Has(string)
+  nameWithType.vb: OptionsState.Has(String)
 - uid: ConfigurableWarning.API.OptionsState.Has*
   name: Has
   href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Has_
@@ -1166,15 +1469,6 @@ references:
   fullName.vb: ConfigurableWarning.API.OptionsState.Has(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
   nameWithType: OptionsState.Has<T>(IOption<T>)
   nameWithType.vb: OptionsState.Has(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.API.OptionsState.Has``1(System.String)
-  name: Has<T>(string)
-  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Has__1_System_String_
-  commentId: M:ConfigurableWarning.API.OptionsState.Has``1(System.String)
-  name.vb: Has(Of T)(String)
-  fullName: ConfigurableWarning.API.OptionsState.Has<T>(string)
-  fullName.vb: ConfigurableWarning.API.OptionsState.Has(Of T)(String)
-  nameWithType: OptionsState.Has<T>(string)
-  nameWithType.vb: OptionsState.Has(Of T)(String)
 - uid: ConfigurableWarning.API.OptionsState.Instance
   name: Instance
   href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Instance
@@ -1204,6 +1498,15 @@ references:
   fullName.vb: ConfigurableWarning.API.OptionsState.Register(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
   nameWithType: OptionsState.Register<T>(IOption<T>)
   nameWithType.vb: OptionsState.Register(Of T)(IOption(Of T))
+- uid: ConfigurableWarning.API.OptionsState.Remove(System.String)
+  name: Remove(string)
+  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Remove_System_String_
+  commentId: M:ConfigurableWarning.API.OptionsState.Remove(System.String)
+  name.vb: Remove(String)
+  fullName: ConfigurableWarning.API.OptionsState.Remove(string)
+  fullName.vb: ConfigurableWarning.API.OptionsState.Remove(String)
+  nameWithType: OptionsState.Remove(string)
+  nameWithType.vb: OptionsState.Remove(String)
 - uid: ConfigurableWarning.API.OptionsState.Remove*
   name: Remove
   href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Remove_
@@ -1220,15 +1523,6 @@ references:
   fullName.vb: ConfigurableWarning.API.OptionsState.Remove(Of T)(ConfigurableWarning.API.Options.IOption(Of T))
   nameWithType: OptionsState.Remove<T>(IOption<T>)
   nameWithType.vb: OptionsState.Remove(Of T)(IOption(Of T))
-- uid: ConfigurableWarning.API.OptionsState.Remove``1(System.String)
-  name: Remove<T>(string)
-  href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Remove__1_System_String_
-  commentId: M:ConfigurableWarning.API.OptionsState.Remove``1(System.String)
-  name.vb: Remove(Of T)(String)
-  fullName: ConfigurableWarning.API.OptionsState.Remove<T>(string)
-  fullName.vb: ConfigurableWarning.API.OptionsState.Remove(Of T)(String)
-  nameWithType: OptionsState.Remove<T>(string)
-  nameWithType.vb: OptionsState.Remove(Of T)(String)
 - uid: ConfigurableWarning.API.OptionsState.Set*
   name: Set
   href: api/ConfigurableWarning.API.OptionsState.html#ConfigurableWarning_API_OptionsState_Set_
@@ -1359,6 +1653,64 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.SettingPatches.SetValueIntPre
   nameWithType: SettingPatches.SetValueIntPre
+- uid: ConfigurableWarning.API.StateHolder`1
+  name: StateHolder<T>
+  href: api/ConfigurableWarning.API.StateHolder-1.html
+  commentId: T:ConfigurableWarning.API.StateHolder`1
+  name.vb: StateHolder(Of T)
+  fullName: ConfigurableWarning.API.StateHolder<T>
+  fullName.vb: ConfigurableWarning.API.StateHolder(Of T)
+  nameWithType: StateHolder<T>
+  nameWithType.vb: StateHolder(Of T)
+- uid: ConfigurableWarning.API.StateHolder`1.Item(System.String)
+  name: this[string]
+  href: api/ConfigurableWarning.API.StateHolder-1.html#ConfigurableWarning_API_StateHolder_1_Item_System_String_
+  commentId: P:ConfigurableWarning.API.StateHolder`1.Item(System.String)
+  name.vb: this[](String)
+  fullName: ConfigurableWarning.API.StateHolder<T>.this[string]
+  fullName.vb: ConfigurableWarning.API.StateHolder(Of T).this[](String)
+  nameWithType: StateHolder<T>.this[string]
+  nameWithType.vb: StateHolder(Of T).this[](String)
+- uid: ConfigurableWarning.API.StateHolder`1.Item*
+  name: this
+  href: api/ConfigurableWarning.API.StateHolder-1.html#ConfigurableWarning_API_StateHolder_1_Item_
+  commentId: Overload:ConfigurableWarning.API.StateHolder`1.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: ConfigurableWarning.API.StateHolder<T>.this
+  fullName.vb: ConfigurableWarning.API.StateHolder(Of T).this[]
+  nameWithType: StateHolder<T>.this
+  nameWithType.vb: StateHolder(Of T).this[]
+- uid: ConfigurableWarning.API.States
+  name: States
+  href: api/ConfigurableWarning.API.States.html
+  commentId: T:ConfigurableWarning.API.States
+  fullName: ConfigurableWarning.API.States
+  nameWithType: States
+- uid: ConfigurableWarning.API.States.Bools
+  name: Bools
+  href: api/ConfigurableWarning.API.States.html#ConfigurableWarning_API_States_Bools
+  commentId: F:ConfigurableWarning.API.States.Bools
+  fullName: ConfigurableWarning.API.States.Bools
+  nameWithType: States.Bools
+- uid: ConfigurableWarning.API.States.Floats
+  name: Floats
+  href: api/ConfigurableWarning.API.States.html#ConfigurableWarning_API_States_Floats
+  commentId: F:ConfigurableWarning.API.States.Floats
+  fullName: ConfigurableWarning.API.States.Floats
+  nameWithType: States.Floats
+- uid: ConfigurableWarning.API.States.Ints
+  name: Ints
+  href: api/ConfigurableWarning.API.States.html#ConfigurableWarning_API_States_Ints
+  commentId: F:ConfigurableWarning.API.States.Ints
+  fullName: ConfigurableWarning.API.States.Ints
+  nameWithType: States.Ints
+- uid: ConfigurableWarning.API.States.Strings
+  name: Strings
+  href: api/ConfigurableWarning.API.States.html#ConfigurableWarning_API_States_Strings
+  commentId: F:ConfigurableWarning.API.States.Strings
+  fullName: ConfigurableWarning.API.States.Strings
+  nameWithType: States.Strings
 - uid: ConfigurableWarning.MyPluginInfo
   name: MyPluginInfo
   href: api/ConfigurableWarning.MyPluginInfo.html
@@ -1800,114 +2152,114 @@ references:
   commentId: T:ConfigurableWarning.Settings.BuiltInSettings
   fullName: ConfigurableWarning.Settings.BuiltInSettings
   nameWithType: BuiltInSettings
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys
-  name: BuiltInSettings.Keys
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html
-  commentId: T:ConfigurableWarning.Settings.BuiltInSettings.Keys
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys
-  nameWithType: BuiltInSettings.Keys
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.DaysPerQuota
+- uid: ConfigurableWarning.Settings.SettingKeys
+  name: SettingKeys
+  href: api/ConfigurableWarning.Settings.SettingKeys.html
+  commentId: T:ConfigurableWarning.Settings.SettingKeys
+  fullName: ConfigurableWarning.Settings.SettingKeys
+  nameWithType: SettingKeys
+- uid: ConfigurableWarning.Settings.SettingKeys.DaysPerQuota
   name: DaysPerQuota
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_DaysPerQuota
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.DaysPerQuota
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.DaysPerQuota
-  nameWithType: BuiltInSettings.Keys.DaysPerQuota
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.Health
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_DaysPerQuota
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.DaysPerQuota
+  fullName: ConfigurableWarning.Settings.SettingKeys.DaysPerQuota
+  nameWithType: SettingKeys.DaysPerQuota
+- uid: ConfigurableWarning.Settings.SettingKeys.Health
   name: Health
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_Health
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.Health
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.Health
-  nameWithType: BuiltInSettings.Keys.Health
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.InfiniteOxygen
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_Health
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.Health
+  fullName: ConfigurableWarning.Settings.SettingKeys.Health
+  nameWithType: SettingKeys.Health
+- uid: ConfigurableWarning.Settings.SettingKeys.InfiniteOxygen
   name: InfiniteOxygen
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_InfiniteOxygen
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.InfiniteOxygen
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.InfiniteOxygen
-  nameWithType: BuiltInSettings.Keys.InfiniteOxygen
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.MaxStamina
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_InfiniteOxygen
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.InfiniteOxygen
+  fullName: ConfigurableWarning.Settings.SettingKeys.InfiniteOxygen
+  nameWithType: SettingKeys.InfiniteOxygen
+- uid: ConfigurableWarning.Settings.SettingKeys.MaxStamina
   name: MaxStamina
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_MaxStamina
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.MaxStamina
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.MaxStamina
-  nameWithType: BuiltInSettings.Keys.MaxStamina
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.Oxygen
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_MaxStamina
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.MaxStamina
+  fullName: ConfigurableWarning.Settings.SettingKeys.MaxStamina
+  nameWithType: SettingKeys.MaxStamina
+- uid: ConfigurableWarning.Settings.SettingKeys.Oxygen
   name: Oxygen
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_Oxygen
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.Oxygen
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.Oxygen
-  nameWithType: BuiltInSettings.Keys.Oxygen
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenRefillRate
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_Oxygen
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.Oxygen
+  fullName: ConfigurableWarning.Settings.SettingKeys.Oxygen
+  nameWithType: SettingKeys.Oxygen
+- uid: ConfigurableWarning.Settings.SettingKeys.OxygenRefillRate
   name: OxygenRefillRate
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_OxygenRefillRate
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenRefillRate
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenRefillRate
-  nameWithType: BuiltInSettings.Keys.OxygenRefillRate
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenUsageMultiplier
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_OxygenRefillRate
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.OxygenRefillRate
+  fullName: ConfigurableWarning.Settings.SettingKeys.OxygenRefillRate
+  nameWithType: SettingKeys.OxygenRefillRate
+- uid: ConfigurableWarning.Settings.SettingKeys.OxygenUsageMultiplier
   name: OxygenUsageMultiplier
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_OxygenUsageMultiplier
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenUsageMultiplier
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.OxygenUsageMultiplier
-  nameWithType: BuiltInSettings.Keys.OxygenUsageMultiplier
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.PrivateHost
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_OxygenUsageMultiplier
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.OxygenUsageMultiplier
+  fullName: ConfigurableWarning.Settings.SettingKeys.OxygenUsageMultiplier
+  nameWithType: SettingKeys.OxygenUsageMultiplier
+- uid: ConfigurableWarning.Settings.SettingKeys.PrivateHost
   name: PrivateHost
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_PrivateHost
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.PrivateHost
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.PrivateHost
-  nameWithType: BuiltInSettings.Keys.PrivateHost
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenInDiveBell
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_PrivateHost
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.PrivateHost
+  fullName: ConfigurableWarning.Settings.SettingKeys.PrivateHost
+  nameWithType: SettingKeys.PrivateHost
+- uid: ConfigurableWarning.Settings.SettingKeys.RefillOxygenInDiveBell
   name: RefillOxygenInDiveBell
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RefillOxygenInDiveBell
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenInDiveBell
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenInDiveBell
-  nameWithType: BuiltInSettings.Keys.RefillOxygenInDiveBell
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenOnSurface
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_RefillOxygenInDiveBell
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.RefillOxygenInDiveBell
+  fullName: ConfigurableWarning.Settings.SettingKeys.RefillOxygenInDiveBell
+  nameWithType: SettingKeys.RefillOxygenInDiveBell
+- uid: ConfigurableWarning.Settings.SettingKeys.RefillOxygenOnSurface
   name: RefillOxygenOnSurface
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RefillOxygenOnSurface
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenOnSurface
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RefillOxygenOnSurface
-  nameWithType: BuiltInSettings.Keys.RefillOxygenOnSurface
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireAllPlayersInDiveBell
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_RefillOxygenOnSurface
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.RefillOxygenOnSurface
+  fullName: ConfigurableWarning.Settings.SettingKeys.RefillOxygenOnSurface
+  nameWithType: SettingKeys.RefillOxygenOnSurface
+- uid: ConfigurableWarning.Settings.SettingKeys.RequireAllPlayersInDiveBell
   name: RequireAllPlayersInDiveBell
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RequireAllPlayersInDiveBell
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireAllPlayersInDiveBell
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireAllPlayersInDiveBell
-  nameWithType: BuiltInSettings.Keys.RequireAllPlayersInDiveBell
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireDiveBellDoorClosed
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_RequireAllPlayersInDiveBell
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.RequireAllPlayersInDiveBell
+  fullName: ConfigurableWarning.Settings.SettingKeys.RequireAllPlayersInDiveBell
+  nameWithType: SettingKeys.RequireAllPlayersInDiveBell
+- uid: ConfigurableWarning.Settings.SettingKeys.RequireDiveBellDoorClosed
   name: RequireDiveBellDoorClosed
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_RequireDiveBellDoorClosed
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireDiveBellDoorClosed
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.RequireDiveBellDoorClosed
-  nameWithType: BuiltInSettings.Keys.RequireDiveBellDoorClosed
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintMultiplier
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_RequireDiveBellDoorClosed
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.RequireDiveBellDoorClosed
+  fullName: ConfigurableWarning.Settings.SettingKeys.RequireDiveBellDoorClosed
+  nameWithType: SettingKeys.RequireDiveBellDoorClosed
+- uid: ConfigurableWarning.Settings.SettingKeys.SprintMultiplier
   name: SprintMultiplier
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_SprintMultiplier
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintMultiplier
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintMultiplier
-  nameWithType: BuiltInSettings.Keys.SprintMultiplier
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintSpeed
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_SprintMultiplier
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.SprintMultiplier
+  fullName: ConfigurableWarning.Settings.SettingKeys.SprintMultiplier
+  nameWithType: SettingKeys.SprintMultiplier
+- uid: ConfigurableWarning.Settings.SettingKeys.SprintSpeed
   name: SprintSpeed
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_SprintSpeed
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintSpeed
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.SprintSpeed
-  nameWithType: BuiltInSettings.Keys.SprintSpeed
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.StaminaRegenRate
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_SprintSpeed
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.SprintSpeed
+  fullName: ConfigurableWarning.Settings.SettingKeys.SprintSpeed
+  nameWithType: SettingKeys.SprintSpeed
+- uid: ConfigurableWarning.Settings.SettingKeys.StaminaRegenRate
   name: StaminaRegenRate
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_StaminaRegenRate
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.StaminaRegenRate
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.StaminaRegenRate
-  nameWithType: BuiltInSettings.Keys.StaminaRegenRate
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenInDiveBell
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_StaminaRegenRate
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.StaminaRegenRate
+  fullName: ConfigurableWarning.Settings.SettingKeys.StaminaRegenRate
+  nameWithType: SettingKeys.StaminaRegenRate
+- uid: ConfigurableWarning.Settings.SettingKeys.UseOxygenInDiveBell
   name: UseOxygenInDiveBell
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_UseOxygenInDiveBell
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenInDiveBell
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenInDiveBell
-  nameWithType: BuiltInSettings.Keys.UseOxygenInDiveBell
-- uid: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenOnSurface
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_UseOxygenInDiveBell
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.UseOxygenInDiveBell
+  fullName: ConfigurableWarning.Settings.SettingKeys.UseOxygenInDiveBell
+  nameWithType: SettingKeys.UseOxygenInDiveBell
+- uid: ConfigurableWarning.Settings.SettingKeys.UseOxygenOnSurface
   name: UseOxygenOnSurface
-  href: api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html#ConfigurableWarning_Settings_BuiltInSettings_Keys_UseOxygenOnSurface
-  commentId: F:ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenOnSurface
-  fullName: ConfigurableWarning.Settings.BuiltInSettings.Keys.UseOxygenOnSurface
-  nameWithType: BuiltInSettings.Keys.UseOxygenOnSurface
+  href: api/ConfigurableWarning.Settings.SettingKeys.html#ConfigurableWarning_Settings_SettingKeys_UseOxygenOnSurface
+  commentId: F:ConfigurableWarning.Settings.SettingKeys.UseOxygenOnSurface
+  fullName: ConfigurableWarning.Settings.SettingKeys.UseOxygenOnSurface
+  nameWithType: SettingKeys.UseOxygenOnSurface
 - uid: ConfigurableWarning.Settings.SettingsUtil
   name: SettingsUtil
   href: api/ConfigurableWarning.Settings.SettingsUtil.html

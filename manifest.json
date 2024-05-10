@@ -72,6 +72,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.OptionExt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.OptionExt.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ConfigurableWarning.API.OptionLoader.yml",
       "output": {
         ".html": {
@@ -202,6 +212,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.StateHolder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.StateHolder-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.States.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.States.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ConfigurableWarning.API.yml",
       "output": {
         ".html": {
@@ -312,20 +342,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.Keys.yml",
+      "source_relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.Keys.html"
+          "relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.yml",
+      "source_relative_path": "api/ConfigurableWarning.Settings.SettingKeys.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.html"
+          "relative_path": "api/ConfigurableWarning.Settings.SettingKeys.html"
         }
       },
       "version": ""

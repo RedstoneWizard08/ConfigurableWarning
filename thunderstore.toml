@@ -4,9 +4,9 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "RedstoneWizard08"
 name = "ConfigurableWarning"
-versionNumber = "1.13.1"
+versionNumber = "1.13.2"
 description = "Makes the game configurable!"
-websiteUrl = "https://github.com/RedstoneWizard08/ConfigurableWarning"
+websiteUrl = "https://redstonewizard08.github.io/ConfigurableWarning"
 containsNsfwContent = false
 
 [package.dependencies]

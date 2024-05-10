@@ -5,7 +5,7 @@
         <PackageId>RedstoneWizard08.ConfigurableWarning</PackageId>
         <AssemblyName>RedstoneWizard08.ConfigurableWarning</AssemblyName>
         <Description>Makes the game configurable!</Description>
-        <Version>1.13.1</Version>
+        <Version>1.13.2</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -13,7 +13,7 @@
         <NoWarn>$(NoWarn);CS0436;NU1701</NoWarn>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/RedstoneWizard08/ConfigurableWarning</PackageProjectUrl>
+        <PackageProjectUrl>https://redstonewizard08.github.io/ConfigurableWarning</PackageProjectUrl>
         <RepositoryUrl>https://github.com/RedstoneWizard08/ConfigurableWarning</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <Authors>RedstoneWizard08</Authors>

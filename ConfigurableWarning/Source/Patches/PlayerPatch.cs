@@ -8,20 +8,20 @@ using UnityEngine.SceneManagement;
 namespace ConfigurableWarning.Patches;
 
 [HarmonyPatch]
-internal class PlayerPatch {
+public class PlayerPatch {
     private static bool _tmpUsingOxygen;
 
-    internal static float GetMaxOxygen() {
+    public static float GetMaxOxygen() {
         return OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
     }
 
-    internal static float GetMaxHealth() {
+    public static float GetMaxHealth() {
         return OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Health);
     }
 
     [HarmonyPrefix]
     [HarmonyPatch(typeof(Player), nameof(Player.CheckOxygen))]
-    internal static bool CheckOxygen(Player __instance) {
+    public static bool CheckOxygen(Player __instance) {
         if (OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.InfiniteOxygen)) {
             __instance.data.remainingOxygen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.Oxygen);
             return false;
@@ -48,7 +48,7 @@ internal class PlayerPatch {
 
     [HarmonyPrefix]
     [HarmonyPatch(typeof(Player.PlayerData), nameof(Player.PlayerData.UpdateValues))]
-    internal static bool UpdateValuesPre(Player.PlayerData __instance) {
+    public static bool UpdateValuesPre(Player.PlayerData __instance) {
         CheckOxygen(__instance.player);
 
         _tmpUsingOxygen = __instance.usingOxygen;
@@ -65,7 +65,7 @@ internal class PlayerPatch {
 
     [HarmonyPostfix]
     [HarmonyPatch(typeof(Player.PlayerData), nameof(Player.PlayerData.UpdateValues))]
-    internal static void UpdateValuesPost(Player.PlayerData __instance) {
+    public static void UpdateValuesPost(Player.PlayerData __instance) {
         __instance.usingOxygen = _tmpUsingOxygen;
 
         if (!__instance.usingOxygen || (__instance.isInDiveBell &&

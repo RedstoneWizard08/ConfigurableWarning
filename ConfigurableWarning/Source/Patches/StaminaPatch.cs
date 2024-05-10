@@ -5,26 +5,41 @@ using UnityEngine;
 
 namespace ConfigurableWarning.Patches;
 
+/// <summary>
+/// Stamina patches
+/// </summary>
 [HarmonyPatch]
-internal class StaminaPatch {
+public class StaminaPatch {
+    /// <summary>
+    /// Patches the player's stamina when they spawn.
+    /// </summary>
+    /// <param name="__instance">The current instance of the <see cref="PlayerController" />.</param>
     [HarmonyPostfix]
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Start))]
-    internal static void Start(ref PlayerController __instance) {
+    public static void Start(ref PlayerController __instance) {
         Update(ref __instance);
         Player.localPlayer.data.currentStamina = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.MaxStamina);
     }
 
+    /// <summary>
+    /// Patches the player's stamina parameters.
+    /// </summary>
+    /// <param name="__instance">The current instance of the <see cref="PlayerController" />.</param>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Update))]
-    internal static void Update(ref PlayerController __instance) {
+    public static void Update(ref PlayerController __instance) {
         __instance.maxStamina = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.MaxStamina);
         __instance.sprintMultiplier = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.SprintMultiplier);
         __instance.staminaRegRate = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.StaminaRegenRate);
     }
 
+    /// <summary>
+    /// Patches the player controller to reflect stamina settings.
+    /// </summary>
+    /// <param name="__instance">The current instance of the <see cref="PlayerController" />.</param>
     [HarmonyPostfix]
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Update))]
-    internal static void UpdatePost(ref PlayerController __instance) {
+    public static void UpdatePost(ref PlayerController __instance) {
         var data = Player.localPlayer.data;
         var max = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.MaxStamina);
         var regen = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.StaminaRegenRate);

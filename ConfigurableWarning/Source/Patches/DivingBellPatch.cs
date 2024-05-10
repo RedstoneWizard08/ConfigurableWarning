@@ -6,24 +6,42 @@ using HarmonyLib;
 
 namespace ConfigurableWarning.Patches;
 
+/// <summary>
+/// Diving Bell patches
+/// </summary>
 [HarmonyPatch]
-internal class DivingBellPatch {
+public class DivingBellPatch {
+    /// <summary>
+    /// Patches the diving bell to allow you to leave without your friends.
+    /// </summary>
+    /// <param name="__instance">The current instance of the <see cref="DivingBellDoor" />.</param>
+    /// <param name="__result"></param>
     [HarmonyPostfix]
     [HarmonyPatch(typeof(DivingBellDoor), nameof(DivingBellDoor.IsFullyClosed))]
-    internal static void IsFullyClosed(DivingBellDoor __instance, ref bool __result) {
+    public static void IsFullyClosed(DivingBellDoor __instance, ref bool __result) {
         __result = __result || !OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RequireDiveBellDoorClosed);
     }
 
+    /// <summary>
+    /// Patches the player checker to allow for all players to not need to be
+    /// inside.
+    /// </summary>
+    /// <param name="__instance">The current instance of the <see cref="DiveBellPlayerDetector" />.</param>
+    /// <param name="__result">The players "inside" the diving bell</param>
     [HarmonyPostfix]
     [HarmonyPatch(typeof(DiveBellPlayerDetector), nameof(DiveBellPlayerDetector.CheckForPlayers))]
-    internal static void CheckForPlayers(DiveBellPlayerDetector __instance, ref ICollection<Player> __result) {
+    public static void CheckForPlayers(DiveBellPlayerDetector __instance, ref ICollection<Player> __result) {
         if (!OptionsState.Instance.Get<bool>(BuiltInSettings.Keys.RequireAllPlayersInDiveBell))
             __result = PlayerHandler.instance.players;
     }
 
+    /// <summary>
+    /// Patches the diving bell's update function to apply our settings
+    /// </summary>
+    /// <param name="__instance">The current instance of the <see cref="DivingBell" />.</param>
     [HarmonyPostfix]
     [HarmonyPatch(typeof(DivingBell), nameof(DivingBell.Update))]
-    internal static void Update(DivingBell __instance) {
+    public static void Update(DivingBell __instance) {
         var recharging = __instance.onSurface && TimeOfDayHandler.TimeOfDay == TimeOfDay.Evening;
 
         if (recharging) {

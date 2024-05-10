@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "RedstoneWizard08"
 name = "ConfigurableWarning"
-versionNumber = "1.13.0"
+versionNumber = "1.13.1"
 description = "Makes the game configurable!"
 websiteUrl = "https://github.com/RedstoneWizard08/ConfigurableWarning"
 containsNsfwContent = false
@@ -19,8 +19,8 @@ readme = "./README.md"
 outdir = "./output"
 
 [[build.copy]]
-source = "./ConfigurableWarning/bin/Release/netstandard2.1"
-target = ""
+source = "./ConfigurableWarning/bin/Release/netstandard2.1/RedstoneWizard08.ConfigurableWarning.dll"
+target = "RedstoneWizard08.ConfigurableWarning.dll"
 
 [[build.copy]]
 source = "./CHANGELOG.md"

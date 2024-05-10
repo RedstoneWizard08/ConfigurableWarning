@@ -20,17 +20,15 @@ public static class OptionLoader {
     public static void RegisterOptions() {
         foreach (var type in AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes())) {
             if (type.IsAbstract || type.IsInterface || !type.IsSubclassOf(typeof(Setting))) continue;
-
             if (RegisteredOptions.ContainsKey(type)) continue;
 
             var register = type.GetCustomAttribute<RegisterOption>(false);
 
             if (register == null) continue;
 
-            var opt = (IOption<object>)Activator.CreateInstance(type);
-            var untypedOption = opt.AsUntyped();
+            Plugin.Logger.LogInfo($"Initializing option: {type.Name} (from {type.Assembly.GetName().Name}.dll");
 
-            RegisteredOptions[type] = untypedOption;
+            RegisteredOptions[type] = (IUntypedOption) Activator.CreateInstance(type);
         }
     }
 }

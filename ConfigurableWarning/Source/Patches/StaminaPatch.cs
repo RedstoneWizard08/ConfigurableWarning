@@ -6,12 +6,12 @@ using UnityEngine;
 namespace ConfigurableWarning.Patches;
 
 /// <summary>
-/// Stamina patches
+///     Stamina patches
 /// </summary>
 [HarmonyPatch]
 public class StaminaPatch {
     /// <summary>
-    /// Patches the player's stamina when they spawn.
+    ///     Patches the player's stamina when they spawn.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="PlayerController" />.</param>
     [HarmonyPostfix]
@@ -22,19 +22,19 @@ public class StaminaPatch {
     }
 
     /// <summary>
-    /// Patches the player's stamina parameters.
+    ///     Patches the player's stamina parameters.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="PlayerController" />.</param>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Update))]
     public static void Update(ref PlayerController __instance) {
         __instance.maxStamina = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.MaxStamina);
-        __instance.sprintMultiplier = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.SprintMultiplier);
+        __instance.sprintMultiplier = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.SprintSpeed);
         __instance.staminaRegRate = OptionsState.Instance.Get<float>(BuiltInSettings.Keys.StaminaRegenRate);
     }
 
     /// <summary>
-    /// Patches the player controller to reflect stamina settings.
+    ///     Patches the player controller to reflect stamina settings.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="PlayerController" />.</param>
     [HarmonyPostfix]

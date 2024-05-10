@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using ConfigurableWarning.API.Options;
-using JetBrains.Annotations;
 using Newtonsoft.Json;
-using UnityEngine;
 
 namespace ConfigurableWarning.API;
 
@@ -23,10 +21,9 @@ public class OptionsState {
     /// <typeparam name="T">The option's value type.</typeparam>
     /// <param name="opt">The option to register.</param>
     public void Register<T>(IOption<T> opt) {
-        if (!Has(opt)) {
-            Debug.Log($"Registering option {opt.GetName()} with initial value {opt.GetValue()}");
-            Set(opt, opt.GetValue());
-        }
+        if (Has(opt)) return;
+
+        Set(opt, opt.GetValue());
     }
 
     /// <summary>
@@ -75,11 +72,11 @@ public class OptionsState {
         return v switch {
             double d when typeof(T) == typeof(float) =>
                 // This is dumb. Kill it with fire.
-                (T)(object)(float)d,
+                (T) (object) (float) d,
             long l when typeof(T) == typeof(int) =>
                 // This is dumb. Kill it with fire. (again)
-                (T)(object)(int)l,
-            _ => (T)v
+                (T) (object) (int) l,
+            _ => (T) v
         };
     }
 

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using ContentSettings.API;
 using ContentSettings.API.Settings;
-using JetBrains.Annotations;
 using Unity.Mathematics;
 
 namespace ConfigurableWarning.API.Options;
@@ -31,7 +30,9 @@ public class IntOption : IntSetting, IOption<int>, IUntypedOption {
     /// <param name="category">The category to register to.</param>
     /// <param name="doClamp">Whether or not to clamp the value when changed.</param>
     protected IntOption(string name, int defaultValue, string displayName, int min, int max, string tab,
-        string category, bool doClamp = true) : this(name, defaultValue, displayName, min, max, tab, category, [], doClamp) { }
+        string category, bool doClamp = true) : this(name, defaultValue, displayName, min, max, tab, category, [],
+        doClamp) {
+    }
 
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="int" /> type.
@@ -46,7 +47,7 @@ public class IntOption : IntSetting, IOption<int>, IUntypedOption {
     /// <param name="actions">Functions to run when the value is applied.</param>
     /// <param name="doClamp">Whether or not to clamp the value when changed.</param>
     protected IntOption(string name, int defaultValue, string displayName, int min, int max, string tab,
-        string category, Action<IntOption>[]? actions, bool doClamp = true) {
+        string category, Action<IntOption>[] actions, bool doClamp = true) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
@@ -88,13 +89,23 @@ public class IntOption : IntSetting, IOption<int>, IUntypedOption {
         return this;
     }
 
+    /// <inheritdoc />
+    public override int GetDefaultValue() {
+        return _defaultValue;
+    }
+
+    /// <inheritdoc />
+    public IOption<int> AsOption() {
+        return this;
+    }
+
     object IUntypedOption.GetValue() {
         return GetValue();
     }
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((int)value);
+        SetValue((int) value);
     }
 
     /// <summary>
@@ -109,17 +120,7 @@ public class IntOption : IntSetting, IOption<int>, IUntypedOption {
     }
 
     /// <inheritdoc />
-    public override int GetDefaultValue() {
-        return _defaultValue;
-    }
-
-    /// <inheritdoc />
     public override (int, int) GetMinMaxValue() {
         return (_minMax.x, _minMax.y);
-    }
-
-    /// <inheritdoc />
-    public IOption<int> AsOption() {
-        return this;
     }
 }

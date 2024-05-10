@@ -1,7 +1,7 @@
 using Cake.DocFx;
 using Cake.Frosting;
 
-namespace ConfigurableWarning.Build.Tasks;
+namespace Build.Tasks;
 
 [TaskName("Docs")]
 public sealed class DocsTask : FrostingTask<BuildContext> {

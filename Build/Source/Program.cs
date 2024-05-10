@@ -1,7 +1,7 @@
 using System;
 using Cake.Frosting;
 
-namespace ConfigurableWarning.Build;
+namespace Build;
 
 public static class Program {
     public static int Main(string[] args) {

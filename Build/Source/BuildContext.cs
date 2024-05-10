@@ -2,13 +2,15 @@ using Cake.Common;
 using Cake.Core;
 using Cake.Frosting;
 
-namespace ConfigurableWarning.Build;
+namespace Build;
 
-public class BuildContext : FrostingContext {
-    public string MsBuildConfiguration { get; set; }
+// ReSharper disable once ClassNeverInstantiated.Global
+public class BuildContext(ICakeContext context) : FrostingContext(context) {
+    public string GamePath { get; set; } = context.Argument("game-path",
+        "F:/SteamLibrary/steamapps/common/Content Warning/Content Warning.exe");
 
-    public BuildContext(ICakeContext context)
-        : base(context) {
-        MsBuildConfiguration = context.Argument("configuration", "Release");
-    }
+    public string ProfilePath { get; set; } =
+        context.Argument("profile-path", "F:/Thunderstore/DataFolder/ContentWarning/profiles/Default");
+
+    public string MsBuildConfiguration { get; set; } = context.Argument("configuration", "Release");
 }

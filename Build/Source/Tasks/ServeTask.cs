@@ -1,7 +1,7 @@
 using Cake.DocFx;
 using Cake.Frosting;
 
-namespace ConfigurableWarning.Build.Tasks;
+namespace Build.Tasks;
 
 [TaskName("Serve")]
 [IsDependentOn(typeof(DocsTask))]

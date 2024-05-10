@@ -5,13 +5,13 @@ using HarmonyLib;
 namespace ConfigurableWarning.Patches;
 
 /// <summary>
-/// Quota patches
+///     Quota patches
 /// </summary>
 [HarmonyPatch]
 public class QuotaPatch {
     /// <summary>
-    /// Patches the days per quota to reflect the set value.
-    /// This patches the constructor of <see cref="RoomStatsHolder" />.
+    ///     Patches the days per quota to reflect the set value.
+    ///     This patches the constructor of <see cref="RoomStatsHolder" />.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="RoomStatsHolder" />.</param>
     /// <param name="handler">The current <see cref="SurfaceNetworkHandler" /></param>
@@ -27,7 +27,7 @@ public class QuotaPatch {
     }
 
     /// <summary>
-    /// Patches the getter for days per quota.
+    ///     Patches the getter for days per quota.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="RoomStatsHolder" />.</param>
     /// <param name="__result">The resulting value</param>

@@ -17,6 +17,7 @@
         <RepositoryUrl>https://github.com/RedstoneWizard08/ConfigurableWarning</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <Authors>RedstoneWizard08</Authors>
+        <DebugType>Portable</DebugType>
 
         <CW_REFERENCES>F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed</CW_REFERENCES>
     </PropertyGroup>
@@ -54,5 +55,14 @@
 
     <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
         <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="pworld">
+            <HintPath>..\..\..\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\pworld.dll</HintPath>
+        </Reference>
+        <Reference Include="Sirenix.Serialization">
+          <HintPath>..\..\..\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Sirenix.Serialization.dll</HintPath>
+        </Reference>
     </ItemGroup>
 </Project>

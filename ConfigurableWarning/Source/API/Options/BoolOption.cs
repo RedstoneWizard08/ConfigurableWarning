@@ -23,7 +23,9 @@ public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
     /// <param name="displayName">The option's displayed name.</param>
     /// <param name="tab">The tab to register to.</param>
     /// <param name="category">The category to register to.</param>
-    protected BoolOption(string name, bool defaultValue, string displayName, string tab, string category) : this(name, defaultValue, displayName, tab, category, []) { }
+    protected BoolOption(string name, bool defaultValue, string displayName, string tab, string category) : this(name,
+        defaultValue, displayName, tab, category, []) {
+    }
 
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="bool" /> type.
@@ -35,7 +37,7 @@ public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
     /// <param name="category">The category to register to.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
     protected BoolOption(string name, bool defaultValue, string displayName, string tab, string category,
-        Action<BoolOption>[]? actions) {
+        Action<BoolOption>[] actions) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
@@ -75,13 +77,23 @@ public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
         return this;
     }
 
+    /// <inheritdoc />
+    public override bool GetDefaultValue() {
+        return _defaultValue;
+    }
+
+    /// <inheritdoc />
+    public IOption<bool> AsOption() {
+        return this;
+    }
+
     object IUntypedOption.GetValue() {
         return GetValue();
     }
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((bool)value);
+        SetValue((bool) value);
     }
 
     /// <summary>
@@ -93,15 +105,5 @@ public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
         ConfigurableWarningAPI.Sync.SyncSettings();
 
         foreach (var action in _applyActions) action(this);
-    }
-
-    /// <inheritdoc />
-    public override bool GetDefaultValue() {
-        return _defaultValue;
-    }
-
-    /// <inheritdoc />
-    public IOption<bool> AsOption() {
-        return this;
     }
 }

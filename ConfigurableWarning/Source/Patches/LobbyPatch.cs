@@ -11,7 +11,7 @@ namespace ConfigurableWarning.Patches;
 [HarmonyPatch]
 public class LobbyPatch {
     /// <summary>
-    /// Check if the player is friends with another person.
+    ///     Check if the player is friends with another person.
     /// </summary>
     /// <param name="cSteamID">The other's Steam ID.</param>
     /// <returns>If they are friends or not</returns>
@@ -20,7 +20,7 @@ public class LobbyPatch {
     }
 
     /// <summary>
-    /// Checks if the game is public
+    ///     Checks if the game is public
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="SteamLobbyHandler" />.</param>
     /// <returns>If the game is public</returns>
@@ -31,7 +31,7 @@ public class LobbyPatch {
     }
 
     /// <summary>
-    /// Patches the random player allower thingamajig to apply the privacy setting
+    ///     Patches the random player allower thingamajig to apply the privacy setting
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="SteamLobbyHandler" />.</param>
     /// <param name="__result">The bool result</param>
@@ -42,8 +42,8 @@ public class LobbyPatch {
     }
 
     /// <summary>
-    /// Patches the steam client adder to kick if they are not friends (and the
-    /// private host setting is true)
+    ///     Patches the steam client adder to kick if they are not friends (and the
+    ///     private host setting is true)
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="SteamLobbyHandler" />.</param>
     /// <param name="cSteamID">The new player's Steam ID</param>
@@ -59,7 +59,7 @@ public class LobbyPatch {
 #pragma warning disable Harmony003
 
     /// <summary>
-    /// Patches the networking session responder to apply our settings.
+    ///     Patches the networking session responder to apply our settings.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="SteamLobbyHandler" />.</param>
     /// <param name="param">The session request</param>
@@ -74,7 +74,7 @@ public class LobbyPatch {
 #pragma warning restore Harmony003
 
     /// <summary>
-    /// Patches the lobby opener to allow private games.
+    ///     Patches the lobby opener to allow private games.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="SteamLobbyHandler" />.</param>
     /// <returns><see cref="HarmonyPrefix" /> continue-or-not flag (this is a prefix)</returns>

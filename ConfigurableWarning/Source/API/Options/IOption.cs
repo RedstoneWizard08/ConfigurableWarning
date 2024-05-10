@@ -8,6 +8,10 @@ namespace ConfigurableWarning.API.Options;
 /// </summary>
 /// <typeparam name="T">The option's value type.</typeparam>
 public interface IOption<T> : ICustomSetting {
+    string IExposedSetting.GetDisplayName() {
+        return GetDisplayName();
+    }
+
     /// <summary>
     ///     Gets this option's name. This is its name in the registry
     ///     and in the state holder.
@@ -16,17 +20,13 @@ public interface IOption<T> : ICustomSetting {
     string GetName();
 
     /// <summary>
-    /// Get the display name of this option.
+    ///     Get the display name of this option.
     /// </summary>
     /// <returns>The option's display name.</returns>
     new string GetDisplayName();
 
-    string IExposedSetting.GetDisplayName() {
-        return GetDisplayName();
-    }
-
     /// <summary>
-    /// Get this option's default value.
+    ///     Get this option's default value.
     /// </summary>
     /// <returns>The option's default value.</returns>
     T GetDefaultValue();
@@ -59,8 +59,8 @@ public interface IOption<T> : ICustomSetting {
     IUntypedOption AsUntyped();
 
     /// <summary>
-    /// Get this as an <see cref="IOption{T}" />.
-    /// This is used for accessing default methods.
+    ///     Get this as an <see cref="IOption{T}" />.
+    ///     This is used for accessing default methods.
     /// </summary>
     /// <returns>This as an <see cref="IOption{T}" />.</returns>
     IOption<T> AsOption();

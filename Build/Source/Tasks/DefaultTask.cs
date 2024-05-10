@@ -1,6 +1,6 @@
 using Cake.Frosting;
 
-namespace ConfigurableWarning.Build.Tasks;
+namespace Build.Tasks;
 
 [TaskName("Default")]
 [IsDependentOn(typeof(BuildTask))]

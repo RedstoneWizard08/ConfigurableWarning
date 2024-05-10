@@ -10,6 +10,8 @@ public static class ConfigurableWarningAPI {
     public static OptionSyncer Sync { get; private set; } = null!;
 
     internal static void Init() {
+        Plugin.Logger.LogInfo("Initializing ConfigurableWarning API...");
+        
         Sync = new OptionSyncer();
     }
 }

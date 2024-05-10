@@ -5,13 +5,13 @@ using HarmonyLib;
 namespace ConfigurableWarning.Patches;
 
 /// <summary>
-/// HUD/UI patches
+///     HUD/UI patches
 /// </summary>
 [HarmonyPatch]
 public class UIPatches {
     /// <summary>
-    /// Patches the health bar to accurately reflect the player's max health,
-    /// as it's normally constant.
+    ///     Patches the health bar to accurately reflect the player's max health,
+    ///     as it's normally constant.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="UI_Health" />.</param>
     [HarmonyPostfix]

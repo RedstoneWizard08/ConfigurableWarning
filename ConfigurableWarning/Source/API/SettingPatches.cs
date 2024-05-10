@@ -7,23 +7,23 @@ using IntSetting = ContentSettings.API.Settings.IntSetting;
 namespace ConfigurableWarning.API;
 
 /// <summary>
-/// Settings patches
+///     Settings patches
 /// </summary>
 [HarmonyPatch]
 public class SettingPatches {
     /// <summary>
-    /// The held value for a <see cref="FloatSetting" />.
+    ///     The held value for a <see cref="FloatSetting" />.
     /// </summary>
     private static float _originalFloatValue;
 
     /// <summary>
-    /// The held value for an <see cref="IntSetting" />.
+    ///     The held value for an <see cref="IntSetting" />.
     /// </summary>
     private static int _originalIntValue;
 
     /// <summary>
-    /// Patches the <see cref="FloatSetting.SetValue(float, ISettingHandler)" /> method
-    /// to capture the value.
+    ///     Patches the <see cref="FloatSetting.SetValue(float, ISettingHandler)" /> method
+    ///     to capture the value.
     /// </summary>
     /// <param name="__instance">The current instance of a <see cref="FloatSetting" />.</param>
     /// <param name="value">The value</param>
@@ -35,8 +35,8 @@ public class SettingPatches {
     }
 
     /// <summary>
-    /// Patches the <see cref="FloatSetting.SetValue(float, ISettingHandler)" /> method
-    /// to not clamp if it's disabled.
+    ///     Patches the <see cref="FloatSetting.SetValue(float, ISettingHandler)" /> method
+    ///     to not clamp if it's disabled.
     /// </summary>
     /// <param name="__instance">The current instance of a <see cref="FloatSetting" />.</param>
     /// <param name="value">The value</param>
@@ -52,8 +52,8 @@ public class SettingPatches {
     }
 
     /// <summary>
-    /// Patches the <see cref="IntSetting.SetValue(int, ISettingHandler)" /> method
-    /// to capture the value.
+    ///     Patches the <see cref="IntSetting.SetValue(int, ISettingHandler)" /> method
+    ///     to capture the value.
     /// </summary>
     /// <param name="__instance">The current instance of an <see cref="IntSetting" />.</param>
     /// <param name="newValue">The value</param>
@@ -65,8 +65,8 @@ public class SettingPatches {
     }
 
     /// <summary>
-    /// Patches the <see cref="IntSetting.SetValue(int, ISettingHandler)" /> method
-    /// to not clamp if it's disabled.
+    ///     Patches the <see cref="IntSetting.SetValue(int, ISettingHandler)" /> method
+    ///     to not clamp if it's disabled.
     /// </summary>
     /// <param name="__instance">The current instance of an <see cref="IntSetting" />.</param>
     /// <param name="newValue">The value</param>
@@ -82,8 +82,8 @@ public class SettingPatches {
     }
 
     /// <summary>
-    /// Patches <see cref="SettingsLoader.RegisterSettings" /> to register our settings
-    /// too.
+    ///     Patches <see cref="SettingsLoader.RegisterSettings" /> to register our settings
+    ///     too.
     /// </summary>
     [HarmonyPostfix]
     [HarmonyPatch(typeof(SettingsLoader), nameof(SettingsLoader.RegisterSettings))]

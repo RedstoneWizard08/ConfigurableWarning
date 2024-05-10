@@ -9,14 +9,14 @@ using Zorro.Core;
 namespace ConfigurableWarning.Patches;
 
 /// <summary>
-/// Spawning mechanic patches
+///     Spawning mechanic patches
 /// </summary>
 [HarmonyPatch]
 public class SpawnPatch {
     /// <summary>
-    /// Patches extra spawn budgets to be between the day one value
-    /// and day three value. This will interpolate the budget to be spread
-    /// across all days.
+    ///     Patches extra spawn budgets to be between the day one value
+    ///     and day three value. This will interpolate the budget to be spread
+    ///     across all days.
     /// </summary>
     /// <param name="day">The day to calculate for</param>
     /// <param name="__result">The output extra spawn budget</param>
@@ -30,12 +30,12 @@ public class SpawnPatch {
         var days = OptionsState.Instance.Get<int>(BuiltInSettings.Keys.DaysPerQuota);
         var per = diff / days;
 
-        __result = (per * day) + min;
+        __result = per * day + min;
     }
 
     /// <summary>
-    /// Patches the second wave monster budget to account for the potential
-    /// extra days.
+    ///     Patches the second wave monster budget to account for the potential
+    ///     extra days.
     /// </summary>
     /// <param name="day">The day to calculate for</param>
     /// <param name="__result">The output budget</param>
@@ -50,7 +50,7 @@ public class SpawnPatch {
         GetExtraBudgetForDay(realDay, ref res);
 
         var anim = Mathf.RoundToInt(bigNumbers.monsterBudgetPerDay.Evaluate(day) + res);
-        var amount = bigNumbers.firstSpawnAmount.PRndRange();
+        var amount = SingletonAsset<BigNumbers>.Instance.firstSpawnAmount.PRndRange();
 
         SingletonAsset<BigNumbers>.Instance.firstWaveSizeWas = amount;
         anim = (bigNumbers.firstWaveSizeWas * anim).ToInt();
@@ -61,8 +61,8 @@ public class SpawnPatch {
     }
 
     /// <summary>
-    /// Patches the second wave monster budget to account for the potential
-    /// extra days.
+    ///     Patches the second wave monster budget to account for the potential
+    ///     extra days.
     /// </summary>
     /// <param name="day">The day to calculate for</param>
     /// <param name="__result">The output budget</param>

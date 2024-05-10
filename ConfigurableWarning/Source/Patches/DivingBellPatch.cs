@@ -7,12 +7,12 @@ using HarmonyLib;
 namespace ConfigurableWarning.Patches;
 
 /// <summary>
-/// Diving Bell patches
+///     Diving Bell patches
 /// </summary>
 [HarmonyPatch]
 public class DivingBellPatch {
     /// <summary>
-    /// Patches the diving bell to allow you to leave without your friends.
+    ///     Patches the diving bell to allow you to leave without your friends.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="DivingBellDoor" />.</param>
     /// <param name="__result"></param>
@@ -23,8 +23,8 @@ public class DivingBellPatch {
     }
 
     /// <summary>
-    /// Patches the player checker to allow for all players to not need to be
-    /// inside.
+    ///     Patches the player checker to allow for all players to not need to be
+    ///     inside.
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="DiveBellPlayerDetector" />.</param>
     /// <param name="__result">The players "inside" the diving bell</param>
@@ -36,7 +36,7 @@ public class DivingBellPatch {
     }
 
     /// <summary>
-    /// Patches the diving bell's update function to apply our settings
+    ///     Patches the diving bell's update function to apply our settings
     /// </summary>
     /// <param name="__instance">The current instance of the <see cref="DivingBell" />.</param>
     [HarmonyPostfix]

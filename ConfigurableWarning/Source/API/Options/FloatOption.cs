@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using ContentSettings.API;
-using JetBrains.Annotations;
 using Unity.Mathematics;
 using Zorro.Settings;
 
@@ -31,7 +30,9 @@ public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
     /// <param name="category">The category to register to.</param>
     /// <param name="doClamp">Whether or not to clamp the value when changed.</param>
     protected FloatOption(string name, float defaultValue, string displayName, float min, float max, string tab,
-        string category, bool doClamp = true) : this(name, defaultValue, displayName, min, max, tab, category, [], doClamp) { }
+        string category, bool doClamp = true) : this(name, defaultValue, displayName, min, max, tab, category, [],
+        doClamp) {
+    }
 
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="float" /> type.
@@ -46,7 +47,7 @@ public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
     /// <param name="actions">Functions to run when the value is applied.</param>
     /// <param name="doClamp">Whether or not to clamp the value when changed.</param>
     protected FloatOption(string name, float defaultValue, string displayName, float min, float max, string tab,
-        string category, Action<FloatOption>[]? actions, bool doClamp = true) {
+        string category, Action<FloatOption>[] actions, bool doClamp = true) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
@@ -88,13 +89,23 @@ public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
         return this;
     }
 
+    /// <inheritdoc />
+    public override float GetDefaultValue() {
+        return _defaultValue;
+    }
+
+    /// <inheritdoc />
+    public IOption<float> AsOption() {
+        return this;
+    }
+
     object IUntypedOption.GetValue() {
         return GetValue();
     }
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((float)value);
+        SetValue((float) value);
     }
 
     /// <summary>
@@ -109,17 +120,7 @@ public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
     }
 
     /// <inheritdoc />
-    public override float GetDefaultValue() {
-        return _defaultValue;
-    }
-
-    /// <inheritdoc />
     public override float2 GetMinMaxValue() {
         return _minMax;
-    }
-
-    /// <inheritdoc />
-    public IOption<float> AsOption() {
-        return this;
     }
 }

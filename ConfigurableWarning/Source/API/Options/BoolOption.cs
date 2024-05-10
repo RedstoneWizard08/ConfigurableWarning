@@ -15,16 +15,6 @@ public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
     private readonly string _displayName;
     private readonly string _name;
 
-    /// <inheritdoc />
-    public bool State { get => AsOption().State; set => AsOption().State = value; }
-
-    /// <summary>
-    ///     Get an instance of an option.
-    /// </summary>
-    /// <param name="name">The option's name.</param>
-    /// <returns>The option.</returns>
-    public static BoolOption? Instance(string name) => (BoolOption?)IOption<bool>.Instance(name);
-
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="bool" /> type.
     /// </summary>
@@ -54,6 +44,12 @@ public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
         _applyActions = [.. actions];
 
         AsOption().Register(tab, category);
+    }
+
+    /// <inheritdoc />
+    public bool State {
+        get => AsOption().State;
+        set => AsOption().State = value;
     }
 
     /// <inheritdoc />
@@ -103,7 +99,16 @@ public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((bool)value);
+        SetValue((bool) value);
+    }
+
+    /// <summary>
+    ///     Get an instance of an option.
+    /// </summary>
+    /// <param name="name">The option's name.</param>
+    /// <returns>The option.</returns>
+    public static BoolOption? Instance(string name) {
+        return (BoolOption?) IOption<bool>.Instance(name);
     }
 
     /// <summary>

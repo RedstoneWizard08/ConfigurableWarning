@@ -1,9 +1,9 @@
-namespace ConfigurableWarning.Settings.Compat;
-
+using System.Linq;
 using ConfigurableWarning.API;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
-using Virality;
+
+namespace ConfigurableWarning.Settings.Compat;
 
 /// <summary>
 ///     Settings keys for Virality compat
@@ -20,29 +20,40 @@ public static class ViralitySettingKeys {
 ///     Virality compat settings
 /// </summary>
 [CompatModule(["Virality"])]
-public class ViralityCompat: ICompatModule {
-    [CompatSetting]
-    private class MaxPlayers()
-        : IntOption(ViralitySettingKeys.MaxPlayers, 12, "Max Players", 4, 100, "VIRALITY", "GENERAL", [ApplySettings], false);
-
-    [CompatSetting]
-    private class AllowLateJoin()
-        : BoolOption(ViralitySettingKeys.AllowLateJoin, true, "Allow Late Joining", "VIRALITY", "GENERAL", [ApplySettings]);
-
-    [CompatSetting]
-    private class EnableVoiceFix()
-        : BoolOption(ViralitySettingKeys.EnableVoiceFix, true, "Enable Voice Fix", "VIRALITY", "GENERAL", [ApplySettings]);
-
+public class ViralityCompat : ICompatModule {
     /// <inheritdoc />
     public void Init() {
-        States.Ints[ViralitySettingKeys.MaxPlayers] = Virality.MaxPlayers!.Value;
-        States.Bools[ViralitySettingKeys.AllowLateJoin] = Virality.AllowLateJoin!.Value;
-        States.Bools[ViralitySettingKeys.EnableVoiceFix] = Virality.EnableVoiceFix!.Value;
+        States.Ints[ViralitySettingKeys.MaxPlayers] = Virality.Virality.MaxPlayers!.Value;
+        States.Bools[ViralitySettingKeys.AllowLateJoin] = Virality.Virality.AllowLateJoin!.Value;
+        States.Bools[ViralitySettingKeys.EnableVoiceFix] = Virality.Virality.EnableVoiceFix!.Value;
     }
 
     internal static void ApplySettings(IUntypedOption _opt) {
-        Virality.MaxPlayers!.Value = States.Ints[ViralitySettingKeys.MaxPlayers];
-        Virality.AllowLateJoin!.Value = States.Bools[ViralitySettingKeys.AllowLateJoin];
-        Virality.EnableVoiceFix!.Value = States.Bools[ViralitySettingKeys.EnableVoiceFix];
+        string[] all = [
+            ViralitySettingKeys.MaxPlayers,
+            ViralitySettingKeys.AllowLateJoin,
+            ViralitySettingKeys.EnableVoiceFix,
+        ];
+        
+        if (!all.All(v => OptionsState.Instance.Has(v))) return;
+        
+        Virality.Virality.MaxPlayers!.Value = States.Ints[ViralitySettingKeys.MaxPlayers];
+        Virality.Virality.AllowLateJoin!.Value = States.Bools[ViralitySettingKeys.AllowLateJoin];
+        Virality.Virality.EnableVoiceFix!.Value = States.Bools[ViralitySettingKeys.EnableVoiceFix];
     }
+
+    [CompatSetting]
+    private class MaxPlayers()
+        : IntOption(ViralitySettingKeys.MaxPlayers, 12, "Max Players", 4, 100, "VIRALITY", "GENERAL", [ApplySettings],
+            false);
+
+    [CompatSetting]
+    private class AllowLateJoin()
+        : BoolOption(ViralitySettingKeys.AllowLateJoin, true, "Allow Late Joining", "VIRALITY", "GENERAL",
+            [ApplySettings]);
+
+    [CompatSetting]
+    private class EnableVoiceFix()
+        : BoolOption(ViralitySettingKeys.EnableVoiceFix, true, "Enable Voice Fix", "VIRALITY", "GENERAL",
+            [ApplySettings]);
 }

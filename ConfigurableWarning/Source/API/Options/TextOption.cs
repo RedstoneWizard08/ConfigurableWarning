@@ -16,16 +16,6 @@ public class TextOption : TextSetting, IOption<string>, IUntypedOption {
     private readonly string _displayName;
     private readonly string _name;
 
-    /// <inheritdoc />
-    public string? State { get => AsOption().State; set => AsOption().State = value; }
-
-    /// <summary>
-    ///     Get an instance of an option.
-    /// </summary>
-    /// <param name="name">The option's name.</param>
-    /// <returns>The option.</returns>
-    public static TextOption? Instance(string name) => (TextOption?)IOption<string>.Instance(name);
-
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="string" /> type.
     /// </summary>
@@ -55,6 +45,12 @@ public class TextOption : TextSetting, IOption<string>, IUntypedOption {
         _applyActions = [.. actions];
 
         AsOption().Register(tab, category);
+    }
+
+    /// <inheritdoc />
+    public string? State {
+        get => AsOption().State;
+        set => AsOption().State = value;
     }
 
     /// <inheritdoc />
@@ -105,6 +101,15 @@ public class TextOption : TextSetting, IOption<string>, IUntypedOption {
     /// <inheritdoc />
     public void SetValue(object value) {
         SetValue((string) value);
+    }
+
+    /// <summary>
+    ///     Get an instance of an option.
+    /// </summary>
+    /// <param name="name">The option's name.</param>
+    /// <returns>The option.</returns>
+    public static TextOption? Instance(string name) {
+        return (TextOption?) IOption<string>.Instance(name);
     }
 
     /// <summary>

@@ -13,5 +13,5 @@ public sealed class CompatModule(string[] dependencies) : Attribute {
     /// <summary>
     ///     A list of namespaces this module depends on.
     /// </summary>
-    public string[] Dependencies = dependencies;
+    public readonly string[] Dependencies = dependencies;
 }

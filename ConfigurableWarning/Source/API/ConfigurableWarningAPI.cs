@@ -11,7 +11,7 @@ public static class ConfigurableWarningAPI {
 
     internal static void Init() {
         Plugin.Logger.LogInfo("Initializing ConfigurableWarning API...");
-        
+
         Sync = new OptionSyncer();
     }
 }

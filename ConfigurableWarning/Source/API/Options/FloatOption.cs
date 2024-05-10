@@ -18,16 +18,6 @@ public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
     private readonly string _name;
     internal readonly bool _shouldClamp;
 
-    /// <inheritdoc />
-    public float State { get => AsOption().State; set => AsOption().State = value; }
-
-    /// <summary>
-    ///     Get an instance of an option.
-    /// </summary>
-    /// <param name="name">The option's name.</param>
-    /// <returns>The option.</returns>
-    public static FloatOption? Instance(string name) => (FloatOption?)IOption<float>.Instance(name);
-
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="float" /> type.
     /// </summary>
@@ -66,6 +56,12 @@ public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
         _applyActions = [.. actions];
 
         AsOption().Register(tab, category);
+    }
+
+    /// <inheritdoc />
+    public float State {
+        get => AsOption().State;
+        set => AsOption().State = value;
     }
 
     /// <inheritdoc />
@@ -116,6 +112,15 @@ public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
     /// <inheritdoc />
     public void SetValue(object value) {
         SetValue((float) value);
+    }
+
+    /// <summary>
+    ///     Get an instance of an option.
+    /// </summary>
+    /// <param name="name">The option's name.</param>
+    /// <returns>The option.</returns>
+    public static FloatOption? Instance(string name) {
+        return (FloatOption?) IOption<float>.Instance(name);
     }
 
     /// <summary>

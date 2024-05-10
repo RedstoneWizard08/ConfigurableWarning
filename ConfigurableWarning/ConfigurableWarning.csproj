@@ -21,9 +21,9 @@
 
         <CW_REFERENCES>F:\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed</CW_REFERENCES>
     </PropertyGroup>
-    
+
     <ItemGroup>
-        <None Include="../README.md" Pack="true" PackagePath="README.md" />
+        <None Include="../README.md" Pack="true" PackagePath="README.md"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -43,8 +43,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="Virality" HintPath="../deps/MaxWasUnavailable.Virality.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True" />
-        <Reference Include="Flashcard" HintPath="../deps/me.loaforc.Flashcard.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True" />
+        <Reference Include="Virality" HintPath="..\deps\MaxWasUnavailable.Virality-publicized.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True"/>
+        <Reference Include="Flashcard" HintPath="..\deps\me.loaforc.Flashcard-publicized.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True"/>
     </ItemGroup>
 
     <ItemGroup Condition="$(CI) != 'true' And $(USER) != 'codespace'">

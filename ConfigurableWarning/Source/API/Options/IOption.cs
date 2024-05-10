@@ -8,6 +8,14 @@ namespace ConfigurableWarning.API.Options;
 /// </summary>
 /// <typeparam name="T">The option's value type.</typeparam>
 public interface IOption<T> : ICustomSetting, IUntypedOption {
+    /// <summary>
+    ///     Get or set this option's state.
+    /// </summary>
+    public T? State {
+        get => OptionsState.Instance.Get<T>(GetName());
+        set => OptionsState.Instance.Set(this, value!);
+    }
+
     string IExposedSetting.GetDisplayName() {
         return GetDisplayName();
     }
@@ -78,17 +86,11 @@ public interface IOption<T> : ICustomSetting, IUntypedOption {
     }
 
     /// <summary>
-    ///     Get or set this option's state.
-    /// </summary>
-    public T? State {
-        get => OptionsState.Instance.Get<T>(GetName());
-        set => OptionsState.Instance.Set<T>(this, value!);
-    }
-
-    /// <summary>
     ///     Get an instance of an option.
     /// </summary>
     /// <param name="name">The option's name.</param>
     /// <returns>The option.</returns>
-    public static IOption<T>? Instance(string name) => OptionManager.Instance.Get<T>(name);
+    public static IOption<T>? Instance(string name) {
+        return OptionManager.Instance.Get<T>(name);
+    }
 }

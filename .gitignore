@@ -9,3 +9,5 @@ _site
 api
 _doc
 /deps/*.dll
+venv
+*.pyc

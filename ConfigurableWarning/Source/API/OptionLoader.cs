@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
 using Zorro.Settings;
 
@@ -23,12 +24,13 @@ public static class OptionLoader {
             if (RegisteredOptions.ContainsKey(type)) continue;
 
             var register = type.GetCustomAttribute<RegisterOption>(false);
-
             if (register == null) continue;
 
             Plugin.Logger.LogInfo($"Initializing option: {type.Name} (from {type.Assembly.GetName().Name}.dll");
 
             RegisteredOptions[type] = (IUntypedOption) Activator.CreateInstance(type);
         }
+
+        CompatLoader.LoadModules();
     }
 }

@@ -46,7 +46,7 @@ public class Plugin : BaseUnityPlugin {
     /// </summary>
     public void Patch() {
         Logger.LogInfo("Patching...");
-        
+
         _harmony.PatchAll();
     }
 
@@ -55,7 +55,7 @@ public class Plugin : BaseUnityPlugin {
     /// </summary>
     public void Unpatch() {
         Logger.LogInfo("Unpatching...");
-        
+
         Harmony.UnpatchAll();
     }
 }

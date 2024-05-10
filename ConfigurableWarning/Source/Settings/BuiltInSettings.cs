@@ -25,7 +25,8 @@ public static class BuiltInSettings {
         : BoolOption(SettingKeys.PrivateHost, true, "Host Privately (friends-only)", "GAMEPLAY", "GENERAL");
 
     [RegisterOption]
-    private class DaysPerQuota() : IntOption(SettingKeys.DaysPerQuota, 3, "Days Per Quota", 0, 30, "GAMEPLAY", "GENERAL",
+    private class DaysPerQuota() : IntOption(SettingKeys.DaysPerQuota, 3, "Days Per Quota", 0, 30, "GAMEPLAY",
+        "GENERAL",
         [SettingsUtil.UpdateQuotaDays], false);
 
     [RegisterOption]
@@ -41,7 +42,8 @@ public static class BuiltInSettings {
         false);
 
     [RegisterOption]
-    private class MaxStamina() : FloatOption(SettingKeys.MaxStamina, 10.0f, "Maximum Stamina", 0f, 100f, "GAMEPLAY", "PLAYER",
+    private class MaxStamina() : FloatOption(SettingKeys.MaxStamina, 10.0f, "Maximum Stamina", 0f, 100f, "GAMEPLAY",
+        "PLAYER",
         false);
 
     [RegisterOption]
@@ -49,11 +51,13 @@ public static class BuiltInSettings {
         "GAMEPLAY", "PLAYER", false);
 
     [RegisterOption]
-    private class SprintSpeed() : FloatOption(SettingKeys.SprintSpeed, 2.0f, "Sprint Speed", 0f, 100f, "GAMEPLAY", "PLAYER",
+    private class SprintSpeed() : FloatOption(SettingKeys.SprintSpeed, 2.0f, "Sprint Speed", 0f, 100f, "GAMEPLAY",
+        "PLAYER",
         false);
 
     [RegisterOption]
-    private class Oxygen() : FloatOption(SettingKeys.Oxygen, 500.0f, "Maximum Oxygen (in seconds)", 0f, 2000f, "GAMEPLAY",
+    private class Oxygen() : FloatOption(SettingKeys.Oxygen, 500.0f, "Maximum Oxygen (in seconds)", 0f, 2000f,
+        "GAMEPLAY",
         "OXYGEN", false);
 
     [RegisterOption]
@@ -61,11 +65,13 @@ public static class BuiltInSettings {
         : BoolOption(SettingKeys.InfiniteOxygen, false, "Enable Infinite Oxygen", "GAMEPLAY", "OXYGEN");
 
     [RegisterOption]
-    private class OxygenUsageMultiplier() : FloatOption(SettingKeys.OxygenUsageMultiplier, 1.0f, "Oxygen Usage Multiplier", 0f,
+    private class OxygenUsageMultiplier() : FloatOption(SettingKeys.OxygenUsageMultiplier, 1.0f,
+        "Oxygen Usage Multiplier", 0f,
         20f, "GAMEPLAY", "OXYGEN", false);
 
     [RegisterOption]
-    private class SprintMultiplier() : FloatOption(SettingKeys.SprintMultiplier, 1.0f, "Sprinting Oxygen Usage Multiplier", 1f,
+    private class SprintMultiplier() : FloatOption(SettingKeys.SprintMultiplier, 1.0f,
+        "Sprinting Oxygen Usage Multiplier", 1f,
         10f, "GAMEPLAY", "OXYGEN", false);
 
     [RegisterOption]

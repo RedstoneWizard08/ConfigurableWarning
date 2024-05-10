@@ -2,6 +2,7 @@ import os
 import json
 import shutil
 import requests
+import subprocess
 
 from io import BytesIO
 from os import path
@@ -20,6 +21,9 @@ urls = []
 for item in deps:
     urls.append(json.loads(requests.get(item).text)["latest"]["download_url"])
 
+if path.exists(DIR):
+    shutil.rmtree(DIR)
+
 for url in urls:
     print(f"Downloading: {url}")
 
@@ -37,3 +41,7 @@ for url in urls:
                 )
 
                 shutil.rmtree(path.join(DIR, file.orig_filename.split("/")[0]))
+                
+                file = path.join(DIR, path.basename(file.orig_filename))
+                
+                subprocess.check_output(["dotnet", "assembly-publicizer", file])

@@ -1,9 +1,10 @@
-namespace ConfigurableWarning.Settings.Compat;
-
+using System.Linq;
 using ConfigurableWarning.API;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
 using Flashcard;
+
+namespace ConfigurableWarning.Settings.Compat;
 
 /// <summary>
 ///     Settings keys for Flashcard compat
@@ -23,34 +24,11 @@ public static class FlashcardSettingKeys {
 ///     Flashcard compat settings
 /// </summary>
 [CompatModule(["Flashcard"])]
-public class FlashcardCompat: ICompatModule {
-    [CompatSetting]
-    private class EnableExtraCamera()
-        : BoolOption(FlashcardSettingKeys.EnableExtraCamera, true, "Enable Extra Camera Upgrade", "FLASHCARD", "UPGRADES", [ApplySettings]);
-
-    [CompatSetting]
-    private class ClipLength()
-        : FloatOption(FlashcardSettingKeys.ClipLength, 120f, "Clip Length", 1f, 1000f, "FLASHCARD", "RECORDING", [ApplySettings], false);
-    
-    [CompatSetting]
-    private class ClipFramerate()
-        : IntOption(FlashcardSettingKeys.ClipFramerate, 24, "Clip Framerate", 1, 30, "FLASHCARD", "RECORDING", [ApplySettings], false);
-    
-    [CompatSetting]
-    private class ClipQuality()
-        : TextOption(FlashcardSettingKeys.ClipQuality, "512k", "Clip Quality (Bitrate)", "FLASHCARD", "RECORDING", [ApplySettings]);
-
-    [CompatSetting]
-    private class PacketDelay()
-        : FloatOption(FlashcardSettingKeys.PacketDelay, 0.5f, "Delay Between Packets", 0f, 10f, "FLASHCARD", "UPLOADING", [ApplySettings], false);
-
-    [CompatSetting]
-    private class VerboseLogging()
-        : BoolOption(FlashcardSettingKeys.VerboseLogging, false, "Enable Verbose Logging", "FLASHCARD", "DEBUGGING", [ApplySettings]);
-
+public class FlashcardCompat : ICompatModule {
     /// <inheritdoc />
     public void Init() {
-        States.Bools[FlashcardSettingKeys.EnableExtraCamera] = FlashcardPlugin.config.UPGRADES_EXTRA_CAMERA.Value == "disabled";
+        States.Bools[FlashcardSettingKeys.EnableExtraCamera] =
+            FlashcardPlugin.config.UPGRADES_EXTRA_CAMERA.Value == "disabled";
         States.Floats[FlashcardSettingKeys.ClipLength] = FlashcardPlugin.config.RECORDING_CLIP_LENGTH.Value;
         States.Ints[FlashcardSettingKeys.ClipFramerate] = FlashcardPlugin.config.RECORDING_CLIP_FRAMERATE.Value;
         States.Strings[FlashcardSettingKeys.ClipQuality] = FlashcardPlugin.config.RECORDING_CLIP_QUALITY.Value;
@@ -59,11 +37,53 @@ public class FlashcardCompat: ICompatModule {
     }
 
     internal static void ApplySettings(IUntypedOption _opt) {
-        FlashcardPlugin.config.UPGRADES_EXTRA_CAMERA.Value = States.Bools[FlashcardSettingKeys.EnableExtraCamera] ? "always" : "disabled";
+        string[] all = [
+            FlashcardSettingKeys.EnableExtraCamera,
+            FlashcardSettingKeys.ClipLength,
+            FlashcardSettingKeys.ClipFramerate,
+            FlashcardSettingKeys.ClipQuality,
+            FlashcardSettingKeys.PacketDelay,
+            FlashcardSettingKeys.VerboseLogging,
+        ];
+        
+        if (!all.All(v => OptionsState.Instance.Has(v))) return;
+        
+        FlashcardPlugin.config.UPGRADES_EXTRA_CAMERA.Value =
+            States.Bools[FlashcardSettingKeys.EnableExtraCamera] ? "always" : "disabled";
         FlashcardPlugin.config.RECORDING_CLIP_LENGTH.Value = States.Floats[FlashcardSettingKeys.ClipLength];
         FlashcardPlugin.config.RECORDING_CLIP_FRAMERATE.Value = States.Ints[FlashcardSettingKeys.ClipFramerate];
         FlashcardPlugin.config.RECORDING_CLIP_QUALITY.Value = States.Strings[FlashcardSettingKeys.ClipQuality];
         FlashcardPlugin.config.UPLOADING_DELAY_BETWEEN_PACKETS.Value = States.Floats[FlashcardSettingKeys.PacketDelay];
         FlashcardPlugin.config.DEBUGGING_VERBOSE_LOGGING.Value = States.Bools[FlashcardSettingKeys.VerboseLogging];
     }
+
+    [CompatSetting]
+    private class EnableExtraCamera()
+        : BoolOption(FlashcardSettingKeys.EnableExtraCamera, true, "Enable Extra Camera Upgrade", "FLASHCARD",
+            "UPGRADES", [ApplySettings]);
+
+    [CompatSetting]
+    private class ClipLength()
+        : FloatOption(FlashcardSettingKeys.ClipLength, 120f, "Clip Length", 1f, 1000f, "FLASHCARD", "RECORDING",
+            [ApplySettings], false);
+
+    [CompatSetting]
+    private class ClipFramerate()
+        : IntOption(FlashcardSettingKeys.ClipFramerate, 24, "Clip Framerate", 1, 30, "FLASHCARD", "RECORDING",
+            [ApplySettings], false);
+
+    [CompatSetting]
+    private class ClipQuality()
+        : TextOption(FlashcardSettingKeys.ClipQuality, "512k", "Clip Quality (Bitrate)", "FLASHCARD", "RECORDING",
+            [ApplySettings]);
+
+    [CompatSetting]
+    private class PacketDelay()
+        : FloatOption(FlashcardSettingKeys.PacketDelay, 0.5f, "Delay Between Packets", 0f, 10f, "FLASHCARD",
+            "UPLOADING", [ApplySettings], false);
+
+    [CompatSetting]
+    private class VerboseLogging()
+        : BoolOption(FlashcardSettingKeys.VerboseLogging, false, "Enable Verbose Logging", "FLASHCARD", "DEBUGGING",
+            [ApplySettings]);
 }

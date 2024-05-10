@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started | ConfigurableWarning Docs </title>
+      <title>State | ConfigurableWarning Docs </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started | ConfigurableWarning Docs ">
+      <meta name="title" content="State | ConfigurableWarning Docs ">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/quickstart/getting-started.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/tutorials/state.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,59 +84,60 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Guides.GettingStarted">
-<h1 id="getting-started">Getting Started</h1>
+        <article data-uid="Tutorials.State">
+<h1 id="state">State</h1>
 
-<p>With ConfigurableWarning, getting started is easy!</p>
-<h2 id="installing">Installing</h2>
-<p>After setting up a new BepInEx mod,
-you can add the package to your project using the following:</p>
-<div class="tabGroup" id="tabgroup_1">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_1_cli" role="tab" aria-controls="tabpanel_1_cli" data-tab="cli" tabindex="0" aria-selected="true">CLI</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_1_csproj" role="tab" aria-controls="tabpanel_1_csproj" data-tab="csproj" tabindex="-1">CSProj</a>
-</li>
-</ul>
-<section id="tabpanel_1_cli" role="tabpanel" data-tab="cli">
+<p>State in ConfigurableWarning will always be held in the
+&lt;xref:ConfigurableWarning.API.Options.OptionsState&gt; class. You can check its
+documentation for a list of fields and methods.</p>
+<h2 id="keys">Keys</h2>
+<p>It is recommended to have a class of keys to store common values.</p>
+<p>Example:</p>
+<pre><code class="lang-cs">public static class Keys {
+    public const string MyOption = &quot;MyOption&quot;;
+}
 
-<pre><code class="lang-pwsh">dotnet add package RedstoneWizard08.ConfigurableWarning
+// Then access the state
+
+var state = OptionsState.Instance.Get&lt;...&gt;(Keys.MyOption);
 </code></pre>
-</section>
-<section id="tabpanel_1_csproj" role="tabpanel" data-tab="csproj" aria-hidden="true" hidden="hidden">
-
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;RedstoneWizard08.ConfigurableWarning&quot; Version=&quot;1.13.2&quot; IncludeAssets=&quot;compile&quot; ExcludeAssets=&quot;RUNTIME&quot; /&gt;
+<p>If you use the key instead, it eliminates the risk of a typo somewhere in the code.</p>
+<h2 id="modifying-state">Modifying State</h2>
+<p>The &lt;xref:ConfigurableWarning.API.Options.OptionsState&gt; also allows you to modify state
+manually! Just call other methods.</p>
+<p>Examples:</p>
+<pre><code class="lang-cs">OptionsState.Instance.Set(Keys.MyOption, ...); // Here, `...` is the value to set it to.
 </code></pre>
-</section>
-</div>
-
+<pre><code class="lang-cs">OptionsState.Instance.Remove&lt;...&gt;(Keys.MyOption); // Here, `...` is the option's type.
+</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>ConfigurableWarning is not yet actually published on NuGet.
-This is what it will be like in the future!</p>
+<p>Yes, I do know that this type parameter doesn't need to exist. For the string
+overload, I'll be removing the type parameter soon.</p>
 </div>
-<h2 id="your-first-option">Your First Option</h2>
-<p>Here's a basic option:</p>
-<pre><code class="lang-cs">[RegisterOption]
-private class MyOptionThing() // Class name is different here to show that it doesn't matter in state
-    : IntOption(&quot;MyOption&quot;, 50, &quot;My Option!&quot;, 0, 100, &quot;MY STUFF&quot;, &quot;GENERAL&quot;);
+<h2 id="checking-state">Checking State</h2>
+<p>You can also check state! The &lt;xref:ConfigurableWarning.API.Options.OptionsState.Has&gt; method
+will allow you to check if the option is registered to the state.</p>
+<pre><code class="lang-cs">bool exists = OptionsState.Instance.Has&lt;...&gt;(Keys.MyOption);
 </code></pre>
-<p>For more info, head to the <a href="./tutorials/">tutorials</a> section!</p>
-<h2 id="accessing-its-state">Accessing it's state</h2>
-<p>To access your option's state, you can use the &lt;xref:ConfigurableWarning.API.Options.OptionsState&gt;
-manager. To access it, you'll use the same string that you used in your option's name above.
-In this case, it's <code>&quot;MyOption&quot;</code>.</p>
-<pre><code class="lang-cs">int? state = OptionsState.Instance.Get&lt;int&gt;(&quot;MyOption&quot;);
+<div class="NOTE">
+<h5>Note</h5>
+<p>Yes, I do know that this type parameter doesn't need to exist. For the string
+overload, I'll be removing the type parameter soon.</p>
+</div>
+<h2 id="updating-state">Updating State</h2>
+<p>You can also have the state automatically update based on the option's contained value!
+Just use the &lt;xref:ConfigurableWarning.API.Options.OptionsState.Update&gt; method.</p>
+<pre><code class="lang-cs">IOption&lt;...&gt; myOption = ...;
+
+OptionsState.Instance.Update&lt;...&gt;(myOption);
 </code></pre>
-<p>This code retrieves the optional state of the option. You can learn more about that
-<a href="../tutorials/state.html">here</a>.</p>
+<p>Note that you <em>do</em> need an instance of the option to use this method.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/quickstart/getting-started.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/tutorials/state.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

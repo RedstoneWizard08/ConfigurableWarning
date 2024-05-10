@@ -385,10 +385,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "guides/quickstart/introduction.md",
+      "source_relative_path": "guides/quickstart/index.md",
       "output": {
         ".html": {
-          "relative_path": "guides/quickstart/introduction.html"
+          "relative_path": "guides/quickstart/index.html"
         }
       },
       "version": ""
@@ -402,6 +402,36 @@
         },
         ".html": {
           "relative_path": "guides/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/tutorials/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/tutorials/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/tutorials/options.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/tutorials/options.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/tutorials/state.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/tutorials/state.html"
         }
       },
       "version": ""

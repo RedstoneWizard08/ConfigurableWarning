@@ -1931,5 +1931,14 @@ references:
   name: Getting Started
   href: guides/quickstart/getting-started.html
 - uid: Guides.Introduction
-  name: Introduction to ConfigurableWarning
-  href: guides/quickstart/introduction.html
+  name: Introduction
+  href: guides/quickstart/index.html
+- uid: Tutorials.Intro
+  name: Introduction
+  href: guides/tutorials/index.html
+- uid: Tutorials.Options
+  name: Options
+  href: guides/tutorials/options.html
+- uid: Tutorials.State
+  name: State
+  href: guides/tutorials/state.html

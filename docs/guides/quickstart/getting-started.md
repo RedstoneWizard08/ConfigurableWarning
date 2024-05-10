@@ -32,43 +32,25 @@ dotnet add package RedstoneWizard08.ConfigurableWarning
 
 ## Your First Option
 
-To create an option, you'll need a few things.
-
-You'll start with the class:
+Here's a basic option:
 
 ```cs
 [RegisterOption]
-private class MyOption()
+private class MyOptionThing() // Class name is different here to show that it doesn't matter in state
     : IntOption("MyOption", 50, "My Option!", 0, 100, "MY STUFF", "GENERAL");
 ```
 
-You'll notice a few things here. Let's break it down.
+For more info, head to the [tutorials](./tutorials/) section!
 
-The `[RegisterOption]` comes from <xref:ConfigurableWarning.API.RegisterOption>, and
-tells ConfigurableWarning to automatically register your option to the game, meaning that
-you don't have to do that!
+## Accessing it's state
 
-The inherited class, <xref:ConfigurableWarning.API.Options.IntOption>, defines this as an
-<xref:ConfigurableWarning.API.Options.IOption`1> with the <xref:System.Boolean> type for its
-value. This constructor takes a few arguments, namely:
+To access your option's state, you can use the <xref:ConfigurableWarning.API.Options.OptionsState>
+manager. To access it, you'll use the same string that you used in your option's name above.
+In this case, it's `"MyOption"`.
 
-1. The option's name - Here it's `MyOption`. This is used in the registry, and the end-user will
-   likely never see it.
-2. The default value - Here it's `50`.
-3. The option's display name - Here it's `"My Option!"`. This is what the user will see in the
-   settings menu.
-4. The minimum value - Here it's `0`. This is the <u>minumum</u> value that the slider will go to.
-5. The maximum value - Here it's `100`. This is the <u>maximum</u> value that the slider will go to.
-6. The tab - Here it's `"MY STUFF"`. This will be the tab that the setting shows up in.
-7. The category - Here it's `"GENERAL"`. This will be the category that the setting appears under.
+```cs
+int? state = OptionsState.Instance.Get<int>("MyOption");
+```
 
-> [!TIP]
-> To see all of the option types and constructors, look at the API reference!
-> See <xref:ConfigurableWarning.API.Options>.
-
-## Notes
-
--   Unfortunately, due to the nature of how Zorro's Settings API works, each option has to be its
-    own class.
--   This API is built on top of ContentSettings, they did some amazing work!
--   This API is a work-in-progress! Things may change at any time!
+This code retrieves the optional state of the option. You can learn more about that
+[here](../tutorials/state.md).

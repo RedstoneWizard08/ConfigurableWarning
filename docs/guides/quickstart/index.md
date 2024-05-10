@@ -1,6 +1,6 @@
 ---
 uid: Guides.Introduction
-title: Introduction to ConfigurableWarning
+title: Introduction
 ---
 
 # Introduction

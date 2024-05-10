@@ -1,4 +1,18 @@
-- name: Introduction
-  topicUid: Guides.Introduction
-- name: Getting Started
-  topicUid: Guides.GettingStarted
+# This is an automatically generated file
+items:
+- name: Quick Start
+  href: quickstart/index.md
+  items:
+  - name: Introduction
+    href: quickstart/index.md
+  - name: Getting Started
+    href: quickstart/getting-started.md
+- name: Tutorials
+  href: tutorials/index.md
+  items:
+  - name: Introduction
+    href: tutorials/index.md
+  - name: Options
+    href: tutorials/options.md
+  - name: State
+    href: tutorials/state.md

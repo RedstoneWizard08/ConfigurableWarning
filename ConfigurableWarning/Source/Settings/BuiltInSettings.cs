@@ -7,6 +7,19 @@ namespace ConfigurableWarning.Settings;
 ///     ConfigurableWarning's built-in settings.
 /// </summary>
 public static class BuiltInSettings {
+    // TODO: Implement more settings:
+    // - Spawning Mechanics
+    // - Customization Limits
+    // - Camera Settings (Flashcard Support)
+    // - Shop Prices
+    // - Battery Settings
+    // - MetaCoin Prices
+    // - Gravity
+    // - Intro Screen Skip
+    // - Video Save Location
+    // - More Graphics Settings?
+    // - Player Limit? (Virality Config Support)
+
     [RegisterOption]
     private class PrivateHost()
         : BoolOption(SettingKeys.PrivateHost, true, "Host Privately (friends-only)", "GAMEPLAY", "GENERAL");

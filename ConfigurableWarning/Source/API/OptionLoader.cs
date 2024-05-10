@@ -11,7 +11,7 @@ namespace ConfigurableWarning.API;
 ///     Responsible for loading, holding, and registering options.
 /// </summary>
 public static class OptionLoader {
-    private static Dictionary<Type, IUntypedOption> RegisteredOptions { get; } = new();
+    internal static Dictionary<Type, IUntypedOption> RegisteredOptions { get; } = new();
 
     /// <summary>
     ///     Automatically collect and register all options annotated with

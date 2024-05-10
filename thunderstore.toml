@@ -14,7 +14,7 @@ RugbugRedfern-MyceliumNetworking = "1.0.12"
 CommanderCat101-ContentSettings = "1.2.2"
 
 [build]
-icon = "./icon.svg"
+icon = "./icon.png"
 readme = "./README.md"
 outdir = "./output"
 

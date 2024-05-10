@@ -51,18 +51,11 @@
         <Reference Include="Photon.Realtime" HintPath="$(CW_REFERENCES)\PhotonRealtime.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
         <Reference Include="Photon3Unity3D" HintPath="$(CW_REFERENCES)\Photon3Unity3D.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
         <Reference Include="Steamworks" HintPath="$(CW_REFERENCES)\com.rlabrecque.steamworks.net.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="pworld" HintPath="$(CW_REFERENCES)\pworld.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
+        <Reference Include="Sirenix.Serialization" HintPath="$(CW_REFERENCES)\Sirenix.Serialization.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
     </ItemGroup>
 
     <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
         <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <Reference Include="pworld">
-            <HintPath>..\..\..\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\pworld.dll</HintPath>
-        </Reference>
-        <Reference Include="Sirenix.Serialization">
-          <HintPath>..\..\..\SteamLibrary\steamapps\common\Content Warning\Content Warning_Data\Managed\Sirenix.Serialization.dll</HintPath>
-        </Reference>
     </ItemGroup>
 </Project>

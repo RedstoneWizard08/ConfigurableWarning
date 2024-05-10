@@ -1276,6 +1276,89 @@ references:
   commentId: T:ConfigurableWarning.API.RegisterOption
   fullName: ConfigurableWarning.API.RegisterOption
   nameWithType: RegisterOption
+- uid: ConfigurableWarning.API.SettingPatches
+  name: SettingPatches
+  href: api/ConfigurableWarning.API.SettingPatches.html
+  commentId: T:ConfigurableWarning.API.SettingPatches
+  fullName: ConfigurableWarning.API.SettingPatches
+  nameWithType: SettingPatches
+- uid: ConfigurableWarning.API.SettingPatches.RegisterOptions
+  name: RegisterOptions()
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_RegisterOptions
+  commentId: M:ConfigurableWarning.API.SettingPatches.RegisterOptions
+  fullName: ConfigurableWarning.API.SettingPatches.RegisterOptions()
+  nameWithType: SettingPatches.RegisterOptions()
+- uid: ConfigurableWarning.API.SettingPatches.RegisterOptions*
+  name: RegisterOptions
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_RegisterOptions_
+  commentId: Overload:ConfigurableWarning.API.SettingPatches.RegisterOptions
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.SettingPatches.RegisterOptions
+  nameWithType: SettingPatches.RegisterOptions
+- uid: ConfigurableWarning.API.SettingPatches.SetValueFloat(Zorro.Settings.FloatSetting@,System.Single,Zorro.Settings.ISettingHandler)
+  name: SetValueFloat(ref FloatSetting, float, ISettingHandler)
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueFloat_Zorro_Settings_FloatSetting__System_Single_Zorro_Settings_ISettingHandler_
+  commentId: M:ConfigurableWarning.API.SettingPatches.SetValueFloat(Zorro.Settings.FloatSetting@,System.Single,Zorro.Settings.ISettingHandler)
+  name.vb: SetValueFloat(FloatSetting, Single, ISettingHandler)
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueFloat(ref Zorro.Settings.FloatSetting, float, Zorro.Settings.ISettingHandler)
+  fullName.vb: ConfigurableWarning.API.SettingPatches.SetValueFloat(Zorro.Settings.FloatSetting, Single, Zorro.Settings.ISettingHandler)
+  nameWithType: SettingPatches.SetValueFloat(ref FloatSetting, float, ISettingHandler)
+  nameWithType.vb: SettingPatches.SetValueFloat(FloatSetting, Single, ISettingHandler)
+- uid: ConfigurableWarning.API.SettingPatches.SetValueFloat*
+  name: SetValueFloat
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueFloat_
+  commentId: Overload:ConfigurableWarning.API.SettingPatches.SetValueFloat
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueFloat
+  nameWithType: SettingPatches.SetValueFloat
+- uid: ConfigurableWarning.API.SettingPatches.SetValueFloatPre(Zorro.Settings.FloatSetting@,System.Single,Zorro.Settings.ISettingHandler)
+  name: SetValueFloatPre(ref FloatSetting, float, ISettingHandler)
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueFloatPre_Zorro_Settings_FloatSetting__System_Single_Zorro_Settings_ISettingHandler_
+  commentId: M:ConfigurableWarning.API.SettingPatches.SetValueFloatPre(Zorro.Settings.FloatSetting@,System.Single,Zorro.Settings.ISettingHandler)
+  name.vb: SetValueFloatPre(FloatSetting, Single, ISettingHandler)
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueFloatPre(ref Zorro.Settings.FloatSetting, float, Zorro.Settings.ISettingHandler)
+  fullName.vb: ConfigurableWarning.API.SettingPatches.SetValueFloatPre(Zorro.Settings.FloatSetting, Single, Zorro.Settings.ISettingHandler)
+  nameWithType: SettingPatches.SetValueFloatPre(ref FloatSetting, float, ISettingHandler)
+  nameWithType.vb: SettingPatches.SetValueFloatPre(FloatSetting, Single, ISettingHandler)
+- uid: ConfigurableWarning.API.SettingPatches.SetValueFloatPre*
+  name: SetValueFloatPre
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueFloatPre_
+  commentId: Overload:ConfigurableWarning.API.SettingPatches.SetValueFloatPre
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueFloatPre
+  nameWithType: SettingPatches.SetValueFloatPre
+- uid: ConfigurableWarning.API.SettingPatches.SetValueInt(ContentSettings.API.Settings.IntSetting@,System.Int32,Zorro.Settings.ISettingHandler)
+  name: SetValueInt(ref IntSetting, int, ISettingHandler)
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueInt_ContentSettings_API_Settings_IntSetting__System_Int32_Zorro_Settings_ISettingHandler_
+  commentId: M:ConfigurableWarning.API.SettingPatches.SetValueInt(ContentSettings.API.Settings.IntSetting@,System.Int32,Zorro.Settings.ISettingHandler)
+  name.vb: SetValueInt(IntSetting, Integer, ISettingHandler)
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueInt(ref ContentSettings.API.Settings.IntSetting, int, Zorro.Settings.ISettingHandler)
+  fullName.vb: ConfigurableWarning.API.SettingPatches.SetValueInt(ContentSettings.API.Settings.IntSetting, Integer, Zorro.Settings.ISettingHandler)
+  nameWithType: SettingPatches.SetValueInt(ref IntSetting, int, ISettingHandler)
+  nameWithType.vb: SettingPatches.SetValueInt(IntSetting, Integer, ISettingHandler)
+- uid: ConfigurableWarning.API.SettingPatches.SetValueInt*
+  name: SetValueInt
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueInt_
+  commentId: Overload:ConfigurableWarning.API.SettingPatches.SetValueInt
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueInt
+  nameWithType: SettingPatches.SetValueInt
+- uid: ConfigurableWarning.API.SettingPatches.SetValueIntPre(ContentSettings.API.Settings.IntSetting@,System.Int32,Zorro.Settings.ISettingHandler)
+  name: SetValueIntPre(ref IntSetting, int, ISettingHandler)
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueIntPre_ContentSettings_API_Settings_IntSetting__System_Int32_Zorro_Settings_ISettingHandler_
+  commentId: M:ConfigurableWarning.API.SettingPatches.SetValueIntPre(ContentSettings.API.Settings.IntSetting@,System.Int32,Zorro.Settings.ISettingHandler)
+  name.vb: SetValueIntPre(IntSetting, Integer, ISettingHandler)
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueIntPre(ref ContentSettings.API.Settings.IntSetting, int, Zorro.Settings.ISettingHandler)
+  fullName.vb: ConfigurableWarning.API.SettingPatches.SetValueIntPre(ContentSettings.API.Settings.IntSetting, Integer, Zorro.Settings.ISettingHandler)
+  nameWithType: SettingPatches.SetValueIntPre(ref IntSetting, int, ISettingHandler)
+  nameWithType.vb: SettingPatches.SetValueIntPre(IntSetting, Integer, ISettingHandler)
+- uid: ConfigurableWarning.API.SettingPatches.SetValueIntPre*
+  name: SetValueIntPre
+  href: api/ConfigurableWarning.API.SettingPatches.html#ConfigurableWarning_API_SettingPatches_SetValueIntPre_
+  commentId: Overload:ConfigurableWarning.API.SettingPatches.SetValueIntPre
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.SettingPatches.SetValueIntPre
+  nameWithType: SettingPatches.SetValueIntPre
 - uid: ConfigurableWarning.MyPluginInfo
   name: MyPluginInfo
   href: api/ConfigurableWarning.MyPluginInfo.html
@@ -1300,6 +1383,360 @@ references:
   commentId: F:ConfigurableWarning.MyPluginInfo.PLUGIN_VERSION
   fullName: ConfigurableWarning.MyPluginInfo.PLUGIN_VERSION
   nameWithType: MyPluginInfo.PLUGIN_VERSION
+- uid: ConfigurableWarning.Patches
+  name: ConfigurableWarning.Patches
+  href: api/ConfigurableWarning.Patches.html
+  commentId: N:ConfigurableWarning.Patches
+  fullName: ConfigurableWarning.Patches
+  nameWithType: ConfigurableWarning.Patches
+- uid: ConfigurableWarning.Patches.DivingBellPatch
+  name: DivingBellPatch
+  href: api/ConfigurableWarning.Patches.DivingBellPatch.html
+  commentId: T:ConfigurableWarning.Patches.DivingBellPatch
+  fullName: ConfigurableWarning.Patches.DivingBellPatch
+  nameWithType: DivingBellPatch
+- uid: ConfigurableWarning.Patches.DivingBellPatch.CheckForPlayers(DiveBellPlayerDetector,System.Collections.Generic.ICollection{Player}@)
+  name: CheckForPlayers(DiveBellPlayerDetector, ref ICollection<Player>)
+  href: api/ConfigurableWarning.Patches.DivingBellPatch.html#ConfigurableWarning_Patches_DivingBellPatch_CheckForPlayers_DiveBellPlayerDetector_System_Collections_Generic_ICollection_Player___
+  commentId: M:ConfigurableWarning.Patches.DivingBellPatch.CheckForPlayers(DiveBellPlayerDetector,System.Collections.Generic.ICollection{Player}@)
+  name.vb: CheckForPlayers(DiveBellPlayerDetector, ICollection(Of Player))
+  fullName: ConfigurableWarning.Patches.DivingBellPatch.CheckForPlayers(DiveBellPlayerDetector, ref System.Collections.Generic.ICollection<Player>)
+  fullName.vb: ConfigurableWarning.Patches.DivingBellPatch.CheckForPlayers(DiveBellPlayerDetector, System.Collections.Generic.ICollection(Of Player))
+  nameWithType: DivingBellPatch.CheckForPlayers(DiveBellPlayerDetector, ref ICollection<Player>)
+  nameWithType.vb: DivingBellPatch.CheckForPlayers(DiveBellPlayerDetector, ICollection(Of Player))
+- uid: ConfigurableWarning.Patches.DivingBellPatch.CheckForPlayers*
+  name: CheckForPlayers
+  href: api/ConfigurableWarning.Patches.DivingBellPatch.html#ConfigurableWarning_Patches_DivingBellPatch_CheckForPlayers_
+  commentId: Overload:ConfigurableWarning.Patches.DivingBellPatch.CheckForPlayers
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.DivingBellPatch.CheckForPlayers
+  nameWithType: DivingBellPatch.CheckForPlayers
+- uid: ConfigurableWarning.Patches.DivingBellPatch.IsFullyClosed(DivingBellDoor,System.Boolean@)
+  name: IsFullyClosed(DivingBellDoor, ref bool)
+  href: api/ConfigurableWarning.Patches.DivingBellPatch.html#ConfigurableWarning_Patches_DivingBellPatch_IsFullyClosed_DivingBellDoor_System_Boolean__
+  commentId: M:ConfigurableWarning.Patches.DivingBellPatch.IsFullyClosed(DivingBellDoor,System.Boolean@)
+  name.vb: IsFullyClosed(DivingBellDoor, Boolean)
+  fullName: ConfigurableWarning.Patches.DivingBellPatch.IsFullyClosed(DivingBellDoor, ref bool)
+  fullName.vb: ConfigurableWarning.Patches.DivingBellPatch.IsFullyClosed(DivingBellDoor, Boolean)
+  nameWithType: DivingBellPatch.IsFullyClosed(DivingBellDoor, ref bool)
+  nameWithType.vb: DivingBellPatch.IsFullyClosed(DivingBellDoor, Boolean)
+- uid: ConfigurableWarning.Patches.DivingBellPatch.IsFullyClosed*
+  name: IsFullyClosed
+  href: api/ConfigurableWarning.Patches.DivingBellPatch.html#ConfigurableWarning_Patches_DivingBellPatch_IsFullyClosed_
+  commentId: Overload:ConfigurableWarning.Patches.DivingBellPatch.IsFullyClosed
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.DivingBellPatch.IsFullyClosed
+  nameWithType: DivingBellPatch.IsFullyClosed
+- uid: ConfigurableWarning.Patches.DivingBellPatch.Update(DivingBell)
+  name: Update(DivingBell)
+  href: api/ConfigurableWarning.Patches.DivingBellPatch.html#ConfigurableWarning_Patches_DivingBellPatch_Update_DivingBell_
+  commentId: M:ConfigurableWarning.Patches.DivingBellPatch.Update(DivingBell)
+  fullName: ConfigurableWarning.Patches.DivingBellPatch.Update(DivingBell)
+  nameWithType: DivingBellPatch.Update(DivingBell)
+- uid: ConfigurableWarning.Patches.DivingBellPatch.Update*
+  name: Update
+  href: api/ConfigurableWarning.Patches.DivingBellPatch.html#ConfigurableWarning_Patches_DivingBellPatch_Update_
+  commentId: Overload:ConfigurableWarning.Patches.DivingBellPatch.Update
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.DivingBellPatch.Update
+  nameWithType: DivingBellPatch.Update
+- uid: ConfigurableWarning.Patches.LobbyPatch
+  name: LobbyPatch
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html
+  commentId: T:ConfigurableWarning.Patches.LobbyPatch
+  fullName: ConfigurableWarning.Patches.LobbyPatch
+  nameWithType: LobbyPatch
+- uid: ConfigurableWarning.Patches.LobbyPatch.AddSteamClient(SteamLobbyHandler,Steamworks.CSteamID)
+  name: AddSteamClient(SteamLobbyHandler, CSteamID)
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_AddSteamClient_SteamLobbyHandler_Steamworks_CSteamID_
+  commentId: M:ConfigurableWarning.Patches.LobbyPatch.AddSteamClient(SteamLobbyHandler,Steamworks.CSteamID)
+  fullName: ConfigurableWarning.Patches.LobbyPatch.AddSteamClient(SteamLobbyHandler, Steamworks.CSteamID)
+  nameWithType: LobbyPatch.AddSteamClient(SteamLobbyHandler, CSteamID)
+- uid: ConfigurableWarning.Patches.LobbyPatch.AddSteamClient*
+  name: AddSteamClient
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_AddSteamClient_
+  commentId: Overload:ConfigurableWarning.Patches.LobbyPatch.AddSteamClient
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.LobbyPatch.AddSteamClient
+  nameWithType: LobbyPatch.AddSteamClient
+- uid: ConfigurableWarning.Patches.LobbyPatch.IsPlayingWithRandoms(SteamLobbyHandler,System.Boolean@)
+  name: IsPlayingWithRandoms(SteamLobbyHandler, ref bool)
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_IsPlayingWithRandoms_SteamLobbyHandler_System_Boolean__
+  commentId: M:ConfigurableWarning.Patches.LobbyPatch.IsPlayingWithRandoms(SteamLobbyHandler,System.Boolean@)
+  name.vb: IsPlayingWithRandoms(SteamLobbyHandler, Boolean)
+  fullName: ConfigurableWarning.Patches.LobbyPatch.IsPlayingWithRandoms(SteamLobbyHandler, ref bool)
+  fullName.vb: ConfigurableWarning.Patches.LobbyPatch.IsPlayingWithRandoms(SteamLobbyHandler, Boolean)
+  nameWithType: LobbyPatch.IsPlayingWithRandoms(SteamLobbyHandler, ref bool)
+  nameWithType.vb: LobbyPatch.IsPlayingWithRandoms(SteamLobbyHandler, Boolean)
+- uid: ConfigurableWarning.Patches.LobbyPatch.IsPlayingWithRandoms*
+  name: IsPlayingWithRandoms
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_IsPlayingWithRandoms_
+  commentId: Overload:ConfigurableWarning.Patches.LobbyPatch.IsPlayingWithRandoms
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.LobbyPatch.IsPlayingWithRandoms
+  nameWithType: LobbyPatch.IsPlayingWithRandoms
+- uid: ConfigurableWarning.Patches.LobbyPatch.OnNetworkingSessionRequest(SteamLobbyHandler,Steamworks.SteamNetworkingMessagesSessionRequest_t)
+  name: OnNetworkingSessionRequest(SteamLobbyHandler, SteamNetworkingMessagesSessionRequest_t)
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_OnNetworkingSessionRequest_SteamLobbyHandler_Steamworks_SteamNetworkingMessagesSessionRequest_t_
+  commentId: M:ConfigurableWarning.Patches.LobbyPatch.OnNetworkingSessionRequest(SteamLobbyHandler,Steamworks.SteamNetworkingMessagesSessionRequest_t)
+  fullName: ConfigurableWarning.Patches.LobbyPatch.OnNetworkingSessionRequest(SteamLobbyHandler, Steamworks.SteamNetworkingMessagesSessionRequest_t)
+  nameWithType: LobbyPatch.OnNetworkingSessionRequest(SteamLobbyHandler, SteamNetworkingMessagesSessionRequest_t)
+- uid: ConfigurableWarning.Patches.LobbyPatch.OnNetworkingSessionRequest*
+  name: OnNetworkingSessionRequest
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_OnNetworkingSessionRequest_
+  commentId: Overload:ConfigurableWarning.Patches.LobbyPatch.OnNetworkingSessionRequest
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.LobbyPatch.OnNetworkingSessionRequest
+  nameWithType: LobbyPatch.OnNetworkingSessionRequest
+- uid: ConfigurableWarning.Patches.LobbyPatch.OpenLobby(SteamLobbyHandler)
+  name: OpenLobby(SteamLobbyHandler)
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_OpenLobby_SteamLobbyHandler_
+  commentId: M:ConfigurableWarning.Patches.LobbyPatch.OpenLobby(SteamLobbyHandler)
+  fullName: ConfigurableWarning.Patches.LobbyPatch.OpenLobby(SteamLobbyHandler)
+  nameWithType: LobbyPatch.OpenLobby(SteamLobbyHandler)
+- uid: ConfigurableWarning.Patches.LobbyPatch.OpenLobby*
+  name: OpenLobby
+  href: api/ConfigurableWarning.Patches.LobbyPatch.html#ConfigurableWarning_Patches_LobbyPatch_OpenLobby_
+  commentId: Overload:ConfigurableWarning.Patches.LobbyPatch.OpenLobby
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.LobbyPatch.OpenLobby
+  nameWithType: LobbyPatch.OpenLobby
+- uid: ConfigurableWarning.Patches.PlayerPatch
+  name: PlayerPatch
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html
+  commentId: T:ConfigurableWarning.Patches.PlayerPatch
+  fullName: ConfigurableWarning.Patches.PlayerPatch
+  nameWithType: PlayerPatch
+- uid: ConfigurableWarning.Patches.PlayerPatch.CheckOxygen(Player)
+  name: CheckOxygen(Player)
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_CheckOxygen_Player_
+  commentId: M:ConfigurableWarning.Patches.PlayerPatch.CheckOxygen(Player)
+  fullName: ConfigurableWarning.Patches.PlayerPatch.CheckOxygen(Player)
+  nameWithType: PlayerPatch.CheckOxygen(Player)
+- uid: ConfigurableWarning.Patches.PlayerPatch.CheckOxygen*
+  name: CheckOxygen
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_CheckOxygen_
+  commentId: Overload:ConfigurableWarning.Patches.PlayerPatch.CheckOxygen
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.PlayerPatch.CheckOxygen
+  nameWithType: PlayerPatch.CheckOxygen
+- uid: ConfigurableWarning.Patches.PlayerPatch.GetMaxHealth
+  name: GetMaxHealth()
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_GetMaxHealth
+  commentId: M:ConfigurableWarning.Patches.PlayerPatch.GetMaxHealth
+  fullName: ConfigurableWarning.Patches.PlayerPatch.GetMaxHealth()
+  nameWithType: PlayerPatch.GetMaxHealth()
+- uid: ConfigurableWarning.Patches.PlayerPatch.GetMaxHealth*
+  name: GetMaxHealth
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_GetMaxHealth_
+  commentId: Overload:ConfigurableWarning.Patches.PlayerPatch.GetMaxHealth
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.PlayerPatch.GetMaxHealth
+  nameWithType: PlayerPatch.GetMaxHealth
+- uid: ConfigurableWarning.Patches.PlayerPatch.GetMaxOxygen
+  name: GetMaxOxygen()
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_GetMaxOxygen
+  commentId: M:ConfigurableWarning.Patches.PlayerPatch.GetMaxOxygen
+  fullName: ConfigurableWarning.Patches.PlayerPatch.GetMaxOxygen()
+  nameWithType: PlayerPatch.GetMaxOxygen()
+- uid: ConfigurableWarning.Patches.PlayerPatch.GetMaxOxygen*
+  name: GetMaxOxygen
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_GetMaxOxygen_
+  commentId: Overload:ConfigurableWarning.Patches.PlayerPatch.GetMaxOxygen
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.PlayerPatch.GetMaxOxygen
+  nameWithType: PlayerPatch.GetMaxOxygen
+- uid: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPost(Player.PlayerData)
+  name: UpdateValuesPost(PlayerData)
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_UpdateValuesPost_Player_PlayerData_
+  commentId: M:ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPost(Player.PlayerData)
+  fullName: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPost(Player.PlayerData)
+  nameWithType: PlayerPatch.UpdateValuesPost(Player.PlayerData)
+- uid: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPost*
+  name: UpdateValuesPost
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_UpdateValuesPost_
+  commentId: Overload:ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPost
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPost
+  nameWithType: PlayerPatch.UpdateValuesPost
+- uid: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPre(Player.PlayerData)
+  name: UpdateValuesPre(PlayerData)
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_UpdateValuesPre_Player_PlayerData_
+  commentId: M:ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPre(Player.PlayerData)
+  fullName: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPre(Player.PlayerData)
+  nameWithType: PlayerPatch.UpdateValuesPre(Player.PlayerData)
+- uid: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPre*
+  name: UpdateValuesPre
+  href: api/ConfigurableWarning.Patches.PlayerPatch.html#ConfigurableWarning_Patches_PlayerPatch_UpdateValuesPre_
+  commentId: Overload:ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPre
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.PlayerPatch.UpdateValuesPre
+  nameWithType: PlayerPatch.UpdateValuesPre
+- uid: ConfigurableWarning.Patches.QuotaPatch
+  name: QuotaPatch
+  href: api/ConfigurableWarning.Patches.QuotaPatch.html
+  commentId: T:ConfigurableWarning.Patches.QuotaPatch
+  fullName: ConfigurableWarning.Patches.QuotaPatch
+  nameWithType: QuotaPatch
+- uid: ConfigurableWarning.Patches.QuotaPatch.Constructor(RoomStatsHolder,SurfaceNetworkHandler,System.Int32,System.Int32,System.Int32)
+  name: Constructor(RoomStatsHolder, SurfaceNetworkHandler, int, int, int)
+  href: api/ConfigurableWarning.Patches.QuotaPatch.html#ConfigurableWarning_Patches_QuotaPatch_Constructor_RoomStatsHolder_SurfaceNetworkHandler_System_Int32_System_Int32_System_Int32_
+  commentId: M:ConfigurableWarning.Patches.QuotaPatch.Constructor(RoomStatsHolder,SurfaceNetworkHandler,System.Int32,System.Int32,System.Int32)
+  name.vb: Constructor(RoomStatsHolder, SurfaceNetworkHandler, Integer, Integer, Integer)
+  fullName: ConfigurableWarning.Patches.QuotaPatch.Constructor(RoomStatsHolder, SurfaceNetworkHandler, int, int, int)
+  fullName.vb: ConfigurableWarning.Patches.QuotaPatch.Constructor(RoomStatsHolder, SurfaceNetworkHandler, Integer, Integer, Integer)
+  nameWithType: QuotaPatch.Constructor(RoomStatsHolder, SurfaceNetworkHandler, int, int, int)
+  nameWithType.vb: QuotaPatch.Constructor(RoomStatsHolder, SurfaceNetworkHandler, Integer, Integer, Integer)
+- uid: ConfigurableWarning.Patches.QuotaPatch.Constructor*
+  name: Constructor
+  href: api/ConfigurableWarning.Patches.QuotaPatch.html#ConfigurableWarning_Patches_QuotaPatch_Constructor_
+  commentId: Overload:ConfigurableWarning.Patches.QuotaPatch.Constructor
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.QuotaPatch.Constructor
+  nameWithType: QuotaPatch.Constructor
+- uid: ConfigurableWarning.Patches.QuotaPatch.GetDaysPerQuota(RoomStatsHolder,System.Int32@)
+  name: GetDaysPerQuota(RoomStatsHolder, ref int)
+  href: api/ConfigurableWarning.Patches.QuotaPatch.html#ConfigurableWarning_Patches_QuotaPatch_GetDaysPerQuota_RoomStatsHolder_System_Int32__
+  commentId: M:ConfigurableWarning.Patches.QuotaPatch.GetDaysPerQuota(RoomStatsHolder,System.Int32@)
+  name.vb: GetDaysPerQuota(RoomStatsHolder, Integer)
+  fullName: ConfigurableWarning.Patches.QuotaPatch.GetDaysPerQuota(RoomStatsHolder, ref int)
+  fullName.vb: ConfigurableWarning.Patches.QuotaPatch.GetDaysPerQuota(RoomStatsHolder, Integer)
+  nameWithType: QuotaPatch.GetDaysPerQuota(RoomStatsHolder, ref int)
+  nameWithType.vb: QuotaPatch.GetDaysPerQuota(RoomStatsHolder, Integer)
+- uid: ConfigurableWarning.Patches.QuotaPatch.GetDaysPerQuota*
+  name: GetDaysPerQuota
+  href: api/ConfigurableWarning.Patches.QuotaPatch.html#ConfigurableWarning_Patches_QuotaPatch_GetDaysPerQuota_
+  commentId: Overload:ConfigurableWarning.Patches.QuotaPatch.GetDaysPerQuota
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.QuotaPatch.GetDaysPerQuota
+  nameWithType: QuotaPatch.GetDaysPerQuota
+- uid: ConfigurableWarning.Patches.SpawnPatch
+  name: SpawnPatch
+  href: api/ConfigurableWarning.Patches.SpawnPatch.html
+  commentId: T:ConfigurableWarning.Patches.SpawnPatch
+  fullName: ConfigurableWarning.Patches.SpawnPatch
+  nameWithType: SpawnPatch
+- uid: ConfigurableWarning.Patches.SpawnPatch.GetExtraBudgetForDay(System.Int32,System.Int32@)
+  name: GetExtraBudgetForDay(int, ref int)
+  href: api/ConfigurableWarning.Patches.SpawnPatch.html#ConfigurableWarning_Patches_SpawnPatch_GetExtraBudgetForDay_System_Int32_System_Int32__
+  commentId: M:ConfigurableWarning.Patches.SpawnPatch.GetExtraBudgetForDay(System.Int32,System.Int32@)
+  name.vb: GetExtraBudgetForDay(Integer, Integer)
+  fullName: ConfigurableWarning.Patches.SpawnPatch.GetExtraBudgetForDay(int, ref int)
+  fullName.vb: ConfigurableWarning.Patches.SpawnPatch.GetExtraBudgetForDay(Integer, Integer)
+  nameWithType: SpawnPatch.GetExtraBudgetForDay(int, ref int)
+  nameWithType.vb: SpawnPatch.GetExtraBudgetForDay(Integer, Integer)
+- uid: ConfigurableWarning.Patches.SpawnPatch.GetExtraBudgetForDay*
+  name: GetExtraBudgetForDay
+  href: api/ConfigurableWarning.Patches.SpawnPatch.html#ConfigurableWarning_Patches_SpawnPatch_GetExtraBudgetForDay_
+  commentId: Overload:ConfigurableWarning.Patches.SpawnPatch.GetExtraBudgetForDay
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.SpawnPatch.GetExtraBudgetForDay
+  nameWithType: SpawnPatch.GetExtraBudgetForDay
+- uid: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForDayFirstWave(System.Int32,System.Int32@)
+  name: GetMonsterBudgetForDayFirstWave(int, ref int)
+  href: api/ConfigurableWarning.Patches.SpawnPatch.html#ConfigurableWarning_Patches_SpawnPatch_GetMonsterBudgetForDayFirstWave_System_Int32_System_Int32__
+  commentId: M:ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForDayFirstWave(System.Int32,System.Int32@)
+  name.vb: GetMonsterBudgetForDayFirstWave(Integer, Integer)
+  fullName: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForDayFirstWave(int, ref int)
+  fullName.vb: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForDayFirstWave(Integer, Integer)
+  nameWithType: SpawnPatch.GetMonsterBudgetForDayFirstWave(int, ref int)
+  nameWithType.vb: SpawnPatch.GetMonsterBudgetForDayFirstWave(Integer, Integer)
+- uid: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForDayFirstWave*
+  name: GetMonsterBudgetForDayFirstWave
+  href: api/ConfigurableWarning.Patches.SpawnPatch.html#ConfigurableWarning_Patches_SpawnPatch_GetMonsterBudgetForDayFirstWave_
+  commentId: Overload:ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForDayFirstWave
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForDayFirstWave
+  nameWithType: SpawnPatch.GetMonsterBudgetForDayFirstWave
+- uid: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForSecondWave(System.Int32,System.Int32@)
+  name: GetMonsterBudgetForSecondWave(int, ref int)
+  href: api/ConfigurableWarning.Patches.SpawnPatch.html#ConfigurableWarning_Patches_SpawnPatch_GetMonsterBudgetForSecondWave_System_Int32_System_Int32__
+  commentId: M:ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForSecondWave(System.Int32,System.Int32@)
+  name.vb: GetMonsterBudgetForSecondWave(Integer, Integer)
+  fullName: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForSecondWave(int, ref int)
+  fullName.vb: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForSecondWave(Integer, Integer)
+  nameWithType: SpawnPatch.GetMonsterBudgetForSecondWave(int, ref int)
+  nameWithType.vb: SpawnPatch.GetMonsterBudgetForSecondWave(Integer, Integer)
+- uid: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForSecondWave*
+  name: GetMonsterBudgetForSecondWave
+  href: api/ConfigurableWarning.Patches.SpawnPatch.html#ConfigurableWarning_Patches_SpawnPatch_GetMonsterBudgetForSecondWave_
+  commentId: Overload:ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForSecondWave
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.SpawnPatch.GetMonsterBudgetForSecondWave
+  nameWithType: SpawnPatch.GetMonsterBudgetForSecondWave
+- uid: ConfigurableWarning.Patches.StaminaPatch
+  name: StaminaPatch
+  href: api/ConfigurableWarning.Patches.StaminaPatch.html
+  commentId: T:ConfigurableWarning.Patches.StaminaPatch
+  fullName: ConfigurableWarning.Patches.StaminaPatch
+  nameWithType: StaminaPatch
+- uid: ConfigurableWarning.Patches.StaminaPatch.Start(PlayerController@)
+  name: Start(ref PlayerController)
+  href: api/ConfigurableWarning.Patches.StaminaPatch.html#ConfigurableWarning_Patches_StaminaPatch_Start_PlayerController__
+  commentId: M:ConfigurableWarning.Patches.StaminaPatch.Start(PlayerController@)
+  name.vb: Start(PlayerController)
+  fullName: ConfigurableWarning.Patches.StaminaPatch.Start(ref PlayerController)
+  fullName.vb: ConfigurableWarning.Patches.StaminaPatch.Start(PlayerController)
+  nameWithType: StaminaPatch.Start(ref PlayerController)
+  nameWithType.vb: StaminaPatch.Start(PlayerController)
+- uid: ConfigurableWarning.Patches.StaminaPatch.Start*
+  name: Start
+  href: api/ConfigurableWarning.Patches.StaminaPatch.html#ConfigurableWarning_Patches_StaminaPatch_Start_
+  commentId: Overload:ConfigurableWarning.Patches.StaminaPatch.Start
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.StaminaPatch.Start
+  nameWithType: StaminaPatch.Start
+- uid: ConfigurableWarning.Patches.StaminaPatch.Update(PlayerController@)
+  name: Update(ref PlayerController)
+  href: api/ConfigurableWarning.Patches.StaminaPatch.html#ConfigurableWarning_Patches_StaminaPatch_Update_PlayerController__
+  commentId: M:ConfigurableWarning.Patches.StaminaPatch.Update(PlayerController@)
+  name.vb: Update(PlayerController)
+  fullName: ConfigurableWarning.Patches.StaminaPatch.Update(ref PlayerController)
+  fullName.vb: ConfigurableWarning.Patches.StaminaPatch.Update(PlayerController)
+  nameWithType: StaminaPatch.Update(ref PlayerController)
+  nameWithType.vb: StaminaPatch.Update(PlayerController)
+- uid: ConfigurableWarning.Patches.StaminaPatch.Update*
+  name: Update
+  href: api/ConfigurableWarning.Patches.StaminaPatch.html#ConfigurableWarning_Patches_StaminaPatch_Update_
+  commentId: Overload:ConfigurableWarning.Patches.StaminaPatch.Update
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.StaminaPatch.Update
+  nameWithType: StaminaPatch.Update
+- uid: ConfigurableWarning.Patches.StaminaPatch.UpdatePost(PlayerController@)
+  name: UpdatePost(ref PlayerController)
+  href: api/ConfigurableWarning.Patches.StaminaPatch.html#ConfigurableWarning_Patches_StaminaPatch_UpdatePost_PlayerController__
+  commentId: M:ConfigurableWarning.Patches.StaminaPatch.UpdatePost(PlayerController@)
+  name.vb: UpdatePost(PlayerController)
+  fullName: ConfigurableWarning.Patches.StaminaPatch.UpdatePost(ref PlayerController)
+  fullName.vb: ConfigurableWarning.Patches.StaminaPatch.UpdatePost(PlayerController)
+  nameWithType: StaminaPatch.UpdatePost(ref PlayerController)
+  nameWithType.vb: StaminaPatch.UpdatePost(PlayerController)
+- uid: ConfigurableWarning.Patches.StaminaPatch.UpdatePost*
+  name: UpdatePost
+  href: api/ConfigurableWarning.Patches.StaminaPatch.html#ConfigurableWarning_Patches_StaminaPatch_UpdatePost_
+  commentId: Overload:ConfigurableWarning.Patches.StaminaPatch.UpdatePost
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.StaminaPatch.UpdatePost
+  nameWithType: StaminaPatch.UpdatePost
+- uid: ConfigurableWarning.Patches.UIPatches
+  name: UIPatches
+  href: api/ConfigurableWarning.Patches.UIPatches.html
+  commentId: T:ConfigurableWarning.Patches.UIPatches
+  fullName: ConfigurableWarning.Patches.UIPatches
+  nameWithType: UIPatches
+- uid: ConfigurableWarning.Patches.UIPatches.UpdateHealth(UI_Health)
+  name: UpdateHealth(UI_Health)
+  href: api/ConfigurableWarning.Patches.UIPatches.html#ConfigurableWarning_Patches_UIPatches_UpdateHealth_UI_Health_
+  commentId: M:ConfigurableWarning.Patches.UIPatches.UpdateHealth(UI_Health)
+  fullName: ConfigurableWarning.Patches.UIPatches.UpdateHealth(UI_Health)
+  nameWithType: UIPatches.UpdateHealth(UI_Health)
+- uid: ConfigurableWarning.Patches.UIPatches.UpdateHealth*
+  name: UpdateHealth
+  href: api/ConfigurableWarning.Patches.UIPatches.html#ConfigurableWarning_Patches_UIPatches_UpdateHealth_
+  commentId: Overload:ConfigurableWarning.Patches.UIPatches.UpdateHealth
+  isSpec: "True"
+  fullName: ConfigurableWarning.Patches.UIPatches.UpdateHealth
+  nameWithType: UIPatches.UpdateHealth
 - uid: ConfigurableWarning.Plugin
   name: Plugin
   href: api/ConfigurableWarning.Plugin.html

@@ -192,6 +192,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.SettingPatches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.SettingPatches.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ConfigurableWarning.API.yml",
       "output": {
         ".html": {
@@ -206,6 +216,86 @@
       "output": {
         ".html": {
           "relative_path": "api/ConfigurableWarning.MyPluginInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.DivingBellPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.DivingBellPatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.LobbyPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.LobbyPatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.PlayerPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.PlayerPatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.QuotaPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.QuotaPatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.SpawnPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.SpawnPatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.StaminaPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.StaminaPatch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.UIPatches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.UIPatches.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.html"
         }
       },
       "version": ""

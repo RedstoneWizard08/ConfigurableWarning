@@ -8,33 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.config/dotnet-tools.json" beforeDir="false" afterPath="$PROJECT_DIR$/.config/dotnet-tools.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Spookdivers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatModule.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/ICompatModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/ICompatModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/ConfigurableWarningAPI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/ConfigurableWarningAPI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionExt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionExt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IUntypedOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IUntypedOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IntOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IntOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/TextOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/TextOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/StateHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/StateHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/States.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/States.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Plugin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/BuiltInSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/BuiltInSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Flashcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Flashcard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Virality.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Virality.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/SettingKeys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/SettingKeys.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Util.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps.py" beforeDir="false" afterPath="$PROJECT_DIR$/deps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps/.gitkeep" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +48,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Activator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Enum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Type.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3aa4e992bfac406eb997516c43881f48125400/31/bc6bbd0c/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3aa4e992bfac406eb997516c43881f48125400/74/b308456c/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,6 +58,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6a18188ce6264976a9218286caeb57f41ea00/d8/cb1addd4/Logger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4f9b8a46fd540608b6d6422ed3a7fc37200/81/06c73e7f/FlashcardPlugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4f9b8a46fd540608b6d6422ed3a7fc37200/a1/b1db210f/FlashcardConfig.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cdbb0156c5f14428b9e39f273d3bdab83b000/1a/415e5744/StructWrapperUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ec00715c979042bbbffb0d761f44f7b4122a00/17/5e315b17/SteamLobbyHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b6241b1fe547e48a76ae670d3cdb36c317410dc77c895ed6336af943f37/ProcessAliases.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -115,7 +104,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.Launch">
+  <component name="RunManager" selected="Python.Update DLL dependencies">
     <configuration name="Build" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build/bin/Debug/net8.0/Build.exe" />
       <option name="PROGRAM_PARAMETERS" value="-t Build" />
@@ -217,7 +206,8 @@
       <workItem from="1715304633977" duration="1482000" />
       <workItem from="1715306343861" duration="268000" />
       <workItem from="1715379739396" duration="606000" />
-      <workItem from="1715380360917" duration="1452000" />
+      <workItem from="1715380360917" duration="2375000" />
+      <workItem from="1715390964155" duration="3913000" />
     </task>
     <task id="LOCAL-00001" summary="WIP v1.13.0">
       <option name="closed" value="true" />

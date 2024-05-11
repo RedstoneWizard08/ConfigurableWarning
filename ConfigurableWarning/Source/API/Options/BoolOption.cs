@@ -9,7 +9,7 @@ namespace ConfigurableWarning.API.Options;
 ///     A boolean option. This *must* be inherited from to use.
 ///     Its state is stored in the <see cref="OptionsState" /> class.
 /// </summary>
-public class BoolOption : BoolSetting, IOption<bool>, IUntypedOption {
+public class BoolOption : BoolSetting, IOption<bool> {
     private readonly List<Action<BoolOption>> _applyActions;
     private readonly bool _defaultValue;
     private readonly string _displayName;

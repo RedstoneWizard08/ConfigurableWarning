@@ -10,7 +10,7 @@ namespace ConfigurableWarning.API.Options;
 ///     A float option. This *must* be inherited from to use.
 ///     Its state is stored in the <see cref="OptionsState" /> class.
 /// </summary>
-public class FloatOption : FloatSetting, IOption<float>, IUntypedOption {
+public class FloatOption : FloatSetting, IOption<float> {
     private readonly List<Action<FloatOption>> _applyActions;
     private readonly float _defaultValue;
     private readonly string _displayName;

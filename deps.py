@@ -13,6 +13,7 @@ DIR = path.join(path.dirname(__file__), "deps")
 DEPS = [
     "MaxWasUnavailable/Virality",
     "loaforc/Flashcard",
+    "OriginalCheese/Spookdivers",
 ]
 
 deps = [f"https://thunderstore.io/api/experimental/package/{it}/" for it in DEPS]
@@ -35,12 +36,13 @@ for url in urls:
             if file.orig_filename.endswith(".dll"):
                 zip.extract(file, DIR)
 
-                os.rename(
-                    path.join(DIR, file.orig_filename),
-                    path.join(DIR, path.basename(file.orig_filename)),
-                )
+                if "/" in file.orig_filename:
+                    os.rename(
+                        path.join(DIR, file.orig_filename),
+                        path.join(DIR, path.basename(file.orig_filename)),
+                    )
 
-                shutil.rmtree(path.join(DIR, file.orig_filename.split("/")[0]))
+                    shutil.rmtree(path.join(DIR, file.orig_filename.split("/")[0]))
                 
                 file = path.join(DIR, path.basename(file.orig_filename))
                 

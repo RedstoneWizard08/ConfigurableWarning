@@ -43,11 +43,11 @@ public class FlashcardCompat : ICompatModule {
             FlashcardSettingKeys.ClipFramerate,
             FlashcardSettingKeys.ClipQuality,
             FlashcardSettingKeys.PacketDelay,
-            FlashcardSettingKeys.VerboseLogging,
+            FlashcardSettingKeys.VerboseLogging
         ];
-        
+
         if (!all.All(v => OptionsState.Instance.Has(v))) return;
-        
+
         FlashcardPlugin.config.UPGRADES_EXTRA_CAMERA.Value =
             States.Bools[FlashcardSettingKeys.EnableExtraCamera] ? "always" : "disabled";
         FlashcardPlugin.config.RECORDING_CLIP_LENGTH.Value = States.Floats[FlashcardSettingKeys.ClipLength];

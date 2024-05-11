@@ -10,7 +10,7 @@ namespace ConfigurableWarning.API.Options;
 ///     An int option. This *must* be inherited from to use.
 ///     Its state is stored in the <see cref="OptionsState" /> class.
 /// </summary>
-public class IntOption : IntSetting, IOption<int>, IUntypedOption {
+public class IntOption : IntSetting, IOption<int> {
     private readonly List<Action<IntOption>> _applyActions;
     private readonly int _defaultValue;
     private readonly string _displayName;

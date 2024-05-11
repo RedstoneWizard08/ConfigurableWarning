@@ -32,11 +32,11 @@ public class ViralityCompat : ICompatModule {
         string[] all = [
             ViralitySettingKeys.MaxPlayers,
             ViralitySettingKeys.AllowLateJoin,
-            ViralitySettingKeys.EnableVoiceFix,
+            ViralitySettingKeys.EnableVoiceFix
         ];
-        
+
         if (!all.All(v => OptionsState.Instance.Has(v))) return;
-        
+
         Virality.Virality.MaxPlayers!.Value = States.Ints[ViralitySettingKeys.MaxPlayers];
         Virality.Virality.AllowLateJoin!.Value = States.Bools[ViralitySettingKeys.AllowLateJoin];
         Virality.Virality.EnableVoiceFix!.Value = States.Bools[ViralitySettingKeys.EnableVoiceFix];

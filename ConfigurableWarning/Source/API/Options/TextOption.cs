@@ -10,7 +10,7 @@ namespace ConfigurableWarning.API.Options;
 ///     Its state is stored in the <see cref="OptionsState" /> class.
 /// </summary>
 // ReSharper disable once ClassNeverInstantiated.Global
-public class TextOption : TextSetting, IOption<string>, IUntypedOption {
+public class TextOption : TextSetting, IOption<string> {
     private readonly List<Action<TextOption>> _applyActions;
     private readonly string _defaultValue;
     private readonly string _displayName;

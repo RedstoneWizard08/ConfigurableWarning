@@ -12,7 +12,7 @@ namespace ConfigurableWarning.API.Compat;
 /// </summary>
 public static class CompatLoader {
     internal static Dictionary<Type, ICompatModule> RegisteredModules { get; } = new();
-    
+
     internal static bool NamespaceExists(string ns) {
         return AppDomain.CurrentDomain.GetAssemblies()
             .SelectMany(a => a.GetTypes().Select(t => t.Namespace))
@@ -43,14 +43,14 @@ public static class CompatLoader {
                     ok = false;
                     break;
                 }
-            
+
             if (!ok) continue;
 
             Plugin.Logger.LogInfo($"Initializing compat module: {type.Name}");
 
             foreach (var ty in type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public)) {
                 Plugin.Logger.LogInfo($"Checking compat setting: {ty.Name} (from {ty.Assembly.GetName().Name}.dll");
-                
+
                 if (ty.IsInterface || ty.IsAbstract || !ty.IsSubclassOf(typeof(Setting))) continue;
 
                 var attr = ty.GetCustomAttribute<CompatSetting>(false);

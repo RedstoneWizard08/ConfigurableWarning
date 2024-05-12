@@ -9,16 +9,20 @@ namespace ConfigurableWarning.Settings;
 public static class BuiltInSettings {
     // TODO: Implement more settings:
     // - Spawning Mechanics
-    // - Customization Limits
-    // - Camera Settings (Flashcard Support)
+    // - Damage Taken Multiplier
+    // - Customization Limits (revive https://thunderstore.io/c/content-warning/p/DiabolicalStudios/MoreCustomization/)
     // - Shop Prices
     // - Battery Settings
     // - MetaCoin Prices
-    // - Gravity
-    // - Intro Screen Skip
-    // - Video Save Location
-    // - More Graphics Settings?
-    // - Player Limit? (Virality Config Support)
+    // - Save Slots (based on https://thunderstore.io/c/content-warning/p/Isbjorn52/More_Saves/)
+    // - Gravity (based on https://thunderstore.io/c/content-warning/p/Marcus/Better_Gravity/)
+    // - Intro Screen Skip (based on https://thunderstore.io/c/content-warning/p/CTWOriginals/DevelopmentStartup/)
+    // - Video Save Location (based on https://thunderstore.io/c/content-warning/p/RamuneNeptune/CustomVideoSaveLocation/)
+    // - Inventory Slots (based on https://thunderstore.io/c/content-warning/p/nickklmao/ExtraInventorySlot/)
+    // - More Graphics Settings (basically revive https://thunderstore.io/c/content-warning/p/Jasson9/MoreSettings/)
+    // - Revive https://thunderstore.io/c/content-warning/p/nickklmao/BetterThrowing/
+    // - Revive https://thunderstore.io/c/content-warning/p/Fleig/CustomFov/
+    // - Revive https://thunderstore.io/c/content-warning/p/Computery/Toggle_Mute/
 
     [RegisterOption]
     private class PrivateHost()

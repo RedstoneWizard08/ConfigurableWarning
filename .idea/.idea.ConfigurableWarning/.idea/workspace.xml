@@ -8,20 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Spookdivers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionExt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionExt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatModule.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IntOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IntOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/TextOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/TextOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/States.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/States.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Flashcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Flashcard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Virality.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Virality.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deps.py" beforeDir="false" afterPath="$PROJECT_DIR$/deps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/BuiltInSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/BuiltInSettings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +49,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/693c6d998c0d40f29d2867f596ec363691e590/87/e91300a0/BindingFlags.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6a18188ce6264976a9218286caeb57f41ea00/6d/e3579e4c/BaseUnityPlugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6a18188ce6264976a9218286caeb57f41ea00/d8/cb1addd4/Logger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0284f5335cd471eb28c9ea6579669b1101400/13/7cd1bcd8/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4f9b8a46fd540608b6d6422ed3a7fc37200/81/06c73e7f/FlashcardPlugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4f9b8a46fd540608b6d6422ed3a7fc37200/a1/b1db210f/FlashcardConfig.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bdea04f37b994bdbb4cd9f33b70e575aa000/d2/e9a8e051/Plugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cdbb0156c5f14428b9e39f273d3bdab83b000/1a/415e5744/StructWrapperUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e47e7dae82ae48f0a6923254c62a16b6178f400/f4/b11b9f6f/BoolSetting.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ec00715c979042bbbffb0d761f44f7b4122a00/17/5e315b17/SteamLobbyHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b6241b1fe547e48a76ae670d3cdb36c317410dc77c895ed6336af943f37/ProcessAliases.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -104,7 +100,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.Update DLL dependencies">
+  <component name="RunManager" selected=".NET Project.Launch">
     <configuration name="Build" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build/bin/Debug/net8.0/Build.exe" />
       <option name="PROGRAM_PARAMETERS" value="-t Build" />
@@ -207,7 +203,8 @@
       <workItem from="1715306343861" duration="268000" />
       <workItem from="1715379739396" duration="606000" />
       <workItem from="1715380360917" duration="2375000" />
-      <workItem from="1715390964155" duration="3913000" />
+      <workItem from="1715390964155" duration="5646000" />
+      <workItem from="1715456856512" duration="5248000" />
     </task>
     <task id="LOCAL-00001" summary="WIP v1.13.0">
       <option name="closed" value="true" />
@@ -235,6 +232,17 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

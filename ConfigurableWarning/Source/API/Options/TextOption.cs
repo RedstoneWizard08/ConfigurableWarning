@@ -37,7 +37,7 @@ public class TextOption : TextSetting, IOption<string> {
     /// <param name="tab">The tab to register to.</param>
     /// <param name="category">The category to register to.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
-    public TextOption(string name, string defaultValue, string displayName, string tab, string category,
+    protected TextOption(string name, string defaultValue, string displayName, string tab, string category,
         Action<TextOption>[] actions) {
         _name = name;
         _displayName = displayName;
@@ -64,7 +64,11 @@ public class TextOption : TextSetting, IOption<string> {
         GameHandler.Instance.SettingsHandler.SaveSetting(this);
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Gets this option's name. This is its name in the registry
+    ///     and in the state holder.
+    /// </summary>
+    /// <returns>The option's name.</returns>
     public string GetName() {
         return _name;
     }
@@ -74,7 +78,10 @@ public class TextOption : TextSetting, IOption<string> {
         return Value;
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Get the display name of this option.
+    /// </summary>
+    /// <returns>The option's display name.</returns>
     public string GetDisplayName() {
         return _displayName;
     }
@@ -84,7 +91,10 @@ public class TextOption : TextSetting, IOption<string> {
         return this;
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Get this option's default value.
+    /// </summary>
+    /// <returns>The option's default value.</returns>
     public override string GetDefaultValue() {
         return _defaultValue;
     }

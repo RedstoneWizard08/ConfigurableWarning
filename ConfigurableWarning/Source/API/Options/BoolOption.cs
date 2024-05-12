@@ -63,7 +63,11 @@ public class BoolOption : BoolSetting, IOption<bool> {
         GameHandler.Instance.SettingsHandler.SaveSetting(this);
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Gets this option's name. This is its name in the registry
+    ///     and in the state holder.
+    /// </summary>
+    /// <returns>The option's name.</returns>
     public string GetName() {
         return _name;
     }
@@ -73,7 +77,10 @@ public class BoolOption : BoolSetting, IOption<bool> {
         return Value;
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Get the display name of this option.
+    /// </summary>
+    /// <returns>The option's display name.</returns>
     public string GetDisplayName() {
         return _displayName;
     }
@@ -83,7 +90,10 @@ public class BoolOption : BoolSetting, IOption<bool> {
         return this;
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Get this option's default value.
+    /// </summary>
+    /// <returns>The option's default value.</returns>
     public override bool GetDefaultValue() {
         return _defaultValue;
     }

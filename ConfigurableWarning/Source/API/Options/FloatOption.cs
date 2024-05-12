@@ -28,7 +28,7 @@ public class FloatOption : FloatSetting, IOption<float> {
     /// <param name="max">The maximum value.</param>
     /// <param name="tab">The tab to register to.</param>
     /// <param name="category">The category to register to.</param>
-    /// <param name="doClamp">Whether or not to clamp the value when changed.</param>
+    /// <param name="doClamp">Whether to clamp the value when changed.</param>
     protected FloatOption(string name, float defaultValue, string displayName, float min, float max, string tab,
         string category, bool doClamp = true) : this(name, defaultValue, displayName, min, max, tab, category, [],
         doClamp) {
@@ -45,7 +45,7 @@ public class FloatOption : FloatSetting, IOption<float> {
     /// <param name="tab">The tab to register to.</param>
     /// <param name="category">The category to register to.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
-    /// <param name="doClamp">Whether or not to clamp the value when changed.</param>
+    /// <param name="doClamp">Whether to clamp the value when changed.</param>
     protected FloatOption(string name, float defaultValue, string displayName, float min, float max, string tab,
         string category, Action<FloatOption>[] actions, bool doClamp = true) {
         _name = name;
@@ -75,7 +75,11 @@ public class FloatOption : FloatSetting, IOption<float> {
         GameHandler.Instance.SettingsHandler.SaveSetting(this);
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Gets this option's name. This is its name in the registry
+    ///     and in the state holder.
+    /// </summary>
+    /// <returns>The option's name.</returns>
     public string GetName() {
         return _name;
     }
@@ -85,7 +89,10 @@ public class FloatOption : FloatSetting, IOption<float> {
         return Value;
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Get the display name of this option.
+    /// </summary>
+    /// <returns>The option's display name.</returns>
     public string GetDisplayName() {
         return _displayName;
     }
@@ -95,7 +102,10 @@ public class FloatOption : FloatSetting, IOption<float> {
         return this;
     }
 
-    /// <inheritdoc />
+    /// <summary>
+    ///     Get this option's default value.
+    /// </summary>
+    /// <returns>The option's default value.</returns>
     public override float GetDefaultValue() {
         return _defaultValue;
     }

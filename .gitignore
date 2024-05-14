@@ -6,6 +6,7 @@ obj
 TODO.md
 _site
 .mono
+/docs/api
 /api
 _doc
 /deps/*.dll

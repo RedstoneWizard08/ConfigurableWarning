@@ -196,7 +196,7 @@ Class OptionExt  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="ConfigurableWarning_API_OptionExt_BoolState_System_String_" data-uid="ConfigurableWarning.API.OptionExt.BoolState(System.String)">
   BoolState(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts this string into an option and gets its state.</p>
@@ -231,11 +231,99 @@ Class OptionExt  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <a id="ConfigurableWarning_API_OptionExt_EnumOpt_" data-uid="ConfigurableWarning.API.OptionExt.EnumOpt*"></a>
+
+  <h3 id="ConfigurableWarning_API_OptionExt_EnumOpt__1_System_String_" data-uid="ConfigurableWarning.API.OptionExt.EnumOpt``1(System.String)">
+  EnumOpt&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert this string into an option.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EnumOption&lt;T&gt;? EnumOpt&lt;T&gt;(this string name) where T : struct</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ConfigurableWarning.API.Options.EnumOption-1.html">EnumOption</a>&lt;T&gt;</dt>
+    <dd><p>The option.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_OptionExt_EnumState_" data-uid="ConfigurableWarning.API.OptionExt.EnumState*"></a>
+
+  <h3 id="ConfigurableWarning_API_OptionExt_EnumState__1_System_String_" data-uid="ConfigurableWarning.API.OptionExt.EnumState``1(System.String)">
+  EnumState&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts this string into an option and gets its state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T? EnumState&lt;T&gt;(this string opt) where T : struct</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>opt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T?</dt>
+    <dd><p>The state.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="ConfigurableWarning_API_OptionExt_FloatOpt_" data-uid="ConfigurableWarning.API.OptionExt.FloatOpt*"></a>
 
   <h3 id="ConfigurableWarning_API_OptionExt_FloatOpt_System_String_" data-uid="ConfigurableWarning.API.OptionExt.FloatOpt(System.String)">
   FloatOpt(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this string into an option.</p>
@@ -274,7 +362,7 @@ Class OptionExt  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="ConfigurableWarning_API_OptionExt_FloatState_System_String_" data-uid="ConfigurableWarning.API.OptionExt.FloatState(System.String)">
   FloatState(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts this string into an option and gets its state.</p>
@@ -313,7 +401,7 @@ Class OptionExt  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="ConfigurableWarning_API_OptionExt_IntOpt_System_String_" data-uid="ConfigurableWarning.API.OptionExt.IntOpt(System.String)">
   IntOpt(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this string into an option.</p>
@@ -352,7 +440,7 @@ Class OptionExt  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="ConfigurableWarning_API_OptionExt_IntState_System_String_" data-uid="ConfigurableWarning.API.OptionExt.IntState(System.String)">
   IntState(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts this string into an option and gets its state.</p>
@@ -391,7 +479,7 @@ Class OptionExt  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="ConfigurableWarning_API_OptionExt_TextOpt_System_String_" data-uid="ConfigurableWarning.API.OptionExt.TextOpt(System.String)">
   TextOpt(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Convert this string into an option.</p>
@@ -430,7 +518,7 @@ Class OptionExt  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="ConfigurableWarning_API_OptionExt_TextState_System_String_" data-uid="ConfigurableWarning.API.OptionExt.TextState(System.String)">
   TextState(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionExt.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts this string into an option and gets its state.</p>

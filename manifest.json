@@ -62,10 +62,80 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Compat.CompatLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Compat.CompatLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Compat.CompatModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Compat.CompatModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Compat.CompatSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Compat.CompatSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Compat.ICompatModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Compat.ICompatModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Compat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Compat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ConfigurableWarning.API.ConfigurableWarningAPI.yml",
       "output": {
         ".html": {
           "relative_path": "api/ConfigurableWarning.API.ConfigurableWarningAPI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.EnumStateHolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.EnumStateHolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.EnumUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.EnumUtil.html"
         }
       },
       "version": ""
@@ -116,6 +186,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ConfigurableWarning.API.Options.BoolOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Options.EnumOption-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Options.EnumOption-1.html"
         }
       },
       "version": ""
@@ -346,6 +426,86 @@
       "output": {
         ".html": {
           "relative_path": "api/ConfigurableWarning.Settings.BuiltInSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.FlashcardCompat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.FlashcardCompat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.SceneType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.SceneType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.SpookdiversCompat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.SpookdiversCompat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.ViralityCompat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.ViralityCompat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.ViralitySettingKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.ViralitySettingKeys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Settings.Compat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Settings.Compat.html"
         }
       },
       "version": ""

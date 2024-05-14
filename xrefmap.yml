@@ -13,6 +13,87 @@ references:
   commentId: N:ConfigurableWarning.API
   fullName: ConfigurableWarning.API
   nameWithType: ConfigurableWarning.API
+- uid: ConfigurableWarning.API.Compat
+  name: ConfigurableWarning.API.Compat
+  href: api/ConfigurableWarning.API.Compat.html
+  commentId: N:ConfigurableWarning.API.Compat
+  fullName: ConfigurableWarning.API.Compat
+  nameWithType: ConfigurableWarning.API.Compat
+- uid: ConfigurableWarning.API.Compat.CompatLoader
+  name: CompatLoader
+  href: api/ConfigurableWarning.API.Compat.CompatLoader.html
+  commentId: T:ConfigurableWarning.API.Compat.CompatLoader
+  fullName: ConfigurableWarning.API.Compat.CompatLoader
+  nameWithType: CompatLoader
+- uid: ConfigurableWarning.API.Compat.CompatLoader.LoadModules
+  name: LoadModules()
+  href: api/ConfigurableWarning.API.Compat.CompatLoader.html#ConfigurableWarning_API_Compat_CompatLoader_LoadModules
+  commentId: M:ConfigurableWarning.API.Compat.CompatLoader.LoadModules
+  fullName: ConfigurableWarning.API.Compat.CompatLoader.LoadModules()
+  nameWithType: CompatLoader.LoadModules()
+- uid: ConfigurableWarning.API.Compat.CompatLoader.LoadModules*
+  name: LoadModules
+  href: api/ConfigurableWarning.API.Compat.CompatLoader.html#ConfigurableWarning_API_Compat_CompatLoader_LoadModules_
+  commentId: Overload:ConfigurableWarning.API.Compat.CompatLoader.LoadModules
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Compat.CompatLoader.LoadModules
+  nameWithType: CompatLoader.LoadModules
+- uid: ConfigurableWarning.API.Compat.CompatModule
+  name: CompatModule
+  href: api/ConfigurableWarning.API.Compat.CompatModule.html
+  commentId: T:ConfigurableWarning.API.Compat.CompatModule
+  fullName: ConfigurableWarning.API.Compat.CompatModule
+  nameWithType: CompatModule
+- uid: ConfigurableWarning.API.Compat.CompatModule.#ctor(System.String[])
+  name: CompatModule(string[])
+  href: api/ConfigurableWarning.API.Compat.CompatModule.html#ConfigurableWarning_API_Compat_CompatModule__ctor_System_String___
+  commentId: M:ConfigurableWarning.API.Compat.CompatModule.#ctor(System.String[])
+  name.vb: New(String())
+  fullName: ConfigurableWarning.API.Compat.CompatModule.CompatModule(string[])
+  fullName.vb: ConfigurableWarning.API.Compat.CompatModule.New(String())
+  nameWithType: CompatModule.CompatModule(string[])
+  nameWithType.vb: CompatModule.New(String())
+- uid: ConfigurableWarning.API.Compat.CompatModule.#ctor*
+  name: CompatModule
+  href: api/ConfigurableWarning.API.Compat.CompatModule.html#ConfigurableWarning_API_Compat_CompatModule__ctor_
+  commentId: Overload:ConfigurableWarning.API.Compat.CompatModule.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConfigurableWarning.API.Compat.CompatModule.CompatModule
+  fullName.vb: ConfigurableWarning.API.Compat.CompatModule.New
+  nameWithType: CompatModule.CompatModule
+  nameWithType.vb: CompatModule.New
+- uid: ConfigurableWarning.API.Compat.CompatModule.Dependencies
+  name: Dependencies
+  href: api/ConfigurableWarning.API.Compat.CompatModule.html#ConfigurableWarning_API_Compat_CompatModule_Dependencies
+  commentId: F:ConfigurableWarning.API.Compat.CompatModule.Dependencies
+  fullName: ConfigurableWarning.API.Compat.CompatModule.Dependencies
+  nameWithType: CompatModule.Dependencies
+- uid: ConfigurableWarning.API.Compat.CompatSetting
+  name: CompatSetting
+  href: api/ConfigurableWarning.API.Compat.CompatSetting.html
+  commentId: T:ConfigurableWarning.API.Compat.CompatSetting
+  fullName: ConfigurableWarning.API.Compat.CompatSetting
+  nameWithType: CompatSetting
+- uid: ConfigurableWarning.API.Compat.ICompatModule
+  name: ICompatModule
+  href: api/ConfigurableWarning.API.Compat.ICompatModule.html
+  commentId: T:ConfigurableWarning.API.Compat.ICompatModule
+  fullName: ConfigurableWarning.API.Compat.ICompatModule
+  nameWithType: ICompatModule
+- uid: ConfigurableWarning.API.Compat.ICompatModule.Init
+  name: Init()
+  href: api/ConfigurableWarning.API.Compat.ICompatModule.html#ConfigurableWarning_API_Compat_ICompatModule_Init
+  commentId: M:ConfigurableWarning.API.Compat.ICompatModule.Init
+  fullName: ConfigurableWarning.API.Compat.ICompatModule.Init()
+  nameWithType: ICompatModule.Init()
+- uid: ConfigurableWarning.API.Compat.ICompatModule.Init*
+  name: Init
+  href: api/ConfigurableWarning.API.Compat.ICompatModule.html#ConfigurableWarning_API_Compat_ICompatModule_Init_
+  commentId: Overload:ConfigurableWarning.API.Compat.ICompatModule.Init
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Compat.ICompatModule.Init
+  nameWithType: ICompatModule.Init
 - uid: ConfigurableWarning.API.ConfigurableWarningAPI
   name: ConfigurableWarningAPI
   href: api/ConfigurableWarning.API.ConfigurableWarningAPI.html
@@ -32,6 +113,98 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.ConfigurableWarningAPI.Sync
   nameWithType: ConfigurableWarningAPI.Sync
+- uid: ConfigurableWarning.API.EnumStateHolder
+  name: EnumStateHolder
+  href: api/ConfigurableWarning.API.EnumStateHolder.html
+  commentId: T:ConfigurableWarning.API.EnumStateHolder
+  fullName: ConfigurableWarning.API.EnumStateHolder
+  nameWithType: EnumStateHolder
+- uid: ConfigurableWarning.API.EnumStateHolder.Get*
+  name: Get
+  href: api/ConfigurableWarning.API.EnumStateHolder.html#ConfigurableWarning_API_EnumStateHolder_Get_
+  commentId: Overload:ConfigurableWarning.API.EnumStateHolder.Get
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.EnumStateHolder.Get
+  nameWithType: EnumStateHolder.Get
+- uid: ConfigurableWarning.API.EnumStateHolder.Get``1(System.String)
+  name: Get<T>(string)
+  href: api/ConfigurableWarning.API.EnumStateHolder.html#ConfigurableWarning_API_EnumStateHolder_Get__1_System_String_
+  commentId: M:ConfigurableWarning.API.EnumStateHolder.Get``1(System.String)
+  name.vb: Get(Of T)(String)
+  fullName: ConfigurableWarning.API.EnumStateHolder.Get<T>(string)
+  fullName.vb: ConfigurableWarning.API.EnumStateHolder.Get(Of T)(String)
+  nameWithType: EnumStateHolder.Get<T>(string)
+  nameWithType.vb: EnumStateHolder.Get(Of T)(String)
+- uid: ConfigurableWarning.API.EnumStateHolder.Set*
+  name: Set
+  href: api/ConfigurableWarning.API.EnumStateHolder.html#ConfigurableWarning_API_EnumStateHolder_Set_
+  commentId: Overload:ConfigurableWarning.API.EnumStateHolder.Set
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.EnumStateHolder.Set
+  nameWithType: EnumStateHolder.Set
+- uid: ConfigurableWarning.API.EnumStateHolder.Set``1(System.String,``0)
+  name: Set<T>(string, T)
+  href: api/ConfigurableWarning.API.EnumStateHolder.html#ConfigurableWarning_API_EnumStateHolder_Set__1_System_String___0_
+  commentId: M:ConfigurableWarning.API.EnumStateHolder.Set``1(System.String,``0)
+  name.vb: Set(Of T)(String, T)
+  fullName: ConfigurableWarning.API.EnumStateHolder.Set<T>(string, T)
+  fullName.vb: ConfigurableWarning.API.EnumStateHolder.Set(Of T)(String, T)
+  nameWithType: EnumStateHolder.Set<T>(string, T)
+  nameWithType.vb: EnumStateHolder.Set(Of T)(String, T)
+- uid: ConfigurableWarning.API.EnumUtil
+  name: EnumUtil
+  href: api/ConfigurableWarning.API.EnumUtil.html
+  commentId: T:ConfigurableWarning.API.EnumUtil
+  fullName: ConfigurableWarning.API.EnumUtil
+  nameWithType: EnumUtil
+- uid: ConfigurableWarning.API.EnumUtil.GetIndex*
+  name: GetIndex
+  href: api/ConfigurableWarning.API.EnumUtil.html#ConfigurableWarning_API_EnumUtil_GetIndex_
+  commentId: Overload:ConfigurableWarning.API.EnumUtil.GetIndex
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.EnumUtil.GetIndex
+  nameWithType: EnumUtil.GetIndex
+- uid: ConfigurableWarning.API.EnumUtil.GetIndex``1(``0)
+  name: GetIndex<T>(T)
+  href: api/ConfigurableWarning.API.EnumUtil.html#ConfigurableWarning_API_EnumUtil_GetIndex__1___0_
+  commentId: M:ConfigurableWarning.API.EnumUtil.GetIndex``1(``0)
+  name.vb: GetIndex(Of T)(T)
+  fullName: ConfigurableWarning.API.EnumUtil.GetIndex<T>(T)
+  fullName.vb: ConfigurableWarning.API.EnumUtil.GetIndex(Of T)(T)
+  nameWithType: EnumUtil.GetIndex<T>(T)
+  nameWithType.vb: EnumUtil.GetIndex(Of T)(T)
+- uid: ConfigurableWarning.API.EnumUtil.GetOptions*
+  name: GetOptions
+  href: api/ConfigurableWarning.API.EnumUtil.html#ConfigurableWarning_API_EnumUtil_GetOptions_
+  commentId: Overload:ConfigurableWarning.API.EnumUtil.GetOptions
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.EnumUtil.GetOptions
+  nameWithType: EnumUtil.GetOptions
+- uid: ConfigurableWarning.API.EnumUtil.GetOptions``1
+  name: GetOptions<T>()
+  href: api/ConfigurableWarning.API.EnumUtil.html#ConfigurableWarning_API_EnumUtil_GetOptions__1
+  commentId: M:ConfigurableWarning.API.EnumUtil.GetOptions``1
+  name.vb: GetOptions(Of T)()
+  fullName: ConfigurableWarning.API.EnumUtil.GetOptions<T>()
+  fullName.vb: ConfigurableWarning.API.EnumUtil.GetOptions(Of T)()
+  nameWithType: EnumUtil.GetOptions<T>()
+  nameWithType.vb: EnumUtil.GetOptions(Of T)()
+- uid: ConfigurableWarning.API.EnumUtil.Parse*
+  name: Parse
+  href: api/ConfigurableWarning.API.EnumUtil.html#ConfigurableWarning_API_EnumUtil_Parse_
+  commentId: Overload:ConfigurableWarning.API.EnumUtil.Parse
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.EnumUtil.Parse
+  nameWithType: EnumUtil.Parse
+- uid: ConfigurableWarning.API.EnumUtil.Parse``1(System.String)
+  name: Parse<T>(string)
+  href: api/ConfigurableWarning.API.EnumUtil.html#ConfigurableWarning_API_EnumUtil_Parse__1_System_String_
+  commentId: M:ConfigurableWarning.API.EnumUtil.Parse``1(System.String)
+  name.vb: Parse(Of T)(String)
+  fullName: ConfigurableWarning.API.EnumUtil.Parse<T>(string)
+  fullName.vb: ConfigurableWarning.API.EnumUtil.Parse(Of T)(String)
+  nameWithType: EnumUtil.Parse<T>(string)
+  nameWithType.vb: EnumUtil.Parse(Of T)(String)
 - uid: ConfigurableWarning.API.OptionExt
   name: OptionExt
   href: api/ConfigurableWarning.API.OptionExt.html
@@ -70,6 +243,38 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.OptionExt.BoolState
   nameWithType: OptionExt.BoolState
+- uid: ConfigurableWarning.API.OptionExt.EnumOpt*
+  name: EnumOpt
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_EnumOpt_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.EnumOpt
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.EnumOpt
+  nameWithType: OptionExt.EnumOpt
+- uid: ConfigurableWarning.API.OptionExt.EnumOpt``1(System.String)
+  name: EnumOpt<T>(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_EnumOpt__1_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.EnumOpt``1(System.String)
+  name.vb: EnumOpt(Of T)(String)
+  fullName: ConfigurableWarning.API.OptionExt.EnumOpt<T>(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.EnumOpt(Of T)(String)
+  nameWithType: OptionExt.EnumOpt<T>(string)
+  nameWithType.vb: OptionExt.EnumOpt(Of T)(String)
+- uid: ConfigurableWarning.API.OptionExt.EnumState*
+  name: EnumState
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_EnumState_
+  commentId: Overload:ConfigurableWarning.API.OptionExt.EnumState
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.OptionExt.EnumState
+  nameWithType: OptionExt.EnumState
+- uid: ConfigurableWarning.API.OptionExt.EnumState``1(System.String)
+  name: EnumState<T>(string)
+  href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_EnumState__1_System_String_
+  commentId: M:ConfigurableWarning.API.OptionExt.EnumState``1(System.String)
+  name.vb: EnumState(Of T)(String)
+  fullName: ConfigurableWarning.API.OptionExt.EnumState<T>(string)
+  fullName.vb: ConfigurableWarning.API.OptionExt.EnumState(Of T)(String)
+  nameWithType: OptionExt.EnumState<T>(string)
+  nameWithType.vb: OptionExt.EnumState(Of T)(String)
 - uid: ConfigurableWarning.API.OptionExt.FloatOpt(System.String)
   name: FloatOpt(string)
   href: api/ConfigurableWarning.API.OptionExt.html#ConfigurableWarning_API_OptionExt_FloatOpt_System_String_
@@ -513,6 +718,275 @@ references:
   isSpec: "True"
   fullName: ConfigurableWarning.API.Options.BoolOption.State
   nameWithType: BoolOption.State
+- uid: ConfigurableWarning.API.Options.EnumOption`1
+  name: EnumOption<T>
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html
+  commentId: T:ConfigurableWarning.API.Options.EnumOption`1
+  name.vb: EnumOption(Of T)
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T)
+  nameWithType: EnumOption<T>
+  nameWithType.vb: EnumOption(Of T)
+- uid: ConfigurableWarning.API.Options.EnumOption`1.#ctor(System.String,`0,System.String,System.String,System.String)
+  name: EnumOption(string, T, string, string, string)
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1__ctor_System_String__0_System_String_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.#ctor(System.String,`0,System.String,System.String,System.String)
+  name.vb: New(String, T, String, String, String)
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.EnumOption(string, T, string, string, string)
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).New(String, T, String, String, String)
+  nameWithType: EnumOption<T>.EnumOption(string, T, string, string, string)
+  nameWithType.vb: EnumOption(Of T).New(String, T, String, String, String)
+- uid: ConfigurableWarning.API.Options.EnumOption`1.#ctor(System.String,`0,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.EnumOption{`0}}[])
+  name: EnumOption(string, T, string, string, string, Action<EnumOption<T>>[])
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1__ctor_System_String__0_System_String_System_String_System_String_System_Action_ConfigurableWarning_API_Options_EnumOption__0_____
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.#ctor(System.String,`0,System.String,System.String,System.String,System.Action{ConfigurableWarning.API.Options.EnumOption{`0}}[])
+  name.vb: New(String, T, String, String, String, Action(Of EnumOption(Of T))())
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.EnumOption(string, T, string, string, string, System.Action<ConfigurableWarning.API.Options.EnumOption<T>>[])
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).New(String, T, String, String, String, System.Action(Of ConfigurableWarning.API.Options.EnumOption(Of T))())
+  nameWithType: EnumOption<T>.EnumOption(string, T, string, string, string, Action<EnumOption<T>>[])
+  nameWithType.vb: EnumOption(Of T).New(String, T, String, String, String, Action(Of EnumOption(Of T))())
+- uid: ConfigurableWarning.API.Options.EnumOption`1.#ctor*
+  name: EnumOption
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1__ctor_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.EnumOption
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).New
+  nameWithType: EnumOption<T>.EnumOption
+  nameWithType.vb: EnumOption(Of T).New
+- uid: ConfigurableWarning.API.Options.EnumOption`1.ApplyValue
+  name: ApplyValue()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_ApplyValue
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.ApplyValue
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.ApplyValue()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).ApplyValue()
+  nameWithType: EnumOption<T>.ApplyValue()
+  nameWithType.vb: EnumOption(Of T).ApplyValue()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.ApplyValue*
+  name: ApplyValue
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_ApplyValue_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.ApplyValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.ApplyValue
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).ApplyValue
+  nameWithType: EnumOption<T>.ApplyValue
+  nameWithType.vb: EnumOption(Of T).ApplyValue
+- uid: ConfigurableWarning.API.Options.EnumOption`1.AsOption
+  name: AsOption()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_AsOption
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.AsOption
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.AsOption()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).AsOption()
+  nameWithType: EnumOption<T>.AsOption()
+  nameWithType.vb: EnumOption(Of T).AsOption()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.AsOption*
+  name: AsOption
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_AsOption_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.AsOption
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.AsOption
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).AsOption
+  nameWithType: EnumOption<T>.AsOption
+  nameWithType.vb: EnumOption(Of T).AsOption
+- uid: ConfigurableWarning.API.Options.EnumOption`1.AsUntyped
+  name: AsUntyped()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_AsUntyped
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.AsUntyped
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.AsUntyped()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).AsUntyped()
+  nameWithType: EnumOption<T>.AsUntyped()
+  nameWithType.vb: EnumOption(Of T).AsUntyped()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.AsUntyped*
+  name: AsUntyped
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_AsUntyped_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.AsUntyped
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.AsUntyped
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).AsUntyped
+  nameWithType: EnumOption<T>.AsUntyped
+  nameWithType.vb: EnumOption(Of T).AsUntyped
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetChoices
+  name: GetChoices()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetChoices
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.GetChoices
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetChoices()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetChoices()
+  nameWithType: EnumOption<T>.GetChoices()
+  nameWithType.vb: EnumOption(Of T).GetChoices()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetChoices*
+  name: GetChoices
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetChoices_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.GetChoices
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetChoices
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetChoices
+  nameWithType: EnumOption<T>.GetChoices
+  nameWithType.vb: EnumOption(Of T).GetChoices
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetDefaultValue
+  name: GetDefaultValue()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetDefaultValue
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.GetDefaultValue
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetDefaultValue()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetDefaultValue()
+  nameWithType: EnumOption<T>.GetDefaultValue()
+  nameWithType.vb: EnumOption(Of T).GetDefaultValue()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetDefaultValue*
+  name: GetDefaultValue
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetDefaultValue_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.GetDefaultValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetDefaultValue
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetDefaultValue
+  nameWithType: EnumOption<T>.GetDefaultValue
+  nameWithType.vb: EnumOption(Of T).GetDefaultValue
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetDisplayName
+  name: GetDisplayName()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetDisplayName
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.GetDisplayName
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetDisplayName()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetDisplayName()
+  nameWithType: EnumOption<T>.GetDisplayName()
+  nameWithType.vb: EnumOption(Of T).GetDisplayName()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetDisplayName*
+  name: GetDisplayName
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetDisplayName_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.GetDisplayName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetDisplayName
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetDisplayName
+  nameWithType: EnumOption<T>.GetDisplayName
+  nameWithType.vb: EnumOption(Of T).GetDisplayName
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetName
+  name: GetName()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetName
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.GetName
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetName()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetName()
+  nameWithType: EnumOption<T>.GetName()
+  nameWithType.vb: EnumOption(Of T).GetName()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetName*
+  name: GetName
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetName_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.GetName
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetName
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetName
+  nameWithType: EnumOption<T>.GetName
+  nameWithType.vb: EnumOption(Of T).GetName
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetValue
+  name: GetValue()
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetValue
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.GetValue
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetValue()
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetValue()
+  nameWithType: EnumOption<T>.GetValue()
+  nameWithType.vb: EnumOption(Of T).GetValue()
+- uid: ConfigurableWarning.API.Options.EnumOption`1.GetValue*
+  name: GetValue
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_GetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.GetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.GetValue
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).GetValue
+  nameWithType: EnumOption<T>.GetValue
+  nameWithType.vb: EnumOption(Of T).GetValue
+- uid: ConfigurableWarning.API.Options.EnumOption`1.Instance(System.String)
+  name: Instance(string)
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_Instance_System_String_
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.Instance(System.String)
+  name.vb: Instance(String)
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.Instance(string)
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).Instance(String)
+  nameWithType: EnumOption<T>.Instance(string)
+  nameWithType.vb: EnumOption(Of T).Instance(String)
+- uid: ConfigurableWarning.API.Options.EnumOption`1.Instance*
+  name: Instance
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_Instance_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.Instance
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.Instance
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).Instance
+  nameWithType: EnumOption<T>.Instance
+  nameWithType.vb: EnumOption(Of T).Instance
+- uid: ConfigurableWarning.API.Options.EnumOption`1.RegisterSetting(System.String,System.String)
+  name: RegisterSetting(string, string)
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_RegisterSetting_System_String_System_String_
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.RegisterSetting(System.String,System.String)
+  name.vb: RegisterSetting(String, String)
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.RegisterSetting(string, string)
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).RegisterSetting(String, String)
+  nameWithType: EnumOption<T>.RegisterSetting(string, string)
+  nameWithType.vb: EnumOption(Of T).RegisterSetting(String, String)
+- uid: ConfigurableWarning.API.Options.EnumOption`1.RegisterSetting*
+  name: RegisterSetting
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_RegisterSetting_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.RegisterSetting
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.RegisterSetting
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).RegisterSetting
+  nameWithType: EnumOption<T>.RegisterSetting
+  nameWithType.vb: EnumOption(Of T).RegisterSetting
+- uid: ConfigurableWarning.API.Options.EnumOption`1.SetValue(System.Object)
+  name: SetValue(object)
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_SetValue_System_Object_
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.SetValue(System.Object)
+  name.vb: SetValue(Object)
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.SetValue(object)
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).SetValue(Object)
+  nameWithType: EnumOption<T>.SetValue(object)
+  nameWithType.vb: EnumOption(Of T).SetValue(Object)
+- uid: ConfigurableWarning.API.Options.EnumOption`1.SetValue(`0)
+  name: SetValue(T)
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_SetValue__0_
+  commentId: M:ConfigurableWarning.API.Options.EnumOption`1.SetValue(`0)
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.SetValue(T)
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).SetValue(T)
+  nameWithType: EnumOption<T>.SetValue(T)
+  nameWithType.vb: EnumOption(Of T).SetValue(T)
+- uid: ConfigurableWarning.API.Options.EnumOption`1.SetValue*
+  name: SetValue
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_SetValue_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.SetValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.SetValue
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).SetValue
+  nameWithType: EnumOption<T>.SetValue
+  nameWithType.vb: EnumOption(Of T).SetValue
+- uid: ConfigurableWarning.API.Options.EnumOption`1.State
+  name: State
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_State
+  commentId: P:ConfigurableWarning.API.Options.EnumOption`1.State
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.State
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).State
+  nameWithType: EnumOption<T>.State
+  nameWithType.vb: EnumOption(Of T).State
+- uid: ConfigurableWarning.API.Options.EnumOption`1.State*
+  name: State
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_State_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.State
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.State
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).State
+  nameWithType: EnumOption<T>.State
+  nameWithType.vb: EnumOption(Of T).State
+- uid: ConfigurableWarning.API.Options.EnumOption`1.WrappedValue
+  name: WrappedValue
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_WrappedValue
+  commentId: P:ConfigurableWarning.API.Options.EnumOption`1.WrappedValue
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.WrappedValue
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).WrappedValue
+  nameWithType: EnumOption<T>.WrappedValue
+  nameWithType.vb: EnumOption(Of T).WrappedValue
+- uid: ConfigurableWarning.API.Options.EnumOption`1.WrappedValue*
+  name: WrappedValue
+  href: api/ConfigurableWarning.API.Options.EnumOption-1.html#ConfigurableWarning_API_Options_EnumOption_1_WrappedValue_
+  commentId: Overload:ConfigurableWarning.API.Options.EnumOption`1.WrappedValue
+  isSpec: "True"
+  fullName: ConfigurableWarning.API.Options.EnumOption<T>.WrappedValue
+  fullName.vb: ConfigurableWarning.API.Options.EnumOption(Of T).WrappedValue
+  nameWithType: EnumOption<T>.WrappedValue
+  nameWithType.vb: EnumOption(Of T).WrappedValue
 - uid: ConfigurableWarning.API.Options.FloatOption
   name: FloatOption
   href: api/ConfigurableWarning.API.Options.FloatOption.html
@@ -1693,6 +2167,12 @@ references:
   commentId: F:ConfigurableWarning.API.States.Bools
   fullName: ConfigurableWarning.API.States.Bools
   nameWithType: States.Bools
+- uid: ConfigurableWarning.API.States.Enums
+  name: Enums
+  href: api/ConfigurableWarning.API.States.html#ConfigurableWarning_API_States_Enums
+  commentId: F:ConfigurableWarning.API.States.Enums
+  fullName: ConfigurableWarning.API.States.Enums
+  nameWithType: States.Enums
 - uid: ConfigurableWarning.API.States.Floats
   name: Floats
   href: api/ConfigurableWarning.API.States.html#ConfigurableWarning_API_States_Floats
@@ -2152,6 +2632,195 @@ references:
   commentId: T:ConfigurableWarning.Settings.BuiltInSettings
   fullName: ConfigurableWarning.Settings.BuiltInSettings
   nameWithType: BuiltInSettings
+- uid: ConfigurableWarning.Settings.Compat
+  name: ConfigurableWarning.Settings.Compat
+  href: api/ConfigurableWarning.Settings.Compat.html
+  commentId: N:ConfigurableWarning.Settings.Compat
+  fullName: ConfigurableWarning.Settings.Compat
+  nameWithType: ConfigurableWarning.Settings.Compat
+- uid: ConfigurableWarning.Settings.Compat.FlashcardCompat
+  name: FlashcardCompat
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardCompat.html
+  commentId: T:ConfigurableWarning.Settings.Compat.FlashcardCompat
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardCompat
+  nameWithType: FlashcardCompat
+- uid: ConfigurableWarning.Settings.Compat.FlashcardCompat.Init
+  name: Init()
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardCompat.html#ConfigurableWarning_Settings_Compat_FlashcardCompat_Init
+  commentId: M:ConfigurableWarning.Settings.Compat.FlashcardCompat.Init
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardCompat.Init()
+  nameWithType: FlashcardCompat.Init()
+- uid: ConfigurableWarning.Settings.Compat.FlashcardCompat.Init*
+  name: Init
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardCompat.html#ConfigurableWarning_Settings_Compat_FlashcardCompat_Init_
+  commentId: Overload:ConfigurableWarning.Settings.Compat.FlashcardCompat.Init
+  isSpec: "True"
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardCompat.Init
+  nameWithType: FlashcardCompat.Init
+- uid: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys
+  name: FlashcardSettingKeys
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html
+  commentId: T:ConfigurableWarning.Settings.Compat.FlashcardSettingKeys
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys
+  nameWithType: FlashcardSettingKeys
+- uid: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipFramerate
+  name: ClipFramerate
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html#ConfigurableWarning_Settings_Compat_FlashcardSettingKeys_ClipFramerate
+  commentId: F:ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipFramerate
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipFramerate
+  nameWithType: FlashcardSettingKeys.ClipFramerate
+- uid: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipLength
+  name: ClipLength
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html#ConfigurableWarning_Settings_Compat_FlashcardSettingKeys_ClipLength
+  commentId: F:ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipLength
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipLength
+  nameWithType: FlashcardSettingKeys.ClipLength
+- uid: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipQuality
+  name: ClipQuality
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html#ConfigurableWarning_Settings_Compat_FlashcardSettingKeys_ClipQuality
+  commentId: F:ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipQuality
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.ClipQuality
+  nameWithType: FlashcardSettingKeys.ClipQuality
+- uid: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.EnableExtraCamera
+  name: EnableExtraCamera
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html#ConfigurableWarning_Settings_Compat_FlashcardSettingKeys_EnableExtraCamera
+  commentId: F:ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.EnableExtraCamera
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.EnableExtraCamera
+  nameWithType: FlashcardSettingKeys.EnableExtraCamera
+- uid: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.PacketDelay
+  name: PacketDelay
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html#ConfigurableWarning_Settings_Compat_FlashcardSettingKeys_PacketDelay
+  commentId: F:ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.PacketDelay
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.PacketDelay
+  nameWithType: FlashcardSettingKeys.PacketDelay
+- uid: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.VerboseLogging
+  name: VerboseLogging
+  href: api/ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.html#ConfigurableWarning_Settings_Compat_FlashcardSettingKeys_VerboseLogging
+  commentId: F:ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.VerboseLogging
+  fullName: ConfigurableWarning.Settings.Compat.FlashcardSettingKeys.VerboseLogging
+  nameWithType: FlashcardSettingKeys.VerboseLogging
+- uid: ConfigurableWarning.Settings.Compat.SceneType
+  name: SceneType
+  href: api/ConfigurableWarning.Settings.Compat.SceneType.html
+  commentId: T:ConfigurableWarning.Settings.Compat.SceneType
+  fullName: ConfigurableWarning.Settings.Compat.SceneType
+  nameWithType: SceneType
+- uid: ConfigurableWarning.Settings.Compat.SceneType.FactoryScene
+  name: FactoryScene
+  href: api/ConfigurableWarning.Settings.Compat.SceneType.html#ConfigurableWarning_Settings_Compat_SceneType_FactoryScene
+  commentId: F:ConfigurableWarning.Settings.Compat.SceneType.FactoryScene
+  fullName: ConfigurableWarning.Settings.Compat.SceneType.FactoryScene
+  nameWithType: SceneType.FactoryScene
+- uid: ConfigurableWarning.Settings.Compat.SceneType.HarbourScene
+  name: HarbourScene
+  href: api/ConfigurableWarning.Settings.Compat.SceneType.html#ConfigurableWarning_Settings_Compat_SceneType_HarbourScene
+  commentId: F:ConfigurableWarning.Settings.Compat.SceneType.HarbourScene
+  fullName: ConfigurableWarning.Settings.Compat.SceneType.HarbourScene
+  nameWithType: SceneType.HarbourScene
+- uid: ConfigurableWarning.Settings.Compat.SceneType.MinesScene
+  name: MinesScene
+  href: api/ConfigurableWarning.Settings.Compat.SceneType.html#ConfigurableWarning_Settings_Compat_SceneType_MinesScene
+  commentId: F:ConfigurableWarning.Settings.Compat.SceneType.MinesScene
+  fullName: ConfigurableWarning.Settings.Compat.SceneType.MinesScene
+  nameWithType: SceneType.MinesScene
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversCompat
+  name: SpookdiversCompat
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversCompat.html
+  commentId: T:ConfigurableWarning.Settings.Compat.SpookdiversCompat
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversCompat
+  nameWithType: SpookdiversCompat
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init
+  name: Init()
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversCompat.html#ConfigurableWarning_Settings_Compat_SpookdiversCompat_Init
+  commentId: M:ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init()
+  nameWithType: SpookdiversCompat.Init()
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init*
+  name: Init
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversCompat.html#ConfigurableWarning_Settings_Compat_SpookdiversCompat_Init_
+  commentId: Overload:ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init
+  isSpec: "True"
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init
+  nameWithType: SpookdiversCompat.Init
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys
+  name: SpookdiversSettingKeys
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.html
+  commentId: T:ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys
+  nameWithType: SpookdiversSettingKeys
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.FakeBells
+  name: FakeBells
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.html#ConfigurableWarning_Settings_Compat_SpookdiversSettingKeys_FakeBells
+  commentId: F:ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.FakeBells
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.FakeBells
+  nameWithType: SpookdiversSettingKeys.FakeBells
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.ForceScene
+  name: ForceScene
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.html#ConfigurableWarning_Settings_Compat_SpookdiversSettingKeys_ForceScene
+  commentId: F:ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.ForceScene
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.ForceScene
+  nameWithType: SpookdiversSettingKeys.ForceScene
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.LoweringSpeed
+  name: LoweringSpeed
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.html#ConfigurableWarning_Settings_Compat_SpookdiversSettingKeys_LoweringSpeed
+  commentId: F:ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.LoweringSpeed
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.LoweringSpeed
+  nameWithType: SpookdiversSettingKeys.LoweringSpeed
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.ReadyTime
+  name: ReadyTime
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.html#ConfigurableWarning_Settings_Compat_SpookdiversSettingKeys_ReadyTime
+  commentId: F:ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.ReadyTime
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.ReadyTime
+  nameWithType: SpookdiversSettingKeys.ReadyTime
+- uid: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.SceneName
+  name: SceneName
+  href: api/ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.html#ConfigurableWarning_Settings_Compat_SpookdiversSettingKeys_SceneName
+  commentId: F:ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.SceneName
+  fullName: ConfigurableWarning.Settings.Compat.SpookdiversSettingKeys.SceneName
+  nameWithType: SpookdiversSettingKeys.SceneName
+- uid: ConfigurableWarning.Settings.Compat.ViralityCompat
+  name: ViralityCompat
+  href: api/ConfigurableWarning.Settings.Compat.ViralityCompat.html
+  commentId: T:ConfigurableWarning.Settings.Compat.ViralityCompat
+  fullName: ConfigurableWarning.Settings.Compat.ViralityCompat
+  nameWithType: ViralityCompat
+- uid: ConfigurableWarning.Settings.Compat.ViralityCompat.Init
+  name: Init()
+  href: api/ConfigurableWarning.Settings.Compat.ViralityCompat.html#ConfigurableWarning_Settings_Compat_ViralityCompat_Init
+  commentId: M:ConfigurableWarning.Settings.Compat.ViralityCompat.Init
+  fullName: ConfigurableWarning.Settings.Compat.ViralityCompat.Init()
+  nameWithType: ViralityCompat.Init()
+- uid: ConfigurableWarning.Settings.Compat.ViralityCompat.Init*
+  name: Init
+  href: api/ConfigurableWarning.Settings.Compat.ViralityCompat.html#ConfigurableWarning_Settings_Compat_ViralityCompat_Init_
+  commentId: Overload:ConfigurableWarning.Settings.Compat.ViralityCompat.Init
+  isSpec: "True"
+  fullName: ConfigurableWarning.Settings.Compat.ViralityCompat.Init
+  nameWithType: ViralityCompat.Init
+- uid: ConfigurableWarning.Settings.Compat.ViralitySettingKeys
+  name: ViralitySettingKeys
+  href: api/ConfigurableWarning.Settings.Compat.ViralitySettingKeys.html
+  commentId: T:ConfigurableWarning.Settings.Compat.ViralitySettingKeys
+  fullName: ConfigurableWarning.Settings.Compat.ViralitySettingKeys
+  nameWithType: ViralitySettingKeys
+- uid: ConfigurableWarning.Settings.Compat.ViralitySettingKeys.AllowLateJoin
+  name: AllowLateJoin
+  href: api/ConfigurableWarning.Settings.Compat.ViralitySettingKeys.html#ConfigurableWarning_Settings_Compat_ViralitySettingKeys_AllowLateJoin
+  commentId: F:ConfigurableWarning.Settings.Compat.ViralitySettingKeys.AllowLateJoin
+  fullName: ConfigurableWarning.Settings.Compat.ViralitySettingKeys.AllowLateJoin
+  nameWithType: ViralitySettingKeys.AllowLateJoin
+- uid: ConfigurableWarning.Settings.Compat.ViralitySettingKeys.EnableVoiceFix
+  name: EnableVoiceFix
+  href: api/ConfigurableWarning.Settings.Compat.ViralitySettingKeys.html#ConfigurableWarning_Settings_Compat_ViralitySettingKeys_EnableVoiceFix
+  commentId: F:ConfigurableWarning.Settings.Compat.ViralitySettingKeys.EnableVoiceFix
+  fullName: ConfigurableWarning.Settings.Compat.ViralitySettingKeys.EnableVoiceFix
+  nameWithType: ViralitySettingKeys.EnableVoiceFix
+- uid: ConfigurableWarning.Settings.Compat.ViralitySettingKeys.MaxPlayers
+  name: MaxPlayers
+  href: api/ConfigurableWarning.Settings.Compat.ViralitySettingKeys.html#ConfigurableWarning_Settings_Compat_ViralitySettingKeys_MaxPlayers
+  commentId: F:ConfigurableWarning.Settings.Compat.ViralitySettingKeys.MaxPlayers
+  fullName: ConfigurableWarning.Settings.Compat.ViralitySettingKeys.MaxPlayers
+  nameWithType: ViralitySettingKeys.MaxPlayers
 - uid: ConfigurableWarning.Settings.SettingKeys
   name: SettingKeys
   href: api/ConfigurableWarning.Settings.SettingKeys.html

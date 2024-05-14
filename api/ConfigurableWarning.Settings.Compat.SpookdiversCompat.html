@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class OptionLoader | ConfigurableWarning Docs </title>
+      <title>Class SpookdiversCompat | ConfigurableWarning Docs </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class OptionLoader | ConfigurableWarning Docs ">
+      <meta name="title" content="Class SpookdiversCompat | ConfigurableWarning Docs ">
       
-      <meta name="description" content="Responsible for loading, holding, and registering options.">
+      <meta name="description" content="Spookdivers compat settings">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/new/main/apiSpec/new?filename=ConfigurableWarning_API_OptionLoader.md&amp;value=---%0Auid%3A%20ConfigurableWarning.API.OptionLoader%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/new/main/apiSpec/new?filename=ConfigurableWarning_Settings_Compat_SpookdiversCompat.md&amp;value=---%0Auid%3A%20ConfigurableWarning.Settings.Compat.SpookdiversCompat%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,26 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ConfigurableWarning.API.OptionLoader">
+        <article data-uid="ConfigurableWarning.Settings.Compat.SpookdiversCompat">
 
 
 
-  <h1 id="ConfigurableWarning_API_OptionLoader" data-uid="ConfigurableWarning.API.OptionLoader" class="text-break">
-Class OptionLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ConfigurableWarning_Settings_Compat_SpookdiversCompat" data-uid="ConfigurableWarning.Settings.Compat.SpookdiversCompat" class="text-break">
+Class SpookdiversCompat  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Settings/Compat/Spookdivers.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ConfigurableWarning.html">ConfigurableWarning</a>.<a class="xref" href="ConfigurableWarning.API.html">API</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ConfigurableWarning.html">ConfigurableWarning</a>.<a class="xref" href="ConfigurableWarning.Settings.html">Settings</a>.<a class="xref" href="ConfigurableWarning.Settings.Compat.html">Compat</a></dd></dl>
   <dl><dt>Assembly</dt><dd>RedstoneWizard08.ConfigurableWarning.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Responsible for loading, holding, and registering options.</p>
+  <div class="markdown summary"><p>Spookdivers compat settings</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class OptionLoader</code></pre>
+    <pre><code class="lang-csharp hljs">[CompatModule(new string[] { &quot;Spookdivers&quot; })]
+public class SpookdiversCompat : ICompatModule</code></pre>
   </div>
 
 
@@ -112,10 +113,16 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">OptionLoader</span></div>
+      <div><span class="xref">SpookdiversCompat</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ConfigurableWarning.API.Compat.ICompatModule.html">ICompatModule</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -153,20 +160,19 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
 </h2>
 
 
-  <a id="ConfigurableWarning_API_OptionLoader_RegisterOptions_" data-uid="ConfigurableWarning.API.OptionLoader.RegisterOptions*"></a>
+  <a id="ConfigurableWarning_Settings_Compat_SpookdiversCompat_Init_" data-uid="ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init*"></a>
 
-  <h3 id="ConfigurableWarning_API_OptionLoader_RegisterOptions" data-uid="ConfigurableWarning.API.OptionLoader.RegisterOptions">
-  RegisterOptions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ConfigurableWarning_Settings_Compat_SpookdiversCompat_Init" data-uid="ConfigurableWarning.Settings.Compat.SpookdiversCompat.Init">
+  Init()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Settings/Compat/Spookdivers.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Automatically collect and register all options annotated with
-<a class="xref" href="ConfigurableWarning.API.RegisterOption.html">RegisterOption</a>.</p>
+  <div class="markdown level1 summary"><p>Initialize the compat module</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterOptions()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Init()</code></pre>
   </div>
 
 
@@ -185,7 +191,7 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/Settings/Compat/Spookdivers.cs/#L37" class="edit-link">Edit this page</a>
         </div>
 
 

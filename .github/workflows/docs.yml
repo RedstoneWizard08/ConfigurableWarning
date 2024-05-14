@@ -21,6 +21,7 @@ jobs:
         run: |
           dotnet tool update -g docfx
           dotnet tool restore
+          python3 deps.py
           chmod +x build.sh
           ./build.sh -t Docs
 

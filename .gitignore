@@ -6,7 +6,7 @@ obj
 TODO.md
 _site
 .mono
-api
+/api
 _doc
 /deps/*.dll
 venv

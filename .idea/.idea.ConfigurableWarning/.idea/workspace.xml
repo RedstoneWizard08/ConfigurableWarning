@@ -9,6 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Source/Tasks/BuildTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Source/Tasks/BuildTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Source/Tasks/DocsTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Source/Tasks/DocsTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Source/Tasks/LaunchTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Source/Tasks/LaunchTask.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatModule.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" afterDir="false" />
@@ -40,6 +43,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.nuget/packages/bepinex.assemblypublicizer.msbuild/0.4.1/contentFiles/cs/any/IgnoresAccessChecksToAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Activator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Enum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Type.cs" root0="SKIP_HIGHLIGHTING" />
@@ -205,6 +209,7 @@
       <workItem from="1715380360917" duration="2375000" />
       <workItem from="1715390964155" duration="5646000" />
       <workItem from="1715456856512" duration="5248000" />
+      <workItem from="1715543626275" duration="548000" />
     </task>
     <task id="LOCAL-00001" summary="WIP v1.13.0">
       <option name="closed" value="true" />

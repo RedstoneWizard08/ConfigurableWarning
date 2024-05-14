@@ -48,6 +48,9 @@
             "_enableSearch": true,
             "_gitUrlPattern": "github"
         },
-        "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"]
+        "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"],
+        "xref": [
+            "https://redstonewizard08.github.io/DocumentationWarning/docs/ContentWarning/xrefmap.yml"
+        ]
     }
 }

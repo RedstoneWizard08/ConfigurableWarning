@@ -1,5 +1,4 @@
 using ConfigurableWarning.API.Options;
-using ContentSettings.API;
 using HarmonyLib;
 using Zorro.Settings;
 using IntSetting = ContentSettings.API.Settings.IntSetting;
@@ -79,15 +78,5 @@ public class SettingPatches {
         __instance.Value = opt._shouldClamp ? __instance.Clamp(_originalIntValue) : _originalIntValue;
         __instance.ApplyValue();
         settingHandler.SaveSetting(__instance);
-    }
-
-    /// <summary>
-    ///     Patches <see cref="SettingsLoader.RegisterSettings" /> to register our settings
-    ///     too.
-    /// </summary>
-    [HarmonyPostfix]
-    [HarmonyPatch(typeof(SettingsLoader), nameof(SettingsLoader.RegisterSettings))]
-    public static void RegisterOptions() {
-        OptionLoader.RegisterOptions();
     }
 }

@@ -24,4 +24,12 @@ public interface IUntypedOption {
     /// </summary>
     /// <param name="value">The new value.</param>
     void SetValue(object value);
+
+    /// <summary>
+    ///     Registers this option to Content Settings, sets up its state,
+    ///     and registers it to the <see cref="OptionManager" />.
+    /// </summary>
+    /// <param name="tab">The tab to register to.</param>
+    /// <param name="category">The category this option belongs to.</param>
+    public void Register(string tab, string category);
 }

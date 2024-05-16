@@ -1,4 +1,4 @@
-﻿using ConfigurableWarning.API;
+﻿using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Options;
 
 namespace ConfigurableWarning.Settings;
@@ -6,6 +6,7 @@ namespace ConfigurableWarning.Settings;
 /// <summary>
 ///     ConfigurableWarning's built-in settings.
 /// </summary>
+[Tab("GAMEPLAY")]
 public static class BuiltInSettings {
     // TODO: Implement more settings:
     // - Spawning Mechanics
@@ -20,81 +21,88 @@ public static class BuiltInSettings {
     // - Video Save Location (based on https://thunderstore.io/c/content-warning/p/RamuneNeptune/CustomVideoSaveLocation/)
     // - Inventory Slots (based on https://thunderstore.io/c/content-warning/p/nickklmao/ExtraInventorySlot/)
     // - More Graphics Settings (basically revive https://thunderstore.io/c/content-warning/p/Jasson9/MoreSettings/)
-    // - Revive https://thunderstore.io/c/content-warning/p/nickklmao/BetterThrowing/
-    // - Revive https://thunderstore.io/c/content-warning/p/Fleig/CustomFov/
     // - Revive https://thunderstore.io/c/content-warning/p/Computery/Toggle_Mute/
 
-    [RegisterOption]
-    private class PrivateHost()
-        : BoolOption(SettingKeys.PrivateHost, true, "Host Privately (friends-only)", "GAMEPLAY", "GENERAL");
+    [Group("GENERAL")]
+    private static class General {
+        [Register]
+        private class PrivateHost()
+            : BoolOption(SettingKeys.PrivateHost, true, "Host Privately (friends-only)");
 
-    [RegisterOption]
-    private class DaysPerQuota() : IntOption(SettingKeys.DaysPerQuota, 3, "Days Per Quota", 0, 30, "GAMEPLAY",
-        "GENERAL",
-        [SettingsUtil.UpdateQuotaDays], false);
+        [Register]
+        private class DaysPerQuota() : IntOption(SettingKeys.DaysPerQuota, 3, "Days Per Quota", 0, 30,
+            [SettingsUtil.UpdateQuotaDays], false);
 
-    [RegisterOption]
-    private class RequireAllPlayersInDiveBell() : BoolOption(SettingKeys.RequireAllPlayersInDiveBell, true,
-        "Require All Players in Dive Bell", "GAMEPLAY", "GENERAL");
+        [Register]
+        private class RequireAllPlayersInDiveBell() : BoolOption(SettingKeys.RequireAllPlayersInDiveBell, true,
+            "Require All Players in Dive Bell");
 
-    [RegisterOption]
-    private class RequireDiveBellDoorClosed() : BoolOption(SettingKeys.RequireDiveBellDoorClosed, true,
-        "Require Dive Bell Door Closed", "GAMEPLAY", "GENERAL");
+        [Register]
+        private class RequireDiveBellDoorClosed() : BoolOption(SettingKeys.RequireDiveBellDoorClosed, true,
+            "Require Dive Bell Door Closed");
+        
+        [Register]
+        private class Fov() : FloatOption(SettingKeys.Fov, 70.0f, "Field of View", 20f, 120f, false);
+    }
 
-    [RegisterOption]
-    private class Health() : FloatOption(SettingKeys.Health, 100.0f, "Maximum Health", 0f, 1000f, "GAMEPLAY", "PLAYER",
-        false);
+    [Group("PLAYER")]
+    private static class Player {
+        [Register]
+        private class MaxHealth() : FloatOption(SettingKeys.Health, 100.0f, "Maximum Health", 0f, 1000f,
+            false);
 
-    [RegisterOption]
-    private class MaxStamina() : FloatOption(SettingKeys.MaxStamina, 10.0f, "Maximum Stamina", 0f, 100f, "GAMEPLAY",
-        "PLAYER",
-        false);
+        [Register]
+        private class MaxStamina() : FloatOption(SettingKeys.MaxStamina, 10.0f, "Maximum Stamina", 0f, 100f,
+            false);
 
-    [RegisterOption]
-    private class StaminaRegenRate() : FloatOption(SettingKeys.StaminaRegenRate, 1.0f, "Stamina Regen Rate", 0f, 100f,
-        "GAMEPLAY", "PLAYER", false);
+        [Register]
+        private class StaminaRegenRate() : FloatOption(SettingKeys.StaminaRegenRate, 1.0f, "Stamina Regen Rate", 0f,
+            100f,
+            false);
 
-    [RegisterOption]
-    private class SprintSpeed() : FloatOption(SettingKeys.SprintSpeed, 2.0f, "Sprint Speed", 0f, 100f, "GAMEPLAY",
-        "PLAYER",
-        false);
+        [Register]
+        private class SprintSpeed() : FloatOption(SettingKeys.SprintSpeed, 2.0f, "Sprint Speed", 0f, 100f,
+            false);
+    }
 
-    [RegisterOption]
-    private class Oxygen() : FloatOption(SettingKeys.Oxygen, 500.0f, "Maximum Oxygen (in seconds)", 0f, 2000f,
-        "GAMEPLAY",
-        "OXYGEN", false);
+    [Group("OXYGEN")]
+    private static class Oxygen {
+        [Register]
+        private class MaxOxygen()
+            : FloatOption(SettingKeys.Oxygen, 500.0f, "Maximum Oxygen (in seconds)", 0f, 2000f, false);
 
-    [RegisterOption]
-    private class InfiniteOxygen()
-        : BoolOption(SettingKeys.InfiniteOxygen, false, "Enable Infinite Oxygen", "GAMEPLAY", "OXYGEN");
+        [Register]
+        private class InfiniteOxygen()
+            : BoolOption(SettingKeys.InfiniteOxygen, false, "Enable Infinite Oxygen");
 
-    [RegisterOption]
-    private class OxygenUsageMultiplier() : FloatOption(SettingKeys.OxygenUsageMultiplier, 1.0f,
-        "Oxygen Usage Multiplier", 0f,
-        20f, "GAMEPLAY", "OXYGEN", false);
+        [Register]
+        private class OxygenUsageMultiplier() : FloatOption(SettingKeys.OxygenUsageMultiplier, 1.0f,
+            "Oxygen Usage Multiplier", 0f,
+            20f, false);
 
-    [RegisterOption]
-    private class SprintMultiplier() : FloatOption(SettingKeys.SprintMultiplier, 1.0f,
-        "Sprinting Oxygen Usage Multiplier", 1f,
-        10f, "GAMEPLAY", "OXYGEN", false);
+        [Register]
+        private class SprintMultiplier() : FloatOption(SettingKeys.SprintMultiplier, 1.0f,
+            "Sprinting Oxygen Usage Multiplier", 1f,
+            10f, false);
 
-    [RegisterOption]
-    private class UseOxygenInDiveBell() : BoolOption(SettingKeys.UseOxygenInDiveBell, false, "Use Oxygen in Dive Bell",
-        "GAMEPLAY", "OXYGEN");
+        [Register]
+        private class UseOxygenInDiveBell()
+            : BoolOption(SettingKeys.UseOxygenInDiveBell, false, "Use Oxygen in Dive Bell");
 
-    [RegisterOption]
-    private class RefillOxygenInDiveBell() : BoolOption(SettingKeys.RefillOxygenInDiveBell, false,
-        "Refill Oxygen in Dive Bell", "GAMEPLAY", "OXYGEN");
+        [Register]
+        private class RefillOxygenInDiveBell() : BoolOption(SettingKeys.RefillOxygenInDiveBell, false,
+            "Refill Oxygen in Dive Bell");
 
-    [RegisterOption]
-    private class UseOxygenOnSurface() : BoolOption(SettingKeys.UseOxygenOnSurface, false,
-        "Use Oxygen on Surface (useful for debugging)", "GAMEPLAY", "OXYGEN");
+        [Register]
+        private class UseOxygenOnSurface() : BoolOption(SettingKeys.UseOxygenOnSurface, false,
+            "Use Oxygen on Surface (useful for debugging)");
 
-    [RegisterOption]
-    private class RefillOxygenOnSurface() : BoolOption(SettingKeys.RefillOxygenOnSurface, true,
-        "Refill Oxygen on Surface (useful for debugging)", "GAMEPLAY", "OXYGEN");
+        [Register]
+        private class RefillOxygenOnSurface() : BoolOption(SettingKeys.RefillOxygenOnSurface, true,
+            "Refill Oxygen on Surface (useful for debugging)");
 
-    [RegisterOption]
-    private class OxygenRefillRate() : FloatOption(SettingKeys.OxygenRefillRate, 20.0f, "Oxygen Refill Rate", 0f, 500f,
-        "GAMEPLAY", "OXYGEN", false);
+        [Register]
+        private class OxygenRefillRate()
+            : FloatOption(SettingKeys.OxygenRefillRate, 20.0f, "Oxygen Refill Rate", 0f, 500f, false);
+    }
 }

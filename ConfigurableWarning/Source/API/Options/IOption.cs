@@ -20,6 +20,10 @@ public interface IOption<T> : ICustomSetting, IUntypedOption {
         return GetDisplayName();
     }
 
+    void IUntypedOption.Register(string tab, string category) {
+        Register(tab, category);
+    }
+
     /// <summary>
     ///     Gets this option's name. This is its name in the registry
     ///     and in the state holder.
@@ -79,7 +83,7 @@ public interface IOption<T> : ICustomSetting, IUntypedOption {
     /// </summary>
     /// <param name="tab">The tab to register to.</param>
     /// <param name="category">The category this option belongs to.</param>
-    public void Register(string tab, string category) {
+    public new void Register(string tab, string category) {
         RegisterSetting(tab, category);
         OptionManager.Instance.Register(this);
         OptionsState.Instance.Register(this);

@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ConfigurableWarning.API.Options;
-using Zorro.Settings;
+using ConfigurableWarning.API.Attributes;
 
 namespace ConfigurableWarning.API.Compat;
 
@@ -11,9 +10,27 @@ namespace ConfigurableWarning.API.Compat;
 ///     A loader for compat modules.
 /// </summary>
 public static class CompatLoader {
-    internal static Dictionary<Type, ICompatModule> RegisteredModules { get; } = new();
+    /// <summary>
+    ///     A list of all registered compat modules.
+    /// </summary>
+    public static readonly Dictionary<Type, ICompatModule> RegisteredModules = new();
+    
+    /// <summary>
+    ///     A list of all registered compat tabs.
+    /// </summary>
+    public static readonly Dictionary<Type, CompatTab> RegisteredTabs = new();
 
-    internal static bool NamespaceExists(string ns) {
+    /// <summary>
+    ///     A list of all registered compat groups.
+    /// </summary>
+    public static readonly Dictionary<Type, CompatGroup> RegisteredGroups = new();
+
+    /// <summary>
+    ///     Checks if a namespace exists.
+    /// </summary>
+    /// <param name="ns">The namespace.</param>
+    /// <returns>If it exists.</returns>
+    public static bool NamespaceExists(string ns) {
         return AppDomain.CurrentDomain.GetAssemblies()
             .SelectMany(a => a.GetTypes().Select(t => t.Namespace))
             .Where(v => v != null)
@@ -49,18 +66,8 @@ public static class CompatLoader {
             Plugin.Logger.LogInfo($"Initializing compat module: {type.Name}");
 
             foreach (var ty in type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public)) {
-                Plugin.Logger.LogInfo($"Checking compat setting: {ty.Name} (from {ty.Assembly.GetName().Name}.dll");
-
-                if (ty.IsInterface || ty.IsAbstract || !ty.IsSubclassOf(typeof(Setting))) continue;
-
-                var attr = ty.GetCustomAttribute<CompatSetting>(false);
-
-                if (attr == null) continue;
-
-                Plugin.Logger.LogInfo(
-                    $"[COMPAT] Initializing option: {ty.Name} (from {ty.Assembly.GetName().Name}.dll");
-
-                OptionLoader.RegisteredOptions[ty] = (IUntypedOption) Activator.CreateInstance(ty);
+                TryRegisterCompatTab(ty);
+                TryRegisterCompatGroup(null, ty);
             }
 
             var it = (ICompatModule) Activator.CreateInstance(type);
@@ -68,5 +75,59 @@ public static class CompatLoader {
             it.Init();
             RegisteredModules[type] = it;
         }
+    }
+
+    /// <summary>
+    ///     Try to register a compat group from a type.
+    /// </summary>
+    /// <param name="tab">The tab</param>
+    /// <param name="type">The type</param>
+    /// <returns>If it could be registered</returns>
+    public static bool TryRegisterCompatGroup(string? tab, Type type) {
+        if (RegisteredGroups.ContainsKey(type)) return false;
+
+        var group = type.GetCustomAttribute<CompatGroup>(false);
+        if (group == null) return false;
+
+        Plugin.Logger.LogInfo($"Found compat group {group.Category} in {type.FullName}");
+
+        if (tab == null && group.Tab == null) {
+            Plugin.Logger.LogError("Cannot register a CompatGroup with no tab!");
+            return false;
+        }
+
+        var settings = type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public);
+
+        foreach (var setting in settings) OptionLoader.TryRegisterSetting(tab ?? group.Tab!, group.Category, setting);
+
+        RegisteredGroups.Add(type, group);
+
+        return true;
+    }
+
+    /// <summary>
+    ///     Try to register a compat tab from a type.
+    /// </summary>
+    /// <param name="type">The type</param>
+    /// <returns>If it could be registered</returns>
+    public static bool TryRegisterCompatTab(Type type) {
+        if (RegisteredTabs.ContainsKey(type)) return false;
+
+        var tab = type.GetCustomAttribute<CompatTab>(false);
+        if (tab == null) return false;
+
+        Plugin.Logger.LogInfo(
+            $"Found compat tab {tab.Name} in {type.FullName} (from {type.Assembly.GetName().Name}.dll");
+
+        var subClasses = type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public);
+
+        foreach (var subClass in subClasses) {
+            OptionLoader.TryRegisterGroup(tab.Name, subClass);
+            TryRegisterCompatGroup(tab.Name, subClass);
+        }
+
+        RegisteredTabs.Add(type, tab);
+
+        return true;
     }
 }

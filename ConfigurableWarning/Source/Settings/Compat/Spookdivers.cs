@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using ConfigurableWarning.API;
+using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
 using SPlugin = Spookdivers.Plugin;
@@ -64,30 +65,32 @@ public class SpookdiversCompat : ICompatModule {
         SPlugin.Instance.LoweringSpeedConfig.Value = States.Floats[SpookdiversSettingKeys.LoweringSpeed];
     }
 
-    [CompatSetting]
-    private class ReadyTime()
-        : FloatOption(SpookdiversSettingKeys.ReadyTime, 30f, "Max Players", 0f, 100f, "SPOOKDIVERS", "GENERAL",
-            [ApplySettings],
-            false);
+    [CompatGroup("SPOOKDIVERS", "GENERAL")]
+    private static class Settings {
+        [Register]
+        private class ReadyTime()
+            : FloatOption(SpookdiversSettingKeys.ReadyTime, 30f, "Max Players", 0f, 100f,
+                [ApplySettings],
+                false);
 
-    [CompatSetting]
-    private class ForceScene()
-        : BoolOption(SpookdiversSettingKeys.ForceScene, false, "Force Scene Change", "SPOOKDIVERS", "GENERAL",
-            [ApplySettings]);
+        [Register]
+        private class ForceScene()
+            : BoolOption(SpookdiversSettingKeys.ForceScene, false, "Force Scene Change",
+                [ApplySettings]);
 
-    [CompatSetting]
-    private class SceneName()
-        : EnumOption<SceneType>(SpookdiversSettingKeys.SceneName, SceneType.FactoryScene, "Scene Name", "SPOOKDIVERS",
-            "GENERAL", [ApplySettings]);
+        [Register]
+        private class SceneName()
+            : EnumOption<SceneType>(SpookdiversSettingKeys.SceneName, SceneType.FactoryScene, "Scene Name",
+                [ApplySettings]);
 
-    [CompatSetting]
-    private class FakeBells()
-        : BoolOption(SpookdiversSettingKeys.FakeBells, false, "Enable Fake Bells", "SPOOKDIVERS", "GENERAL",
-            [ApplySettings]);
+        [Register]
+        private class FakeBells()
+            : BoolOption(SpookdiversSettingKeys.FakeBells, false, "Enable Fake Bells",
+                [ApplySettings]);
 
-    [CompatSetting]
-    private class LoweringSpeed()
-        : FloatOption(SpookdiversSettingKeys.LoweringSpeed, 2f, "Bell Lowering Speed", 0f, 30f, "SPOOKDIVERS",
-            "GENERAL", [ApplySettings],
-            false);
+        [Register]
+        private class LoweringSpeed()
+            : FloatOption(SpookdiversSettingKeys.LoweringSpeed, 2f, "Bell Lowering Speed", 0f, 30f, [ApplySettings],
+                false);
+    }
 }

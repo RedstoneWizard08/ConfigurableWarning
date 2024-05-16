@@ -1,5 +1,6 @@
 using System.Linq;
 using ConfigurableWarning.API;
+using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
 
@@ -42,18 +43,21 @@ public class ViralityCompat : ICompatModule {
         Virality.Virality.EnableVoiceFix!.Value = States.Bools[ViralitySettingKeys.EnableVoiceFix];
     }
 
-    [CompatSetting]
-    private class MaxPlayers()
-        : IntOption(ViralitySettingKeys.MaxPlayers, 12, "Max Players", 4, 100, "VIRALITY", "GENERAL", [ApplySettings],
-            false);
+    [CompatGroup("VIRALITY", "GENERAL")]
+    private static class Settings {
+        [Register]
+        private class MaxPlayers()
+            : IntOption(ViralitySettingKeys.MaxPlayers, 12, "Max Players", 4, 100, [ApplySettings],
+                false);
 
-    [CompatSetting]
-    private class AllowLateJoin()
-        : BoolOption(ViralitySettingKeys.AllowLateJoin, true, "Allow Late Joining", "VIRALITY", "GENERAL",
-            [ApplySettings]);
+        [Register]
+        private class AllowLateJoin()
+            : BoolOption(ViralitySettingKeys.AllowLateJoin, true, "Allow Late Joining",
+                [ApplySettings]);
 
-    [CompatSetting]
-    private class EnableVoiceFix()
-        : BoolOption(ViralitySettingKeys.EnableVoiceFix, true, "Enable Voice Fix", "VIRALITY", "GENERAL",
-            [ApplySettings]);
+        [Register]
+        private class EnableVoiceFix()
+            : BoolOption(ViralitySettingKeys.EnableVoiceFix, true, "Enable Voice Fix",
+                [ApplySettings]);
+    }
 }

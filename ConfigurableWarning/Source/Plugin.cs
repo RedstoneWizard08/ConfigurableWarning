@@ -37,6 +37,7 @@ public class Plugin : BaseUnityPlugin {
 
         ConfigurableWarningAPI.Init();
         Patch();
+        OptionLoader.RegisterOptions();
 
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} loaded!");
     }

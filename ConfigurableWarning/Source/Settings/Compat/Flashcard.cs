@@ -1,5 +1,6 @@
 using System.Linq;
 using ConfigurableWarning.API;
+using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
 using Flashcard;
@@ -57,33 +58,47 @@ public class FlashcardCompat : ICompatModule {
         FlashcardPlugin.config.DEBUGGING_VERBOSE_LOGGING.Value = States.Bools[FlashcardSettingKeys.VerboseLogging];
     }
 
-    [CompatSetting]
-    private class EnableExtraCamera()
-        : BoolOption(FlashcardSettingKeys.EnableExtraCamera, true, "Enable Extra Camera Upgrade", "FLASHCARD",
-            "UPGRADES", [ApplySettings]);
+    [CompatTab("FLASHCARD")]
+    private static class Settings {
+        [Group("UPGRADES")]
+        private static class Upgrades {
+            [Register]
+            private class EnableExtraCamera()
+                : BoolOption(FlashcardSettingKeys.EnableExtraCamera, true, "Enable Extra Camera Upgrade",
+                    [ApplySettings]);
+        }
 
-    [CompatSetting]
-    private class ClipLength()
-        : FloatOption(FlashcardSettingKeys.ClipLength, 120f, "Clip Length", 1f, 1000f, "FLASHCARD", "RECORDING",
-            [ApplySettings], false);
+        [Group("RECORDING")]
+        private static class Recording {
+            [Register]
+            private class ClipLength()
+                : FloatOption(FlashcardSettingKeys.ClipLength, 120f, "Clip Length", 1f, 1000f,
+                    [ApplySettings], false);
 
-    [CompatSetting]
-    private class ClipFramerate()
-        : IntOption(FlashcardSettingKeys.ClipFramerate, 24, "Clip Framerate", 1, 30, "FLASHCARD", "RECORDING",
-            [ApplySettings], false);
+            [Register]
+            private class ClipFramerate()
+                : IntOption(FlashcardSettingKeys.ClipFramerate, 24, "Clip Framerate", 1, 30,
+                    [ApplySettings], false);
 
-    [CompatSetting]
-    private class ClipQuality()
-        : TextOption(FlashcardSettingKeys.ClipQuality, "512k", "Clip Quality (Bitrate)", "FLASHCARD", "RECORDING",
-            [ApplySettings]);
+            [Register]
+            private class ClipQuality()
+                : TextOption(FlashcardSettingKeys.ClipQuality, "512k", "Clip Quality (Bitrate)",
+                    [ApplySettings]);
+        }
 
-    [CompatSetting]
-    private class PacketDelay()
-        : FloatOption(FlashcardSettingKeys.PacketDelay, 0.5f, "Delay Between Packets", 0f, 10f, "FLASHCARD",
-            "UPLOADING", [ApplySettings], false);
+        [Group("UPLOADING")]
+        private static class Uploading {
+            [Register]
+            private class PacketDelay()
+                : FloatOption(FlashcardSettingKeys.PacketDelay, 0.5f, "Delay Between Packets", 0f, 10f, [ApplySettings],
+                    false);
+        }
 
-    [CompatSetting]
-    private class VerboseLogging()
-        : BoolOption(FlashcardSettingKeys.VerboseLogging, false, "Enable Verbose Logging", "FLASHCARD", "DEBUGGING",
-            [ApplySettings]);
+        [Group("DEBUGGING")]
+        private static class Debugging {
+            [Register]
+            private class VerboseLogging()
+                : BoolOption(FlashcardSettingKeys.VerboseLogging, false, "Enable Verbose Logging", [ApplySettings]);
+        }
+    }
 }

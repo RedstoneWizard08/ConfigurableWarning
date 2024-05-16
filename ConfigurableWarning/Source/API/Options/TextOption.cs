@@ -22,10 +22,8 @@ public class TextOption : TextSetting, IOption<string> {
     /// <param name="name">The option's name.</param>
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
-    /// <param name="tab">The tab to register to.</param>
-    /// <param name="category">The category to register to.</param>
-    protected TextOption(string name, string defaultValue, string displayName, string tab, string category) : this(name,
-        defaultValue, displayName, tab, category, []) {
+    protected TextOption(string name, string defaultValue, string displayName) : this(name,
+        defaultValue, displayName, []) {
     }
 
     /// <summary>
@@ -34,17 +32,13 @@ public class TextOption : TextSetting, IOption<string> {
     /// <param name="name">The option's name.</param>
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
-    /// <param name="tab">The tab to register to.</param>
-    /// <param name="category">The category to register to.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
-    protected TextOption(string name, string defaultValue, string displayName, string tab, string category,
+    protected TextOption(string name, string defaultValue, string displayName,
         Action<TextOption>[] actions) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _applyActions = [.. actions];
-
-        AsOption().Register(tab, category);
     }
 
     /// <inheritdoc />

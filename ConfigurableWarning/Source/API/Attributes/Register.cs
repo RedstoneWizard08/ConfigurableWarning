@@ -1,7 +1,7 @@
 using System;
 using JetBrains.Annotations;
 
-namespace ConfigurableWarning.API;
+namespace ConfigurableWarning.API.Attributes;
 
 /// <summary>
 ///     Automatically registers the option. This will initialize it in the state,
@@ -10,4 +10,4 @@ namespace ConfigurableWarning.API;
 /// </summary>
 [MeansImplicitUse]
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
-public class RegisterOption : Attribute;
+public class Register : Attribute;

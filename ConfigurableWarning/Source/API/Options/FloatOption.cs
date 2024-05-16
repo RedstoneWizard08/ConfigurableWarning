@@ -26,11 +26,9 @@ public class FloatOption : FloatSetting, IOption<float> {
     /// <param name="displayName">The option's displayed name.</param>
     /// <param name="min">The minimum value.</param>
     /// <param name="max">The maximum value.</param>
-    /// <param name="tab">The tab to register to.</param>
-    /// <param name="category">The category to register to.</param>
     /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected FloatOption(string name, float defaultValue, string displayName, float min, float max, string tab,
-        string category, bool doClamp = true) : this(name, defaultValue, displayName, min, max, tab, category, [],
+    protected FloatOption(string name, float defaultValue, string displayName, float min, float max,
+        bool doClamp = true) : this(name, defaultValue, displayName, min, max, [],
         doClamp) {
     }
 
@@ -42,20 +40,16 @@ public class FloatOption : FloatSetting, IOption<float> {
     /// <param name="displayName">The option's displayed name.</param>
     /// <param name="min">The minimum value.</param>
     /// <param name="max">The maximum value.</param>
-    /// <param name="tab">The tab to register to.</param>
-    /// <param name="category">The category to register to.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
     /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected FloatOption(string name, float defaultValue, string displayName, float min, float max, string tab,
-        string category, Action<FloatOption>[] actions, bool doClamp = true) {
+    protected FloatOption(string name, float defaultValue, string displayName, float min, float max,
+        Action<FloatOption>[] actions, bool doClamp = true) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _minMax = new float2(min, max);
         _shouldClamp = doClamp;
         _applyActions = [.. actions];
-
-        AsOption().Register(tab, category);
     }
 
     /// <inheritdoc />

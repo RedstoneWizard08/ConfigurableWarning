@@ -9,12 +9,13 @@ public static class SettingKeys {
     public const string DaysPerQuota = "DaysPerQuota";
     public const string RequireAllPlayersInDiveBell = "RequireAllPlayersInDiveBell";
     public const string RequireDiveBellDoorClosed = "RequireDiveBellDoorClosed";
+    public const string Fov = "Fov";
 
     public const string Health = "Health";
     public const string MaxStamina = "MaxStamina";
     public const string StaminaRegenRate = "StaminaRegenRate";
     public const string SprintSpeed = "SprintSpeed";
-
+    
     public const string Oxygen = "Oxygen";
     public const string InfiniteOxygen = "InfiniteOxygen";
     public const string OxygenUsageMultiplier = "OxygenUsageMultiplier";

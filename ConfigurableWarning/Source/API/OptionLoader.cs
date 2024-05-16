@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
 using Zorro.Settings;
@@ -12,25 +13,105 @@ namespace ConfigurableWarning.API;
 ///     Responsible for loading, holding, and registering options.
 /// </summary>
 public static class OptionLoader {
-    internal static Dictionary<Type, IUntypedOption> RegisteredOptions { get; } = new();
+    /// <summary>
+    ///     A list of all registered options.
+    /// </summary>
+    public static readonly Dictionary<Type, IUntypedOption> RegisteredOptions = new();
+
+    /// <summary>
+    ///     A list of all registered tabs.
+    /// </summary>
+    public static readonly Dictionary<Type, Tab> RegisteredTabs = new();
+
+    /// <summary>
+    ///     A list of all registered groups.
+    /// </summary>
+    public static readonly Dictionary<Type, Group> RegisteredGroups = new();
 
     /// <summary>
     ///     Automatically collect and register all options annotated with
-    ///     <see cref="RegisterOption" />.
+    ///     <see cref="Register" />.
     /// </summary>
     public static void RegisterOptions() {
         foreach (var type in AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes())) {
-            if (type.IsAbstract || type.IsInterface || !type.IsSubclassOf(typeof(Setting))) continue;
-            if (RegisteredOptions.ContainsKey(type)) continue;
-
-            var register = type.GetCustomAttribute<RegisterOption>(false);
-            if (register == null) continue;
-
-            Plugin.Logger.LogInfo($"Initializing option: {type.Name} (from {type.Assembly.GetName().Name}.dll");
-
-            RegisteredOptions[type] = (IUntypedOption) Activator.CreateInstance(type);
+            TryRegisterTab(type);
+            TryRegisterGroup(null, type);
         }
 
         CompatLoader.LoadModules();
+    }
+
+    /// <summary>
+    ///     Try to register a setting from a type.
+    /// </summary>
+    /// <param name="group">The group</param>
+    /// <param name="type">The type</param>
+    /// <param name="tab">The tab</param>
+    /// <returns>If it could be registered</returns>
+    public static bool TryRegisterSetting(string tab, string group, Type type) {
+        if (type.IsInterface || type.IsAbstract || !type.IsSubclassOf(typeof(Setting))) return false;
+        if (RegisteredOptions.ContainsKey(type)) return false;
+
+        var register = type.GetCustomAttribute<Register>(false);
+        if (register == null) return false;
+
+        Plugin.Logger.LogInfo($"Found setting {type.FullName}");
+
+        var instance = (IUntypedOption) Activator.CreateInstance(type);
+
+        instance.Register(tab, group);
+        RegisteredOptions.Add(type, instance);
+
+        return true;
+    }
+
+    /// <summary>
+    ///     Try to register a group from a type.
+    /// </summary>
+    /// <param name="tab">The tab</param>
+    /// <param name="type">The type</param>
+    /// <returns>If it could be registered</returns>
+    public static bool TryRegisterGroup(string? tab, Type type) {
+        if (RegisteredGroups.ContainsKey(type)) return false;
+
+        var group = type.GetCustomAttribute<Group>(false);
+        if (group == null) return false;
+
+        Plugin.Logger.LogInfo($"Found group {group.Category} in {type.FullName}");
+
+        if (tab == null && group.Tab == null) {
+            Plugin.Logger.LogError("Cannot register a Group with no tab!");
+            return false;
+        }
+
+        var settings = type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public);
+
+        foreach (var setting in settings) TryRegisterSetting(tab ?? group.Tab!, group.Category, setting);
+
+        RegisteredGroups.Add(type, group);
+
+        return true;
+    }
+
+    /// <summary>
+    ///     Try to register a tab from a type.
+    /// </summary>
+    /// <param name="type">The type</param>
+    /// <returns>If it could be registered</returns>
+    public static bool TryRegisterTab(Type type) {
+        if (RegisteredTabs.ContainsKey(type)) return false;
+
+        var tab = type.GetCustomAttribute<Tab>(false);
+        if (tab == null) return false;
+
+        Plugin.Logger.LogInfo($"Found tab {tab.Name} in {type.FullName} (from {type.Assembly.GetName().Name}.dll");
+
+        var subClasses = type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public);
+
+        foreach (var subClass in subClasses) TryRegisterGroup(tab.Name, subClass);
+
+        RegisteredTabs.Add(type, tab);
+
+        return true;
     }
 }

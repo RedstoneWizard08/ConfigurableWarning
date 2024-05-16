@@ -20,8 +20,6 @@ public static class BuiltInSettings {
     // - Intro Screen Skip (based on https://thunderstore.io/c/content-warning/p/CTWOriginals/DevelopmentStartup/)
     // - Video Save Location (based on https://thunderstore.io/c/content-warning/p/RamuneNeptune/CustomVideoSaveLocation/)
     // - Inventory Slots (based on https://thunderstore.io/c/content-warning/p/nickklmao/ExtraInventorySlot/)
-    // - More Graphics Settings (basically revive https://thunderstore.io/c/content-warning/p/Jasson9/MoreSettings/)
-    // - Revive https://thunderstore.io/c/content-warning/p/Computery/Toggle_Mute/
 
     [Group("GENERAL")]
     private static class General {

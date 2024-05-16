@@ -62,6 +62,66 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Attributes.CompatGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Attributes.CompatGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Attributes.CompatTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Attributes.CompatTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Attributes.Group.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Attributes.Group.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Attributes.Register.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Attributes.Register.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Attributes.Tab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Attributes.Tab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.API.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.API.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ConfigurableWarning.API.Compat.CompatLoader.yml",
       "output": {
         ".html": {
@@ -76,16 +136,6 @@
       "output": {
         ".html": {
           "relative_path": "api/ConfigurableWarning.API.Compat.CompatModule.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.API.Compat.CompatSetting.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ConfigurableWarning.API.Compat.CompatSetting.html"
         }
       },
       "version": ""
@@ -272,16 +322,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.API.RegisterOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ConfigurableWarning.API.RegisterOption.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ConfigurableWarning.API.SettingPatches.yml",
       "output": {
         ".html": {
@@ -326,6 +366,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ConfigurableWarning.MyPluginInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.Patches.CameraPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.Patches.CameraPatch.html"
         }
       },
       "version": ""

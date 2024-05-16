@@ -89,7 +89,7 @@
 
 
   <h1 id="ConfigurableWarning_API_Compat_CompatLoader" data-uid="ConfigurableWarning.API.Compat.CompatLoader" class="text-break">
-Class CompatLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class CompatLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,6 +149,103 @@ Class CompatLoader  <a class="header-action link-secondary" title="View source" 
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ConfigurableWarning_API_Compat_CompatLoader_RegisteredGroups" data-uid="ConfigurableWarning.API.Compat.CompatLoader.RegisteredGroups">
+  RegisteredGroups
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of all registered compat groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Dictionary&lt;Type, CompatGroup&gt; RegisteredGroups</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="ConfigurableWarning.API.Attributes.CompatGroup.html">CompatGroup</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConfigurableWarning_API_Compat_CompatLoader_RegisteredModules" data-uid="ConfigurableWarning.API.Compat.CompatLoader.RegisteredModules">
+  RegisteredModules
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of all registered compat modules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Dictionary&lt;Type, ICompatModule&gt; RegisteredModules</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="ConfigurableWarning.API.Compat.ICompatModule.html">ICompatModule</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConfigurableWarning_API_Compat_CompatLoader_RegisteredTabs" data-uid="ConfigurableWarning.API.Compat.CompatLoader.RegisteredTabs">
+  RegisteredTabs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of all registered compat tabs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Dictionary&lt;Type, CompatTab&gt; RegisteredTabs</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="ConfigurableWarning.API.Attributes.CompatTab.html">CompatTab</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -157,7 +254,7 @@ Class CompatLoader  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="ConfigurableWarning_API_Compat_CompatLoader_LoadModules" data-uid="ConfigurableWarning.API.Compat.CompatLoader.LoadModules">
   LoadModules()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Auto-loads all compat modules.</p>
@@ -180,11 +277,131 @@ Class CompatLoader  <a class="header-action link-secondary" title="View source" 
 
 
 
+  <a id="ConfigurableWarning_API_Compat_CompatLoader_NamespaceExists_" data-uid="ConfigurableWarning.API.Compat.CompatLoader.NamespaceExists*"></a>
+
+  <h3 id="ConfigurableWarning_API_Compat_CompatLoader_NamespaceExists_System_String_" data-uid="ConfigurableWarning.API.Compat.CompatLoader.NamespaceExists(System.String)">
+  NamespaceExists(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if a namespace exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool NamespaceExists(string ns)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ns</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The namespace.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If it exists.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_Compat_CompatLoader_TryRegisterCompatGroup_" data-uid="ConfigurableWarning.API.Compat.CompatLoader.TryRegisterCompatGroup*"></a>
+
+  <h3 id="ConfigurableWarning_API_Compat_CompatLoader_TryRegisterCompatGroup_System_String_System_Type_" data-uid="ConfigurableWarning.API.Compat.CompatLoader.TryRegisterCompatGroup(System.String,System.Type)">
+  TryRegisterCompatGroup(string?, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Try to register a compat group from a type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryRegisterCompatGroup(string? tab, Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tab</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The tab</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If it could be registered</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_Compat_CompatLoader_TryRegisterCompatTab_" data-uid="ConfigurableWarning.API.Compat.CompatLoader.TryRegisterCompatTab*"></a>
+
+  <h3 id="ConfigurableWarning_API_Compat_CompatLoader_TryRegisterCompatTab_System_Type_" data-uid="ConfigurableWarning.API.Compat.CompatLoader.TryRegisterCompatTab(System.Type)">
+  TryRegisterCompatTab(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Try to register a compat tab from a type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryRegisterCompatTab(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If it could be registered</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/Compat/CompatLoader.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

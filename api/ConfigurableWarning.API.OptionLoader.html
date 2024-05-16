@@ -89,7 +89,7 @@
 
 
   <h1 id="ConfigurableWarning_API_OptionLoader" data-uid="ConfigurableWarning.API.OptionLoader" class="text-break">
-Class OptionLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class OptionLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,6 +149,103 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ConfigurableWarning_API_OptionLoader_RegisteredGroups" data-uid="ConfigurableWarning.API.OptionLoader.RegisteredGroups">
+  RegisteredGroups
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of all registered groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Dictionary&lt;Type, Group&gt; RegisteredGroups</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="ConfigurableWarning.API.Attributes.Group.html">Group</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConfigurableWarning_API_OptionLoader_RegisteredOptions" data-uid="ConfigurableWarning.API.OptionLoader.RegisteredOptions">
+  RegisteredOptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of all registered options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Dictionary&lt;Type, IUntypedOption&gt; RegisteredOptions</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="ConfigurableWarning.API.Options.IUntypedOption.html">IUntypedOption</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ConfigurableWarning_API_OptionLoader_RegisteredTabs" data-uid="ConfigurableWarning.API.OptionLoader.RegisteredTabs">
+  RegisteredTabs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A list of all registered tabs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Dictionary&lt;Type, Tab&gt; RegisteredTabs</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="ConfigurableWarning.API.Attributes.Tab.html">Tab</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -157,11 +254,11 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="ConfigurableWarning_API_OptionLoader_RegisterOptions" data-uid="ConfigurableWarning.API.OptionLoader.RegisterOptions">
   RegisterOptions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Automatically collect and register all options annotated with
-<a class="xref" href="ConfigurableWarning.API.RegisterOption.html">RegisterOption</a>.</p>
+<a class="xref" href="ConfigurableWarning.API.Attributes.Register.html">Register</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -181,11 +278,137 @@ Class OptionLoader  <a class="header-action link-secondary" title="View source" 
 
 
 
+  <a id="ConfigurableWarning_API_OptionLoader_TryRegisterGroup_" data-uid="ConfigurableWarning.API.OptionLoader.TryRegisterGroup*"></a>
+
+  <h3 id="ConfigurableWarning_API_OptionLoader_TryRegisterGroup_System_String_System_Type_" data-uid="ConfigurableWarning.API.OptionLoader.TryRegisterGroup(System.String,System.Type)">
+  TryRegisterGroup(string?, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Try to register a group from a type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryRegisterGroup(string? tab, Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tab</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The tab</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If it could be registered</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_OptionLoader_TryRegisterSetting_" data-uid="ConfigurableWarning.API.OptionLoader.TryRegisterSetting*"></a>
+
+  <h3 id="ConfigurableWarning_API_OptionLoader_TryRegisterSetting_System_String_System_String_System_Type_" data-uid="ConfigurableWarning.API.OptionLoader.TryRegisterSetting(System.String,System.String,System.Type)">
+  TryRegisterSetting(string, string, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Try to register a setting from a type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryRegisterSetting(string tab, string group, Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tab</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The tab</p>
+</dd>
+    <dt><code>group</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The group</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If it could be registered</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ConfigurableWarning_API_OptionLoader_TryRegisterTab_" data-uid="ConfigurableWarning.API.OptionLoader.TryRegisterTab*"></a>
+
+  <h3 id="ConfigurableWarning_API_OptionLoader_TryRegisterTab_System_Type_" data-uid="ConfigurableWarning.API.OptionLoader.TryRegisterTab(System.Type)">
+  TryRegisterTab(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Try to register a tab from a type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryRegisterTab(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If it could be registered</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/ConfigurableWarning/Source/API/OptionLoader.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -7,18 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/Group.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/Tab.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/EnumOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/EnumOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/RegisterOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/Register.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/LobbyPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/LobbyPatch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/BuiltInSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/BuiltInSettings.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,6 +201,7 @@
       <workItem from="1715543626275" duration="548000" />
       <workItem from="1715724035501" duration="1114000" />
       <workItem from="1715814177526" duration="601000" />
+      <workItem from="1715835100684" duration="540000" />
     </task>
     <task id="LOCAL-00001" summary="WIP v1.13.0">
       <option name="closed" value="true" />

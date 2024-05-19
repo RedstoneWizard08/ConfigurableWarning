@@ -10,7 +10,7 @@ websiteUrl = "https://redstonewizard08.github.io/ConfigurableWarning"
 containsNsfwContent = false
 
 [package.dependencies]
-RugbugRedfern-MyceliumNetworking = "1.0.12"
+RugbugRedfern-MyceliumNetworking = "1.0.14"
 CommanderCat101-ContentSettings = "1.2.2"
 
 [build]

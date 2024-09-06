@@ -362,6 +362,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ConfigurableWarning.ConfigurableWarning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConfigurableWarning.ConfigurableWarning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ConfigurableWarning.MyPluginInfo.yml",
       "output": {
         ".html": {
@@ -456,16 +466,6 @@
       "output": {
         ".html": {
           "relative_path": "api/ConfigurableWarning.Patches.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ConfigurableWarning.Plugin.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ConfigurableWarning.Plugin.html"
         }
       },
       "version": ""
@@ -601,14 +601,254 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSetings.CSPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSetings.CSPluginInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSetings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSetings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Attributes.SettingRegister.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Attributes.SettingRegister.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.BoolSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.BoolSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.BoolSettingUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.BoolSettingUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.DebugUI.BoolSettingsUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.DebugUI.BoolSettingsUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.DebugUI.IntSettingsUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.DebugUI.IntSettingsUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.DebugUI.TextSettingsUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.DebugUI.TextSettingsUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.DebugUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.DebugUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.ICustomSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.ICustomSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.IntSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.IntSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.IntSettingUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.IntSettingUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.TextSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.TextSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.TextSettingUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.TextSettingUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.UI.SettingsButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.UI.SettingsButton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.UI.SettingsNavigation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.UI.SettingsNavigation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.UI.SettingsTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.UI.SettingsTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.UI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.SettingsLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.SettingsLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.API.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.ContentSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.ContentSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -637,11 +877,11 @@
       "type": "Toc",
       "source_relative_path": "guides/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "guides/toc.json"
-        },
         ".html": {
           "relative_path": "guides/toc.html"
+        },
+        ".json": {
+          "relative_path": "guides/toc.json"
         }
       },
       "version": ""
@@ -690,11 +930,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

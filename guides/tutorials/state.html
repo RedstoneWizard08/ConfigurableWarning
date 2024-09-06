@@ -88,7 +88,7 @@
 <h1 id="state">State</h1>
 
 <p>State in ConfigurableWarning will always be held in the
-&lt;xref:ConfigurableWarning.API.Options.OptionsState&gt; class. You can check its
+<a class="xref" href="../../api/ConfigurableWarning.API.States.html">States</a> class. You can check its
 documentation for a list of fields and methods.</p>
 <h2 id="keys">Keys</h2>
 <p>It is recommended to have a class of keys to store common values.</p>
@@ -99,40 +99,20 @@ documentation for a list of fields and methods.</p>
 
 // Then access the state
 
-var state = OptionsState.Instance.Get&lt;...&gt;(Keys.MyOption);
+int? state = States.Ints[Keys.MyOption];
 </code></pre>
 <p>If you use the key instead, it eliminates the risk of a typo somewhere in the code.</p>
 <h2 id="modifying-state">Modifying State</h2>
-<p>The &lt;xref:ConfigurableWarning.API.Options.OptionsState&gt; also allows you to modify state
+<p>The <a class="xref" href="../../api/ConfigurableWarning.API.States.html">States</a> also allows you to modify state
 manually! Just call other methods.</p>
-<p>Examples:</p>
-<pre><code class="lang-cs">OptionsState.Instance.Set(Keys.MyOption, ...); // Here, `...` is the value to set it to.
+<p>Example:</p>
+<pre><code class="lang-cs">States.Ints[Keys.MyOption] = ...; // Here, `...` is the value to set it to.
 </code></pre>
-<pre><code class="lang-cs">OptionsState.Instance.Remove&lt;...&gt;(Keys.MyOption); // Here, `...` is the option's type.
-</code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Yes, I do know that this type parameter doesn't need to exist. For the string
-overload, I'll be removing the type parameter soon.</p>
-</div>
-<h2 id="checking-state">Checking State</h2>
-<p>You can also check state! The &lt;xref:ConfigurableWarning.API.Options.OptionsState.Has&gt; method
-will allow you to check if the option is registered to the state.</p>
-<pre><code class="lang-cs">bool exists = OptionsState.Instance.Has&lt;...&gt;(Keys.MyOption);
-</code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Yes, I do know that this type parameter doesn't need to exist. For the string
-overload, I'll be removing the type parameter soon.</p>
-</div>
-<h2 id="updating-state">Updating State</h2>
-<p>You can also have the state automatically update based on the option's contained value!
-Just use the &lt;xref:ConfigurableWarning.API.Options.OptionsState.Update&gt; method.</p>
-<pre><code class="lang-cs">IOption&lt;...&gt; myOption = ...;
-
-OptionsState.Instance.Update&lt;...&gt;(myOption);
-</code></pre>
-<p>Note that you <em>do</em> need an instance of the option to use this method.</p>
+<h2 id="syncing">Syncing</h2>
+<p>Whenever an option is changed, the state is automatically synced to every
+client in the game. This is done through @RugbugRedfern's awesome Mycelium Networking system,
+as to not put any strain on the internal Pun-based system (which also costs the devs money!).</p>
+<p>In the future, there will be a way to disable the syncing behavior, but for now, it's always on.</p>
 
 </article>
 

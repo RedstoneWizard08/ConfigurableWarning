@@ -89,17 +89,36 @@
 
 <h2 id="creating-an-option">Creating an Option</h2>
 <p>To create an option, you'll need a few things.</p>
-<p>You'll start with the class:</p>
-<pre><code class="lang-cs">[RegisterOption]
-private class MyOptionThing() // Class name is different here to show that it doesn't matter in state
-    : IntOption(Keys.MyOption, 50, &quot;My Option!&quot;, 0, 100, &quot;MY STUFF&quot;, &quot;GENERAL&quot;);
+<p>You'll start with the parent class:</p>
+<pre><code class="lang-csharp">[Group(/* Tab = */ &quot;MY STUFF&quot;, /* Group = */ &quot;GENERAL&quot;)]
+public static class MyOptions { }
+</code></pre>
+<p>This class is used to group all of your options together. The <code>Group</code> attribute is used to
+define the tab and category that the options will appear in.</p>
+<details>
+<summary>Multiple groups in one tab</summary>
+<p>You can also have multiple groups in one tab! This is useful if you have a lot of options.</p>
+<pre><code class="lang-csharp">[Tab(&quot;MY STUFF&quot;)]
+public static class MyOptions {
+    [Group(&quot;GENERAL&quot;)]
+    public static class General { }
+
+    [Group(&quot;ADVANCED&quot;)]
+    public static class Advanced { }
+}
+</code></pre>
+</details>
+<p>Then, the option class, which is placed inside your group class:</p>
+<pre><code class="lang-cs">[Register]
+private class MyOptionThing()
+    : IntOption(Keys.MyOption, 50, &quot;My Option!&quot;, 0, 100);
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>For information about the <code>Keys</code> class, see <a href="state.html">State</a>.</p>
 </div>
 <p>You'll notice a few things here. Let's break it down.</p>
-<p>The <code>[RegisterOption]</code> comes from &lt;xref:ConfigurableWarning.API.RegisterOption&gt;, and
+<p>The <code>[RegisterOption]</code> comes from <a class="xref" href="../../api/ConfigurableWarning.API.Attributes.Register.html">Register</a>, and
 tells ConfigurableWarning to automatically register your option to the game, meaning that
 you don't have to do that!</p>
 <p>The inherited class, <a class="xref" href="../../api/ConfigurableWarning.API.Options.IntOption.html">IntOption</a>, defines this as an
@@ -113,8 +132,6 @@ end-user will likely never see it.</li>
 settings menu.</li>
 <li>The minimum value - Here it's <code>0</code>. This is the <u>minumum</u> value that the slider will go to.</li>
 <li>The maximum value - Here it's <code>100</code>. This is the <u>maximum</u> value that the slider will go to.</li>
-<li>The tab - Here it's <code>&quot;MY STUFF&quot;</code>. This will be the tab that the setting shows up in.</li>
-<li>The category - Here it's <code>&quot;GENERAL&quot;</code>. This will be the category that the setting appears under.</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>

@@ -602,26 +602,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ContentSetings.CSPluginInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ContentSetings.CSPluginInfo.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ContentSetings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ContentSetings.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ContentSettings.API.Attributes.SettingRegister.yml",
       "output": {
         ".html": {
@@ -816,6 +796,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ContentSettings.API.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ContentSettings.CSPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ContentSettings.CSPluginInfo.html"
         }
       },
       "version": ""

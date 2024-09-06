@@ -181,7 +181,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.Launch">
+  <component name="RunManager" selected=".NET Project.Build">
     <configuration name="Build" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build/bin/Debug/net8.0/Build.exe" />
       <option name="PROGRAM_PARAMETERS" value="-t Build" />

@@ -5,7 +5,7 @@
         <PackageId>RedstoneWizard08.ConfigurableWarning</PackageId>
         <AssemblyName>RedstoneWizard08.ConfigurableWarning</AssemblyName>
         <Description>Makes the game configurable!</Description>
-        <Version>1.14.0</Version>
+        <Version>1.15.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -33,7 +33,6 @@
         <PackageReference Include="UnityEngine.Modules" Version="2022.3.10" IncludeAssets="compile" ExcludeAssets="RUNTIME"/>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" IncludeAssets="compile" ExcludeAssets="RUNTIME"/>
         <PackageReference Include="RugbugRedfern.MyceliumNetworking.CW" Version="1.0.12" IncludeAssets="compile" ExcludeAssets="RUNTIME"/>
-        <PackageReference Include="CommanderCat101.ContentSettings" Version="1.2.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" Publicize="True"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -67,5 +66,10 @@
 
     <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
         <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="contentsettings.bundle"/>
+        <EmbeddedResource Include="contentsettings.bundle"/>
     </ItemGroup>
 </Project>

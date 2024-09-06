@@ -10,7 +10,7 @@ public class BuildContext(ICakeContext context) : FrostingContext(context) {
         "F:/SteamLibrary/steamapps/common/Content Warning/Content Warning.exe");
 
     public string ProfilePath { get; set; } =
-        context.Argument("profile-path", "F:/Thunderstore/DataFolder/ContentWarning/profiles/Default");
+        context.Argument("profile-path", "F:/Thunderstore/DataFolder/ContentWarning/profiles/CW2");
 
     public string MsBuildConfiguration { get; set; } = context.Argument("configuration", "Release");
 }

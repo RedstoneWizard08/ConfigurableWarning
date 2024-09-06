@@ -4,14 +4,13 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "RedstoneWizard08"
 name = "ConfigurableWarning"
-versionNumber = "1.14.0"
+versionNumber = "1.15.0"
 description = "Makes the game configurable!"
 websiteUrl = "https://redstonewizard08.github.io/ConfigurableWarning"
 containsNsfwContent = false
 
 [package.dependencies]
 RugbugRedfern-MyceliumNetworking = "1.0.14"
-CommanderCat101-ContentSettings = "1.2.2"
 
 [build]
 icon = "./icon.png"

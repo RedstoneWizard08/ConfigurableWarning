@@ -7,7 +7,76 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="" />
+    <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Attributes/SettingRegister.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/BoolSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/BoolSettingUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/DebugUI/BoolSettingsUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/DebugUI/IntSettingsUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/DebugUI/TextSettingsUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/ICustomSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/IntSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/IntSettingUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/TextSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/TextSettingUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/UI/SettingsButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/UI/SettingsNavigation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/UI/SettingsTab.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/SettingsLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/CSPluginInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/ContentSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/Internal/SettingsAssets.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/Internal/SettingsMapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/Internal/SettingsPatch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfigurableWarning/contentsettings.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Source/BuildContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Source/BuildContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Source/Tasks/LaunchTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Source/Tasks/LaunchTask.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/CompatGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Attributes/CompatGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/CompatTab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Attributes/CompatTab.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Attributes/Group.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Attributes/Register.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Attributes/Tab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Attributes/Tab.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Compat/CompatLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/CompatModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Compat/CompatModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Compat/ICompatModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Compat/ICompatModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/ConfigurableWarningAPI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/ConfigurableWarningAPI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/EnumStateHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/EnumStateHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/EnumUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/EnumUtil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionExt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/OptionExt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/OptionLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/OptionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionSyncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/OptionSyncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/BoolOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/BoolOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/EnumOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/EnumOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/FloatOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/FloatOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/IOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IUntypedOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/IUntypedOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/IntOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/IntOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/Options/TextOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/TextOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/OptionsState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/OptionsState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/SettingPatches.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/SettingPatches.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/StateHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/StateHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/API/States.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/States.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/CameraPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/CameraPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/DivingBellPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/DivingBellPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/LobbyPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/LobbyPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/PlayerPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/PlayerPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/QuotaPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/QuotaPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/SpawnPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/SpawnPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/StaminaPatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/StaminaPatch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Patches/UIPatches.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Patches/UIPatches.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Plugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/ConfigurableWarning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/BuiltInSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Settings/BuiltInSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Flashcard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Settings/Compat/Flashcard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Spookdivers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Settings/Compat/Spookdivers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Compat/Virality.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Settings/Compat/Virality.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/SettingKeys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Settings/SettingKeys.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/Settings/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/Settings/Util.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,20 +105,39 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Activator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Enum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/coreclr/f3787201149e2d57d6256c9489b3df02adcf1a6e/src/System.Private.CoreLib/shared/System/Type.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/08338fcaa5c9b9a8190abb99222fed12aaba956c/src/libraries/System.Private.CoreLib/src/System/IO/Path.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3aa4e992bfac406eb997516c43881f48125400/31/bc6bbd0c/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3aa4e992bfac406eb997516c43881f48125400/74/b308456c/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3aa4e992bfac406eb997516c43881f48125400/c0/7da1ac56/BigNumbers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/693c6d998c0d40f29d2867f596ec363691e590/87/e91300a0/BindingFlags.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6a18188ce6264976a9218286caeb57f41ea00/6d/e3579e4c/BaseUnityPlugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6a18188ce6264976a9218286caeb57f41ea00/d8/cb1addd4/Logger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8bb79728b13d4996aa9fab48a5ef8b1911f000/f5/5e98cc15/RoomStatsHolder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8bb79728b13d4996aa9fab48a5ef8b19127800/0d/a6b05607/MainCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/947345cdc4fa4847a35c09349dc3a8e0129400/5f/282e33b1/SettingCategoryTab.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/947345cdc4fa4847a35c09349dc3a8e0129400/a9/22f899b8/SettingsMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/947345cdc4fa4847a35c09349dc3a8e0129400/a9/48d9c9e2/MainMenuHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/947345cdc4fa4847a35c09349dc3a8e0129400/aa/cd1912b6/SettingCategory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/947345cdc4fa4847a35c09349dc3a8e0129400/ad/b9477caa/ContentWarningPlugin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/947345cdc4fa4847a35c09349dc3a8e0129400/bc/ab8f624f/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b0284f5335cd471eb28c9ea6579669b1101400/13/7cd1bcd8/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4f9b8a46fd540608b6d6422ed3a7fc37000/98/623f40b6/FlashcardConfig.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4f9b8a46fd540608b6d6422ed3a7fc37200/81/06c73e7f/FlashcardPlugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b4f9b8a46fd540608b6d6422ed3a7fc37200/a1/b1db210f/FlashcardConfig.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7a6a1f1507542dfac6b3aad805d56394000/17/1c48414e/TABS`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bdea04f37b994bdbb4cd9f33b70e575aa000/d2/e9a8e051/Plugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cdbb0156c5f14428b9e39f273d3bdab83b000/1a/415e5744/StructWrapperUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e47e7dae82ae48f0a6923254c62a16b6178f400/7c/c63086c0/MyPluginInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e47e7dae82ae48f0a6923254c62a16b6178f400/f4/b11b9f6f/BoolSetting.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ec00715c979042bbbffb0d761f44f7b4122a00/17/5e315b17/SteamLobbyHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b6241b1fe547e48a76ae670d3cdb36c317410dc77c895ed6336af943f37/ProcessAliases.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e56284ee8255e2f88fa7142b543901aa3fd2d21774966096a17bc2901e4f85/DirectoryCreator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f2b1d222a056e9665ba7c3d95ff35d3d2e83dd5b1fc5ca1e1010bed0749650a1/DirectoryAliases.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConfigurableWarning/Source/ConfigurableWarning/API/Options/TextOption.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Attributes/SettingRegister.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/IntSetting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/API/Settings/TextSetting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/ContentSettings.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -202,6 +290,12 @@
       <workItem from="1715724035501" duration="1114000" />
       <workItem from="1715814177526" duration="601000" />
       <workItem from="1715835100684" duration="540000" />
+      <workItem from="1716082375970" duration="211000" />
+      <workItem from="1719293429686" duration="81000" />
+      <workItem from="1719293578156" duration="1624000" />
+      <workItem from="1719444893716" duration="1706000" />
+      <workItem from="1725608389066" duration="59000" />
+      <workItem from="1725608552716" duration="6398000" />
     </task>
     <task id="LOCAL-00001" summary="WIP v1.13.0">
       <option name="closed" value="true" />

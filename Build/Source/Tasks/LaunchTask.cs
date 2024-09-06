@@ -16,6 +16,10 @@ public sealed class LaunchTask : FrostingTask<BuildContext> {
         var pluginPath = Path.Join(profilePath, "BepInEx/plugins/RedstoneWizard08-ConfigurableWarning");
         var args = $"--doorstop-enable true --doorstop-target \"{profilePath}/BepInEx/core/BepInEx.Preloader.dll\"";
 
+        if (!Path.Exists(Path.Join(outPath, ".."))) {
+            context.CreateDirectory(Path.Join(outPath, ".."));
+        }
+
         context.CopyFile(outPath, $"{pluginPath}/RedstoneWizard08.ConfigurableWarning.dll");
         context.StartProcess(gamePath, args);
     }

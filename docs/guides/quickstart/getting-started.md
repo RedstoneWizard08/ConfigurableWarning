@@ -26,10 +26,6 @@ dotnet add package RedstoneWizard08.ConfigurableWarning
 
 ---
 
-> [!NOTE]
-> ConfigurableWarning is not yet actually published on NuGet.
-> This is what it will be like in the future!
-
 ## Your First Option
 
 While the legacy `ContentSettings` API still works, we recommend using the newer API instead.

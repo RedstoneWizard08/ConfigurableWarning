@@ -7,18 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/ConfigurableWarning.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/CSPluginInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/CSPluginInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/ContentSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigurableWarning/Source/ContentSettings/ContentSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/quickstart/getting-started.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/quickstart/getting-started.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/tutorials/options.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/tutorials/options.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/tutorials/state.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/tutorials/state.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thunderstore.toml" beforeDir="false" afterPath="$PROJECT_DIR$/thunderstore.toml" afterDir="false" />
-    </list>
+    <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,7 +227,7 @@
       <workItem from="1719293578156" duration="1624000" />
       <workItem from="1719444893716" duration="1706000" />
       <workItem from="1725608389066" duration="59000" />
-      <workItem from="1725608552716" duration="7583000" />
+      <workItem from="1725608552716" duration="7964000" />
     </task>
     <task id="LOCAL-00001" summary="WIP v1.13.0">
       <option name="closed" value="true" />

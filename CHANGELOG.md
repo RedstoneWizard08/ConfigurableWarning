@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.15.2] - 2024-09-06
+
+### Changed
+
+- Updated docs
+- Corrected namespace
+
+## [v1.15.1] - 2024-09-06
+
+### Changed
+
+- Updated readme
+
+## [v1.15.0] - 2024-09-06
+
+### Added
+
+- The entire ContentSettings API! (This is the continuation)
+
 ## [v1.14.0] - 2024-05-18
 
 ### Added

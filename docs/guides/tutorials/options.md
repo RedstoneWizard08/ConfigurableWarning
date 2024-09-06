@@ -9,12 +9,40 @@ title: Options
 
 To create an option, you'll need a few things.
 
-You'll start with the class:
+You'll start with the parent class:
+
+```csharp
+[Group(/* Tab = */ "MY STUFF", /* Group = */ "GENERAL")]
+public static class MyOptions { }
+```
+
+This class is used to group all of your options together. The `Group` attribute is used to
+define the tab and category that the options will appear in.
+
+<details>
+<summary>Multiple groups in one tab</summary>
+
+You can also have multiple groups in one tab! This is useful if you have a lot of options.
+
+```csharp
+[Tab("MY STUFF")]
+public static class MyOptions {
+    [Group("GENERAL")]
+    public static class General { }
+
+    [Group("ADVANCED")]
+    public static class Advanced { }
+}
+```
+
+</details>
+
+Then, the option class, which is placed inside your group class:
 
 ```cs
-[RegisterOption]
-private class MyOptionThing() // Class name is different here to show that it doesn't matter in state
-    : IntOption(Keys.MyOption, 50, "My Option!", 0, 100, "MY STUFF", "GENERAL");
+[Register]
+private class MyOptionThing()
+    : IntOption(Keys.MyOption, 50, "My Option!", 0, 100);
 ```
 
 > [!NOTE]
@@ -22,7 +50,7 @@ private class MyOptionThing() // Class name is different here to show that it do
 
 You'll notice a few things here. Let's break it down.
 
-The `[RegisterOption]` comes from <xref:ConfigurableWarning.API.RegisterOption>, and
+The `[RegisterOption]` comes from <xref:ConfigurableWarning.API.Attributes.Register>, and
 tells ConfigurableWarning to automatically register your option to the game, meaning that
 you don't have to do that!
 
@@ -37,8 +65,6 @@ value. This constructor takes a few arguments, namely:
    settings menu.
 4. The minimum value - Here it's `0`. This is the <u>minumum</u> value that the slider will go to.
 5. The maximum value - Here it's `100`. This is the <u>maximum</u> value that the slider will go to.
-6. The tab - Here it's `"MY STUFF"`. This will be the tab that the setting shows up in.
-7. The category - Here it's `"GENERAL"`. This will be the category that the setting appears under.
 
 > [!NOTE]
 > Unfortunately, due to the nature of how Zorro's Settings API works, each option has

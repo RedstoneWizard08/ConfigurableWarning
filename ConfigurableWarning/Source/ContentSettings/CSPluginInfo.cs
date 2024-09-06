@@ -1,4 +1,4 @@
-namespace ContentSetings;
+namespace ContentSettings;
 
 /// <summary>
 /// Contains the plugin information for the Content Settings plugin.

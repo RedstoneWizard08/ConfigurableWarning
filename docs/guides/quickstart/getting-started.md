@@ -21,7 +21,7 @@ dotnet add package RedstoneWizard08.ConfigurableWarning
 # [CSProj](#tab/csproj)
 
 ```xml
-<PackageReference Include="RedstoneWizard08.ConfigurableWarning" Version="1.13.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
+<PackageReference Include="RedstoneWizard08.ConfigurableWarning" Version="1.15.2" IncludeAssets="compile" ExcludeAssets="RUNTIME" />
 ```
 
 ---
@@ -32,24 +32,30 @@ dotnet add package RedstoneWizard08.ConfigurableWarning
 
 ## Your First Option
 
+While the legacy `ContentSettings` API still works, we recommend using the newer API instead.
+It's more powerful and easier to use!
+
 Here's a basic option:
 
 ```cs
-[RegisterOption]
-private class MyOptionThing() // Class name is different here to show that it doesn't matter in state
-    : IntOption("MyOption", 50, "My Option!", 0, 100, "MY STUFF", "GENERAL");
+[Group("MY STUFF", "GENERAL")]
+public static class MyOptions {
+    [Register]
+    private class MyOptionThing()
+        : IntOption("MyOption", 50, "My Option!", 0, 100);
+}
 ```
 
-For more info, head to the [tutorials](./tutorials/) section!
+For more info, head to the [tutorials](./tutorials/index.md) section!
 
 ## Accessing it's state
 
-To access your option's state, you can use the <xref:ConfigurableWarning.API.Options.OptionsState>
+To access your option's state, you can use the <xref:ConfigurableWarning.API.States>
 manager. To access it, you'll use the same string that you used in your option's name above.
 In this case, it's `"MyOption"`.
 
 ```cs
-int? state = OptionsState.Instance.Get<int>("MyOption");
+int? state = States.Ints["MyOption"];
 ```
 
 This code retrieves the optional state of the option. You can learn more about that

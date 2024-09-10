@@ -15,8 +15,7 @@ using Zorro.Settings.DebugUI;
 /// <summary>
 /// A setting that contains a boolean value.
 /// </summary>
-public abstract class BoolSetting : Setting
-{
+public abstract class BoolSetting : Setting {
     /// <summary>
     /// Gets a value indicating whether the setting is enabled.
     /// </summary>
@@ -26,8 +25,7 @@ public abstract class BoolSetting : Setting
     /// Loads the setting using the provided loader.
     /// </summary>
     /// <param name="loader">The loader to load the setting with.</param>
-    public override void Load(ISettingsSaveLoad loader)
-    {
+    public override void Load(ISettingsSaveLoad loader) {
         Value = loader.TryLoadInt(GetType(), out var value) ? value != 0 : GetDefaultValue();
     }
 
@@ -42,8 +40,7 @@ public abstract class BoolSetting : Setting
     /// </summary>
     /// <param name="newValue">The new value of the setting.</param>
     /// <param name="settingHandler">The setting handler to save the setting with.</param>
-    public void SetValue(bool newValue, ISettingHandler settingHandler)
-    {
+    public void SetValue(bool newValue, ISettingHandler settingHandler) {
         Value = newValue;
         ApplyValue();
         settingHandler.SaveSetting(this);

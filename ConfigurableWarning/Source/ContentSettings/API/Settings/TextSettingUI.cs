@@ -14,8 +14,7 @@ using Zorro.Settings;
 /// <summary>
 /// The UI cell for a text setting.
 /// </summary>
-public class TextSettingUI : SettingInputUICell
-{
+public class TextSettingUI : SettingInputUICell {
     [SerializeField]
     private TMP_InputField? inputField;
 
@@ -24,15 +23,12 @@ public class TextSettingUI : SettingInputUICell
     /// </summary>
     /// <param name="setting">The text setting to set up the UI cell with.</param>
     /// <param name="settingHandler">The setting handler to use for saving the setting.</param>
-    public override void Setup(Setting setting, ISettingHandler settingHandler)
-    {
-        if (setting is not TextSetting textSetting)
-        {
+    public override void Setup(Setting setting, ISettingHandler settingHandler) {
+        if (setting is not TextSetting textSetting) {
             return;
         }
 
-        if (inputField == null)
-        {
+        if (inputField == null) {
             return;
         }
 
@@ -41,15 +37,13 @@ public class TextSettingUI : SettingInputUICell
 
         return;
 
-        void OnInputChanged(string value)
-        {
+        void OnInputChanged(string value) {
             inputField.SetTextWithoutNotify(value);
             textSetting.SetValue(value, settingHandler);
         }
     }
 
-    private void Awake()
-    {
+    private void Awake() {
         inputField = GetComponentInChildren<TMP_InputField>();
     }
 }

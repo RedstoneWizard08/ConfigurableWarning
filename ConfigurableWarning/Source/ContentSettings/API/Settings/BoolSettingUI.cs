@@ -14,8 +14,7 @@ using Zorro.Settings;
 /// <summary>
 /// The UI for a boolean setting.
 /// </summary>
-public class BoolSettingUI : SettingInputUICell
-{
+public class BoolSettingUI : SettingInputUICell {
     [SerializeField]
     private Toggle? toggle;
 
@@ -24,15 +23,12 @@ public class BoolSettingUI : SettingInputUICell
     /// </summary>
     /// <param name="setting">The setting to set up the UI with.</param>
     /// <param name="settingHandler">The setting handler to use for saving the setting.</param>
-    public override void Setup(Setting setting, ISettingHandler settingHandler)
-    {
-        if (setting is not BoolSetting boolSetting)
-        {
+    public override void Setup(Setting setting, ISettingHandler settingHandler) {
+        if (setting is not BoolSetting boolSetting) {
             return;
         }
 
-        if (toggle == null)
-        {
+        if (toggle == null) {
             return;
         }
 
@@ -40,14 +36,12 @@ public class BoolSettingUI : SettingInputUICell
         toggle.onValueChanged.AddListener(OnToggleChanged);
         return;
 
-        void OnToggleChanged(bool value)
-        {
+        void OnToggleChanged(bool value) {
             boolSetting.SetValue(value, settingHandler);
         }
     }
 
-    private void Awake()
-    {
+    private void Awake() {
         toggle = GetComponentInChildren<Toggle>();
     }
 }

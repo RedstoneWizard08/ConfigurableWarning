@@ -16,8 +16,7 @@ using Zorro.Settings.DebugUI;
 /// <summary>
 /// A setting that contains a text value.
 /// </summary>
-public abstract class TextSetting : Setting
-{
+public abstract class TextSetting : Setting {
     /// <summary>
     /// Gets the value of the setting.
     /// </summary>
@@ -27,8 +26,7 @@ public abstract class TextSetting : Setting
     /// Loads the setting using the provided loader.
     /// </summary>
     /// <param name="loader">The loader to load the setting with.</param>
-    public override void Load(ISettingsSaveLoad loader)
-    {
+    public override void Load(ISettingsSaveLoad loader) {
         Value = loader.TryGetString(GetType(), out var value) ? value : GetDefaultValue();
     }
 
@@ -43,8 +41,7 @@ public abstract class TextSetting : Setting
     /// </summary>
     /// <param name="newValue">The new value of the setting.</param>
     /// <param name="settingHandler">The setting handler to save the setting with.</param>
-    public void SetValue(string newValue, ISettingHandler settingHandler)
-    {
+    public void SetValue(string newValue, ISettingHandler settingHandler) {
         Value = newValue;
         ApplyValue();
         settingHandler.SaveSetting(this);

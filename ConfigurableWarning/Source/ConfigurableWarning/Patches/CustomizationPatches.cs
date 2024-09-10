@@ -35,12 +35,12 @@ public class CustomizationPatches {
     [HarmonyPatch(typeof(PlayerCustomizer), nameof(PlayerCustomizer.Update))]
     [HarmonyPostfix]
     private static void UpdatePostfix(PlayerCustomizer __instance, TextMeshProUGUI ___faceText, PhotonView ___view_g) {
-        if (Input.GetKey((KeyCode) 127)) {
+        if (Input.GetKey((KeyCode)127)) {
             ___view_g.RPC("SetFaceText", 0, [""]);
-        } else if ((Input.GetKey((KeyCode) 306) || Input.GetKey((KeyCode) 305)) && Input.GetKeyDown((KeyCode) 118)) {
+        } else if ((Input.GetKey((KeyCode)306) || Input.GetKey((KeyCode)305)) && Input.GetKeyDown((KeyCode)118)) {
             string systemCopyBuffer = GUIUtility.systemCopyBuffer;
             ___view_g.RPC("SetFaceText", 0, [systemCopyBuffer]);
-        } else if (Input.GetKeyDown((KeyCode) 13) || Input.GetKeyDown((KeyCode) 271)) {
+        } else if (Input.GetKeyDown((KeyCode)13) || Input.GetKeyDown((KeyCode)271)) {
             string text = ___faceText.text;
             string text2 = text + "\n";
             ___view_g.RPC("SetFaceText", 0, [text2]);
@@ -65,8 +65,8 @@ public class CustomizationPatches {
 
             __instance.faceText.text = text;
             __instance.playerInTerminal.refs.visor.visorFaceText.text = text;
-            
-			if (__instance.faceText != null) {
+
+            if (__instance.faceText != null) {
                 __instance.faceText.enableAutoSizing = States.Bools[SettingKeys.FaceAutoSizing];
                 __instance.faceText.fontSizeMin = States.Floats[SettingKeys.FaceMinFont];
                 __instance.faceText.fontSizeMax = States.Floats[SettingKeys.FaceMaxFont];
@@ -88,16 +88,16 @@ public class CustomizationPatches {
     }
 
     [HarmonyPatch(typeof(PlayerCustomizer), "OnChangeFaceSize")]
-	[HarmonyPrefix]
+    [HarmonyPrefix]
     private static bool PrefixOnChangeFaceSize(PlayerCustomizer __instance, bool smaller) {
         float x = __instance.faceText.transform.localScale.x;
         float num = 0.05f;
         float num2 = smaller ? (x - num) : (x + num);
-        
-		__instance.faceText.transform.localScale = new Vector3(num2, num2, 1f);
-		
+
+        __instance.faceText.transform.localScale = new Vector3(num2, num2, 1f);
+
         Debug.Log($"Adjusted face size to: {num2}");
-        
-		return false;
+
+        return false;
     }
 }

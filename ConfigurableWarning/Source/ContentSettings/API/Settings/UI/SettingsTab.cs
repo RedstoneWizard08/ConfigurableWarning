@@ -18,8 +18,7 @@ using Zorro.Settings;
 /// <summary>
 /// A component representing a tab in a settings menu, which can be selected to show settings belonging to the tab.
 /// </summary>
-public class SettingsTab : SettingsButton
-{
+public class SettingsTab : SettingsButton {
     /// <summary>
     /// The current settings menu instance.
     /// </summary>
@@ -29,15 +28,12 @@ public class SettingsTab : SettingsButton
     /// <summary>
     /// Shows the settings for the tab.
     /// </summary>
-    public void Show()
-    {
-        if (!SettingsLoader.TryGetTab(Name, out var settingsByCategory))
-        {
+    public void Show() {
+        if (!SettingsLoader.TryGetTab(Name, out var settingsByCategory)) {
             return;
         }
 
-        if (settingsMenu == null)
-        {
+        if (settingsMenu == null) {
             return;
         }
 
@@ -45,18 +41,15 @@ public class SettingsTab : SettingsButton
         settingsMenu.m_cells.Clear();
         settingsMenu.m_settingsContainer?.ClearChildren();
 
-        if (settingsMenu.m_settingsCell == null || settingsMenu.m_settingsContainer == null)
-        {
+        if (settingsMenu.m_settingsCell == null || settingsMenu.m_settingsContainer == null) {
             return;
         }
 
-        if (settingsByCategory.ContainsKey(string.Empty))
-        {
+        if (settingsByCategory.ContainsKey(string.Empty)) {
             settingsByCategory[string.Empty].ForEach(CreateSettingCell);
         }
 
-        foreach (var (category, settings) in settingsByCategory.Where(s => s.Key != string.Empty))
-        {
+        foreach (var (category, settings) in settingsByCategory.Where(s => s.Key != string.Empty)) {
             var categoryCell = Instantiate(SettingsAssets.SettingsCategoryPrefab, settingsMenu.m_settingsContainer);
             categoryCell.GetComponentInChildren<TextMeshProUGUI>().text = category;
 
@@ -67,31 +60,26 @@ public class SettingsTab : SettingsButton
     /// <summary>
     /// Called when the tab is clicked, selecting the tab.
     /// </summary>
-    public void OnPointerClicked()
-    {
+    public void OnPointerClicked() {
         transform.parent.GetComponent<SettingsNavigation>().Select(this);
     }
 
     /// <summary>
     /// Called by Unity when the script instance has been loaded.
     /// </summary>
-    protected void Start()
-    {
+    protected void Start() {
         GetComponent<Button>().onClick.AddListener(OnPointerClicked);
     }
 
     /// <inheritdoc />
-    protected override void Awake()
-    {
+    protected override void Awake() {
         base.Awake();
 
         settingsMenu = GetComponentInParent<SettingsMenu>();
     }
 
-    private void CreateSettingCell(Setting setting)
-    {
-        if (settingsMenu == null)
-        {
+    private void CreateSettingCell(Setting setting) {
+        if (settingsMenu == null) {
             throw new System.Exception("Settings menu is null.");
         }
 

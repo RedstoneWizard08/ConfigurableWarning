@@ -6,8 +6,7 @@ namespace ContentSettings.Internal;
 /// <summary>
 /// Used to map input cells to game objects.
 /// </summary>
-internal static class SettingsMapper
-{
+internal static class SettingsMapper {
     private static GameObject? _textSettingCell;
 
     private static GameObject? _intSettingCell;
@@ -17,17 +16,13 @@ internal static class SettingsMapper
     /// <summary>
     /// Gets the text setting cell.
     /// </summary>
-    public static GameObject TextSettingCell
-    {
-        get
-        {
-            if (_textSettingCell == null)
-            {
+    public static GameObject TextSettingCell {
+        get {
+            if (_textSettingCell == null) {
                 _textSettingCell = SettingsAssets.SettingsTextInputPrefab;
             }
 
-            if (_textSettingCell.GetComponent<TextSettingUI>() == null)
-            {
+            if (_textSettingCell.GetComponent<TextSettingUI>() == null) {
                 _textSettingCell.AddComponent<TextSettingUI>();
             }
 
@@ -38,17 +33,13 @@ internal static class SettingsMapper
     /// <summary>
     /// Gets the int setting cell.
     /// </summary>
-    public static GameObject IntSettingCell
-    {
-        get
-        {
-            if (_intSettingCell == null)
-            {
+    public static GameObject IntSettingCell {
+        get {
+            if (_intSettingCell == null) {
                 _intSettingCell = SettingsAssets.SettingsIntInputPrefab;
             }
 
-            if (_intSettingCell.GetComponent<IntSettingUI>() == null)
-            {
+            if (_intSettingCell.GetComponent<IntSettingUI>() == null) {
                 _intSettingCell.AddComponent<IntSettingUI>();
             }
 
@@ -59,17 +50,13 @@ internal static class SettingsMapper
     /// <summary>
     /// Gets the bool setting cell.
     /// </summary>
-    public static GameObject BoolSettingCell
-    {
-        get
-        {
-            if (_boolSettingCell == null)
-            {
+    public static GameObject BoolSettingCell {
+        get {
+            if (_boolSettingCell == null) {
                 _boolSettingCell = SettingsAssets.SettingsBoolInputPrefab;
             }
 
-            if (_boolSettingCell.GetComponent<BoolSettingUI>() == null)
-            {
+            if (_boolSettingCell.GetComponent<BoolSettingUI>() == null) {
                 _boolSettingCell.AddComponent<BoolSettingUI>();
             }
 

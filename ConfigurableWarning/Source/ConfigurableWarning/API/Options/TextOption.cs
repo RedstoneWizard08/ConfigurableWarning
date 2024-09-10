@@ -104,7 +104,7 @@ public class TextOption : TextSetting, IOption<string> {
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((string) value);
+        SetValue((string)value);
     }
 
     /// <summary>
@@ -113,7 +113,7 @@ public class TextOption : TextSetting, IOption<string> {
     /// <param name="name">The option's name.</param>
     /// <returns>The option.</returns>
     public static TextOption? Instance(string name) {
-        return (TextOption?) IOption<string>.Instance(name);
+        return (TextOption?)IOption<string>.Instance(name);
     }
 
     /// <summary>

@@ -8,7 +8,7 @@ public static class CSPluginInfo {
     /// The GUID of the plugin.
     /// </summary>
     public const string PLUGIN_GUID = "CommanderCat101.ContentSettings";
-    
+
     /// <summary>
     /// The name of the plugin.
     /// </summary>

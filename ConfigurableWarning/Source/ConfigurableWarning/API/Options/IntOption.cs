@@ -115,7 +115,7 @@ public class IntOption : IntSetting, IOption<int> {
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((int) value);
+        SetValue((int)value);
     }
 
     /// <summary>
@@ -124,7 +124,7 @@ public class IntOption : IntSetting, IOption<int> {
     /// <param name="name">The option's name.</param>
     /// <returns>The option.</returns>
     public static IntOption? Instance(string name) {
-        return (IntOption?) IOption<int>.Instance(name);
+        return (IntOption?)IOption<int>.Instance(name);
     }
 
     /// <summary>

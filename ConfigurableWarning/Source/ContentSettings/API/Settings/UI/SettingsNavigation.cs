@@ -18,8 +18,7 @@ using Zorro.Core;
 /// A component containing settings tabs for a settings menu.
 /// </summary>
 [UsedImplicitly]
-public class SettingsNavigation : MonoBehaviour
-{
+public class SettingsNavigation : MonoBehaviour {
     /// <summary>
     /// The settings menu this tab belongs to.
     /// </summary>
@@ -36,7 +35,7 @@ public class SettingsNavigation : MonoBehaviour
     /// The list of settings tabs available.
     /// </summary>
     [SerializeField]
-    private List<SettingsTab> settingsTabs = new ();
+    private List<SettingsTab> settingsTabs = new();
 
     /// <summary>
     /// The number of settings to display per page.
@@ -60,8 +59,7 @@ public class SettingsNavigation : MonoBehaviour
     /// Add a settings tab to the available tabs.
     /// </summary>
     /// <param name="tab">The tab to add.</param>
-    public void Add(SettingsTab tab)
-    {
+    public void Add(SettingsTab tab) {
         settingsTabs.Add(tab);
     }
 
@@ -70,8 +68,7 @@ public class SettingsNavigation : MonoBehaviour
     /// </summary>
     /// <param name="tabName">The name of the tab. This will be the display name.</param>
     /// <returns>The created settings tab.</returns>
-    public SettingsTab Create(string tabName)
-    {
+    public SettingsTab Create(string tabName) {
         var settingsTabObject = Instantiate(SettingsAssets.SettingsTabPrefab, transform);
         var settingsTab = settingsTabObject.AddComponent<SettingsTab>();
         settingsTab.Name = tabName;
@@ -85,10 +82,8 @@ public class SettingsNavigation : MonoBehaviour
     /// Select a settings tab.
     /// </summary>
     /// <param name="tab">The tab to select.</param>
-    public void Select(SettingsTab tab)
-    {
-        if (selectedTab != null)
-        {
+    public void Select(SettingsTab tab) {
+        if (selectedTab != null) {
             Deselect(selectedTab);
         }
 
@@ -101,8 +96,7 @@ public class SettingsNavigation : MonoBehaviour
     /// De-select a settings tab.
     /// </summary>
     /// <param name="tab">The tab to de-select.</param>
-    public void Deselect(SettingsTab tab)
-    {
+    public void Deselect(SettingsTab tab) {
         selectedTab = null;
         tab.Deselect();
     }
@@ -110,16 +104,14 @@ public class SettingsNavigation : MonoBehaviour
     /// <summary>
     /// Show the next page of settings tabs.
     /// </summary>
-    public void NextPage()
-    {
+    public void NextPage() {
         SetPage((Page + 1) % PageCount);
     }
 
     /// <summary>
     /// Show the previous page of settings tabs.
     /// </summary>
-    public void PreviousPage()
-    {
+    public void PreviousPage() {
         SetPage((Page - 1 + PageCount) % PageCount);
     }
 
@@ -127,8 +119,7 @@ public class SettingsNavigation : MonoBehaviour
     /// Select a specific page of settings tabs.
     /// </summary>
     /// <param name="page">The page to select, indexed from zero.</param>
-    public void SelectPage(int page)
-    {
+    public void SelectPage(int page) {
         SetPage(Mathf.Clamp(page, 0, PageCount - 1));
     }
 
@@ -136,29 +127,24 @@ public class SettingsNavigation : MonoBehaviour
     /// Called when a tab is selected.
     /// </summary>
     /// <param name="tab">The selected tab.</param>
-    public virtual void OnSelected(SettingsTab tab)
-    {
+    public virtual void OnSelected(SettingsTab tab) {
         tab.Show();
 
         // Hide all other tabs except the current page
         var page = settingsTabs.IndexOf(tab) / pageSize;
-        for (var i = 0; i < settingsTabs.Count; i++)
-        {
+        for (var i = 0; i < settingsTabs.Count; i++) {
             settingsTabs[i].gameObject.SetActive(i / pageSize == page);
         }
     }
 
-    private void SetPage(int page)
-    {
+    private void SetPage(int page) {
         Page = page;
-        for (var i = 0; i < settingsTabs.Count; i++)
-        {
+        for (var i = 0; i < settingsTabs.Count; i++) {
             settingsTabs[i].gameObject.SetActive(i / pageSize == page);
         }
     }
 
-    private void Awake()
-    {
+    private void Awake() {
         settingsMenu = GetComponentInParent<SettingsMenu>();
 
         var nextTabs = settingsMenu.transform
@@ -174,22 +160,16 @@ public class SettingsNavigation : MonoBehaviour
             .onClick.AddListener(PreviousPage);
     }
 
-    private void Start()
-    {
-        if (selectedTab != null)
-        {
+    private void Start() {
+        if (selectedTab != null) {
             Select(selectedTab);
-        }
-        else if (settingsTabs.Count > 0)
-        {
+        } else if (settingsTabs.Count > 0) {
             Select(settingsTabs[0]);
         }
     }
 
-    private void OnEnable()
-    {
-        if (selectedTab != null)
-        {
+    private void OnEnable() {
+        if (selectedTab != null) {
             Select(selectedTab);
         }
     }

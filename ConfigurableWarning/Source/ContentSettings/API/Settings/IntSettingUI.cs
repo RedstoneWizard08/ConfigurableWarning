@@ -15,8 +15,7 @@ using Zorro.Settings;
 /// <summary>
 /// The UI for an integer setting.
 /// </summary>
-public class IntSettingUI : SettingInputUICell
-{
+public class IntSettingUI : SettingInputUICell {
     [SerializeField]
     private TMP_InputField? inputField;
 
@@ -28,15 +27,12 @@ public class IntSettingUI : SettingInputUICell
     /// </summary>
     /// <param name="setting">The setting to set up the UI with.</param>
     /// <param name="settingHandler">The setting handler to use for saving the setting.</param>
-    public override void Setup(Setting setting, ISettingHandler settingHandler)
-    {
-        if (setting is not IntSetting intSetting)
-        {
+    public override void Setup(Setting setting, ISettingHandler settingHandler) {
+        if (setting is not IntSetting intSetting) {
             return;
         }
 
-        if (inputField == null || slider == null)
-        {
+        if (inputField == null || slider == null) {
             return;
         }
 
@@ -52,10 +48,8 @@ public class IntSettingUI : SettingInputUICell
 
         return;
 
-        void OnInputChanged(string value)
-        {
-            if (!int.TryParse(value, out var result))
-            {
+        void OnInputChanged(string value) {
+            if (!int.TryParse(value, out var result)) {
                 return;
             }
 
@@ -65,8 +59,7 @@ public class IntSettingUI : SettingInputUICell
             slider.SetValueWithoutNotify(result);
         }
 
-        void OnSliderChanged(float value)
-        {
+        void OnSliderChanged(float value) {
             intSetting.SetValue((int)value, settingHandler);
 
             inputField.SetTextWithoutNotify(intSetting.Expose(intSetting.Value));
@@ -74,8 +67,7 @@ public class IntSettingUI : SettingInputUICell
         }
     }
 
-    private void Awake()
-    {
+    private void Awake() {
         inputField = GetComponentInChildren<TMP_InputField>();
         slider = GetComponentInChildren<Slider>();
     }

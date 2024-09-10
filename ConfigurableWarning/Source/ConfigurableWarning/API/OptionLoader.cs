@@ -57,7 +57,7 @@ public static class OptionLoader {
 
         ConfigurableWarning.Logger.LogInfo($"Found setting {type.FullName}");
 
-        var instance = (IUntypedOption) Activator.CreateInstance(type);
+        var instance = (IUntypedOption)Activator.CreateInstance(type);
 
         instance.Register(tab, group);
         RegisteredOptions.Add(type, instance);

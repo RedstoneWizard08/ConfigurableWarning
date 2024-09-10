@@ -54,6 +54,6 @@ public class OptionManager {
     /// <param name="name">The option's name.</param>
     /// <returns>The option.</returns>
     public IOption<T>? Get<T>(string name) {
-        return (IOption<T>?) Get(name);
+        return (IOption<T>?)Get(name);
     }
 }

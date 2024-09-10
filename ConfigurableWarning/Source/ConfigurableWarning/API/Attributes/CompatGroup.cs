@@ -20,7 +20,7 @@ public class CompatGroup : Attribute {
     ///     tab.
     /// </summary>
     public readonly string? Tab;
-    
+
     /// <summary>
     ///     Registers any contained options as a part of this category.
     ///     This is specifically for compat modules.

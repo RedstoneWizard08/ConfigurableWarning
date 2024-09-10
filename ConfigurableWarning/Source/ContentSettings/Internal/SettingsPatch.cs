@@ -12,15 +12,13 @@ namespace ContentSettings.Internal;
 [HarmonyPatch]
 [SuppressMessage("ReSharper", "InconsistentNaming", Justification = "Harmony patch.")]
 [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "Harmony patch.")]
-internal class SettingsPatch
-{
+internal class SettingsPatch {
     /// <summary>
     /// Patches the <see cref="DefaultSettingsSaveLoad.WriteToDisk"/> method to save our custom settings.
     /// </summary>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(DefaultSettingsSaveLoad), nameof(DefaultSettingsSaveLoad.WriteToDisk))]
-    internal static void WriteToDiskPatch()
-    {
+    internal static void WriteToDiskPatch() {
         SettingsLoader.SaveSettings();
     }
 
@@ -31,10 +29,9 @@ internal class SettingsPatch
     /// <returns>Whether the original method should be called.</returns>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(SettingsMenu), nameof(SettingsMenu.OnEnable))]
-    internal static bool OnEnablePatch(SettingsMenu __instance)
-    {
+    internal static bool OnEnablePatch(SettingsMenu __instance) {
         GameBooter.Initialize();
-        
+
         SettingsLoader.RegisterSettings();
         SettingsLoader.CreateSettingsMenu(__instance);
 
@@ -48,8 +45,7 @@ internal class SettingsPatch
     /// <returns>Whether the original method should be called.</returns>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(MainMenuHandler), nameof(MainMenuHandler.Start))]
-    internal static bool MainMenuHandlerStartPatch(MainMenuHandler __instance)
-    {
+    internal static bool MainMenuHandlerStartPatch(MainMenuHandler __instance) {
         SettingsLoader.RegisterSettings();
 
         return true;
@@ -62,10 +58,8 @@ internal class SettingsPatch
     /// <returns>Whether the original method should be called.</returns>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(SFX_Instance), nameof(SFX_Instance.Play))]
-    internal static bool PlayPatch(SFX_Instance __instance)
-    {
-        if (__instance.settings.mixerGroup != SingletonAsset<MixerHolder>.Instance.sfxMixer)
-        {
+    internal static bool PlayPatch(SFX_Instance __instance) {
+        if (__instance.settings.mixerGroup != SingletonAsset<MixerHolder>.Instance.sfxMixer) {
             ContentSettings.Logger.LogDebug($"Changing mixer group for {__instance.name}");
         }
 

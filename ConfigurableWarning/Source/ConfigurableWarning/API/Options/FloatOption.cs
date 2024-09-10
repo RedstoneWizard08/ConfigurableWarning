@@ -115,7 +115,7 @@ public class FloatOption : FloatSetting, IOption<float> {
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((float) value);
+        SetValue((float)value);
     }
 
     /// <summary>
@@ -124,7 +124,7 @@ public class FloatOption : FloatSetting, IOption<float> {
     /// <param name="name">The option's name.</param>
     /// <returns>The option.</returns>
     public static FloatOption? Instance(string name) {
-        return (FloatOption?) IOption<float>.Instance(name);
+        return (FloatOption?)IOption<float>.Instance(name);
     }
 
     /// <summary>

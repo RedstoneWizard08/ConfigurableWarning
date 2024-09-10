@@ -38,7 +38,7 @@ public class CameraPatch {
         }
 
         videoFileName = "content_warning_" + GuidExtensions.ToShortString(__instance.videoHandle.id) + ".webm";
-        
+
         string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         string value = States.Strings[SettingKeys.VideoSaveLocation] ?? "Desktop";
 

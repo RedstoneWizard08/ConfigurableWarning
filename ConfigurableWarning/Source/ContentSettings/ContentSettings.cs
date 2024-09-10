@@ -11,8 +11,7 @@ namespace ContentSettings;
 /// </summary>
 [ContentWarningPlugin(CSPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_VERSION, true)]
 [BepInPlugin(CSPluginInfo.PLUGIN_GUID, CSPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-public partial class ContentSettings : BaseUnityPlugin
-{
+public partial class ContentSettings : BaseUnityPlugin {
     /// <summary>
     /// Gets the logger of the plugin.
     /// </summary>
@@ -21,10 +20,9 @@ public partial class ContentSettings : BaseUnityPlugin
     /// <summary>
     /// Initialize ContentSettings.
     /// </summary>
-    public void Awake()
-    {
+    public void Awake() {
         // DON'T PATCH HARMONY HERE!!! ConfigurableWarning already does it!
-        
+
         Logger = base.Logger;
 
         SettingsAssets.LoadAssets();
@@ -33,8 +31,7 @@ public partial class ContentSettings : BaseUnityPlugin
     /// <summary>
     /// Update ContentSettings.
     /// </summary>
-    public void Update()
-    {
+    public void Update() {
         SettingsLoader.Update();
     }
 }

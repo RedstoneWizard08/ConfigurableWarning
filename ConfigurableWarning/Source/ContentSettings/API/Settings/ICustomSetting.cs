@@ -13,8 +13,7 @@ using JetBrains.Annotations;
 /// Interface for all custom settings to implement.
 /// </summary>
 [UsedImplicitly]
-public interface ICustomSetting : IExposedSetting
-{
+public interface ICustomSetting : IExposedSetting {
     /// <summary>
     /// This is called when the setting is loaded but currently does nothing.
     /// </summary>

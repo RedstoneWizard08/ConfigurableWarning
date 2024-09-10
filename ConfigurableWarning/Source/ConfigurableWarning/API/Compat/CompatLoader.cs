@@ -14,7 +14,7 @@ public static class CompatLoader {
     ///     A list of all registered compat modules.
     /// </summary>
     public static readonly Dictionary<Type, ICompatModule> RegisteredModules = new();
-    
+
     /// <summary>
     ///     A list of all registered compat tabs.
     /// </summary>
@@ -70,7 +70,7 @@ public static class CompatLoader {
                 TryRegisterCompatGroup(null, ty);
             }
 
-            var it = (ICompatModule) Activator.CreateInstance(type);
+            var it = (ICompatModule)Activator.CreateInstance(type);
 
             it.Init();
             RegisteredModules[type] = it;

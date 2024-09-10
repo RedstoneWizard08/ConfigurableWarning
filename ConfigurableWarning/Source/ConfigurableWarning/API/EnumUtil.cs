@@ -20,7 +20,7 @@ public static class EnumUtil {
     /// <param name="value">The name of the enum value.</param>
     /// <returns>The enum value.</returns>
     public static T Parse<T>(string value) where T : struct {
-        return (T) Enum.Parse(typeof(T), value);
+        return (T)Enum.Parse(typeof(T), value);
     }
 
     /// <summary>

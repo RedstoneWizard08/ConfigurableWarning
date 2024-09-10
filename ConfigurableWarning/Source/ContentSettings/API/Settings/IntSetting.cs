@@ -17,8 +17,7 @@ using Zorro.Settings.DebugUI;
 /// <summary>
 /// A setting that contains an integer value.
 /// </summary>
-public abstract class IntSetting : Setting
-{
+public abstract class IntSetting : Setting {
     /// <summary>
     /// Gets the value of the setting.
     /// </summary>
@@ -38,8 +37,7 @@ public abstract class IntSetting : Setting
     /// Loads the setting using the provided loader.
     /// </summary>
     /// <param name="loader">The loader to load the setting with.</param>
-    public override void Load(ISettingsSaveLoad loader)
-    {
+    public override void Load(ISettingsSaveLoad loader) {
         var (min, max) = GetMinMaxValue();
         MinValue = min;
         MaxValue = max;
@@ -58,8 +56,7 @@ public abstract class IntSetting : Setting
     /// </summary>
     /// <param name="newValue">The new value of the setting.</param>
     /// <param name="settingHandler">The setting handler to save the setting with.</param>
-    public void SetValue(int newValue, ISettingHandler settingHandler)
-    {
+    public void SetValue(int newValue, ISettingHandler settingHandler) {
         Value = Clamp(newValue);
         ApplyValue();
         settingHandler.SaveSetting(this);

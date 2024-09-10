@@ -111,7 +111,7 @@ public class EnumOption<T> : EnumSetting, IOption<T> where T : struct {
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((T) value);
+        SetValue((T)value);
     }
 
     /// <inheritdoc />
@@ -133,7 +133,7 @@ public class EnumOption<T> : EnumSetting, IOption<T> where T : struct {
     /// <param name="name">The option's name.</param>
     /// <returns>The option.</returns>
     public static EnumOption<T>? Instance(string name) {
-        return (EnumOption<T>?) IOption<T>.Instance(name);
+        return (EnumOption<T>?)IOption<T>.Instance(name);
     }
 
     /// <summary>

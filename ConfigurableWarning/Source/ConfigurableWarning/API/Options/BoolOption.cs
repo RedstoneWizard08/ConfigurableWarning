@@ -103,7 +103,7 @@ public class BoolOption : BoolSetting, IOption<bool> {
 
     /// <inheritdoc />
     public void SetValue(object value) {
-        SetValue((bool) value);
+        SetValue((bool)value);
     }
 
     /// <summary>
@@ -112,7 +112,7 @@ public class BoolOption : BoolSetting, IOption<bool> {
     /// <param name="name">The option's name.</param>
     /// <returns>The option.</returns>
     public static BoolOption? Instance(string name) {
-        return (BoolOption?) IOption<bool>.Instance(name);
+        return (BoolOption?)IOption<bool>.Instance(name);
     }
 
     /// <summary>

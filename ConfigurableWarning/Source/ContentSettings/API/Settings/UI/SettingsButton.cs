@@ -16,8 +16,7 @@ using UnityEngine.UI;
 /// <summary>
 /// A component representing a button in a settings menu, providing hover and selection states.
 /// </summary>
-public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
-{
+public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     /// <summary>
     /// The text mesh pro component of the tab, displaying the tab name.
     /// </summary>
@@ -33,13 +32,10 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     /// <summary>
     /// Gets or sets the display name of the button.
     /// </summary>
-    public string Name
-    {
+    public string Name {
         get => textMeshPro?.text ?? string.Empty;
-        set
-        {
-            if (textMeshPro != null)
-            {
+        set {
+            if (textMeshPro != null) {
                 textMeshPro.text = value;
             }
         }
@@ -61,8 +57,7 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     /// Called when the tab is hovered over.
     /// </summary>
     /// <param name="eventData">The pointer event data.</param>
-    public void OnPointerEnter(PointerEventData eventData)
-    {
+    public void OnPointerEnter(PointerEventData eventData) {
         IsHovered = true;
         OnHover();
     }
@@ -71,8 +66,7 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     /// Called when the tab is no longer hovered over.
     /// </summary>
     /// <param name="eventData">The pointer event data.</param>
-    public void OnPointerExit(PointerEventData eventData)
-    {
+    public void OnPointerExit(PointerEventData eventData) {
         IsHovered = false;
         OnUnhover();
     }
@@ -81,8 +75,7 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     /// Select the tab.
     /// </summary>
     /// <remarks>See <see cref="OnSelected"/> for the event triggered by this.</remarks>
-    public void Select()
-    {
+    public void Select() {
         IsSelected = true;
         OnSelected();
     }
@@ -91,8 +84,7 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     /// Deselect the tab.
     /// </summary>
     /// <remarks>See <see cref="OnDeselected"/> for the event triggered by this.</remarks>
-    public void Deselect()
-    {
+    public void Deselect() {
         IsSelected = false;
         OnDeselected();
     }
@@ -100,67 +92,56 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     /// <summary>
     /// Called when the tab is selected.
     /// </summary>
-    public virtual void OnSelected()
-    {
+    public virtual void OnSelected() {
         SetColorActive();
     }
 
     /// <summary>
     /// Called when the tab is deselected.
     /// </summary>
-    public virtual void OnDeselected()
-    {
+    public virtual void OnDeselected() {
         SetColorInactive();
     }
 
     /// <summary>
     /// Called when the tab is hovered over.
     /// </summary>
-    public virtual void OnHover()
-    {
+    public virtual void OnHover() {
         SetColorActive();
     }
 
     /// <summary>
     /// Called when the tab is no longer hovered over.
     /// </summary>
-    public virtual void OnUnhover()
-    {
+    public virtual void OnUnhover() {
         SetColorInactive();
     }
 
     /// <summary>
     /// Awake is called by Unity when the script instance is being loaded.
     /// </summary>
-    protected virtual void Awake()
-    {
+    protected virtual void Awake() {
         textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         image = GetComponentInChildren<Image>();
     }
 
-    private void SetColorActive()
-    {
-        if (image is not null)
-        {
-            image.color = new (0.992f, 0.839f, 0.000f, 0.600f);
+    private void SetColorActive() {
+        if (image is not null) {
+            image.color = new(0.992f, 0.839f, 0.000f, 0.600f);
         }
 
-        if (textMeshPro is not null)
-        {
-            textMeshPro.color = new (0.0f, 0.0f, 0.0f, 1.000f);
+        if (textMeshPro is not null) {
+            textMeshPro.color = new(0.0f, 0.0f, 0.0f, 1.000f);
         }
     }
 
-    private void SetColorInactive()
-    {
-        if (image is not null && !IsHovered && !IsSelected)
-        {
-            image.color = new (0.122f, 0.122f, 0.122f, 0.482f);
+    private void SetColorInactive() {
+        if (image is not null && !IsHovered && !IsSelected) {
+            image.color = new(0.122f, 0.122f, 0.122f, 0.482f);
         }
 
-        if (textMeshPro is not null && !IsHovered && !IsSelected)
-        {
-            textMeshPro.color = new (1.0f, 1.0f, 1.0f, 1.000f);
+        if (textMeshPro is not null && !IsHovered && !IsSelected) {
+            textMeshPro.color = new(1.0f, 1.0f, 1.0f, 1.000f);
         }
     }
 }

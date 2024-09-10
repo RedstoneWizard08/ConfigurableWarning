@@ -18,7 +18,10 @@ public partial class ContentSettings : BaseUnityPlugin
     /// </summary>
     internal new static ManualLogSource Logger { get; private set; } = null!;
 
-    private void Awake()
+    /// <summary>
+    /// Initialize ContentSettings.
+    /// </summary>
+    public void Awake()
     {
         // DON'T PATCH HARMONY HERE!!! ConfigurableWarning already does it!
         
@@ -27,7 +30,10 @@ public partial class ContentSettings : BaseUnityPlugin
         SettingsAssets.LoadAssets();
     }
 
-    private void Update()
+    /// <summary>
+    /// Update ContentSettings.
+    /// </summary>
+    public void Update()
     {
         SettingsLoader.Update();
     }

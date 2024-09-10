@@ -88,9 +88,8 @@ public static class SettingsLoader {
         var settingType = setting.GetType();
         ContentSettings.Logger.LogDebug($"Registering setting {settingType.Name}({settingType.BaseType?.Name}) to tab {tab} and category {category}.");
 
-        var settingsByCategory = SettingsByCategoryByTab
-            .GetValueOrDefault(tab, new Dictionary<string, List<Setting>>());
-        var settings = settingsByCategory.GetValueOrDefault(category, new List<Setting>());
+        var settingsByCategory = SettingsByCategoryByTab.GetValueOrDefault(tab, []);
+        var settings = settingsByCategory.GetValueOrDefault(category, []);
 
         settingsByCategory[category] = settings;
         SettingsByCategoryByTab[tab] = settingsByCategory;
@@ -148,12 +147,8 @@ public static class SettingsLoader {
     internal static void CreateSettingsMenu(SettingsMenu menu) {
         ContentSettings.Logger.LogDebug("Initializing settings.");
 
-        var tabs = menu.transform.Find("Content")?.Find("TABS");
-
-        if (tabs == null) {
-            throw new Exception("Failed to find settings tab.");
-        }
-
+        var tabs = (menu.transform.Find("Content")?.Find("TABS")) ?? throw new Exception("Failed to find settings tab.");
+        
         if (SettingsNavigation == null) {
             var settingsMenuObject = Object.Instantiate(SettingsAssets.SettingsNavigationPrefab, tabs.parent, false);
             var settingsTabsTransform = settingsMenuObject.transform.FindChildRecursive("Content");

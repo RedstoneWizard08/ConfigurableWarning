@@ -145,4 +145,7 @@ public class FloatOption : FloatSetting, IOption<float> {
     public override float2 GetMinMaxValue() {
         return _minMax;
     }
+
+    /// <inheritdoc />
+    public StateHolder<float> StateHolder => States.Floats;
 }

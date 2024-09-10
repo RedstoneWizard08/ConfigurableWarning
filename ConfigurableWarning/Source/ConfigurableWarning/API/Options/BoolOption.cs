@@ -128,4 +128,7 @@ public class BoolOption : BoolSetting, IOption<bool> {
 
         foreach (var action in _applyActions) action(this);
     }
+
+    /// <inheritdoc />
+    public StateHolder<bool> StateHolder => States.Bools;
 }

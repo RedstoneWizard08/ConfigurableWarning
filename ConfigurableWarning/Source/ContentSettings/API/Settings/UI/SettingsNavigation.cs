@@ -35,13 +35,13 @@ public class SettingsNavigation : MonoBehaviour {
     /// The list of settings tabs available.
     /// </summary>
     [SerializeField]
-    private List<SettingsTab> settingsTabs = new();
+    private readonly List<SettingsTab> settingsTabs = [];
 
     /// <summary>
     /// The number of settings to display per page.
     /// </summary>
     [SerializeField]
-    private int pageSize = 3;
+    private readonly int pageSize = 3;
 
     /// <summary>
     /// Gets a value indicating the current page of settings tabs.

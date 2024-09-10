@@ -9,7 +9,7 @@ namespace ConfigurableWarning.API.Options;
 ///     by all options.
 /// </summary>
 /// <typeparam name="T">The option's value type.</typeparam>
-public interface IOption<T> : ICustomSetting, IUntypedOption {
+public interface IOption<T> : ICustomSetting, IUntypedOption, IHasStateHolder<T> {
     /// <summary>
     ///     Get or set this option's state.
     /// </summary>

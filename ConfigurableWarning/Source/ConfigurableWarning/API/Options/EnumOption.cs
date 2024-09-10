@@ -149,4 +149,7 @@ public class EnumOption<T> : EnumSetting, IOption<T> where T : struct {
 
         foreach (var action in _applyActions) action(this);
     }
+
+    /// <inheritdoc />
+    public StateHolder<T> StateHolder => States.WrapEnums<T>();
 }

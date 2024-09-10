@@ -129,4 +129,7 @@ public class TextOption : TextSetting, IOption<string> {
 
         foreach (var action in _applyActions) action(this);
     }
+
+    /// <inheritdoc />
+    public StateHolder<string> StateHolder => States.Strings;
 }

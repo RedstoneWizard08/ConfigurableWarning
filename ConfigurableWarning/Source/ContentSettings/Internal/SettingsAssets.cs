@@ -42,7 +42,7 @@ internal static class SettingsAssets {
     /// </summary>
     internal static GameObject SettingsBoolInputPrefab { get; private set; } = null!;
 
-    private static Dictionary<string, AssetBundle> AssetBundles { get; } = new();
+    private static Dictionary<string, AssetBundle> AssetBundles { get; } = [];
 
     /// <summary>
     /// Loads the assets used by the settings system.
@@ -91,28 +91,15 @@ internal static class SettingsAssets {
 
         var assetBundleStream = typeof(ContentSettings)
             .Assembly
-            .GetManifestResourceStream(typeof(ConfigurableWarning.ConfigurableWarning).Namespace + "." + bundleName);
-
-        if (assetBundleStream == null) {
-            throw new Exception($"Failed to load asset bundle '{bundleName}' from embedded resource.");
-        }
+            .GetManifestResourceStream(typeof(ConfigurableWarning.ConfigurableWarning).Namespace + "." + bundleName)
+            ?? throw new Exception($"Failed to load asset bundle '{bundleName}' from embedded resource.");
 
         using (assetBundleStream)
         using (var gzStream = new GZipStream(assetBundleStream, CompressionMode.Decompress)) {
-            var assetBundle = AssetBundle.LoadFromStream(gzStream);
-
-            if (assetBundle == null) {
-                throw new Exception($"Failed to load asset bundle '{bundleName}' from stream.");
-            }
-
-            var asset = assetBundle.LoadAsset<T>(assetName);
-
-            if (asset == null) {
-                throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");
-            }
+            var assetBundle = AssetBundle.LoadFromStream(gzStream) ?? throw new Exception($"Failed to load asset bundle '{bundleName}' from stream.");
+            var asset = assetBundle.LoadAsset<T>(assetName) ?? throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");
 
             ContentSettings.Logger.LogDebug($"Loaded asset '{assetName}' from asset bundle '{bundleName}'.");
-
             AssetBundles.Add(bundleName, assetBundle);
 
             return asset;

@@ -28,4 +28,8 @@ public static class States {
     ///     Enum states.
     /// </summary>
     public static readonly EnumStateHolder Enums = new();
+
+    internal static StateHolder<T> WrapEnums<T>() {
+        return new WrappedEnumStateHolder<T>();
+    }
 }

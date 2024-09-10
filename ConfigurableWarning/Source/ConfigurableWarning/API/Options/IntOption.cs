@@ -145,4 +145,7 @@ public class IntOption : IntSetting, IOption<int> {
     protected override (int, int) GetMinMaxValue() {
         return (_minMax.x, _minMax.y);
     }
+
+    /// <inheritdoc />
+    public StateHolder<int> StateHolder => States.Ints;
 }

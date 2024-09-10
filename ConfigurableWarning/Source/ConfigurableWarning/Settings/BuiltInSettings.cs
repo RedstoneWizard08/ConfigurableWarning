@@ -11,13 +11,9 @@ public static class BuiltInSettings {
     // TODO: Implement more settings:
     // - Spawning Mechanics
     // - Damage Taken Multiplier
-    // - Customization Limits (revive https://thunderstore.io/c/content-warning/p/DiabolicalStudios/MoreCustomization/)
     // - Shop Prices
     // - Battery Settings
-    // - MetaCoin Prices
     // - Save Slots (based on https://thunderstore.io/c/content-warning/p/Isbjorn52/More_Saves/)
-    // - Gravity (based on https://thunderstore.io/c/content-warning/p/Marcus/Better_Gravity/)
-    // - Intro Screen Skip (based on https://thunderstore.io/c/content-warning/p/CTWOriginals/DevelopmentStartup/)
     // - Video Save Location (based on https://thunderstore.io/c/content-warning/p/RamuneNeptune/CustomVideoSaveLocation/)
     // - Inventory Slots (based on https://thunderstore.io/c/content-warning/p/nickklmao/ExtraInventorySlot/)
 
@@ -26,6 +22,10 @@ public static class BuiltInSettings {
         [Register]
         private class PrivateHost()
             : BoolOption(SettingKeys.PrivateHost, true, "Host Privately (friends-only)");
+
+        [Register]
+        private class SkipIntroScreen()
+            : BoolOption(SettingKeys.SkipIntroScreen, false, "Skip Intro Screen");
 
         [Register]
         private class DaysPerQuota() : IntOption(SettingKeys.DaysPerQuota, 3, "Days Per Quota", 0, 30,
@@ -38,9 +38,15 @@ public static class BuiltInSettings {
         [Register]
         private class RequireDiveBellDoorClosed() : BoolOption(SettingKeys.RequireDiveBellDoorClosed, true,
             "Require Dive Bell Door Closed");
-        
+
         [Register]
         private class Fov() : FloatOption(SettingKeys.Fov, 70.0f, "Field of View", 20f, 120f, false);
+
+        [Register]
+        private class VideoSaveLocation() : TextOption(SettingKeys.VideoSaveLocation, "Desktop", "Video Save Location");
+
+        [Register]
+        private class FreeMetaCoins() : BoolOption(SettingKeys.FreeMetaCoins, false, "Free MetaCoin Purchases");
     }
 
     [Group("PLAYER")]
@@ -60,6 +66,10 @@ public static class BuiltInSettings {
 
         [Register]
         private class SprintSpeed() : FloatOption(SettingKeys.SprintSpeed, 2.0f, "Sprint Speed", 0f, 100f,
+            false);
+
+        [Register]
+        private class Gravity() : FloatOption(SettingKeys.Gravity, 10.0f, "Gravity", 0f, 100f,
             false);
     }
 
@@ -102,5 +112,24 @@ public static class BuiltInSettings {
         [Register]
         private class OxygenRefillRate()
             : FloatOption(SettingKeys.OxygenRefillRate, 20.0f, "Oxygen Refill Rate", 0f, 500f, false);
+    }
+
+    [Group("CUSTOMIZATION")]
+    private static class Customization {
+        [Register]
+        private class FaceAutoSizing()
+            : BoolOption(SettingKeys.FaceAutoSizing, true, "Auto-resize Face Text");
+
+        [Register]
+        private class FaceMinFont() : FloatOption(SettingKeys.FaceMinFont, 10.0f, "Minimum Face Font Size", 0f, 100f,
+            false);
+
+        [Register]
+        private class FaceMaxFont() : FloatOption(SettingKeys.FaceMaxFont, 40.0f, "Maximum Face Font Size", 0f, 100f,
+            false);
+
+        [Register]
+        private class FaceCharLimit() : IntOption(SettingKeys.FaceCharLimit, 128, "Face Character Limit", 0, 512,
+            false);
     }
 }

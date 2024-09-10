@@ -256,7 +256,7 @@ public static class SettingsLoader
         foreach (var category in Enum.GetValues(typeof(SettingCategory)))
         {
             var settingCategory = (SettingCategory) category;
-            var categorySettings = settingsHandler.GetSettings(settingCategory);
+            var categorySettings = settingsHandler?.GetSettings(settingCategory) ?? [];
             
             foreach (var setting in categorySettings)
             {

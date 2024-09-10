@@ -47,7 +47,7 @@
         <Reference Include="Spookdivers" HintPath="..\deps\cheese.spookdivers-publicized.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True"/>
     </ItemGroup>
 
-    <ItemGroup Condition="$(CI) != 'true' And $(USER) != 'codespace'">
+    <ItemGroup Condition="$(CI) != 'true' And $(USER) != 'codespace' And $(REDSTONE_IS_DUMB) != 1">
         <Reference Include="Assembly-CSharp" HintPath="$(CW_REFERENCES)\Assembly-CSharp.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="True"/>
         <Reference Include="Unity.Localization" HintPath="$(CW_REFERENCES)\Unity.Localization.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
         <Reference Include="Unity.TextMeshPro" HintPath="$(CW_REFERENCES)\Unity.TextMeshPro.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
@@ -64,7 +64,7 @@
         <Reference Include="Sirenix.Serialization" HintPath="$(CW_REFERENCES)\Sirenix.Serialization.dll" Private="False" ExcluseAssets="RUNTIME" Publicize="true"/>
     </ItemGroup>
 
-    <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace'">
+    <ItemGroup Condition="$(CI) == 'true' Or $(USER) == 'codespace' Or $(USER) == 'jacob' Or $(REDSTONE_IS_DUMB) == 1">
         <PackageReference Include="ContentWarning.GameLibs.Steam" Version="0.1.11-a-ngd.0" Publicize="true" PrivateAssets="All"/>
     </ItemGroup>
 

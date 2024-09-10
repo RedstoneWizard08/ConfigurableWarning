@@ -1,3 +1,5 @@
+#pragma warning disable CS1723
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

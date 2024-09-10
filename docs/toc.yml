@@ -1,6 +1,6 @@
 items:
     - name: Home
-      href: /
+      href: index.md
     - name: Guides
       href: guides/
     - name: API Reference

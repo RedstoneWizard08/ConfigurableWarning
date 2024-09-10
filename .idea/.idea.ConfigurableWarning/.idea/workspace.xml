@@ -8,15 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d319342e-26dc-49e7-bbd5-9af9483bbaeb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Build/Source/Tasks/DevTask.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/guides/legacy/getting-started.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/guides/legacy/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConfigurableWarning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/quickstart/getting-started.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/quickstart/getting-started.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/quickstart/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/quickstart/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/toc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/toc.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/tutorials/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/toc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/toc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/docs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +246,7 @@
       <workItem from="1725608389066" duration="59000" />
       <workItem from="1725608552716" duration="8271000" />
       <workItem from="1725931911059" duration="632000" />
-      <workItem from="1725938210267" duration="1800000" />
+      <workItem from="1725938210267" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="WIP v1.13.0">
       <option name="closed" value="true" />

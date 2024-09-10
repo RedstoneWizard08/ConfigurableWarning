@@ -7,6 +7,7 @@
 
 namespace ContentSettings.API.Settings;
 
+using ConfigurableWarning.API.Options;
 using DebugUI;
 using Internal;
 using JetBrains.Annotations;
@@ -57,7 +58,12 @@ public abstract class IntSetting : Setting {
     /// <param name="newValue">The new value of the setting.</param>
     /// <param name="settingHandler">The setting handler to save the setting with.</param>
     public void SetValue(int newValue, ISettingHandler settingHandler) {
-        Value = Clamp(newValue);
+        if (this is IntOption opt) {
+            Value = opt._shouldClamp ? Clamp(newValue) : newValue;
+        } else {
+            Value = Clamp(newValue);
+        }
+
         ApplyValue();
         settingHandler.SaveSetting(this);
     }

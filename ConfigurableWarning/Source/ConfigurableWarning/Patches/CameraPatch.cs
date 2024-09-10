@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using ConfigurableWarning.API;
+using ConfigurableWarning.API.State;
 using ConfigurableWarning.Settings;
 using HarmonyLib;
 using Zorro.Core;

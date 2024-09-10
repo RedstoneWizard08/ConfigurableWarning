@@ -1,8 +1,11 @@
 #pragma warning disable CS1723
+#pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ConfigurableWarning.API.State;
+using ConfigurableWarning.API.Util;
 using ContentSettings.API;
 using Zorro.Settings;
 

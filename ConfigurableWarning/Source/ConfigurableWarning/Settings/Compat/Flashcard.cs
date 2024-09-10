@@ -1,5 +1,5 @@
 using System.Linq;
-using ConfigurableWarning.API;
+using ConfigurableWarning.API.State;
 using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;

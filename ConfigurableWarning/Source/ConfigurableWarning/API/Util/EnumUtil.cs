@@ -1,6 +1,6 @@
 using System;
 
-namespace ConfigurableWarning.API;
+namespace ConfigurableWarning.API.Util;
 
 /// <summary>
 ///     Utilities for enums.

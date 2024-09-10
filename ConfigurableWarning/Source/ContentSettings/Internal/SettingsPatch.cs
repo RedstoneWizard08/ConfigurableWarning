@@ -1,3 +1,5 @@
+#pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
+
 using System.Diagnostics.CodeAnalysis;
 using ContentSettings.API;
 using HarmonyLib;

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using ConfigurableWarning.API;
+using ConfigurableWarning.API.State;
 using ConfigurableWarning.Settings;
 using HarmonyLib;
 

@@ -36,7 +36,7 @@ public class ConfigurableWarning : BaseUnityPlugin {
 
         ConfigurableWarningAPI.Init();
         Patch();
-        OptionLoader.RegisterOptions();
+        ConfigurableWarningAPI.Register();
 
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} loaded!");
     }

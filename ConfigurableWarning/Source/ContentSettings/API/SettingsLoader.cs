@@ -21,6 +21,7 @@ using Object = UnityEngine.Object;
 /// <summary>
 /// Settings loader for custom settings belonging to mods.
 /// </summary>
+[Obsolete]
 public static class SettingsLoader {
     /// <summary>
     /// Gets all registered settings.
@@ -30,9 +31,9 @@ public static class SettingsLoader {
 
     private static DefaultSettingsSaveLoad SaveLoader { get; } = new();
 
-    private static Dictionary<string, Dictionary<string, List<Setting>>> SettingsByCategoryByTab { get; set; } = new();
+    private static Dictionary<string, Dictionary<string, List<Setting>>> SettingsByCategoryByTab { get; set; } = [];
 
-    private static Dictionary<Type, Setting> RegisteredSettings { get; } = new();
+    private static Dictionary<Type, Setting> RegisteredSettings { get; } = [];
 
     private static bool IsInitialized { get; set; }
 
@@ -79,6 +80,7 @@ public static class SettingsLoader {
     /// <param name="tab">The tab to register the setting to.</param>
     /// <param name="category">The category of the setting.</param>
     /// <param name="setting">The setting to register.</param>
+    [Obsolete]
     [UsedImplicitly]
     public static void RegisterSetting(string tab, string? category, Setting setting) {
         category ??= string.Empty;
@@ -112,6 +114,7 @@ public static class SettingsLoader {
     /// </summary>
     /// <param name="tab">The tab to register the setting to.</param>
     /// <param name="setting">The setting to register.</param>
+    [Obsolete]
     [UsedImplicitly]
     public static void RegisterSetting(string tab, Setting setting) {
         RegisterSetting(tab, string.Empty, setting);
@@ -121,6 +124,7 @@ public static class SettingsLoader {
     /// Register a custom setting to the default MODDED tab and empty category.
     /// </summary>
     /// <param name="setting">The setting to register.</param>
+    [Obsolete]
     [UsedImplicitly]
     public static void RegisterSetting(Setting setting) {
         RegisterSetting("MODDED", string.Empty, setting);
@@ -218,7 +222,7 @@ public static class SettingsLoader {
 
         var settingsByCategoryByTab = SettingsByCategoryByTab;
 
-        SettingsByCategoryByTab = new Dictionary<string, Dictionary<string, List<Setting>>>();
+        SettingsByCategoryByTab = [];
 
         // if (GameHandler.Instance == null) {
         //     ContentSettings.Logger.LogWarning("GameHandler is null, we've been called too early!");

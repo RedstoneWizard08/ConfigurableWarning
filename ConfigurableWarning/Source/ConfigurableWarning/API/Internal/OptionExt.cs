@@ -1,6 +1,6 @@
 using ConfigurableWarning.API.Options;
 
-namespace ConfigurableWarning.API;
+namespace ConfigurableWarning.API.Internal;
 
 /// <summary>
 ///     Extension Methods.

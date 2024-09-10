@@ -1,3 +1,5 @@
+using ConfigurableWarning.API.Internal;
+
 namespace ConfigurableWarning.API.Options;
 
 /// <summary>

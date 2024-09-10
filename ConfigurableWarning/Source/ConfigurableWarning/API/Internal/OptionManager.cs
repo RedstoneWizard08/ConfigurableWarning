@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using ConfigurableWarning.API.Options;
 using Zorro.Settings;
 
-namespace ConfigurableWarning.API;
+namespace ConfigurableWarning.API.Internal;
 
 /// <summary>
 ///     Manages options' loading, saving, registration, and accessing.
 /// </summary>
 public class OptionManager {
-    private readonly Dictionary<string, IUntypedOption> _options = new();
+    private readonly Dictionary<string, IUntypedOption> _options = [];
 
     /// <summary>
     ///     The current instance of this <see cref="OptionManager" />.

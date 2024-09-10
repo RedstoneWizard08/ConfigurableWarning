@@ -7,7 +7,7 @@ using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
 using Zorro.Settings;
 
-namespace ConfigurableWarning.API;
+namespace ConfigurableWarning.API.Internal;
 
 /// <summary>
 ///     Responsible for loading, holding, and registering options.

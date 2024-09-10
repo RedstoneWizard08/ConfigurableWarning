@@ -1,5 +1,8 @@
+#pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
+
 using System;
 using System.Collections.Generic;
+using ConfigurableWarning.API.State;
 using ContentSettings.API;
 using ContentSettings.API.Settings;
 

@@ -1,4 +1,4 @@
-namespace ConfigurableWarning.API;
+namespace ConfigurableWarning.API.State;
 
 /// <summary>
 ///     A state holder.

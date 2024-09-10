@@ -1,3 +1,5 @@
+using ConfigurableWarning.API.Internal;
+
 namespace ConfigurableWarning.API;
 
 /// <summary>
@@ -13,5 +15,9 @@ public static class ConfigurableWarningAPI {
         ConfigurableWarning.Logger.LogInfo("Initializing ConfigurableWarning API...");
 
         Sync = new OptionSyncer();
+    }
+
+    internal static void Register() {
+        OptionLoader.RegisterOptions();
     }
 }

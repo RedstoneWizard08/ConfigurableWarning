@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
-using ConfigurableWarning.API;
+using ConfigurableWarning.API.State;
 using ConfigurableWarning.Settings;
 using HarmonyLib;
 using Photon.Pun;

@@ -1,3 +1,5 @@
+using ConfigurableWarning.API.Internal;
+using ConfigurableWarning.API.State;
 using ContentSettings.API.Settings;
 
 namespace ConfigurableWarning.API.Options;

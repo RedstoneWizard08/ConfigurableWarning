@@ -1,14 +1,15 @@
 using System.Collections.Generic;
+using ConfigurableWarning.API.Internal;
 using ConfigurableWarning.API.Options;
 using Newtonsoft.Json;
 
-namespace ConfigurableWarning.API;
+namespace ConfigurableWarning.API.State;
 
 /// <summary>
 ///     The class responsible for storing options' values.
 /// </summary>
 public class OptionsState {
-    private Dictionary<string, object> _states = new();
+    private Dictionary<string, object> _states = [];
 
     /// <summary>
     ///     The current instance of this <see cref="OptionsState" />.

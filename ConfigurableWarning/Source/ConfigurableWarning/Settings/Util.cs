@@ -1,4 +1,6 @@
-using ConfigurableWarning.API;
+#pragma warning disable IDE0060
+
+using ConfigurableWarning.API.State;
 using ConfigurableWarning.API.Options;
 
 namespace ConfigurableWarning.Settings;

@@ -13,10 +13,10 @@ Previously known as `ConfigurableWarning`.
 
 ## Features
 
-- [x] An easy-to-use and incredibly powerful configuration system
-- [ ] An easy API for creating custom monsters
-- [ ] An API for creating and loading your own maps
-- [x] Extra built-in configuration options
+- An easy-to-use and incredibly powerful configuration system
+- [COMING SOON] An easy API for creating custom monsters
+- [COMING SOON] An API for creating and loading your own maps
+- Extra built-in configuration options
 
 ## Credits
 

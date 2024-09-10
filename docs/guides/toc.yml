@@ -8,11 +8,16 @@ items:
   - name: Getting Started
     href: quickstart/getting-started.md
 - name: Tutorials
-  href: tutorials/index.md
+  href: tutorials/options.md
   items:
-  - name: Introduction
-    href: tutorials/index.md
   - name: Options
     href: tutorials/options.md
   - name: State
     href: tutorials/state.md
+- name: Legacy API
+  href: legacy/index.md
+  items:
+  - name: Introduction
+    href: legacy/index.md
+  - name: Getting Started
+    href: legacy/getting-started.md

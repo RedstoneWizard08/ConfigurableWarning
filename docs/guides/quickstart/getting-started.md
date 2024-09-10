@@ -44,7 +44,7 @@ public static class MyOptions {
 
 For more info, head to the [tutorials](../tutorials/index.md) section!
 
-## Accessing it's state
+## Accessing its State
 
 To access your option's state, you can use the <xref:ConfigurableWarning.API.States>
 manager. To access it, you'll use the same string that you used in your option's name above.

@@ -69,7 +69,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="contentsettings.bundle"/>
-        <EmbeddedResource Include="contentsettings.bundle"/>
+        <None Remove="contentsettings.bundle" />
+        <None Remove="contentsettings.bundle.gz" />
+        <EmbeddedResource Include="contentsettings.bundle.gz" />
     </ItemGroup>
 </Project>

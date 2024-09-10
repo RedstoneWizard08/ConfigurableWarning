@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO.Compression;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -9,8 +10,8 @@ namespace ContentSettings.Internal;
 /// Contains the assets used by the settings system.
 /// </summary>
 internal static class SettingsAssets {
-    internal const string BundlePath = "contentsettings.bundle";
-    
+    internal const string BundlePath = "contentsettings.bundle.gz";
+
     /// <summary>
     /// Gets the settings navigation prefab.
     /// </summary>
@@ -41,13 +42,12 @@ internal static class SettingsAssets {
     /// </summary>
     internal static GameObject SettingsBoolInputPrefab { get; private set; } = null!;
 
-    private static Dictionary<string, AssetBundle> AssetBundles { get; } = new ();
+    private static Dictionary<string, AssetBundle> AssetBundles { get; } = new();
 
     /// <summary>
     /// Loads the assets used by the settings system.
     /// </summary>
-    internal static void LoadAssets()
-    {
+    internal static void LoadAssets() {
         SettingsNavigationPrefab = LoadAsset<GameObject>(
             BundlePath,
             "Assets/ContentSettings/SettingsNavigation.prefab");
@@ -82,12 +82,10 @@ internal static class SettingsAssets {
     /// <returns>The loaded asset.</returns>
     /// <exception cref="System.Exception">Thrown if the asset bundle or asset could not be loaded.</exception>
     private static T LoadAsset<T>(string bundleName, string assetName)
-        where T : Object
-    {
+        where T : Object {
         ContentSettings.Logger.LogDebug($"Loading asset '{assetName}' from asset bundle '{bundleName}'.");
 
-        if (AssetBundles.TryGetValue(bundleName, out var bundle))
-        {
+        if (AssetBundles.TryGetValue(bundleName, out var bundle)) {
             return bundle.LoadAsset<T>(assetName);
         }
 
@@ -95,22 +93,21 @@ internal static class SettingsAssets {
             .Assembly
             .GetManifestResourceStream(typeof(ConfigurableWarning.ConfigurableWarning).Namespace + "." + bundleName);
 
-        if (assetBundleStream == null)
-        {
+        if (assetBundleStream == null) {
             throw new Exception($"Failed to load asset bundle '{bundleName}' from embedded resource.");
         }
 
         using (assetBundleStream)
-        {
-            var assetBundle = AssetBundle.LoadFromStream(assetBundleStream);
-            if (assetBundle == null)
-            {
+        using (var gzStream = new GZipStream(assetBundleStream, CompressionMode.Decompress)) {
+            var assetBundle = AssetBundle.LoadFromStream(gzStream);
+
+            if (assetBundle == null) {
                 throw new Exception($"Failed to load asset bundle '{bundleName}' from stream.");
             }
 
             var asset = assetBundle.LoadAsset<T>(assetName);
-            if (asset == null)
-            {
+
+            if (asset == null) {
                 throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");
             }
 

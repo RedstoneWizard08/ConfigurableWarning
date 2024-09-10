@@ -1,22 +1,21 @@
-﻿using BepInEx;
+using BepInEx;
 using BepInEx.Logging;
-using ConfigurableWarning.API;
 using HarmonyLib;
 
-namespace ConfigurableWarning;
+namespace ContentLibrary;
 
 /// <summary>
-///     ConfigurableWarning's BepInEx entrypoint.
+///     ContentLibrary's BepInEx entrypoint.
 /// </summary>
 [ContentWarningPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_VERSION, false)]
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency(MyceliumNetworking.MyPluginInfo.PLUGIN_GUID)]
-public class ConfigurableWarning : BaseUnityPlugin {
+public class ContentLibraryPlugin : BaseUnityPlugin {
     /// <summary>
     ///     The ModID for Mycelium.
-    ///     This is: CF + G (in hex = 0x47) + W (in hex = 0x57), for ConFiGurableWarning
+    ///     This is just `CLIB` in hex.
     /// </summary>
-    public const uint ModID = 0xCF4757;
+    public const uint ModID = 0x434C4942;
 
     /// <summary>
     ///     Our <see cref="ManualLogSource" />.
@@ -34,9 +33,7 @@ public class ConfigurableWarning : BaseUnityPlugin {
     public void Awake() {
         Logger.LogInfo($"Loading plugin {MyPluginInfo.PLUGIN_GUID}...");
 
-        ConfigurableWarningAPI.Init();
         Patch();
-        ConfigurableWarningAPI.Register();
 
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} loaded!");
     }

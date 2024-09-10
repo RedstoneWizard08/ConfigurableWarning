@@ -3,9 +3,9 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "RedstoneWizard08"
-name = "ConfigurableWarning"
-versionNumber = "1.15.2"
-description = "Makes the game configurable! (Also the successor to ContentSettings!)"
+name = "ContentLibrary"
+versionNumber = "0.1.0"
+description = "A library for all of your Content Warning modding needs! (Also the successor to ContentSettings!)"
 websiteUrl = "https://redstonewizard08.github.io/ConfigurableWarning"
 containsNsfwContent = false
 
@@ -18,8 +18,8 @@ readme = "./README.md"
 outdir = "./output"
 
 [[build.copy]]
-source = "./ConfigurableWarning/bin/Release/netstandard2.1/RedstoneWizard08.ConfigurableWarning.dll"
-target = "RedstoneWizard08.ConfigurableWarning.dll"
+source = "./ContentLibrary/bin/Release/netstandard2.1/RedstoneWizard08.ContentLibrary.dll"
+target = "RedstoneWizard08.ContentLibrary.dll"
 
 [[build.copy]]
 source = "./CHANGELOG.md"

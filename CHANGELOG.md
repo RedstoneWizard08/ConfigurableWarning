@@ -5,26 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.15.2] - 2024-09-06
+## [Unreleased]
+
+## Changed
+
+- We are now called `ContentLibrary`!
+- Restructured the project and API
+- Finalized legacy `ContentSettings` API
+- Added `SkipIntroScreen` option
+- Added `VideoSaveLocation` option
+- Added `FreeMetaCoins` option
+- Added `Gravity` option
+- Added face customization options
+
+## [v1.15.2-config] - 2024-09-06
 
 ### Changed
 
 - Updated docs
 - Corrected namespace
 
-## [v1.15.1] - 2024-09-06
+## [v1.15.1-config] - 2024-09-06
 
 ### Changed
 
 - Updated readme
 
-## [v1.15.0] - 2024-09-06
+## [v1.15.0-config] - 2024-09-06
 
 ### Added
 
 - The entire ContentSettings API! (This is the continuation)
 
-## [v1.14.0] - 2024-05-18
+## [v1.14.0-config] - 2024-05-18
 
 ### Added
 
@@ -34,7 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Annotations!
 - Much more that I forgor!
 
-## [v1.13.2] - 2024-05-09
+## [v1.13.2-config] - 2024-05-09
 
 ### Added
 
@@ -67,7 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed old (legacy) package script
 - Removed old days-per-quota patch
 
-## [v1.12.0] - 2024-05-05
+## [v1.12.0-config] - 2024-05-05
 
 ### Added
 
@@ -77,7 +90,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated sync
 
-## [v1.11.0] - 2024-05-02
+## [v1.11.0-config] - 2024-05-02
 
 ### Added
 
@@ -90,19 +103,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Redid settings packing
 - Fixed for CW's new May 2nd release
 
-## [v1.10.2] - 2024-05-01
+## [v1.10.2-config] - 2024-05-01
 
 ### Changed
 
 - Hopefully fix settings sync
 
-## [v1.10.1] - 2024-05-01
+## [v1.10.1-config] - 2024-05-01
 
 ### Changed
 
 - Actually fixed the build
 
-## [v1.10.0] - 2024-04-29
+## [v1.10.0-config] - 2024-04-29
 
 ### Changed
 
@@ -112,46 +125,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Building in release mode! (Yes, I wasn't before.)
 - Removed BepInEx config because it kinda broke stuff
 
-## [v1.9.2] - 2024-04-19
+## [v1.9.2-config] - 2024-04-19
 
 ### Changed
 
 - Fixed settings sync
 
-## [v1.9.1] - 2024-04-18
+## [v1.9.1-config] - 2024-04-18
 
 ### Changed
 
 - Nothing, just updated the README. :)
 
-## [v1.9.0] - 2024-04-18
+## [v1.9.0-config] - 2024-04-18
 
 ### Changed
 
 - Refactored UI
 - Moved to using ContentSettings and MyceliumNetworking
 
-## [v1.8.1] - 2024-04-12
+## [v1.8.1-config] - 2024-04-12
 
 ### Changed
 
 - Fixed a default config value
 - Hopefully fix the lobby patch
 
-## [v1.8.0] - 2024-04-12
+## [v1.8.0-config] - 2024-04-12
 
 ### Changed
 
 - Fixed health & days left HUD to actually reflect the correct value (in real time)
 
-## [v1.7.1] - 2024-04-12
+## [v1.7.1-config] - 2024-04-12
 
 ### Changed
 
 - Fixed lobby stuff (I actually applied the patch this time!)
 - Fixed patches not using `nameof`
 
-## [v1.7.0] - 2024-04-12
+## [v1.7.0-config] - 2024-04-12
 
 ### Added
 
@@ -168,7 +181,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Made the patches better
 - We no longer rely on ContentSettings!
 
-## [v1.6.0] - 2024-04-11
+## [v1.6.0-config] - 2024-04-11
 
 ### Added
 
@@ -179,7 +192,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed the sprint multiplier max from 4 to 10
 
-## [v1.5.0] - 2024-04-11
+## [v1.5.0-config] - 2024-04-11
 
 ### Changed
 

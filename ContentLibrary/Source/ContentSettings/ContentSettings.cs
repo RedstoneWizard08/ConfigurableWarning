@@ -2,7 +2,7 @@
 
 using BepInEx;
 using BepInEx.Logging;
-using ConfigurableWarning;
+using ContentLibrary;
 using ContentSettings.API;
 using ContentSettings.Internal;
 

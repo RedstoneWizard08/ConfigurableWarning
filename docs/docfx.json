@@ -3,8 +3,8 @@
         {
             "src": [
                 {
-                    "files": ["**/ConfigurableWarning.csproj"],
-                    "src": "../ConfigurableWarning"
+                    "files": ["**/ContentLibrary.csproj"],
+                    "src": "../ContentLibrary"
                 }
             ],
             "dest": "api",
@@ -43,7 +43,7 @@
         "template": ["default", "modern", "templates/material"],
         "postProcessors": ["ExtractSearchIndex"],
         "globalMetadata": {
-            "_appTitle": "ConfigurableWarning Docs",
+            "_appTitle": "ContentLibrary Docs",
             "_appLogoPath": "banner.svg",
             "_enableSearch": true,
             "_gitUrlPattern": "github"

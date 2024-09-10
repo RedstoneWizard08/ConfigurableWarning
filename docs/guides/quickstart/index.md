@@ -5,6 +5,9 @@ title: Introduction
 
 # Introduction
 
+> [!WARNING]
+> These docs are going to be refactored soon! Don't save any new bookmarks yet!
+
 Welcome to our docs!
 
 ConfigurableWarning is a mod for Content Warning that allows you to change

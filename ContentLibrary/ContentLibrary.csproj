@@ -2,10 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <PackageId>RedstoneWizard08.ConfigurableWarning</PackageId>
-        <AssemblyName>RedstoneWizard08.ConfigurableWarning</AssemblyName>
-        <Description>Makes the game configurable!</Description>
-        <Version>1.15.2</Version>
+        <PackageId>RedstoneWizard08.ContentLibrary</PackageId>
+        <AssemblyName>RedstoneWizard08.ContentLibrary</AssemblyName>
+        <Description>A library for all of your Content Warning modding needs!</Description>
+        <Version>0.1.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>

@@ -42,7 +42,7 @@ public static class MyOptions {
 }
 ```
 
-For more info, head to the [tutorials](../tutorials/index.md) section!
+For more info, head to the [tutorials](../tutorials/options.md) section!
 
 ## Accessing its State
 

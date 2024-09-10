@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/quickstart/getting-started.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/legacy/getting-started.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,10 +84,10 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Guides.GettingStarted">
+        <article data-uid="Legacy.GettingStarted">
 <h1 id="getting-started">Getting Started</h1>
 
-<p>With ConfigurableWarning, getting started is easy!</p>
+<p>With ContentSettings, getting started is easy!</p>
 <h2 id="installing">Installing</h2>
 <p>After setting up a new BepInEx mod,
 you can add the package to your project using the following:</p>
@@ -111,31 +111,66 @@ you can add the package to your project using the following:</p>
 </code></pre>
 </section>
 </div>
-<h2 id="your-first-option">Your First Option</h2>
-<p>While the legacy <code>ContentSettings</code> API still works, we recommend using the newer API instead.
-It's more powerful and easier to use!</p>
-<p>Here's a basic option:</p>
-<pre><code class="lang-cs">[Group(&quot;MY STUFF&quot;, &quot;GENERAL&quot;)]
-public static class MyOptions {
-    [Register]
-    private class MyOptionThing()
-        : IntOption(&quot;MyOption&quot;, 50, &quot;My Option!&quot;, 0, 100);
+<h2 id="your-first-setting">Your First Setting</h2>
+<p>Here's a basic setting:</p>
+<pre><code class="lang-cs">public class MySetting : IntSetting, ICustomSetting {
+    public override void ApplyValue() {
+        // Do something with the value!
+        // it's stored in the `Value` property
+    }
+
+    public override int GetDefaultValue() =&gt; 50;
+    protected override (int, int) GetMinMaxValue() =&gt; (0, 100);
+    public string GetDisplayName() =&gt; &quot;My Setting&quot;;
 }
 </code></pre>
-<p>For more info, head to the <a href="../tutorials/index.md">tutorials</a> section!</p>
-<h2 id="accessing-its-state">Accessing its State</h2>
-<p>To access your option's state, you can use the <a class="xref" href="../../api/ConfigurableWarning.API.States.html">States</a>
-manager. To access it, you'll use the same string that you used in your option's name above.
-In this case, it's <code>&quot;MyOption&quot;</code>.</p>
-<pre><code class="lang-cs">int? state = States.Ints[&quot;MyOption&quot;];
+<h2 id="registering-the-setting">Registering the Setting</h2>
+<p>There are two ways to register a setting:</p>
+<div class="tabGroup" id="tabgroup_2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_2_attribute" role="tab" aria-controls="tabpanel_2_attribute" data-tab="attribute" tabindex="0" aria-selected="true">Using the <code>SettingRegister</code> attribute</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_2_loader" role="tab" aria-controls="tabpanel_2_loader" data-tab="loader" tabindex="-1">Using the <code>SettingsLoader</code></a>
+</li>
+</ul>
+<section id="tabpanel_2_attribute" role="tabpanel" data-tab="attribute">
+
+<pre><code class="lang-cs">[SettingRegister(&quot;MY STUFF&quot;, &quot;GENERAL&quot;)]
+public class MySetting : IntSetting, ICustomSetting {
+    // ...
+}
 </code></pre>
-<p>This code retrieves the optional state of the option. You can learn more about that
-<a href="../tutorials/state.html">here</a>.</p>
+</section>
+<section id="tabpanel_2_loader" role="tabpanel" data-tab="loader" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-cs">// Register MySetting to the tab &quot;MY STUFF&quot; and the group &quot;GENERAL&quot;
+SettingsLoader.RegisterSetting(&quot;MY STUFF&quot;, &quot;GENERAL&quot;, new MySetting());
+</code></pre>
+</section>
+</div>
+<h3 id="accessing-its-state">Accessing its State</h3>
+<p>To access your setting's state, you need to set it somewhere else
+in the <code>ApplyValue</code> method.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">public static class MySettingValues {
+    public static int MySettingValue = 50;
+}
+
+[SettingRegister(&quot;MY STUFF&quot;, &quot;GENERAL&quot;)]
+public class MySetting : IntSetting, ICustomSetting {
+    public override void ApplyValue() {
+        MySettingValues.MySettingValue = Value;
+    }
+}
+</code></pre>
+<p>In this example, you can access <code>MySetting</code>'s value from the <code>MySettingValues.MySettingValue</code> field.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/quickstart/getting-started.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RedstoneWizard08/ConfigurableWarning/blob/main/docs/guides/legacy/getting-started.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -4374,9 +4374,12 @@ references:
 - uid: Guides.Introduction
   name: Introduction
   href: guides/quickstart/index.html
-- uid: Tutorials.Intro
+- uid: Legacy.GettingStarted
+  name: Getting Started
+  href: guides/legacy/getting-started.html
+- uid: Legacy.Intro
   name: Introduction
-  href: guides/tutorials/index.html
+  href: guides/legacy/index.html
 - uid: Tutorials.Options
   name: Options
   href: guides/tutorials/options.html

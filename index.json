@@ -389,20 +389,25 @@
     "title": "Namespace ContentSettings | ConfigurableWarning Docs",
     "keywords": "Namespace ContentSettings Namespaces ContentSettings.API Classes CSPluginInfo Contains the plugin information for the Content Settings plugin. ContentSettings The main Content Settings plugin class."
   },
+  "guides/legacy/getting-started.html": {
+    "href": "guides/legacy/getting-started.html",
+    "title": "Getting Started | ConfigurableWarning Docs",
+    "keywords": "Getting Started With ContentSettings, getting started is easy! Installing After setting up a new BepInEx mod, you can add the package to your project using the following: CLI CSProj dotnet add package RedstoneWizard08.ConfigurableWarning <PackageReference Include=\"RedstoneWizard08.ConfigurableWarning\" Version=\"1.15.2\" IncludeAssets=\"compile\" ExcludeAssets=\"RUNTIME\" /> Your First Setting Here's a basic setting: public class MySetting : IntSetting, ICustomSetting { public override void ApplyValue() { // Do something with the value! // it's stored in the `Value` property } public override int GetDefaultValue() => 50; protected override (int, int) GetMinMaxValue() => (0, 100); public string GetDisplayName() => \"My Setting\"; } Registering the Setting There are two ways to register a setting: Using the SettingRegister attribute Using the SettingsLoader [SettingRegister(\"MY STUFF\", \"GENERAL\")] public class MySetting : IntSetting, ICustomSetting { // ... } // Register MySetting to the tab \"MY STUFF\" and the group \"GENERAL\" SettingsLoader.RegisterSetting(\"MY STUFF\", \"GENERAL\", new MySetting()); Accessing its State To access your setting's state, you need to set it somewhere else in the ApplyValue method. Example: public static class MySettingValues { public static int MySettingValue = 50; } [SettingRegister(\"MY STUFF\", \"GENERAL\")] public class MySetting : IntSetting, ICustomSetting { public override void ApplyValue() { MySettingValues.MySettingValue = Value; } } In this example, you can access MySetting's value from the MySettingValues.MySettingValue field."
+  },
+  "guides/legacy/index.html": {
+    "href": "guides/legacy/index.html",
+    "title": "Introduction | ConfigurableWarning Docs",
+    "keywords": "Legacy API Welcome to the documentation for the legacy ContentSettings API! Warning This API is deprecated and will not be updated. While it won't be removed for compatibility's sake, it is strongly recommended to use the new settings API instead as it is more stable and it's easier to use. See here for how to use that API. Get Started"
+  },
   "guides/quickstart/getting-started.html": {
     "href": "guides/quickstart/getting-started.html",
     "title": "Getting Started | ConfigurableWarning Docs",
-    "keywords": "Getting Started With ConfigurableWarning, getting started is easy! Installing After setting up a new BepInEx mod, you can add the package to your project using the following: CLI CSProj dotnet add package RedstoneWizard08.ConfigurableWarning <PackageReference Include=\"RedstoneWizard08.ConfigurableWarning\" Version=\"1.15.2\" IncludeAssets=\"compile\" ExcludeAssets=\"RUNTIME\" /> Your First Option While the legacy ContentSettings API still works, we recommend using the newer API instead. It's more powerful and easier to use! Here's a basic option: [Group(\"MY STUFF\", \"GENERAL\")] public static class MyOptions { [Register] private class MyOptionThing() : IntOption(\"MyOption\", 50, \"My Option!\", 0, 100); } For more info, head to the tutorials section! Accessing it's state To access your option's state, you can use the States manager. To access it, you'll use the same string that you used in your option's name above. In this case, it's \"MyOption\". int? state = States.Ints[\"MyOption\"]; This code retrieves the optional state of the option. You can learn more about that here."
+    "keywords": "Getting Started With ConfigurableWarning, getting started is easy! Installing After setting up a new BepInEx mod, you can add the package to your project using the following: CLI CSProj dotnet add package RedstoneWizard08.ConfigurableWarning <PackageReference Include=\"RedstoneWizard08.ConfigurableWarning\" Version=\"1.15.2\" IncludeAssets=\"compile\" ExcludeAssets=\"RUNTIME\" /> Your First Option While the legacy ContentSettings API still works, we recommend using the newer API instead. It's more powerful and easier to use! Here's a basic option: [Group(\"MY STUFF\", \"GENERAL\")] public static class MyOptions { [Register] private class MyOptionThing() : IntOption(\"MyOption\", 50, \"My Option!\", 0, 100); } For more info, head to the tutorials section! Accessing its State To access your option's state, you can use the States manager. To access it, you'll use the same string that you used in your option's name above. In this case, it's \"MyOption\". int? state = States.Ints[\"MyOption\"]; This code retrieves the optional state of the option. You can learn more about that here."
   },
   "guides/quickstart/index.html": {
     "href": "guides/quickstart/index.html",
     "title": "Introduction | ConfigurableWarning Docs",
-    "keywords": "Introduction Welcome to our docs! ConfigurableWarning is a mod for Content Warning that allows you to change several aspects of the game that you can't normally change. ConfigurableWarning also has a handy developer API which is documented right here! API Docs: ConfigurableWarning.API Get Started"
-  },
-  "guides/tutorials/index.html": {
-    "href": "guides/tutorials/index.html",
-    "title": "Introduction | ConfigurableWarning Docs",
-    "keywords": "Tutorials Welcome to the tutorials! You can find tutorials on how to use the API here!"
+    "keywords": "Introduction Welcome to our docs! ConfigurableWarning is a mod for Content Warning that allows you to change several aspects of the game that you can't normally change. ConfigurableWarning also has a handy developer API which is documented right here! API Docs: ConfigurableWarning.API Get Started Note Looking for the old ContentSettings API? It's still available, but it's deprecated, and won't be getting updates. You can find it here."
   },
   "guides/tutorials/options.html": {
     "href": "guides/tutorials/options.html",

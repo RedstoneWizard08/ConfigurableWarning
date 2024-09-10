@@ -14,7 +14,6 @@ public static class BuiltInSettings {
     // - Shop Prices
     // - Battery Settings
     // - Save Slots (based on https://thunderstore.io/c/content-warning/p/Isbjorn52/More_Saves/)
-    // - Video Save Location (based on https://thunderstore.io/c/content-warning/p/RamuneNeptune/CustomVideoSaveLocation/)
     // - Inventory Slots (based on https://thunderstore.io/c/content-warning/p/nickklmao/ExtraInventorySlot/)
 
     [Group("GENERAL")]

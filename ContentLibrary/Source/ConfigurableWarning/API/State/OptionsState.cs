@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
 using ConfigurableWarning.API.Internal;
 using ConfigurableWarning.API.Options;
+using ConfigurableWarning.Settings.Compat;
 using Newtonsoft.Json;
+using UnityEngine;
 
 namespace ConfigurableWarning.API.State;
 
@@ -67,7 +70,7 @@ public class OptionsState {
     /// <returns>The option's value.</returns>
     public T? Get<T>(string name) {
         var v = _states[name];
-
+        
         // Json.NET is dumb and doesn't deserialize numbers as the correct type.
 
         return v switch {
@@ -77,6 +80,9 @@ public class OptionsState {
             long l when typeof(T) == typeof(int) =>
                 // This is dumb. Kill it with fire. (again)
                 (T) (object) (int) l,
+            long i when typeof(T) == typeof(KeyCode) =>
+                // This is dumb. Kill it with fire. (again x2)
+                (T) (object) (int) i,
             _ => (T) v
         };
     }

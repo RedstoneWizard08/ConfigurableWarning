@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace ConfigurableWarning.API.State;
 
 /// <summary>
@@ -23,6 +25,11 @@ public static class States {
     ///     String states.
     /// </summary>
     public static readonly StateHolder<string> Strings = new();
+    
+    /// <summary>
+    ///     KeyCode states.
+    /// </summary>
+    public static readonly StateHolder<KeyCode> Keys = new();
 
     /// <summary>
     ///     Enum states.

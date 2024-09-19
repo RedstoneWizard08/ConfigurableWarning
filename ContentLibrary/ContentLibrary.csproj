@@ -45,6 +45,7 @@
         <Reference Include="Virality" HintPath="..\deps\MaxWasUnavailable.Virality-publicized.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True"/>
         <Reference Include="Flashcard" HintPath="..\deps\me.loaforc.Flashcard-publicized.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True"/>
         <Reference Include="Spookdivers" HintPath="..\deps\cheese.spookdivers-publicized.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True"/>
+        <Reference Include="HellDivers" HintPath="..\deps\HellDivers-publicized.dll" Private="False" ExcludeAssets="RUNTIME" Publicize="True"/>
     </ItemGroup>
 
     <ItemGroup Condition="$(CI) != 'true' And $(USER) != 'codespace' And $(REDSTONE_IS_DUMB) != 1">

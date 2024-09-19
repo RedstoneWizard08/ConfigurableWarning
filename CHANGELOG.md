@@ -17,6 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `FreeMetaCoins` option
 - Added `Gravity` option
 - Added face customization options
+- Add support for the `HellDivers` mod
+- Add the `KeyCodeOption`
+- Add `KeyCode` support into `States`
+- GZip the AssetBundle
+- Fix a bunch of bugs
 
 ## [v1.15.2-config] - 2024-09-06
 

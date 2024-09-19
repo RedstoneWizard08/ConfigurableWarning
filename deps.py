@@ -14,6 +14,7 @@ DEPS = [
     "MaxWasUnavailable/Virality",
     "loaforc/Flashcard",
     "OriginalCheese/Spookdivers",
+    "Playboi/HellDivers",
 ]
 
 deps = [f"https://thunderstore.io/api/experimental/package/{it}/" for it in DEPS]

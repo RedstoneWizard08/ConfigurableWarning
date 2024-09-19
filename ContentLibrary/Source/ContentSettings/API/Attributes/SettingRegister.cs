@@ -21,7 +21,6 @@ using JetBrains.Annotations;
 [MeansImplicitUse]
 [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
 public class SettingRegister(string tab, string? category = null) : Attribute {
-
     /// <summary>
     /// Gets the name of the tab to register the setting to.
     /// </summary>

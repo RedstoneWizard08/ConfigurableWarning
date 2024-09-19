@@ -4,6 +4,7 @@
 // Licensed under the GPL-3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------
+
 #pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
 
 namespace ContentSettings.API.Settings.UI;
@@ -23,32 +24,23 @@ public class SettingsTab : SettingsButton {
     /// <summary>
     /// The current settings menu instance.
     /// </summary>
-    [SerializeField]
-    private SettingsMenu? settingsMenu;
+    [SerializeField] private SettingsMenu? settingsMenu;
 
     /// <summary>
     /// Shows the settings for the tab.
     /// </summary>
     public void Show() {
-        if (!SettingsLoader.TryGetTab(Name, out var settingsByCategory)) {
-            return;
-        }
+        if (!SettingsLoader.TryGetTab(Name, out var settingsByCategory)) return;
 
-        if (settingsMenu == null) {
-            return;
-        }
+        if (settingsMenu == null) return;
 
         settingsMenu.m_cells.ForEach(c => Destroy(c.gameObject));
         settingsMenu.m_cells.Clear();
         settingsMenu.m_settingsContainer?.ClearChildren();
 
-        if (settingsMenu.m_settingsCell == null || settingsMenu.m_settingsContainer == null) {
-            return;
-        }
+        if (settingsMenu.m_settingsCell == null || settingsMenu.m_settingsContainer == null) return;
 
-        if (settingsByCategory.ContainsKey(string.Empty)) {
-            settingsByCategory[string.Empty].ForEach(CreateSettingCell);
-        }
+        if (settingsByCategory.ContainsKey(string.Empty)) settingsByCategory[string.Empty].ForEach(CreateSettingCell);
 
         foreach (var (category, settings) in settingsByCategory.Where(s => s.Key != string.Empty)) {
             var categoryCell = Instantiate(SettingsAssets.SettingsCategoryPrefab, settingsMenu.m_settingsContainer);
@@ -80,9 +72,7 @@ public class SettingsTab : SettingsButton {
     }
 
     private void CreateSettingCell(Setting setting) {
-        if (settingsMenu == null) {
-            throw new System.Exception("Settings menu is null.");
-        }
+        if (settingsMenu == null) throw new System.Exception("Settings menu is null.");
 
         var component = Instantiate(settingsMenu.m_settingsCell, settingsMenu.m_settingsContainer)
             .GetComponent<SettingsCell>();

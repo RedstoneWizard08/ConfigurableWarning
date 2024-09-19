@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.IO.Compression;
+using ContentLibrary;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -83,23 +85,31 @@ internal static class SettingsAssets {
     /// <exception cref="System.Exception">Thrown if the asset bundle or asset could not be loaded.</exception>
     private static T LoadAsset<T>(string bundleName, string assetName)
         where T : Object {
-        ContentSettings.Logger.LogDebug($"Loading asset '{assetName}' from asset bundle '{bundleName}'.");
+        ContentSettingsEntry.Logger.LogDebug($"Loading asset '{assetName}' from asset bundle '{bundleName}'.");
 
-        if (AssetBundles.TryGetValue(bundleName, out var bundle)) {
-            return bundle.LoadAsset<T>(assetName);
-        }
+        if (AssetBundles.TryGetValue(bundleName, out var bundle)) return bundle.LoadAsset<T>(assetName);
 
-        var assetBundleStream = typeof(ContentSettings)
-            .Assembly
-            .GetManifestResourceStream(typeof(ConfigurableWarning.ConfigurableWarning).Namespace + "." + bundleName)
-            ?? throw new Exception($"Failed to load asset bundle '{bundleName}' from embedded resource.");
+        var assetBundleStream = typeof(ContentSettingsEntry)
+                                    .Assembly
+                                    .GetManifestResourceStream(
+                                        typeof(ContentLibraryPlugin).Namespace + "." +
+                                        bundleName)
+                                ?? throw new Exception(
+                                    $"Failed to load asset bundle '{bundleName}' from embedded resource.");
 
         using (assetBundleStream)
-        using (var gzStream = new GZipStream(assetBundleStream, CompressionMode.Decompress)) {
-            var assetBundle = AssetBundle.LoadFromStream(gzStream) ?? throw new Exception($"Failed to load asset bundle '{bundleName}' from stream.");
-            var asset = assetBundle.LoadAsset<T>(assetName) ?? throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");
+        using (var gzStream = new GZipStream(assetBundleStream, CompressionMode.Decompress))
+        using (var reader = new StreamReader(gzStream))
+        using (var ms = new MemoryStream()) {
+            reader.BaseStream.CopyTo(ms);
+            
+            var assetBundle = AssetBundle.LoadFromStream(ms) ??
+                              throw new Exception($"Failed to load asset bundle '{bundleName}' from stream.");
+            
+            var asset = assetBundle.LoadAsset<T>(assetName) ??
+                        throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");
 
-            ContentSettings.Logger.LogDebug($"Loaded asset '{assetName}' from asset bundle '{bundleName}'.");
+            ContentSettingsEntry.Logger.LogDebug($"Loaded asset '{assetName}' from asset bundle '{bundleName}'.");
             AssetBundles.Add(bundleName, assetBundle);
 
             return asset;

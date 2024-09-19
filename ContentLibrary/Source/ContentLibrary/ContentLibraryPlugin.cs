@@ -1,5 +1,7 @@
 using BepInEx;
 using BepInEx.Logging;
+using ConfigurableWarning;
+using ContentSettings;
 using HarmonyLib;
 
 namespace ContentLibrary;
@@ -20,7 +22,8 @@ public class ContentLibraryPlugin : BaseUnityPlugin {
     /// <summary>
     ///     Our <see cref="ManualLogSource" />.
     /// </summary>
-    internal new static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource(MyPluginInfo.PLUGIN_GUID);
+    internal new static readonly ManualLogSource Logger =
+        BepInEx.Logging.Logger.CreateLogSource(MyPluginInfo.PLUGIN_GUID);
 
     /// <summary>
     ///     Our <see cref="Harmony" /> instance
@@ -33,6 +36,8 @@ public class ContentLibraryPlugin : BaseUnityPlugin {
     public void Awake() {
         Logger.LogInfo($"Loading plugin {MyPluginInfo.PLUGIN_GUID}...");
 
+        ContentSettingsEntry.Init();
+        ConfigurableWarningEntry.Init();
         Patch();
 
         Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} loaded!");
@@ -54,5 +59,12 @@ public class ContentLibraryPlugin : BaseUnityPlugin {
         Logger.LogInfo("Unpatching...");
 
         Harmony.UnpatchAll();
+    }
+
+    /// <summary>
+    ///     Called each frame.
+    /// </summary>
+    public void Update() {
+        ContentSettingsEntry.Update();
     }
 }

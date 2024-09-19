@@ -6,21 +6,18 @@ using ContentLibrary;
 namespace ConfigurableWarning;
 
 /// <summary>
-///     ConfigurableWarning's BepInEx entrypoint.
+///     ConfigurableWarning's entrypoint.
 /// </summary>
-[ContentWarningPlugin(CWPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_VERSION, false)]
-[BepInPlugin(CWPluginInfo.PLUGIN_GUID, CWPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-[BepInDependency(MyceliumNetworking.MyPluginInfo.PLUGIN_GUID)]
-public class ConfigurableWarning : BaseUnityPlugin {
+public class ConfigurableWarningEntry {
     /// <summary>
     ///     Our <see cref="ManualLogSource" />.
     /// </summary>
-    internal new static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource(CWPluginInfo.PLUGIN_GUID);
+    internal static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource(CWPluginInfo.PLUGIN_GUID);
 
     /// <summary>
     ///     Initializes the plugin
     /// </summary>
-    public void Awake() {
+    public static void Init() {
         Logger.LogInfo($"Loading plugin {CWPluginInfo.PLUGIN_GUID} (bundled with {MyPluginInfo.PLUGIN_GUID})...");
 
         ConfigurableWarningAPI.Init();

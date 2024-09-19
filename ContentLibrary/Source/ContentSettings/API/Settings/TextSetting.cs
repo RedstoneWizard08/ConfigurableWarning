@@ -34,7 +34,9 @@ public abstract class TextSetting : Setting {
     /// Save the setting using the provided loader.
     /// </summary>
     /// <param name="saver">The loader to save the setting with.</param>
-    public override void Save(ISettingsSaveLoad saver) => saver.SaveString(GetType(), Value);
+    public override void Save(ISettingsSaveLoad saver) {
+        saver.SaveString(GetType(), Value);
+    }
 
     /// <summary>
     /// Sets the value of the setting and saves it.
@@ -51,22 +53,27 @@ public abstract class TextSetting : Setting {
     /// Gets the setting UI for the setting.
     /// </summary>
     /// <returns>The setting UI for the setting.</returns>
-    public override GameObject GetSettingUICell() => SettingsMapper.TextSettingCell;
+    public override GameObject GetSettingUICell() {
+        return SettingsMapper.TextSettingCell;
+    }
 
     /// <summary>
     /// Gets the debug UI for the setting.
     /// </summary>
     /// <param name="settingHandler">The setting handler to get the debug UI for.</param>
     /// <returns>The debug UI for the setting.</returns>
-    public override SettingUI GetDebugUI(ISettingHandler settingHandler)
-        => new TextSettingsUI(this, settingHandler);
+    public override SettingUI GetDebugUI(ISettingHandler settingHandler) {
+        return new TextSettingsUI(this, settingHandler);
+    }
 
     /// <summary>
     /// Expose the setting value, you should apply any formatting here.
     /// </summary>
     /// <param name="value">The value to expose.</param>
     /// <returns>The exposed value.</returns>
-    public virtual string Expose(string value) => value;
+    public virtual string Expose(string value) {
+        return value;
+    }
 
     /// <summary>
     /// Get the default value for the setting.

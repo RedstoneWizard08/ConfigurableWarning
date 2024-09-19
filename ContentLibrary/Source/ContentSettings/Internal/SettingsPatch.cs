@@ -14,7 +14,8 @@ namespace ContentSettings.Internal;
 /// </summary>
 [HarmonyPatch]
 [SuppressMessage("ReSharper", "InconsistentNaming", Justification = "Harmony patch.")]
-[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "Harmony patch.")]
+[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter",
+    Justification = "Harmony patch.")]
 internal class SettingsPatch {
     /// <summary>
     /// Patches the <see cref="DefaultSettingsSaveLoad.WriteToDisk"/> method to save our custom settings.
@@ -62,9 +63,8 @@ internal class SettingsPatch {
     [HarmonyPrefix]
     [HarmonyPatch(typeof(SFX_Instance), nameof(SFX_Instance.Play))]
     internal static bool PlayPatch(SFX_Instance __instance) {
-        if (__instance.settings.mixerGroup != SingletonAsset<MixerHolder>.Instance.sfxMixer) {
-            ContentSettings.Logger.LogDebug($"Changing mixer group for {__instance.name}");
-        }
+        if (__instance.settings.mixerGroup != SingletonAsset<MixerHolder>.Instance.sfxMixer)
+            ContentSettingsEntry.Logger.LogDebug($"Changing mixer group for {__instance.name}");
 
         __instance.settings.mixerGroup = SingletonAsset<MixerHolder>.Instance.sfxMixer;
 

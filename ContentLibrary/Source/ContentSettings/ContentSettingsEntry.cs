@@ -1,6 +1,5 @@
 #pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
 
-using BepInEx;
 using BepInEx.Logging;
 using ContentLibrary;
 using ContentSettings.API;
@@ -11,21 +10,16 @@ namespace ContentSettings;
 /// <summary>
 ///     The main Content Settings plugin class.
 /// </summary>
-[ContentWarningPlugin(CSPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_VERSION, true)]
-[BepInPlugin(CSPluginInfo.PLUGIN_GUID, CSPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-public partial class ContentSettings : BaseUnityPlugin {
+public class ContentSettingsEntry {
     /// <summary>
-    ///     Gets the logger of the plugin.
+    ///     Our <see cref="ManualLogSource" />.
     /// </summary>
-    internal new static ManualLogSource Logger { get; private set; } = null!;
+    internal static readonly ManualLogSource Logger = BepInEx.Logging.Logger.CreateLogSource(CSPluginInfo.PLUGIN_GUID);
 
     /// <summary>
     ///     Initialize ContentSettings.
     /// </summary>
-    public void Awake() {
-        // DON'T PATCH HARMONY HERE!!! ConfigurableWarning already does it!
-
-        Logger = base.Logger;
+    public static void Init() {
         Logger.LogInfo($"Loading plugin {CSPluginInfo.PLUGIN_GUID} (bundled with {MyPluginInfo.PLUGIN_GUID})...");
 
         SettingsAssets.LoadAssets();
@@ -36,7 +30,7 @@ public partial class ContentSettings : BaseUnityPlugin {
     /// <summary>
     ///     Called each frame.
     /// </summary>
-    public void Update() {
+    public static void Update() {
         SettingsLoader.Update();
     }
 }

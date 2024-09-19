@@ -55,9 +55,9 @@ public static class OptionLoader {
         var register = type.GetCustomAttribute<Register>(false);
         if (register == null) return false;
 
-        ConfigurableWarning.Logger.LogInfo($"Found setting {type.FullName}");
+        ConfigurableWarningEntry.Logger.LogInfo($"Found setting {type.FullName}");
 
-        var instance = (IUntypedOption)Activator.CreateInstance(type);
+        var instance = (IUntypedOption) Activator.CreateInstance(type);
 
         instance.Register(tab, group);
         RegisteredOptions.Add(type, instance);
@@ -77,10 +77,10 @@ public static class OptionLoader {
         var group = type.GetCustomAttribute<Group>(false);
         if (group == null) return false;
 
-        ConfigurableWarning.Logger.LogInfo($"Found group {group.Category} in {type.FullName}");
+        ConfigurableWarningEntry.Logger.LogInfo($"Found group {group.Category} in {type.FullName}");
 
         if (tab == null && group.Tab == null) {
-            ConfigurableWarning.Logger.LogError("Cannot register a Group with no tab!");
+            ConfigurableWarningEntry.Logger.LogError("Cannot register a Group with no tab!");
             return false;
         }
 
@@ -104,7 +104,8 @@ public static class OptionLoader {
         var tab = type.GetCustomAttribute<Tab>(false);
         if (tab == null) return false;
 
-        ConfigurableWarning.Logger.LogInfo($"Found tab {tab.Name} in {type.FullName} (from {type.Assembly.GetName().Name}.dll");
+        ConfigurableWarningEntry.Logger.LogInfo(
+            $"Found tab {tab.Name} in {type.FullName} (from {type.Assembly.GetName().Name}.dll");
 
         var subClasses = type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public);
 

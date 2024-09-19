@@ -1,7 +1,10 @@
-using System.IO;
+using System;
 using Cake.Common;
 using Cake.Common.IO;
+using Cake.Core.Diagnostics;
+using Cake.Core.IO;
 using Cake.Frosting;
+using Path = System.IO.Path;
 
 namespace Build.Tasks;
 
@@ -19,8 +22,16 @@ public sealed class LaunchTask : FrostingTask<BuildContext> {
         if (!Path.Exists(Path.Join(outPath, ".."))) {
             context.CreateDirectory(Path.Join(outPath, ".."));
         }
+        
+        context.Log.Information("Copying files...");
 
         context.CopyFile(outPath, $"{pluginPath}/RedstoneWizard08.ContentLibrary.dll");
-        context.StartProcess(gamePath, args);
+        
+        context.Log.Information("Launching game...");
+        
+        context.StartAndReturnProcess(gamePath, new ProcessSettings() {
+            Arguments = args,
+            RedirectStandardOutput = true,
+        });
     }
 }

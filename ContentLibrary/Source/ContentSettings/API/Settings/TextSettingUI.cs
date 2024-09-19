@@ -15,8 +15,7 @@ using Zorro.Settings;
 /// The UI cell for a text setting.
 /// </summary>
 public class TextSettingUI : SettingInputUICell {
-    [SerializeField]
-    private TMP_InputField? inputField;
+    [SerializeField] private TMP_InputField? inputField;
 
     /// <summary>
     /// Sets up the setting UI cell with the provided setting and setting handler.
@@ -24,13 +23,9 @@ public class TextSettingUI : SettingInputUICell {
     /// <param name="setting">The text setting to set up the UI cell with.</param>
     /// <param name="settingHandler">The setting handler to use for saving the setting.</param>
     public override void Setup(Setting setting, ISettingHandler settingHandler) {
-        if (setting is not TextSetting textSetting) {
-            return;
-        }
+        if (setting is not TextSetting textSetting) return;
 
-        if (inputField == null) {
-            return;
-        }
+        if (inputField == null) return;
 
         inputField.SetTextWithoutNotify(textSetting.Expose(textSetting.Value));
         inputField.onValueChanged.AddListener(OnInputChanged);

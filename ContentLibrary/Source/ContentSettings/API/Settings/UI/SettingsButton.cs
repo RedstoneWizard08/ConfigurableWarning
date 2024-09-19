@@ -20,14 +20,12 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     /// <summary>
     /// The text mesh pro component of the tab, displaying the tab name.
     /// </summary>
-    [SerializeField]
-    private TextMeshProUGUI? textMeshPro;
+    [SerializeField] private TextMeshProUGUI? textMeshPro;
 
     /// <summary>
     /// The image component of the tab, displaying the tab icon.
     /// </summary>
-    [SerializeField]
-    private Image? image;
+    [SerializeField] private Image? image;
 
     /// <summary>
     /// Gets or sets the display name of the button.
@@ -35,9 +33,7 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public string Name {
         get => textMeshPro?.text ?? string.Empty;
         set {
-            if (textMeshPro != null) {
-                textMeshPro.text = value;
-            }
+            if (textMeshPro != null) textMeshPro.text = value;
         }
     }
 
@@ -126,22 +122,15 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
 
     private void SetColorActive() {
-        if (image is not null) {
-            image.color = new(0.992f, 0.839f, 0.000f, 0.600f);
-        }
+        if (image is not null) image.color = new Color(0.992f, 0.839f, 0.000f, 0.600f);
 
-        if (textMeshPro is not null) {
-            textMeshPro.color = new(0.0f, 0.0f, 0.0f, 1.000f);
-        }
+        if (textMeshPro is not null) textMeshPro.color = new Color(0.0f, 0.0f, 0.0f, 1.000f);
     }
 
     private void SetColorInactive() {
-        if (image is not null && !IsHovered && !IsSelected) {
-            image.color = new(0.122f, 0.122f, 0.122f, 0.482f);
-        }
+        if (image is not null && !IsHovered && !IsSelected) image.color = new Color(0.122f, 0.122f, 0.122f, 0.482f);
 
-        if (textMeshPro is not null && !IsHovered && !IsSelected) {
-            textMeshPro.color = new(1.0f, 1.0f, 1.0f, 1.000f);
-        }
+        if (textMeshPro is not null && !IsHovered && !IsSelected)
+            textMeshPro.color = new Color(1.0f, 1.0f, 1.0f, 1.000f);
     }
 }

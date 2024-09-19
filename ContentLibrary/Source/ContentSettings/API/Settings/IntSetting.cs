@@ -50,7 +50,9 @@ public abstract class IntSetting : Setting {
     /// Save the setting using the provided loader.
     /// </summary>
     /// <param name="saver">The loader to save the setting with.</param>
-    public override void Save(ISettingsSaveLoad saver) => saver.SaveInt(GetType(), Value);
+    public override void Save(ISettingsSaveLoad saver) {
+        saver.SaveInt(GetType(), Value);
+    }
 
     /// <summary>
     /// Sets the value of the setting and saves it.
@@ -58,11 +60,10 @@ public abstract class IntSetting : Setting {
     /// <param name="newValue">The new value of the setting.</param>
     /// <param name="settingHandler">The setting handler to save the setting with.</param>
     public void SetValue(int newValue, ISettingHandler settingHandler) {
-        if (this is IntOption opt) {
+        if (this is IntOption opt)
             Value = opt._shouldClamp ? Clamp(newValue) : newValue;
-        } else {
+        else
             Value = Clamp(newValue);
-        }
 
         ApplyValue();
         settingHandler.SaveSetting(this);
@@ -73,14 +74,17 @@ public abstract class IntSetting : Setting {
     /// </summary>
     /// <param name="settingHandler">The setting handler to get the setting UI for.</param>
     /// <returns>The setting UI for the setting.</returns>
-    public override SettingUI GetDebugUI(ISettingHandler settingHandler)
-        => new IntSettingsUI(this, settingHandler);
+    public override SettingUI GetDebugUI(ISettingHandler settingHandler) {
+        return new IntSettingsUI(this, settingHandler);
+    }
 
     /// <summary>
     /// Gets the setting UI for the setting.
     /// </summary>
     /// <returns>The setting UI for the setting.</returns>
-    public override GameObject GetSettingUICell() => SettingsMapper.IntSettingCell;
+    public override GameObject GetSettingUICell() {
+        return SettingsMapper.IntSettingCell;
+    }
 
     /// <summary>
     /// Exposes the value of the setting as a string, for display purposes.
@@ -88,7 +92,9 @@ public abstract class IntSetting : Setting {
     /// <param name="value">The value to expose.</param>
     /// <returns>The exposed value.</returns>
     [UsedImplicitly]
-    public virtual string Expose(int value) => value.ToString();
+    public virtual string Expose(int value) {
+        return value.ToString();
+    }
 
     /// <summary>
     /// Clamps the value to the minimum and maximum value of the setting.
@@ -96,7 +102,9 @@ public abstract class IntSetting : Setting {
     /// <param name="value">The value to clamp.</param>
     /// <returns>The clamped value.</returns>
     [UsedImplicitly]
-    public virtual int Clamp(int value) => Mathf.Clamp(value, MinValue, MaxValue);
+    public virtual int Clamp(int value) {
+        return Mathf.Clamp(value, MinValue, MaxValue);
+    }
 
     /// <summary>
     /// Gets the value of the setting as an integer.

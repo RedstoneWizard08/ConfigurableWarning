@@ -47,7 +47,9 @@ public static class SettingsLoader {
     /// <param name="tab">The tab to check for.</param>
     /// <returns>True if the settings manager has the tab; otherwise, false.</returns>
     [UsedImplicitly]
-    public static bool HasTab(string tab) => SettingsByCategoryByTab.ContainsKey(tab);
+    public static bool HasTab(string tab) {
+        return SettingsByCategoryByTab.ContainsKey(tab);
+    }
 
     /// <summary>
     /// Gets the settings for the specified tab.
@@ -66,9 +68,7 @@ public static class SettingsLoader {
     /// <returns>The instance of the setting.</returns>
     public static T? GetSetting<T>()
         where T : Setting {
-        if (RegisteredSettings.TryGetValue(typeof(T), out var setting)) {
-            return (T)setting;
-        }
+        if (RegisteredSettings.TryGetValue(typeof(T), out var setting)) return (T) setting;
 
         return null;
     }
@@ -86,7 +86,8 @@ public static class SettingsLoader {
         category ??= string.Empty;
 
         var settingType = setting.GetType();
-        ContentSettings.Logger.LogDebug($"Registering setting {settingType.Name}({settingType.BaseType?.Name}) to tab {tab} and category {category}.");
+        ContentSettingsEntry.Logger.LogDebug(
+            $"Registering setting {settingType.Name}({settingType.BaseType?.Name}) to tab {tab} and category {category}.");
 
         var settingsByCategory = SettingsByCategoryByTab.GetValueOrDefault(tab, []);
         var settings = settingsByCategory.GetValueOrDefault(category, []);
@@ -103,9 +104,7 @@ public static class SettingsLoader {
             RegisteredSettings.Add(settingType, setting);
         }
 
-        if (IsInitialized) {
-            IsDirty = true;
-        }
+        if (IsInitialized) IsDirty = true;
     }
 
     /// <summary>
@@ -133,10 +132,8 @@ public static class SettingsLoader {
     /// Saves all registered settings.
     /// </summary>
     internal static void SaveSettings() {
-        ContentSettings.Logger.LogDebug("Saving settings to disk.");
-        foreach (var setting in Settings) {
-            setting.Save(SaveLoader);
-        }
+        ContentSettingsEntry.Logger.LogDebug("Saving settings to disk.");
+        foreach (var setting in Settings) setting.Save(SaveLoader);
     }
 
     /// <summary>
@@ -145,18 +142,16 @@ public static class SettingsLoader {
     /// <param name="menu">The settings menu to create the tab in.</param>
     /// <exception cref="System.Exception">Thrown when the existing tab to create the modded settings tab from is not found.</exception>
     internal static void CreateSettingsMenu(SettingsMenu menu) {
-        ContentSettings.Logger.LogDebug("Initializing settings.");
+        ContentSettingsEntry.Logger.LogDebug("Initializing settings.");
 
-        var tabs = (menu.transform.Find("Content")?.Find("TABS")) ?? throw new Exception("Failed to find settings tab.");
-        
+        var tabs = menu.transform.Find("Content")?.Find("TABS") ?? throw new Exception("Failed to find settings tab.");
+
         if (SettingsNavigation == null) {
             var settingsMenuObject = Object.Instantiate(SettingsAssets.SettingsNavigationPrefab, tabs.parent, false);
             var settingsTabsTransform = settingsMenuObject.transform.FindChildRecursive("Content");
             var settingsNavigation = settingsTabsTransform.gameObject.AddComponent<SettingsNavigation>();
 
-            foreach (var tab in SettingsByCategoryByTab.Keys) {
-                settingsNavigation.Create(tab);
-            }
+            foreach (var tab in SettingsByCategoryByTab.Keys) settingsNavigation.Create(tab);
 
             SettingsNavigation = settingsNavigation;
         }
@@ -168,34 +163,28 @@ public static class SettingsLoader {
     /// Register all settings in the current domain.
     /// </summary>
     internal static void RegisterSettings() {
-        if (IsInitialized) {
-            return;
-        }
+        if (IsInitialized) return;
 
         RegisterDefaultSettings();
 
-        ContentSettings.Logger.LogDebug("Registering settings.");
+        ContentSettingsEntry.Logger.LogDebug("Registering settings.");
 
         foreach (var type in AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes())) {
-            if (type.IsAbstract || type.IsInterface || !type.IsSubclassOf(typeof(Setting))) {
-                continue;
-            }
+            if (type.IsAbstract || type.IsInterface || !type.IsSubclassOf(typeof(Setting))) continue;
 
-            if (RegisteredSettings.ContainsKey(type)) {
-                continue;
-            }
+            if (RegisteredSettings.ContainsKey(type)) continue;
 
             var settingDefinitions = type.GetCustomAttributes<Attributes.SettingRegister>(false);
             Setting? setting = null;
 
             foreach (var settingDefinition in settingDefinitions) {
-                setting ??= (Setting)Activator.CreateInstance(type);
+                setting ??= (Setting) Activator.CreateInstance(type);
 
                 RegisterSetting(settingDefinition.Tab, settingDefinition.Category, setting);
             }
         }
 
-        ContentSettings.Logger.LogDebug($"Registered {RegisteredSettings.Count} settings.");
+        ContentSettingsEntry.Logger.LogDebug($"Registered {RegisteredSettings.Count} settings.");
 
         IsInitialized = true;
     }
@@ -204,16 +193,14 @@ public static class SettingsLoader {
     /// Called every frame to update the settings.
     /// </summary>
     internal static void Update() {
-        foreach (var setting in Settings) {
-            setting.Update();
-        }
+        foreach (var setting in Settings) setting.Update();
     }
 
     /// <summary>
     /// Register the default settings from the original settings system.
     /// </summary>
     private static void RegisterDefaultSettings() {
-        ContentSettings.Logger.LogDebug("Registering default settings.");
+        ContentSettingsEntry.Logger.LogDebug("Registering default settings.");
 
         var settingsByCategoryByTab = SettingsByCategoryByTab;
 
@@ -226,19 +213,16 @@ public static class SettingsLoader {
 
         var settingsHandler = GameHandler.Instance.SettingsHandler;
 
-        ContentSettings.Logger.LogInfo($"SettingsHandler is null: {settingsHandler == null}");
+        ContentSettingsEntry.Logger.LogInfo($"SettingsHandler is null: {settingsHandler == null}");
 
         foreach (var category in Enum.GetValues(typeof(SettingCategory))) {
-            var settingCategory = (SettingCategory)category;
+            var settingCategory = (SettingCategory) category;
             var categorySettings = settingsHandler?.GetSettings(settingCategory) ?? [];
 
-            foreach (var setting in categorySettings) {
-                RegisterSetting(settingCategory.ToString().ToUpper(), setting);
-            }
+            foreach (var setting in categorySettings) RegisterSetting(settingCategory.ToString().ToUpper(), setting);
         }
 
-        foreach (var tab in settingsByCategoryByTab.Keys.Where(tab => !SettingsByCategoryByTab.ContainsKey(tab))) {
+        foreach (var tab in settingsByCategoryByTab.Keys.Where(tab => !SettingsByCategoryByTab.ContainsKey(tab)))
             SettingsByCategoryByTab.Add(tab, settingsByCategoryByTab[tab]);
-        }
     }
 }

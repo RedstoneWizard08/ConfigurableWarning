@@ -32,22 +32,25 @@ public class CameraPatch {
     [HarmonyPatch(typeof(CameraRecording), nameof(CameraRecording.SaveToDesktop))]
     [HarmonyPrefix]
     public static bool SaveToDesktop(CameraRecording __instance, out string videoFileName) {
-        if (!RecordingsHandler.TryGetRecordingPath(__instance.videoHandle, out string sourceFileName)) {
+        if (!RecordingsHandler.TryGetRecordingPath(__instance.videoHandle, out var sourceFileName)) {
             videoFileName = string.Empty;
             return false;
         }
 
         videoFileName = "content_warning_" + GuidExtensions.ToShortString(__instance.videoHandle.id) + ".webm";
 
-        string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        string value = States.Strings[SettingKeys.VideoSaveLocation] ?? "Desktop";
+        var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        var value = States.Strings[SettingKeys.VideoSaveLocation] ?? "Desktop";
 
         if (value.ToLower() != "desktop" && Directory.Exists(value)) {
             File.Copy(sourceFileName, Path.Combine(value, videoFileName));
-            ConfigurableWarning.Logger.LogInfo("Saved '" + videoFileName + "' to '" + Path.Combine(value, videoFileName) + "'");
+            ConfigurableWarningEntry.Logger.LogInfo("Saved '" + videoFileName + "' to '" +
+                                                    Path.Combine(value, videoFileName) + "'");
         } else {
             File.Copy(sourceFileName, Path.Combine(folderPath, videoFileName));
-            ConfigurableWarning.Logger.LogWarning("Could not find folder at specified custom path '" + value + "', so the video was instead  saved '" + videoFileName + "' to '" + Path.Combine(value, videoFileName) + "'");
+            ConfigurableWarningEntry.Logger.LogWarning("Could not find folder at specified custom path '" + value +
+                                                       "', so the video was instead  saved '" + videoFileName +
+                                                       "' to '" + Path.Combine(value, videoFileName) + "'");
         }
 
         return true;

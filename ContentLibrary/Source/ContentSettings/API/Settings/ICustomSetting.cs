@@ -21,5 +21,7 @@ public interface ICustomSetting : IExposedSetting {
     /// Unfortunately, due to the SettingCategory being an enum, it is not possible for us to implement this method.
     /// </remarks>
     /// <returns>The setting category of the setting.</returns>
-    SettingCategory IExposedSetting.GetSettingCategory() => SettingCategory.Controls;
+    SettingCategory IExposedSetting.GetSettingCategory() {
+        return SettingCategory.Controls;
+    }
 }

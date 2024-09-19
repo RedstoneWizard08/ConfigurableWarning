@@ -22,26 +22,22 @@ public class SettingsNavigation : MonoBehaviour {
     /// <summary>
     /// The settings menu this tab belongs to.
     /// </summary>
-    [SerializeField]
-    private SettingsMenu? settingsMenu;
+    [SerializeField] private SettingsMenu? settingsMenu;
 
     /// <summary>
     /// The currently selected tab.
     /// </summary>
-    [SerializeField]
-    private SettingsTab? selectedTab;
+    [SerializeField] private SettingsTab? selectedTab;
 
     /// <summary>
     /// The list of settings tabs available.
     /// </summary>
-    [SerializeField]
-    private readonly List<SettingsTab> settingsTabs = [];
+    [SerializeField] private readonly List<SettingsTab> settingsTabs = [];
 
     /// <summary>
     /// The number of settings to display per page.
     /// </summary>
-    [SerializeField]
-    private readonly int pageSize = 3;
+    [SerializeField] private readonly int pageSize = 3;
 
     /// <summary>
     /// Gets a value indicating the current page of settings tabs.
@@ -53,7 +49,7 @@ public class SettingsNavigation : MonoBehaviour {
     /// Gets a value indicating the total number of pages of settings tabs.
     /// </summary>
     [UsedImplicitly]
-    public int PageCount => Mathf.CeilToInt((float)settingsTabs.Count / pageSize);
+    public int PageCount => Mathf.CeilToInt((float) settingsTabs.Count / pageSize);
 
     /// <summary>
     /// Add a settings tab to the available tabs.
@@ -83,9 +79,7 @@ public class SettingsNavigation : MonoBehaviour {
     /// </summary>
     /// <param name="tab">The tab to select.</param>
     public void Select(SettingsTab tab) {
-        if (selectedTab != null) {
-            Deselect(selectedTab);
-        }
+        if (selectedTab != null) Deselect(selectedTab);
 
         selectedTab = tab;
         tab.Select();
@@ -132,16 +126,12 @@ public class SettingsNavigation : MonoBehaviour {
 
         // Hide all other tabs except the current page
         var page = settingsTabs.IndexOf(tab) / pageSize;
-        for (var i = 0; i < settingsTabs.Count; i++) {
-            settingsTabs[i].gameObject.SetActive(i / pageSize == page);
-        }
+        for (var i = 0; i < settingsTabs.Count; i++) settingsTabs[i].gameObject.SetActive(i / pageSize == page);
     }
 
     private void SetPage(int page) {
         Page = page;
-        for (var i = 0; i < settingsTabs.Count; i++) {
-            settingsTabs[i].gameObject.SetActive(i / pageSize == page);
-        }
+        for (var i = 0; i < settingsTabs.Count; i++) settingsTabs[i].gameObject.SetActive(i / pageSize == page);
     }
 
     private void Awake() {
@@ -161,16 +151,12 @@ public class SettingsNavigation : MonoBehaviour {
     }
 
     private void Start() {
-        if (selectedTab != null) {
+        if (selectedTab != null)
             Select(selectedTab);
-        } else if (settingsTabs.Count > 0) {
-            Select(settingsTabs[0]);
-        }
+        else if (settingsTabs.Count > 0) Select(settingsTabs[0]);
     }
 
     private void OnEnable() {
-        if (selectedTab != null) {
-            Select(selectedTab);
-        }
+        if (selectedTab != null) Select(selectedTab);
     }
 }

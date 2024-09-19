@@ -68,7 +68,7 @@ public static class BuiltInSettings {
             false);
 
         [Register]
-        private class Gravity() : FloatOption(SettingKeys.Gravity, 10.0f, "Gravity", 0f, 100f,
+        private class Gravity() : FloatOption(SettingKeys.Gravity, 20.0f, "Gravity", 0f, 100f,
             false);
     }
 

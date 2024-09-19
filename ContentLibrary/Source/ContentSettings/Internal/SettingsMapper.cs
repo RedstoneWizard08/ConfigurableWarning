@@ -18,13 +18,9 @@ internal static class SettingsMapper {
     /// </summary>
     public static GameObject TextSettingCell {
         get {
-            if (_textSettingCell == null) {
-                _textSettingCell = SettingsAssets.SettingsTextInputPrefab;
-            }
+            if (_textSettingCell == null) _textSettingCell = SettingsAssets.SettingsTextInputPrefab;
 
-            if (_textSettingCell.GetComponent<TextSettingUI>() == null) {
-                _textSettingCell.AddComponent<TextSettingUI>();
-            }
+            if (_textSettingCell.GetComponent<TextSettingUI>() == null) _textSettingCell.AddComponent<TextSettingUI>();
 
             return _textSettingCell;
         }
@@ -35,13 +31,9 @@ internal static class SettingsMapper {
     /// </summary>
     public static GameObject IntSettingCell {
         get {
-            if (_intSettingCell == null) {
-                _intSettingCell = SettingsAssets.SettingsIntInputPrefab;
-            }
+            if (_intSettingCell == null) _intSettingCell = SettingsAssets.SettingsIntInputPrefab;
 
-            if (_intSettingCell.GetComponent<IntSettingUI>() == null) {
-                _intSettingCell.AddComponent<IntSettingUI>();
-            }
+            if (_intSettingCell.GetComponent<IntSettingUI>() == null) _intSettingCell.AddComponent<IntSettingUI>();
 
             return _intSettingCell;
         }
@@ -52,13 +44,9 @@ internal static class SettingsMapper {
     /// </summary>
     public static GameObject BoolSettingCell {
         get {
-            if (_boolSettingCell == null) {
-                _boolSettingCell = SettingsAssets.SettingsBoolInputPrefab;
-            }
+            if (_boolSettingCell == null) _boolSettingCell = SettingsAssets.SettingsBoolInputPrefab;
 
-            if (_boolSettingCell.GetComponent<BoolSettingUI>() == null) {
-                _boolSettingCell.AddComponent<BoolSettingUI>();
-            }
+            if (_boolSettingCell.GetComponent<BoolSettingUI>() == null) _boolSettingCell.AddComponent<BoolSettingUI>();
 
             return _boolSettingCell;
         }

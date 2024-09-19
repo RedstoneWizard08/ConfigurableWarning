@@ -33,7 +33,9 @@ public abstract class BoolSetting : Setting {
     /// Save the setting using the provided loader.
     /// </summary>
     /// <param name="saver">The loader to save the setting with.</param>
-    public override void Save(ISettingsSaveLoad saver) => saver.SaveInt(GetType(), Value ? 1 : 0);
+    public override void Save(ISettingsSaveLoad saver) {
+        saver.SaveInt(GetType(), Value ? 1 : 0);
+    }
 
     /// <summary>
     /// Sets the value of the setting and saves it.
@@ -50,22 +52,27 @@ public abstract class BoolSetting : Setting {
     /// Gets the setting UI for the setting.
     /// </summary>
     /// <returns>The setting UI for the setting.</returns>
-    public override UnityEngine.GameObject GetSettingUICell() => SettingsMapper.BoolSettingCell;
+    public override UnityEngine.GameObject GetSettingUICell() {
+        return SettingsMapper.BoolSettingCell;
+    }
 
     /// <summary>
     /// Gets the setting UI for the setting.
     /// </summary>
     /// <param name="settingHandler">The setting handler to get the setting UI for.</param>
     /// <returns>The setting UI for the setting.</returns>
-    public override SettingUI GetDebugUI(ISettingHandler settingHandler)
-        => new BoolSettingsUI(this, settingHandler);
+    public override SettingUI GetDebugUI(ISettingHandler settingHandler) {
+        return new BoolSettingsUI(this, settingHandler);
+    }
 
     /// <summary>
     /// Exposes the value of the setting as a string, for display purposes.
     /// </summary>
     /// <param name="value">The value to expose.</param>
     /// <returns>The exposed value.</returns>
-    public virtual string Expose(bool value) => value.ToString();
+    public virtual string Expose(bool value) {
+        return value.ToString();
+    }
 
     /// <summary>
     /// Gets the default value for the setting.

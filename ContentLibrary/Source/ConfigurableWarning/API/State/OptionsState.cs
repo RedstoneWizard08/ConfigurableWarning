@@ -73,11 +73,11 @@ public class OptionsState {
         return v switch {
             double d when typeof(T) == typeof(float) =>
                 // This is dumb. Kill it with fire.
-                (T)(object)(float)d,
+                (T) (object) (float) d,
             long l when typeof(T) == typeof(int) =>
                 // This is dumb. Kill it with fire. (again)
-                (T)(object)(int)l,
-            _ => (T)v
+                (T) (object) (int) l,
+            _ => (T) v
         };
     }
 

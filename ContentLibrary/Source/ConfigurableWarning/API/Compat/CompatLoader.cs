@@ -49,29 +49,30 @@ public static class CompatLoader {
             var module = type.GetCustomAttribute<CompatModule>(false);
             if (module == null) continue;
 
-            ConfigurableWarning.Logger.LogInfo($"Checking compat module: {type.Name} (from {type.Assembly.GetName().Name}.dll");
+            ConfigurableWarningEntry.Logger.LogInfo(
+                $"Checking compat module: {type.Name} (from {type.Assembly.GetName().Name}.dll");
 
             var ok = true;
 
             foreach (var dep in module.Dependencies)
                 if (NamespaceExists(dep)) {
-                    ConfigurableWarning.Logger.LogInfo($"Found namespace: {dep}");
+                    ConfigurableWarningEntry.Logger.LogInfo($"Found namespace: {dep}");
                 } else {
-                    ConfigurableWarning.Logger.LogInfo($"Could not find namespace: {dep}; Skipping...");
+                    ConfigurableWarningEntry.Logger.LogInfo($"Could not find namespace: {dep}; Skipping...");
                     ok = false;
                     break;
                 }
 
             if (!ok) continue;
 
-            ConfigurableWarning.Logger.LogInfo($"Initializing compat module: {type.Name}");
+            ConfigurableWarningEntry.Logger.LogInfo($"Initializing compat module: {type.Name}");
 
             foreach (var ty in type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public)) {
                 TryRegisterCompatTab(ty);
                 TryRegisterCompatGroup(null, ty);
             }
 
-            var it = (ICompatModule)Activator.CreateInstance(type);
+            var it = (ICompatModule) Activator.CreateInstance(type);
 
             it.Init();
             RegisteredModules[type] = it;
@@ -90,10 +91,10 @@ public static class CompatLoader {
         var group = type.GetCustomAttribute<CompatGroup>(false);
         if (group == null) return false;
 
-        ConfigurableWarning.Logger.LogInfo($"Found compat group {group.Category} in {type.FullName}");
+        ConfigurableWarningEntry.Logger.LogInfo($"Found compat group {group.Category} in {type.FullName}");
 
         if (tab == null && group.Tab == null) {
-            ConfigurableWarning.Logger.LogError("Cannot register a CompatGroup with no tab!");
+            ConfigurableWarningEntry.Logger.LogError("Cannot register a CompatGroup with no tab!");
             return false;
         }
 
@@ -117,7 +118,7 @@ public static class CompatLoader {
         var tab = type.GetCustomAttribute<CompatTab>(false);
         if (tab == null) return false;
 
-        ConfigurableWarning.Logger.LogInfo(
+        ConfigurableWarningEntry.Logger.LogInfo(
             $"Found compat tab {tab.Name} in {type.FullName} (from {type.Assembly.GetName().Name}.dll");
 
         var subClasses = type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public);

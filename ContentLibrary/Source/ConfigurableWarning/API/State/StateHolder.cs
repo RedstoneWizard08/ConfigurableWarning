@@ -14,4 +14,14 @@ public class StateHolder<T> {
         get => OptionsState.Instance.Get<T>(name);
         set => OptionsState.Instance.Set(name, value!);
     }
+
+    /// <summary>
+    ///    Get an option's state or a default value.
+    /// </summary>
+    /// <param name="name">The option.</param>
+    /// <param name="defaultValue">The default value.</param>
+    /// <returns>The value.</returns>
+    public T GetOrDefault(string name, T defaultValue) {
+        return OptionsState.Instance.Has(name) ? OptionsState.Instance.Get<T>(name)! : defaultValue;
+    }
 }

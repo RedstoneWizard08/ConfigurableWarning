@@ -38,6 +38,6 @@ public class HellDiversCompat : ICompatModule {
     private static class Settings {
         [Register]
         private class DiveKey()
-            : KeyCodeOption(HellDiversSettingKeys.DiveKey, KeyCode.F, "Max Players", [ApplySettings]);
+            : KeyCodeOption(HellDiversSettingKeys.DiveKey, KeyCode.F, "Dive Keybind", [ApplySettings]);
     }
 }

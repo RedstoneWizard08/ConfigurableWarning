@@ -12,7 +12,7 @@ namespace ContentLibrary;
 [ContentWarningPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_VERSION, false)]
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency(MyceliumNetworking.MyPluginInfo.PLUGIN_GUID)]
-public class ContentLibraryPlugin : BaseUnityPlugin {
+public class Plugin : BaseUnityPlugin {
     /// <summary>
     ///     The ModID for Mycelium.
     ///     This is just `CLIB` in hex.

@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using ConfigurableWarning.API.Internal;
 using ConfigurableWarning.API.Options;
-using ConfigurableWarning.Settings.Compat;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -70,7 +68,7 @@ public class OptionsState {
     /// <returns>The option's value.</returns>
     public T? Get<T>(string name) {
         var v = _states[name];
-        
+
         // Json.NET is dumb and doesn't deserialize numbers as the correct type.
 
         return v switch {

@@ -92,7 +92,7 @@ internal static class SettingsAssets {
         var assetBundleStream = typeof(ContentSettingsEntry)
                                     .Assembly
                                     .GetManifestResourceStream(
-                                        typeof(ContentLibraryPlugin).Namespace + "." +
+                                        typeof(Plugin).Namespace + "." +
                                         bundleName)
                                 ?? throw new Exception(
                                     $"Failed to load asset bundle '{bundleName}' from embedded resource.");

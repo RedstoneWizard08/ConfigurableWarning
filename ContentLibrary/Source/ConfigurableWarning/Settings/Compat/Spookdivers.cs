@@ -69,7 +69,7 @@ public class SpookdiversCompat : ICompatModule {
     private static class Settings {
         [Register]
         private class ReadyTime()
-            : FloatOption(SpookdiversSettingKeys.ReadyTime, 30f, "Max Players", 0f, 100f,
+            : FloatOption(SpookdiversSettingKeys.ReadyTime, 30f, "Ready Time (Seconds)", 0f, 100f,
                 [ApplySettings],
                 false);
 

@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `KeyCode` support into `States`
 - GZip the AssetBundle
 - Fix a bunch of bugs
+- Fix spookdivers setting name
 
 ## [v1.15.2-config] - 2024-09-06
 

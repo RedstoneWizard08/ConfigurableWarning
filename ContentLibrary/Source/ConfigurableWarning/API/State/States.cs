@@ -25,7 +25,7 @@ public static class States {
     ///     String states.
     /// </summary>
     public static readonly StateHolder<string> Strings = new();
-    
+
     /// <summary>
     ///     KeyCode states.
     /// </summary>

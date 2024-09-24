@@ -19,29 +19,29 @@ public class CustomizationPatches {
     [HarmonyTranspiler]
     private static IEnumerable<CodeInstruction> RunTerminalTranspiler(IEnumerable<CodeInstruction> instructions) {
         List<CodeInstruction> list = [..instructions];
-    
+
         foreach (var t in list.Where(t => t.opcode == OpCodes.Ldc_I4_3)) {
             t.opcode = OpCodes.Ldc_I4;
             t.operand = States.Ints[SettingKeys.FaceCharLimit];
-    
+
             break;
         }
-    
+
         return list.AsEnumerable();
     }
-    
+
     [HarmonyPatch(typeof(PlayerVisor), nameof(PlayerVisor.SafetyCheckVisorText))]
     [HarmonyTranspiler]
     private static IEnumerable<CodeInstruction> RunSafetyCheckTranspiler(IEnumerable<CodeInstruction> instructions) {
         List<CodeInstruction> list = [..instructions];
-    
+
         foreach (var t in list.Where(t => t.opcode == OpCodes.Ldc_I4_3)) {
             t.opcode = OpCodes.Ldc_I4;
             t.operand = States.Ints[SettingKeys.FaceCharLimit];
-    
+
             break;
         }
-    
+
         return list.AsEnumerable();
     }
 
@@ -50,7 +50,8 @@ public class CustomizationPatches {
     private static void UpdatePostfix(PlayerCustomizer __instance, TextMeshProUGUI ___faceText, PhotonView ___view_g) {
         if (Input.GetKey(KeyCode.Delete)) {
             ___view_g.RPC("RCP_SetFaceText", RpcTarget.All, "");
-        } else if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && Input.GetKeyDown(KeyCode.V)) {
+        } else if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) &&
+                   Input.GetKeyDown(KeyCode.V)) {
             var systemCopyBuffer = GUIUtility.systemCopyBuffer;
             ___view_g.RPC("RCP_SetFaceText", RpcTarget.All, systemCopyBuffer);
         } else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
@@ -74,14 +75,14 @@ public class CustomizationPatches {
     [HarmonyPostfix]
     private static void PostfixSetFaceText(ref PlayerCustomizer __instance, string text) {
         if (!__instance.playerInTerminal) return;
-        
+
         Debug.Log("Patching SetFaceText with full text: " + text);
 
         __instance.faceText.text = text;
         __instance.playerInTerminal.refs.visor.visorFaceText.text = text;
 
         if (__instance.faceText == null) return;
-        
+
         __instance.faceText.enableAutoSizing = States.Bools[SettingKeys.FaceAutoSizing];
         __instance.faceText.fontSizeMin = States.Floats[SettingKeys.FaceMinFont];
         __instance.faceText.fontSizeMax = States.Floats[SettingKeys.FaceMaxFont];

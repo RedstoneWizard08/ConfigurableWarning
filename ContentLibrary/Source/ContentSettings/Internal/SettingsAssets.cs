@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using ContentLibrary;
+using ContentLibrary.API;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -83,36 +84,20 @@ internal static class SettingsAssets {
     /// <typeparam name="T">The type of asset to load.</typeparam>
     /// <returns>The loaded asset.</returns>
     /// <exception cref="System.Exception">Thrown if the asset bundle or asset could not be loaded.</exception>
-    private static T LoadAsset<T>(string bundleName, string assetName)
-        where T : Object {
+    private static T LoadAsset<T>(string bundleName, string assetName) where T : Object {
         ContentSettingsEntry.Logger.LogDebug($"Loading asset '{assetName}' from asset bundle '{bundleName}'.");
 
         if (AssetBundles.TryGetValue(bundleName, out var bundle)) return bundle.LoadAsset<T>(assetName);
 
-        var assetBundleStream = typeof(ContentSettingsEntry)
-                                    .Assembly
-                                    .GetManifestResourceStream(
-                                        typeof(Plugin).Namespace + "." +
-                                        bundleName)
-                                ?? throw new Exception(
-                                    $"Failed to load asset bundle '{bundleName}' from embedded resource.");
+        var assetBundle = BundleUtils.LoadEmbeddedAssetBundle(typeof(ContentSettingsEntry).Assembly,
+            typeof(Plugin).Namespace + "." + bundleName, true);
 
-        using (assetBundleStream)
-        using (var gzStream = new GZipStream(assetBundleStream, CompressionMode.Decompress))
-        using (var reader = new StreamReader(gzStream))
-        using (var ms = new MemoryStream()) {
-            reader.BaseStream.CopyTo(ms);
-            
-            var assetBundle = AssetBundle.LoadFromStream(ms) ??
-                              throw new Exception($"Failed to load asset bundle '{bundleName}' from stream.");
-            
-            var asset = assetBundle.LoadAsset<T>(assetName) ??
-                        throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");
+        var asset = assetBundle?.LoadAsset<T>(assetName) ??
+                    throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");
 
-            ContentSettingsEntry.Logger.LogDebug($"Loaded asset '{assetName}' from asset bundle '{bundleName}'.");
-            AssetBundles.Add(bundleName, assetBundle);
+        ContentSettingsEntry.Logger.LogDebug($"Loaded asset '{assetName}' from asset bundle '{bundleName}'.");
+        AssetBundles.Add(bundleName, assetBundle);
 
-            return asset;
-        }
+        return asset;
     }
 }

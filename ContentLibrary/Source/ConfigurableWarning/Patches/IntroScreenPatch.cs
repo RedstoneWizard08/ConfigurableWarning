@@ -13,7 +13,7 @@ public class IntroScreenPatch {
     [HarmonyPrefix]
     private static void StartPatch(IntroScreenAnimator __instance) {
         if (!States.Bools[SettingKeys.SkipIntroScreen]) return;
-        
+
         __instance.skipping = true;
         __instance.m_animator.enabled = false;
     }

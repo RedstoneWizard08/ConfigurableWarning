@@ -29,7 +29,8 @@ public class KeyCodeOption : KeyCodeSetting, IOption<KeyCode> {
     /// <param name="min">The minimum value.</param>
     /// <param name="max">The maximum value.</param>
     /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected KeyCodeOption(string name, KeyCode defaultValue, string displayName) : this(name, defaultValue, displayName, []) {
+    protected KeyCodeOption(string name, KeyCode defaultValue, string displayName) : this(name, defaultValue,
+        displayName, []) {
     }
 
     /// <summary>
@@ -97,7 +98,7 @@ public class KeyCodeOption : KeyCodeSetting, IOption<KeyCode> {
     public IUntypedOption AsUntyped() {
         return this;
     }
-    
+
     /// <summary>
     ///     Get this option's default value.
     /// </summary>

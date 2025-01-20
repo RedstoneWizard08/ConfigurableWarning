@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using ConfigurableWarning.API.State;
 using ContentSettings.API;
-using ContentSettings.API.Settings;
+using Zorro.Settings;
 
 namespace ConfigurableWarning.API.Options;
 
@@ -24,8 +24,14 @@ public class BoolOption : BoolSetting, IOption<bool> {
     /// <param name="name">The option's name.</param>
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
-    protected BoolOption(string name, bool defaultValue, string displayName) : this(name,
-        defaultValue, displayName, []) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected BoolOption(string name, bool defaultValue, string displayName, bool sync = true) : this(
+        name,
+        defaultValue,
+        displayName,
+        [],
+        sync
+    ) {
     }
 
     /// <summary>
@@ -35,12 +41,19 @@ public class BoolOption : BoolSetting, IOption<bool> {
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
-    protected BoolOption(string name, bool defaultValue, string displayName,
-        Action<BoolOption>[] actions) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected BoolOption(
+        string name,
+        bool defaultValue,
+        string displayName,
+        Action<BoolOption>[] actions,
+        bool sync = true
+    ) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _applyActions = [.. actions];
+        Sync = sync;
     }
 
     /// <inheritdoc />
@@ -109,6 +122,12 @@ public class BoolOption : BoolSetting, IOption<bool> {
         SetValue((bool) value);
     }
 
+    /// <inheritdoc />
+    public bool Sync { get; set; } = true;
+
+    /// <inheritdoc />
+    public StateHolder<bool> StateHolder => States.Bools;
+
     /// <summary>
     ///     Get an instance of an option.
     /// </summary>
@@ -128,7 +147,4 @@ public class BoolOption : BoolSetting, IOption<bool> {
 
         foreach (var action in _applyActions) action(this);
     }
-
-    /// <inheritdoc />
-    public StateHolder<bool> StateHolder => States.Bools;
 }

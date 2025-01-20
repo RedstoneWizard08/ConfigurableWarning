@@ -1,10 +1,10 @@
 using System.Linq;
-using ConfigurableWarning.API.State;
 using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
+using ConfigurableWarning.API.State;
 
-namespace ConfigurableWarning.Settings.Compat;
+namespace ContentLibrary.Settings.Compat;
 
 /// <summary>
 ///     Settings keys for Virality compat
@@ -29,7 +29,7 @@ public class ViralityCompat : ICompatModule {
         States.Bools[ViralitySettingKeys.EnableVoiceFix] = Virality.Virality.EnableVoiceFix!.Value;
     }
 
-    internal static void ApplySettings(IUntypedOption _opt) {
+    private static void ApplySettings(IUntypedOption opt) {
         string[] all = [
             ViralitySettingKeys.MaxPlayers,
             ViralitySettingKeys.AllowLateJoin,

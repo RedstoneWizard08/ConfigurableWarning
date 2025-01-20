@@ -1,9 +1,9 @@
 using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ContentLibrary.Settings;
 using HarmonyLib;
 using UnityEngine;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Stamina patches

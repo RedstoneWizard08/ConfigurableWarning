@@ -1,10 +1,13 @@
-namespace ConfigurableWarning.Settings;
+namespace ContentLibrary.Settings;
 
 /// <summary>
 ///     The string names of each setting.
 /// </summary>
 public static class SettingKeys {
 #pragma warning disable CS1591
+
+    #region Gameplay Settings
+
     public const string PrivateHost = "PrivateHost";
     public const string SkipIntroScreen = "SkipIntroScreen";
     public const string DaysPerQuota = "DaysPerQuota";
@@ -34,5 +37,14 @@ public static class SettingKeys {
     public const string FaceMaxFont = "FaceMaxFont";
     public const string FaceAutoSizing = "FaceAutoSizing";
     public const string FaceCharLimit = "FaceCharLimit";
+
+    #endregion
+
+    #region Debug Settings
+
+    public const string DebugUIButton = "DebugUIButton";
+
+    #endregion
+
 #pragma warning restore CS1591
 }

@@ -1,12 +1,12 @@
 using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ContentLibrary.Settings;
 using CurvedUI;
 using HarmonyLib;
 using pworld.Scripts.Extensions;
 using UnityEngine;
 using Zorro.Core;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Spawning mechanic patches

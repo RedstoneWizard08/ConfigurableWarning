@@ -7,11 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## Changed
+## Added
 
-- We are now called `ContentLibrary`!
-- Restructured the project and API
-- Finalized legacy `ContentSettings` API
 - Added `SkipIntroScreen` option
 - Added `VideoSaveLocation` option
 - Added `FreeMetaCoins` option
@@ -20,9 +17,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add support for the `HellDivers` mod
 - Add the `KeyCodeOption`
 - Add `KeyCode` support into `States`
-- GZip the AssetBundle
+- Added ability to toggle the built-in debug UI
+- Added configurable debug UI keybind
+- Added `KeyListener` component
+- Added `AssetBundleHelper` utility class
+- Added the `NoSync` attribute
+- Added the ability to exclude options from sync
+
+## Changed
+
+- We are now called `ContentLibrary`!
+- Restructured the project and API
+- Finalized legacy `ContentSettings` API
+- GZip the `ContentSettings` AssetBundle
 - Fix a bunch of bugs
 - Fix spookdivers setting name
+- Updated code style
+- Moved `ConfigurableWarning` patches into `ContentLibrary`
 
 ## [v1.15.2-config] - 2024-09-06
 

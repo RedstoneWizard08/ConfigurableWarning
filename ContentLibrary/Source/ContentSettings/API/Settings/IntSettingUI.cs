@@ -1,27 +1,32 @@
-// -----------------------------------------------------------------------
+﻿// -----------------------------------------------------------------------
 // <copyright file="IntSettingUI.cs" company="ContentSettings">
 // Copyright (c) ContentSettings. All rights reserved.
 // Licensed under the GPL-3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace ContentSettings.API.Settings;
-
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zorro.Settings;
 
+namespace ContentSettings.API.Settings;
+
 /// <summary>
-/// The UI for an integer setting.
+///     The UI for an integer setting.
 /// </summary>
 public class IntSettingUI : SettingInputUICell {
     [SerializeField] private TMP_InputField? inputField;
 
     [SerializeField] private Slider? slider;
 
+    private void Awake() {
+        inputField = GetComponentInChildren<TMP_InputField>();
+        slider = GetComponentInChildren<Slider>();
+    }
+
     /// <summary>
-    /// Sets up the setting UI with the provided setting and setting handler.
+    ///     Sets up the setting UI with the provided setting and setting handler.
     /// </summary>
     /// <param name="setting">The setting to set up the UI with.</param>
     /// <param name="settingHandler">The setting handler to use for saving the setting.</param>
@@ -57,10 +62,5 @@ public class IntSettingUI : SettingInputUICell {
             inputField.SetTextWithoutNotify(intSetting.Expose(intSetting.Value));
             slider.SetValueWithoutNotify(intSetting.Value);
         }
-    }
-
-    private void Awake() {
-        inputField = GetComponentInChildren<TMP_InputField>();
-        slider = GetComponentInChildren<Slider>();
     }
 }

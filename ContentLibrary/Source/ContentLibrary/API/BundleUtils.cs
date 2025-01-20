@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
@@ -7,7 +7,7 @@ using UnityEngine;
 namespace ContentLibrary.API;
 
 /// <summary>
-/// Utility methods for working with asset bundles.
+///     Utility methods for working with asset bundles.
 /// </summary>
 public static class BundleUtils {
     private static MemoryStream CopyToMemoryStream(Stream stream) {
@@ -20,7 +20,7 @@ public static class BundleUtils {
     }
 
     /// <summary>
-    /// Loads an asset bundle from a file path.
+    ///     Loads an asset bundle from a file path.
     /// </summary>
     /// <param name="path">The path to load the asset bundle from.</param>
     /// <param name="gzipped">Whether the stream is gzipped.</param>
@@ -30,7 +30,7 @@ public static class BundleUtils {
     }
 
     /// <summary>
-    /// Loads an asset bundle from an embedded resource.
+    ///     Loads an asset bundle from an embedded resource.
     /// </summary>
     /// <param name="assembly">The assembly to load the asset bundle from.</param>
     /// <param name="path">The path to load the asset bundle from.</param>
@@ -39,12 +39,12 @@ public static class BundleUtils {
     public static AssetBundle? LoadEmbeddedAssetBundle(Assembly assembly, string path, bool gzipped = false) {
         var stream = assembly.GetManifestResourceStream(path) ??
                      throw new Exception($"Failed to load embedded resource '{path}'.");
-        
+
         return LoadAssetBundle(stream, gzipped);
     }
 
     /// <summary>
-    /// Loads an asset bundle from a stream.
+    ///     Loads an asset bundle from a stream.
     /// </summary>
     /// <param name="stream">The stream to load the asset bundle from.</param>
     /// <param name="gzipped">Whether the stream is gzipped.</param>

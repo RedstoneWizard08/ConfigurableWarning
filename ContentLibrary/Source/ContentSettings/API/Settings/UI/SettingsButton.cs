@@ -5,30 +5,30 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace ContentSettings.API.Settings.UI;
-
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+namespace ContentSettings.API.Settings.UI;
+
 /// <summary>
-/// A component representing a button in a settings menu, providing hover and selection states.
+///     A component representing a button in a settings menu, providing hover and selection states.
 /// </summary>
 public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     /// <summary>
-    /// The text mesh pro component of the tab, displaying the tab name.
+    ///     The text mesh pro component of the tab, displaying the tab name.
     /// </summary>
     [SerializeField] private TextMeshProUGUI? textMeshPro;
 
     /// <summary>
-    /// The image component of the tab, displaying the tab icon.
+    ///     The image component of the tab, displaying the tab icon.
     /// </summary>
     [SerializeField] private Image? image;
 
     /// <summary>
-    /// Gets or sets the display name of the button.
+    ///     Gets or sets the display name of the button.
     /// </summary>
     public string Name {
         get => textMeshPro?.text ?? string.Empty;
@@ -38,19 +38,27 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
 
     /// <summary>
-    /// Gets a value indicating whether the tab is hovered over.
+    ///     Gets a value indicating whether the tab is hovered over.
     /// </summary>
     [UsedImplicitly]
     public bool IsHovered { get; private set; }
 
     /// <summary>
-    /// Gets a value indicating whether the tab is selected.
+    ///     Gets a value indicating whether the tab is selected.
     /// </summary>
     [UsedImplicitly]
     public bool IsSelected { get; private set; }
 
     /// <summary>
-    /// Called when the tab is hovered over.
+    ///     Awake is called by Unity when the script instance is being loaded.
+    /// </summary>
+    protected virtual void Awake() {
+        textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+        image = GetComponentInChildren<Image>();
+    }
+
+    /// <summary>
+    ///     Called when the tab is hovered over.
     /// </summary>
     /// <param name="eventData">The pointer event data.</param>
     public void OnPointerEnter(PointerEventData eventData) {
@@ -59,7 +67,7 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
 
     /// <summary>
-    /// Called when the tab is no longer hovered over.
+    ///     Called when the tab is no longer hovered over.
     /// </summary>
     /// <param name="eventData">The pointer event data.</param>
     public void OnPointerExit(PointerEventData eventData) {
@@ -68,57 +76,49 @@ public class SettingsButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
 
     /// <summary>
-    /// Select the tab.
+    ///     Select the tab.
     /// </summary>
-    /// <remarks>See <see cref="OnSelected"/> for the event triggered by this.</remarks>
+    /// <remarks>See <see cref="OnSelected" /> for the event triggered by this.</remarks>
     public void Select() {
         IsSelected = true;
         OnSelected();
     }
 
     /// <summary>
-    /// Deselect the tab.
+    ///     Deselect the tab.
     /// </summary>
-    /// <remarks>See <see cref="OnDeselected"/> for the event triggered by this.</remarks>
+    /// <remarks>See <see cref="OnDeselected" /> for the event triggered by this.</remarks>
     public void Deselect() {
         IsSelected = false;
         OnDeselected();
     }
 
     /// <summary>
-    /// Called when the tab is selected.
+    ///     Called when the tab is selected.
     /// </summary>
     public virtual void OnSelected() {
         SetColorActive();
     }
 
     /// <summary>
-    /// Called when the tab is deselected.
+    ///     Called when the tab is deselected.
     /// </summary>
     public virtual void OnDeselected() {
         SetColorInactive();
     }
 
     /// <summary>
-    /// Called when the tab is hovered over.
+    ///     Called when the tab is hovered over.
     /// </summary>
     public virtual void OnHover() {
         SetColorActive();
     }
 
     /// <summary>
-    /// Called when the tab is no longer hovered over.
+    ///     Called when the tab is no longer hovered over.
     /// </summary>
     public virtual void OnUnhover() {
         SetColorInactive();
-    }
-
-    /// <summary>
-    /// Awake is called by Unity when the script instance is being loaded.
-    /// </summary>
-    protected virtual void Awake() {
-        textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
-        image = GetComponentInChildren<Image>();
     }
 
     private void SetColorActive() {

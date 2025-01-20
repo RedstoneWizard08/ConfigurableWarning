@@ -19,7 +19,11 @@ public class IntOption : IntSetting, IOption<int> {
     private readonly string _displayName;
     private readonly int2 _minMax;
     private readonly string _name;
-    internal readonly bool _shouldClamp;
+
+    /// <summary>
+    ///     Whether to clamp the value when changed.
+    /// </summary>
+    internal readonly bool ShouldClamp;
 
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="int" /> type.
@@ -30,9 +34,26 @@ public class IntOption : IntSetting, IOption<int> {
     /// <param name="min">The minimum value.</param>
     /// <param name="max">The maximum value.</param>
     /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected IntOption(string name, int defaultValue, string displayName, int min, int max, bool doClamp = true) :
-        this(name, defaultValue, displayName, min, max, [],
-            doClamp) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected IntOption(
+        string name,
+        int defaultValue,
+        string displayName,
+        int min,
+        int max,
+        bool doClamp = true,
+        bool sync = true
+    ) :
+        this(
+            name,
+            defaultValue,
+            displayName,
+            min,
+            max,
+            [],
+            doClamp,
+            sync
+        ) {
     }
 
     /// <summary>
@@ -45,14 +66,24 @@ public class IntOption : IntSetting, IOption<int> {
     /// <param name="max">The maximum value.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
     /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected IntOption(string name, int defaultValue, string displayName, int min, int max,
-        Action<IntOption>[] actions, bool doClamp = true) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected IntOption(
+        string name,
+        int defaultValue,
+        string displayName,
+        int min,
+        int max,
+        Action<IntOption>[] actions,
+        bool doClamp = true,
+        bool sync = true
+    ) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _minMax = new int2(min, max);
-        _shouldClamp = doClamp;
+        ShouldClamp = doClamp;
         _applyActions = [.. actions];
+        Sync = sync;
     }
 
     /// <inheritdoc />
@@ -68,7 +99,7 @@ public class IntOption : IntSetting, IOption<int> {
 
     /// <inheritdoc />
     public void SetValue(int value) {
-        Value = _shouldClamp ? Clamp(value) : value;
+        Value = ShouldClamp ? Clamp(value) : value;
         GameHandler.Instance.SettingsHandler.SaveSetting(this);
     }
 
@@ -121,6 +152,12 @@ public class IntOption : IntSetting, IOption<int> {
         SetValue((int) value);
     }
 
+    /// <inheritdoc />
+    public bool Sync { get; set; } = true;
+
+    /// <inheritdoc />
+    public StateHolder<int> StateHolder => States.Ints;
+
     /// <summary>
     ///     Get an instance of an option.
     /// </summary>
@@ -145,7 +182,4 @@ public class IntOption : IntSetting, IOption<int> {
     protected override (int, int) GetMinMaxValue() {
         return (_minMax.x, _minMax.y);
     }
-
-    /// <inheritdoc />
-    public StateHolder<int> StateHolder => States.Ints;
 }

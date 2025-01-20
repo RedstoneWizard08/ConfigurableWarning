@@ -1,4 +1,3 @@
-﻿using BepInEx;
 using BepInEx.Logging;
 using ConfigurableWarning.API;
 using ContentLibrary;

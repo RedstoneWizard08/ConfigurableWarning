@@ -27,8 +27,14 @@ public class EnumOption<T> : EnumSetting, IOption<T> where T : struct {
     /// <param name="name">The option's name.</param>
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
-    protected EnumOption(string name, T defaultValue, string displayName) : this(name,
-        defaultValue, displayName, []) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected EnumOption(string name, T defaultValue, string displayName, bool sync = true) : this(
+        name,
+        defaultValue,
+        displayName,
+        [],
+        sync
+    ) {
     }
 
     /// <summary>
@@ -38,12 +44,19 @@ public class EnumOption<T> : EnumSetting, IOption<T> where T : struct {
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
-    protected EnumOption(string name, T defaultValue, string displayName,
-        Action<EnumOption<T>>[] actions) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected EnumOption(
+        string name,
+        T defaultValue,
+        string displayName,
+        Action<EnumOption<T>>[] actions,
+        bool sync = true
+    ) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _applyActions = [.. actions];
+        Sync = sync;
     }
 
     /// <summary>
@@ -118,6 +131,12 @@ public class EnumOption<T> : EnumSetting, IOption<T> where T : struct {
     }
 
     /// <inheritdoc />
+    public bool Sync { get; set; } = true;
+
+    /// <inheritdoc />
+    public StateHolder<T> StateHolder => States.WrapEnums<T>();
+
+    /// <inheritdoc />
     public override int GetDefaultValue() {
         return EnumUtil.GetIndex(_defaultValue);
     }
@@ -149,7 +168,4 @@ public class EnumOption<T> : EnumSetting, IOption<T> where T : struct {
 
         foreach (var action in _applyActions) action(this);
     }
-
-    /// <inheritdoc />
-    public StateHolder<T> StateHolder => States.WrapEnums<T>();
 }

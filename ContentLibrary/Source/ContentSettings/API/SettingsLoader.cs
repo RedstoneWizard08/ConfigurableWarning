@@ -5,26 +5,29 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace ContentSettings.API;
-
-using System.Collections.Generic;
-using Zorro.Settings;
-using JetBrains.Annotations;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Internal;
-using Settings.UI;
+using ContentSettings.API.Attributes;
+using ContentSettings.API.Settings.UI;
+using ContentSettings.Internal;
+using JetBrains.Annotations;
 using Zorro.Core;
+using Zorro.Settings;
 using Object = UnityEngine.Object;
 
+namespace ContentSettings.API;
+
+using Object = Object;
+
 /// <summary>
-/// Settings loader for custom settings belonging to mods.
+///     Settings loader for custom settings belonging to mods.
 /// </summary>
 [Obsolete]
 public static class SettingsLoader {
     /// <summary>
-    /// Gets all registered settings.
+    ///     Gets all registered settings.
     /// </summary>
     [UsedImplicitly]
     public static IEnumerable<Setting> Settings => RegisteredSettings.Values;
@@ -42,7 +45,7 @@ public static class SettingsLoader {
     private static SettingsNavigation? SettingsNavigation { get; set; }
 
     /// <summary>
-    /// Returns whether the settings manager has a tab.
+    ///     Returns whether the settings manager has a tab.
     /// </summary>
     /// <param name="tab">The tab to check for.</param>
     /// <returns>True if the settings manager has the tab; otherwise, false.</returns>
@@ -52,7 +55,7 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Gets the settings for the specified tab.
+    ///     Gets the settings for the specified tab.
     /// </summary>
     /// <param name="tab">The tab to get the settings for.</param>
     /// <param name="settingsByCategory">The settings by category for the tab, if found.</param>
@@ -62,7 +65,7 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Get the instance of the specified setting.
+    ///     Get the instance of the specified setting.
     /// </summary>
     /// <typeparam name="T">The type of the setting to get.</typeparam>
     /// <returns>The instance of the setting.</returns>
@@ -74,9 +77,9 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Register a custom setting.
+    ///     Register a custom setting.
     /// </summary>
-    /// <remarks>This will apply the value of the setting immediately. See <see cref="Setting.ApplyValue"/>.</remarks>
+    /// <remarks>This will apply the value of the setting immediately. See <see cref="Setting.ApplyValue" />.</remarks>
     /// <param name="tab">The tab to register the setting to.</param>
     /// <param name="category">The category of the setting.</param>
     /// <param name="setting">The setting to register.</param>
@@ -108,7 +111,7 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Register a custom setting to the provided tab without a category.
+    ///     Register a custom setting to the provided tab without a category.
     /// </summary>
     /// <param name="tab">The tab to register the setting to.</param>
     /// <param name="setting">The setting to register.</param>
@@ -119,7 +122,7 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Register a custom setting to the default MODDED tab and empty category.
+    ///     Register a custom setting to the default MODDED tab and empty category.
     /// </summary>
     /// <param name="setting">The setting to register.</param>
     [Obsolete]
@@ -129,7 +132,7 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Saves all registered settings.
+    ///     Saves all registered settings.
     /// </summary>
     internal static void SaveSettings() {
         ContentSettingsEntry.Logger.LogDebug("Saving settings to disk.");
@@ -137,7 +140,7 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Creates the settings tab for the modded settings.
+    ///     Creates the settings tab for the modded settings.
     /// </summary>
     /// <param name="menu">The settings menu to create the tab in.</param>
     /// <exception cref="System.Exception">Thrown when the existing tab to create the modded settings tab from is not found.</exception>
@@ -160,7 +163,7 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Register all settings in the current domain.
+    ///     Register all settings in the current domain.
     /// </summary>
     internal static void RegisterSettings() {
         if (IsInitialized) return;
@@ -174,7 +177,7 @@ public static class SettingsLoader {
 
             if (RegisteredSettings.ContainsKey(type)) continue;
 
-            var settingDefinitions = type.GetCustomAttributes<Attributes.SettingRegister>(false);
+            var settingDefinitions = type.GetCustomAttributes<SettingRegister>(false);
             Setting? setting = null;
 
             foreach (var settingDefinition in settingDefinitions) {
@@ -190,14 +193,14 @@ public static class SettingsLoader {
     }
 
     /// <summary>
-    /// Called every frame to update the settings.
+    ///     Called every frame to update the settings.
     /// </summary>
     internal static void Update() {
         foreach (var setting in Settings) setting.Update();
     }
 
     /// <summary>
-    /// Register the default settings from the original settings system.
+    ///     Register the default settings from the original settings system.
     /// </summary>
     private static void RegisterDefaultSettings() {
         ContentSettingsEntry.Logger.LogDebug("Registering default settings.");

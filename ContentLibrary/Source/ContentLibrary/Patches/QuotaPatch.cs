@@ -1,8 +1,8 @@
-﻿using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ConfigurableWarning.API.State;
+using ContentLibrary.Settings;
 using HarmonyLib;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Quota patches

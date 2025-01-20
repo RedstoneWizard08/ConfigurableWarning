@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using ConfigurableWarning.API.Internal;
 using ConfigurableWarning.API.Options;
 using Newtonsoft.Json;
@@ -10,7 +11,7 @@ namespace ConfigurableWarning.API.State;
 ///     The class responsible for storing options' values.
 /// </summary>
 public class OptionsState {
-    private Dictionary<string, object> _states = [];
+    private readonly Dictionary<string, object> _states = [];
 
     /// <summary>
     ///     The current instance of this <see cref="OptionsState" />.
@@ -151,7 +152,7 @@ public class OptionsState {
     /// </summary>
     /// <returns>The JSON-formatted states.</returns>
     public string Collect() {
-        return JsonConvert.SerializeObject(_states);
+        return JsonConvert.SerializeObject(_states.Where(it => OptionManager.Instance.Get(it.Key)?.Sync ?? false));
     }
 
     /// <summary>
@@ -161,6 +162,9 @@ public class OptionsState {
     /// </summary>
     /// <param name="json">The JSON-encoded map.</param>
     public void Apply(string json) {
-        _states = JsonConvert.DeserializeObject<Dictionary<string, object>>(json)!;
+        foreach (var item in JsonConvert.DeserializeObject<Dictionary<string, object>>(json)!) {
+            // We don't want to overwrite non-synced options, so we just set the values instead of the whole dictionary.
+            _states[item.Key] = item.Value;
+        }
     }
 }

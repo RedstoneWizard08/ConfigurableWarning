@@ -16,7 +16,7 @@ public class StateHolder<T> {
     }
 
     /// <summary>
-    ///    Get an option's state or a default value.
+    ///     Get an option's state or a default value.
     /// </summary>
     /// <param name="name">The option.</param>
     /// <param name="defaultValue">The default value.</param>

@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using ContentLibrary;
 using ContentLibrary.API;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -10,45 +7,41 @@ using Object = UnityEngine.Object;
 namespace ContentSettings.Internal;
 
 /// <summary>
-/// Contains the assets used by the settings system.
+///     Contains the assets used by the settings system.
 /// </summary>
 internal static class SettingsAssets {
-    internal const string BundlePath = "contentsettings.bundle.gz";
+    /// <summary>
+    ///     The path to the asset bundle.
+    /// </summary>
+    private const string BundlePath = "contentsettings.bundle.gz";
 
     /// <summary>
-    /// Gets the settings navigation prefab.
+    ///     Gets the settings navigation prefab.
     /// </summary>
     internal static GameObject SettingsNavigationPrefab { get; private set; } = null!;
 
     /// <summary>
-    /// Gets the settings tab prefab.
+    ///     Gets the settings tab prefab.
     /// </summary>
     internal static GameObject SettingsTabPrefab { get; private set; } = null!;
 
     /// <summary>
-    /// Gets the settings category prefab.
+    ///     Gets the settings category prefab.
     /// </summary>
     internal static GameObject SettingsCategoryPrefab { get; private set; } = null!;
 
     /// <summary>
-    /// Gets the settings text input prefab.
-    /// </summary>
-    internal static GameObject SettingsTextInputPrefab { get; private set; } = null!;
-
-    /// <summary>
-    /// Gets the settings integer input prefab.
+    ///     Gets the settings integer input prefab.
     /// </summary>
     internal static GameObject SettingsIntInputPrefab { get; private set; } = null!;
 
     /// <summary>
-    /// Gets the settings bool input prefab.
+    ///     A cache of loaded asset bundles.
     /// </summary>
-    internal static GameObject SettingsBoolInputPrefab { get; private set; } = null!;
-
     private static Dictionary<string, AssetBundle> AssetBundles { get; } = [];
 
     /// <summary>
-    /// Loads the assets used by the settings system.
+    ///     Loads the assets used by the settings system.
     /// </summary>
     internal static void LoadAssets() {
         SettingsNavigationPrefab = LoadAsset<GameObject>(
@@ -63,21 +56,13 @@ internal static class SettingsAssets {
             BundlePath,
             "Assets/ContentSettings/SettingsCategory.prefab");
 
-        SettingsTextInputPrefab = LoadAsset<GameObject>(
-            BundlePath,
-            "Assets/ContentSettings/SettingsTextInput.prefab");
-
         SettingsIntInputPrefab = LoadAsset<GameObject>(
             BundlePath,
             "Assets/ContentSettings/SettingsIntInput.prefab");
-
-        SettingsBoolInputPrefab = LoadAsset<GameObject>(
-            BundlePath,
-            "Assets/ContentSettings/SettingsBoolInput.prefab");
     }
 
     /// <summary>
-    /// Loads an asset from an asset bundle that is embedded in the assembly.
+    ///     Loads an asset from an asset bundle that is embedded in the assembly.
     /// </summary>
     /// <param name="bundleName">The name of the asset bundle.</param>
     /// <param name="assetName">The name of the asset.</param>
@@ -90,7 +75,7 @@ internal static class SettingsAssets {
         if (AssetBundles.TryGetValue(bundleName, out var bundle)) return bundle.LoadAsset<T>(assetName);
 
         var assetBundle = BundleUtils.LoadEmbeddedAssetBundle(typeof(ContentSettingsEntry).Assembly,
-            typeof(Plugin).Namespace + "." + bundleName, true);
+            typeof(ContentLibrary.Plugin).Namespace + "." + bundleName, true);
 
         var asset = assetBundle?.LoadAsset<T>(assetName) ??
                     throw new Exception($"Failed to load asset '{assetName}' from asset bundle '{bundleName}'.");

@@ -8,6 +8,11 @@ namespace ConfigurableWarning.API.Options;
 /// </summary>
 public interface IUntypedOption {
     /// <summary>
+    ///    Whether this option should be synced with other clients.
+    /// </summary>
+    public bool Sync { get; set; }
+
+    /// <summary>
     ///     Gets this option's name. This is its name in the registry
     ///     and in the state holder.
     /// </summary>

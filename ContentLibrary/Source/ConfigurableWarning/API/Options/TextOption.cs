@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using ConfigurableWarning.API.State;
 using ContentSettings.API;
-using ContentSettings.API.Settings;
+using Zorro.Settings;
 
 namespace ConfigurableWarning.API.Options;
 
@@ -13,7 +13,7 @@ namespace ConfigurableWarning.API.Options;
 ///     Its state is stored in the <see cref="OptionsState" /> class.
 /// </summary>
 // ReSharper disable once ClassNeverInstantiated.Global
-public class TextOption : TextSetting, IOption<string> {
+public class TextOption : StringSetting, IOption<string> {
     private readonly List<Action<TextOption>> _applyActions;
     private readonly string _defaultValue;
     private readonly string _displayName;
@@ -25,8 +25,14 @@ public class TextOption : TextSetting, IOption<string> {
     /// <param name="name">The option's name.</param>
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
-    protected TextOption(string name, string defaultValue, string displayName) : this(name,
-        defaultValue, displayName, []) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected TextOption(string name, string defaultValue, string displayName, bool sync = true) : this(
+        name,
+        defaultValue,
+        displayName,
+        [],
+        sync
+    ) {
     }
 
     /// <summary>
@@ -36,12 +42,19 @@ public class TextOption : TextSetting, IOption<string> {
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
-    protected TextOption(string name, string defaultValue, string displayName,
-        Action<TextOption>[] actions) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected TextOption(
+        string name,
+        string defaultValue,
+        string displayName,
+        Action<TextOption>[] actions,
+        bool sync = true
+    ) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _applyActions = [.. actions];
+        Sync = sync;
     }
 
     /// <inheritdoc />
@@ -110,6 +123,12 @@ public class TextOption : TextSetting, IOption<string> {
         SetValue((string) value);
     }
 
+    /// <inheritdoc />
+    public bool Sync { get; set; } = true;
+
+    /// <inheritdoc />
+    public StateHolder<string> StateHolder => States.Strings;
+
     /// <summary>
     ///     Get an instance of an option.
     /// </summary>
@@ -129,7 +148,4 @@ public class TextOption : TextSetting, IOption<string> {
 
         foreach (var action in _applyActions) action(this);
     }
-
-    /// <inheritdoc />
-    public StateHolder<string> StateHolder => States.Strings;
 }

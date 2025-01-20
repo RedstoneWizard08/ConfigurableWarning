@@ -3,4 +3,5 @@
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=F_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CContent_0020Warning_005CContent_0020Warning_005FData_005CManaged_005CSirenix_002ESerialization_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\jacob\.nuget\packages\rugbugredfern.myceliumnetworking.cw\1.0.12\lib\netstandard2.1\MyceliumNetworkingForCW.dll" /&gt;&#xD;
+  &lt;Assembly Path="F:\Source\ConfigurableWarning\ContentLibrary\obj\Debug\netstandard2.1\publicized\Zorro.Settings.Runtime.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

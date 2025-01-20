@@ -10,7 +10,7 @@ using Zorro.Settings;
 namespace ContentSettings.Internal;
 
 /// <summary>
-/// Patches for the settings system.
+///     Patches for the settings system.
 /// </summary>
 [HarmonyPatch]
 [SuppressMessage("ReSharper", "InconsistentNaming", Justification = "Harmony patch.")]
@@ -18,7 +18,7 @@ namespace ContentSettings.Internal;
     Justification = "Harmony patch.")]
 internal class SettingsPatch {
     /// <summary>
-    /// Patches the <see cref="DefaultSettingsSaveLoad.WriteToDisk"/> method to save our custom settings.
+    ///     Patches the <see cref="DefaultSettingsSaveLoad.WriteToDisk" /> method to save our custom settings.
     /// </summary>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(DefaultSettingsSaveLoad), nameof(DefaultSettingsSaveLoad.WriteToDisk))]
@@ -27,9 +27,9 @@ internal class SettingsPatch {
     }
 
     /// <summary>
-    /// Patches the <see cref="SettingsMenu"/> to add our custom settings tab to the settings menu.
+    ///     Patches the <see cref="SettingsMenu" /> to add our custom settings tab to the settings menu.
     /// </summary>
-    /// <param name="__instance">The instance of the <see cref="SettingsMenu"/>.</param>
+    /// <param name="__instance">The instance of the <see cref="SettingsMenu" />.</param>
     /// <returns>Whether the original method should be called.</returns>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(SettingsMenu), nameof(SettingsMenu.OnEnable))]
@@ -43,9 +43,9 @@ internal class SettingsPatch {
     }
 
     /// <summary>
-    /// Patch the <see cref="MainMenuHandler"/> to register the settings.
+    ///     Patch the <see cref="MainMenuHandler" /> to register the settings.
     /// </summary>
-    /// <param name="__instance">The instance of the <see cref="MainMenuHandler"/>.</param>
+    /// <param name="__instance">The instance of the <see cref="MainMenuHandler" />.</param>
     /// <returns>Whether the original method should be called.</returns>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(MainMenuHandler), nameof(MainMenuHandler.Start))]
@@ -56,9 +56,9 @@ internal class SettingsPatch {
     }
 
     /// <summary>
-    /// Patches the <see cref="SFX_Instance.Play"/> method to ensure that the correct mixer group is used.
+    ///     Patches the <see cref="SFX_Instance.Play" /> method to ensure that the correct mixer group is used.
     /// </summary>
-    /// <param name="__instance">The instance of the <see cref="SFX_Instance"/>.</param>
+    /// <param name="__instance">The instance of the <see cref="SFX_Instance" />.</param>
     /// <returns>Whether the original method should be called.</returns>
     [HarmonyPrefix]
     [HarmonyPatch(typeof(SFX_Instance), nameof(SFX_Instance.Play))]

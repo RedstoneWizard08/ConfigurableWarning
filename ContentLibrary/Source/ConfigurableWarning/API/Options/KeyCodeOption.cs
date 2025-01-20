@@ -1,10 +1,9 @@
-﻿#pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
+#pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
 
 using System;
 using System.Collections.Generic;
 using ConfigurableWarning.API.State;
 using ContentSettings.API;
-using Unity.Mathematics;
 using UnityEngine;
 using Zorro.Settings;
 
@@ -26,11 +25,14 @@ public class KeyCodeOption : KeyCodeSetting, IOption<KeyCode> {
     /// <param name="name">The option's name.</param>
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
-    /// <param name="min">The minimum value.</param>
-    /// <param name="max">The maximum value.</param>
-    /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected KeyCodeOption(string name, KeyCode defaultValue, string displayName) : this(name, defaultValue,
-        displayName, []) {
+    /// <param name="sync">Whether to sync this option with other clients. Since this is a KeyCode option, this will default to false.</param>
+    protected KeyCodeOption(string name, KeyCode defaultValue, string displayName, bool sync = false) : this(
+        name,
+        defaultValue,
+        displayName,
+        [],
+        sync
+    ) {
     }
 
     /// <summary>
@@ -40,11 +42,19 @@ public class KeyCodeOption : KeyCodeSetting, IOption<KeyCode> {
     /// <param name="defaultValue">The default value.</param>
     /// <param name="displayName">The option's displayed name.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
-    protected KeyCodeOption(string name, KeyCode defaultValue, string displayName, Action<KeyCodeOption>[] actions) {
+    /// <param name="sync">Whether to sync this option with other clients. Since this is a KeyCode option, this will default to false.</param>
+    protected KeyCodeOption(
+        string name,
+        KeyCode defaultValue,
+        string displayName,
+        Action<KeyCodeOption>[] actions,
+        bool sync = false
+    ) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _applyActions = [.. actions];
+        Sync = sync;
     }
 
     /// <inheritdoc />
@@ -99,14 +109,6 @@ public class KeyCodeOption : KeyCodeSetting, IOption<KeyCode> {
         return this;
     }
 
-    /// <summary>
-    ///     Get this option's default value.
-    /// </summary>
-    /// <returns>The option's default value.</returns>
-    public override KeyCode GetDefaultKey() {
-        return _defaultValue;
-    }
-
     /// <inheritdoc />
     public IOption<KeyCode> AsOption() {
         return this;
@@ -119,6 +121,23 @@ public class KeyCodeOption : KeyCodeSetting, IOption<KeyCode> {
     /// <inheritdoc />
     public void SetValue(object value) {
         SetValue((KeyCode) value);
+    }
+
+    /// <summary>
+    ///     Whether this option should be synced with other clients.
+    ///     Since this is a KeyCode option, by default it will not be synced.
+    /// </summary>
+    public bool Sync { get; set; } = false;
+
+    /// <inheritdoc />
+    public StateHolder<KeyCode> StateHolder => States.Keys;
+
+    /// <summary>
+    ///     Get this option's default value.
+    /// </summary>
+    /// <returns>The option's default value.</returns>
+    public override KeyCode GetDefaultKey() {
+        return _defaultValue;
     }
 
     /// <summary>
@@ -140,7 +159,4 @@ public class KeyCodeOption : KeyCodeSetting, IOption<KeyCode> {
 
         foreach (var action in _applyActions) action(this);
     }
-
-    /// <inheritdoc />
-    public StateHolder<KeyCode> StateHolder => States.Keys;
 }

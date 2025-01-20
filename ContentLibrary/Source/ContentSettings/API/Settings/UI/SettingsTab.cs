@@ -5,29 +5,44 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-#pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
-
-namespace ContentSettings.API.Settings.UI;
-
+using System;
 using System.Linq;
-using Internal;
+using ContentSettings.Internal;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zorro.Core;
 using Zorro.Settings;
 
+#pragma warning disable CS0612 // The obsolete message is only for other mods, we still need to use these methods.
+
+namespace ContentSettings.API.Settings.UI;
+
 /// <summary>
-/// A component representing a tab in a settings menu, which can be selected to show settings belonging to the tab.
+///     A component representing a tab in a settings menu, which can be selected to show settings belonging to the tab.
 /// </summary>
 public class SettingsTab : SettingsButton {
     /// <summary>
-    /// The current settings menu instance.
+    ///     The current settings menu instance.
     /// </summary>
     [SerializeField] private SettingsMenu? settingsMenu;
 
+    /// <inheritdoc />
+    protected override void Awake() {
+        base.Awake();
+
+        settingsMenu = GetComponentInParent<SettingsMenu>();
+    }
+
     /// <summary>
-    /// Shows the settings for the tab.
+    ///     Called by Unity when the script instance has been loaded.
+    /// </summary>
+    protected void Start() {
+        GetComponent<Button>().onClick.AddListener(OnPointerClicked);
+    }
+
+    /// <summary>
+    ///     Shows the settings for the tab.
     /// </summary>
     public void Show() {
         if (!SettingsLoader.TryGetTab(Name, out var settingsByCategory)) return;
@@ -51,28 +66,14 @@ public class SettingsTab : SettingsButton {
     }
 
     /// <summary>
-    /// Called when the tab is clicked, selecting the tab.
+    ///     Called when the tab is clicked, selecting the tab.
     /// </summary>
     public void OnPointerClicked() {
         transform.parent.GetComponent<SettingsNavigation>().Select(this);
     }
 
-    /// <summary>
-    /// Called by Unity when the script instance has been loaded.
-    /// </summary>
-    protected void Start() {
-        GetComponent<Button>().onClick.AddListener(OnPointerClicked);
-    }
-
-    /// <inheritdoc />
-    protected override void Awake() {
-        base.Awake();
-
-        settingsMenu = GetComponentInParent<SettingsMenu>();
-    }
-
     private void CreateSettingCell(Setting setting) {
-        if (settingsMenu == null) throw new System.Exception("Settings menu is null.");
+        if (settingsMenu == null) throw new Exception("Settings menu is null.");
 
         var component = Instantiate(settingsMenu.m_settingsCell, settingsMenu.m_settingsContainer)
             .GetComponent<SettingsCell>();

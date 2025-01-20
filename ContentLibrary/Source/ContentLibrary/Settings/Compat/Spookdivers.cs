@@ -1,12 +1,11 @@
 using System;
 using System.Linq;
-using ConfigurableWarning.API.State;
 using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
-using Spookdivers;
+using ConfigurableWarning.API.State;
 
-namespace ConfigurableWarning.Settings.Compat;
+namespace ContentLibrary.Settings.Compat;
 
 /// <summary>
 ///     Settings keys for Spookdivers compat
@@ -39,14 +38,15 @@ public enum SceneType {
 public class SpookdiversCompat : ICompatModule {
     /// <inheritdoc />
     public void Init() {
-        States.Floats[SpookdiversSettingKeys.ReadyTime] = Plugin.Instance.ReadyTime.Value;
-        States.Bools[SpookdiversSettingKeys.ForceScene] = Plugin.Instance.ForceScene.Value;
-        States.Enums.Set(SpookdiversSettingKeys.SceneName, Enum.Parse<SceneType>(Plugin.Instance.SceneName.Value));
-        States.Bools[SpookdiversSettingKeys.FakeBells] = Plugin.Instance.FakeBellsConfig.Value;
-        States.Floats[SpookdiversSettingKeys.LoweringSpeed] = Plugin.Instance.LoweringSpeedConfig.Value;
+        States.Floats[SpookdiversSettingKeys.ReadyTime] = Spookdivers.Plugin.Instance.ReadyTime.Value;
+        States.Bools[SpookdiversSettingKeys.ForceScene] = Spookdivers.Plugin.Instance.ForceScene.Value;
+        States.Enums.Set(SpookdiversSettingKeys.SceneName,
+            Enum.Parse<SceneType>(Spookdivers.Plugin.Instance.SceneName.Value));
+        States.Bools[SpookdiversSettingKeys.FakeBells] = Spookdivers.Plugin.Instance.FakeBellsConfig.Value;
+        States.Floats[SpookdiversSettingKeys.LoweringSpeed] = Spookdivers.Plugin.Instance.LoweringSpeedConfig.Value;
     }
 
-    internal static void ApplySettings(IUntypedOption _opt) {
+    private static void ApplySettings(IUntypedOption opt) {
         string[] all = [
             SpookdiversSettingKeys.ReadyTime,
             SpookdiversSettingKeys.ForceScene,
@@ -57,12 +57,12 @@ public class SpookdiversCompat : ICompatModule {
 
         if (!all.All(v => OptionsState.Instance.Has(v))) return;
 
-        Plugin.Instance.ReadyTime.Value = States.Floats[SpookdiversSettingKeys.ReadyTime];
-        Plugin.Instance.ForceScene.Value = States.Bools[SpookdiversSettingKeys.ForceScene];
-        Plugin.Instance.SceneName.Value = Enum.GetName(typeof(SceneType),
+        Spookdivers.Plugin.Instance.ReadyTime.Value = States.Floats[SpookdiversSettingKeys.ReadyTime];
+        Spookdivers.Plugin.Instance.ForceScene.Value = States.Bools[SpookdiversSettingKeys.ForceScene];
+        Spookdivers.Plugin.Instance.SceneName.Value = Enum.GetName(typeof(SceneType),
             States.Enums.Get<SceneType>(SpookdiversSettingKeys.SceneName));
-        Plugin.Instance.FakeBellsConfig.Value = States.Bools[SpookdiversSettingKeys.FakeBells];
-        Plugin.Instance.LoweringSpeedConfig.Value = States.Floats[SpookdiversSettingKeys.LoweringSpeed];
+        Spookdivers.Plugin.Instance.FakeBellsConfig.Value = States.Bools[SpookdiversSettingKeys.FakeBells];
+        Spookdivers.Plugin.Instance.LoweringSpeedConfig.Value = States.Floats[SpookdiversSettingKeys.LoweringSpeed];
     }
 
     [CompatGroup("SPOOKDIVERS", "GENERAL")]

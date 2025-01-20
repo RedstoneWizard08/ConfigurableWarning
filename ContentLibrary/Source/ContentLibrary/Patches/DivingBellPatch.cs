@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ContentLibrary.Settings;
 using HarmonyLib;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Diving Bell patches

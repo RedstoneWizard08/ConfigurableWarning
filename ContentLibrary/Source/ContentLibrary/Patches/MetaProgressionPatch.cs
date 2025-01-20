@@ -1,10 +1,10 @@
 #pragma warning disable IDE0060
 
 using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ContentLibrary.Settings;
 using HarmonyLib;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Patches the <see cref="MetaProgressionHandler" /> to allow for free

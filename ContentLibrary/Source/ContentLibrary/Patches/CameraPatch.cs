@@ -1,11 +1,12 @@
 using System;
 using System.IO;
+using ConfigurableWarning;
 using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ContentLibrary.Settings;
 using HarmonyLib;
 using Zorro.Core;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Patches for the camera.
@@ -37,7 +38,7 @@ public class CameraPatch {
             return false;
         }
 
-        videoFileName = "content_warning_" + GuidExtensions.ToShortString(__instance.videoHandle.id) + ".webm";
+        videoFileName = "content_warning_" + __instance.videoHandle.id.ToShortString() + ".webm";
 
         var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         var value = States.Strings[SettingKeys.VideoSaveLocation] ?? "Desktop";

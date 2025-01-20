@@ -1,11 +1,11 @@
 using System.Linq;
-using ConfigurableWarning.API.State;
 using ConfigurableWarning.API.Attributes;
 using ConfigurableWarning.API.Compat;
 using ConfigurableWarning.API.Options;
+using ConfigurableWarning.API.State;
 using Flashcard;
 
-namespace ConfigurableWarning.Settings.Compat;
+namespace ContentLibrary.Settings.Compat;
 
 /// <summary>
 ///     Settings keys for Flashcard compat
@@ -37,7 +37,7 @@ public class FlashcardCompat : ICompatModule {
         States.Bools[FlashcardSettingKeys.VerboseLogging] = FlashcardPlugin.config.DEBUGGING_VERBOSE_LOGGING.Value;
     }
 
-    internal static void ApplySettings(IUntypedOption _opt) {
+    private static void ApplySettings(IUntypedOption opt) {
         string[] all = [
             FlashcardSettingKeys.EnableExtraCamera,
             FlashcardSettingKeys.ClipLength,

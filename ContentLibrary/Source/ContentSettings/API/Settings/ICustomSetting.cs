@@ -5,23 +5,23 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace ContentSettings.API.Settings;
-
 using JetBrains.Annotations;
 
+namespace ContentSettings.API.Settings;
+
 /// <summary>
-/// Interface for all custom settings to implement.
+///     Interface for all custom settings to implement.
 /// </summary>
 [UsedImplicitly]
 public interface ICustomSetting : IExposedSetting {
     /// <summary>
-    /// This is called when the setting is loaded but currently does nothing.
+    ///     This is called when the setting is loaded but currently does nothing.
     /// </summary>
     /// <remarks>
-    /// Unfortunately, due to the SettingCategory being an enum, it is not possible for us to implement this method.
+    ///     Unfortunately, due to the SettingCategory being an enum, it is not possible for us to implement this method.
     /// </remarks>
     /// <returns>The setting category of the setting.</returns>
     SettingCategory IExposedSetting.GetSettingCategory() {
-        return SettingCategory.Controls;
+        return SettingCategory.Mods;
     }
 }

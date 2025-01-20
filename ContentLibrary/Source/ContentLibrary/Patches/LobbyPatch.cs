@@ -1,9 +1,9 @@
 using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ContentLibrary.Settings;
 using HarmonyLib;
 using Steamworks;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Patches the lobby system to allow truly private games.

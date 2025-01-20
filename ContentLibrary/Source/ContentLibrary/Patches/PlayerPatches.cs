@@ -1,11 +1,11 @@
-﻿using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ConfigurableWarning.API.State;
+using ContentLibrary.Settings;
 using HarmonyLib;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
 ///     Player &amp; PlayerData patch

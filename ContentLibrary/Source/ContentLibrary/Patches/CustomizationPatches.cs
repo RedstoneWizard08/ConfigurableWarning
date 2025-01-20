@@ -2,16 +2,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
 using ConfigurableWarning.API.State;
-using ConfigurableWarning.Settings;
+using ContentLibrary.Settings;
 using HarmonyLib;
 using Photon.Pun;
 using TMPro;
 using UnityEngine;
 
-namespace ConfigurableWarning.Patches;
+namespace ContentLibrary.Patches;
 
 /// <summary>
-///		Player customization patches.
+///     Player customization patches.
 /// </summary>
 [HarmonyPatch]
 public class CustomizationPatches {
@@ -91,7 +91,7 @@ public class CustomizationPatches {
     [HarmonyPatch(typeof(PlayerVisor), "RPCA_SetVisorText")]
     [HarmonyPrefix]
     private static bool PrefixSetVisorText(PlayerVisor __instance, ref string text) {
-        if ((Object) __instance.visorFaceText == null) return false;
+        if (__instance.visorFaceText == null) return false;
 
         __instance.visorFaceText.text = text;
         __instance.visorFaceText.enableAutoSizing = true;

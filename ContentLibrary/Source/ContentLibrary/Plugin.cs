@@ -44,6 +44,13 @@ public class Plugin : BaseUnityPlugin {
     }
 
     /// <summary>
+    ///     Called each frame.
+    /// </summary>
+    public void Update() {
+        ContentSettingsEntry.Update();
+    }
+
+    /// <summary>
     ///     Applies patches
     /// </summary>
     public void Patch() {
@@ -59,12 +66,5 @@ public class Plugin : BaseUnityPlugin {
         Logger.LogInfo("Unpatching...");
 
         Harmony.UnpatchAll();
-    }
-
-    /// <summary>
-    ///     Called each frame.
-    /// </summary>
-    public void Update() {
-        ContentSettingsEntry.Update();
     }
 }

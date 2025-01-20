@@ -1,5 +1,4 @@
 using ConfigurableWarning.API.State;
-using ContentLibrary;
 using MyceliumNetworking;
 
 namespace ConfigurableWarning.API.Internal;
@@ -17,7 +16,7 @@ public class OptionSyncer {
     ///     This should only be called by ConfigurableWarning's base API.
     /// </summary>
     internal OptionSyncer() {
-        MyceliumNetwork.RegisterNetworkObject(this, Plugin.ModID);
+        MyceliumNetwork.RegisterNetworkObject(this, ContentLibrary.Plugin.ModID);
     }
 
     /// <summary>
@@ -51,6 +50,6 @@ public class OptionSyncer {
         if (settings == _lastSent) return;
         _lastSent = settings;
 
-        MyceliumNetwork.RPC(Plugin.ModID, nameof(SyncSettingsRecv), ReliableType.Reliable, settings);
+        MyceliumNetwork.RPC(ContentLibrary.Plugin.ModID, nameof(SyncSettingsRecv), ReliableType.Reliable, settings);
     }
 }

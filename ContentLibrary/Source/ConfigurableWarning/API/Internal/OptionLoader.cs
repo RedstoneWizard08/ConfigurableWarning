@@ -53,11 +53,14 @@ public static class OptionLoader {
         if (RegisteredOptions.ContainsKey(type)) return false;
 
         var register = type.GetCustomAttribute<Register>(false);
+
         if (register == null) return false;
 
         ConfigurableWarningEntry.Logger.LogInfo($"Found setting {type.FullName}");
 
         var instance = (IUntypedOption) Activator.CreateInstance(type);
+
+        if (type.GetCustomAttribute<NoSync>(false) != null) instance.Sync = false;
 
         instance.Register(tab, group);
         RegisteredOptions.Add(type, instance);
@@ -105,7 +108,8 @@ public static class OptionLoader {
         if (tab == null) return false;
 
         ConfigurableWarningEntry.Logger.LogInfo(
-            $"Found tab {tab.Name} in {type.FullName} (from {type.Assembly.GetName().Name}.dll");
+            $"Found tab {tab.Name} in {type.FullName} (from {type.Assembly.GetName().Name}.dll"
+        );
 
         var subClasses = type.GetNestedTypes(BindingFlags.NonPublic | BindingFlags.Public);
 

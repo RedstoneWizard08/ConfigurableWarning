@@ -19,7 +19,11 @@ public class FloatOption : FloatSetting, IOption<float> {
     private readonly string _displayName;
     private readonly float2 _minMax;
     private readonly string _name;
-    internal readonly bool _shouldClamp;
+
+    /// <summary>
+    ///     Whether to clamp the value when changed.
+    /// </summary>
+    internal readonly bool ShouldClamp;
 
     /// <summary>
     ///     Initialize a <see cref="IOption{T}" /> with the <see cref="float" /> type.
@@ -30,9 +34,25 @@ public class FloatOption : FloatSetting, IOption<float> {
     /// <param name="min">The minimum value.</param>
     /// <param name="max">The maximum value.</param>
     /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected FloatOption(string name, float defaultValue, string displayName, float min, float max,
-        bool doClamp = true) : this(name, defaultValue, displayName, min, max, [],
-        doClamp) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected FloatOption(
+        string name,
+        float defaultValue,
+        string displayName,
+        float min,
+        float max,
+        bool doClamp = true,
+        bool sync = true
+    ) : this(
+        name,
+        defaultValue,
+        displayName,
+        min,
+        max,
+        [],
+        doClamp,
+        sync
+    ) {
     }
 
     /// <summary>
@@ -45,14 +65,24 @@ public class FloatOption : FloatSetting, IOption<float> {
     /// <param name="max">The maximum value.</param>
     /// <param name="actions">Functions to run when the value is applied.</param>
     /// <param name="doClamp">Whether to clamp the value when changed.</param>
-    protected FloatOption(string name, float defaultValue, string displayName, float min, float max,
-        Action<FloatOption>[] actions, bool doClamp = true) {
+    /// <param name="sync">Whether to sync this option with other clients.</param>
+    protected FloatOption(
+        string name,
+        float defaultValue,
+        string displayName,
+        float min,
+        float max,
+        Action<FloatOption>[] actions,
+        bool doClamp = true,
+        bool sync = true
+    ) {
         _name = name;
         _displayName = displayName;
         _defaultValue = defaultValue;
         _minMax = new float2(min, max);
-        _shouldClamp = doClamp;
+        ShouldClamp = doClamp;
         _applyActions = [.. actions];
+        Sync = sync;
     }
 
     /// <inheritdoc />
@@ -68,7 +98,7 @@ public class FloatOption : FloatSetting, IOption<float> {
 
     /// <inheritdoc />
     public void SetValue(float value) {
-        Value = _shouldClamp ? Clamp(value) : value;
+        Value = ShouldClamp ? Clamp(value) : value;
         GameHandler.Instance.SettingsHandler.SaveSetting(this);
     }
 
@@ -121,6 +151,12 @@ public class FloatOption : FloatSetting, IOption<float> {
         SetValue((float) value);
     }
 
+    /// <inheritdoc />
+    public bool Sync { get; set; } = true;
+
+    /// <inheritdoc />
+    public StateHolder<float> StateHolder => States.Floats;
+
     /// <summary>
     ///     Get an instance of an option.
     /// </summary>
@@ -145,7 +181,4 @@ public class FloatOption : FloatSetting, IOption<float> {
     public override float2 GetMinMaxValue() {
         return _minMax;
     }
-
-    /// <inheritdoc />
-    public StateHolder<float> StateHolder => States.Floats;
 }
